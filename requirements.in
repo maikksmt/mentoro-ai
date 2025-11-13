@@ -25,6 +25,7 @@ django-fsm-2==4.1.0
 django-fsm-2-admin==2.0.1
 rules==3.5
 django-reversion==6.0.0
+graphviz==0.21
 
 # Entwicklung / Tests
 coverage==7.11.0

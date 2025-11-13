@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 19:41+0100\n"
+"POT-Creation-Date: 2025-11-13 23:26+0100\n"
 "PO-Revision-Date: 2025-11-13 19:39+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -342,7 +342,7 @@ msgstr "Leitfaden"
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
 #: templates/base.html:36 templates/base.html:60
-#: templates/content/home.html:120 templates/content/what-to-find.html:32
+#: templates/content/home.html:119 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr "Leitfäden"
@@ -506,7 +506,7 @@ msgstr "Prompt"
 
 #: prompts/models.py:32 prompts/views.py:67 prompts/views.py:128
 #: templates/base.html:39 templates/base.html:63
-#: templates/content/home.html:121 templates/content/what-to-find.html:33
+#: templates/content/home.html:120 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr "Prompts"
@@ -758,7 +758,7 @@ msgid "Reset"
 msgstr "Zurücksetzen"
 
 #: templates/catalog/tool_list.html:53 templates/compare/index.html:43
-#: templates/content/home.html:96 templates/prompts/prompt_list.html:28
+#: templates/content/home.html:95 templates/prompts/prompt_list.html:28
 #: templates/usecases/list.html:37
 msgid "Details"
 msgstr "Details"
@@ -897,15 +897,15 @@ msgstr ""
 msgid "Please provide feedback on"
 msgstr "Bitte sende Feedback auf dem"
 
-#: templates/content/home.html:14
+#: templates/content/home.html:13
 msgid "Project Github"
 msgstr "Projekt Github"
 
-#: templates/content/home.html:32
+#: templates/content/home.html:31
 msgid "Quick introduction to AI tools & practice."
 msgstr "Schnelle Einführung in KI-Tools und Praxis."
 
-#: templates/content/home.html:35
+#: templates/content/home.html:34
 msgid ""
 "\n"
 "                            Find suitable AI tools, compare alternatives, "
@@ -917,24 +917,24 @@ msgstr ""
 "Finde geeignete KI Tools, vergleiche Alternativen und nutze praktische "
 "Leitfäden und Prompts für deinen Alltag."
 
-#: templates/content/home.html:65
+#: templates/content/home.html:64
 msgid "Featured Tools"
 msgstr "Empfohlene Tools"
 
-#: templates/content/home.html:107
+#: templates/content/home.html:106
 msgid "Recommended for you"
 msgstr "Empfohlen für dich"
 
-#: templates/content/home.html:119
+#: templates/content/home.html:118
 msgid "Current content"
 msgstr "Aktuelle Inhalte"
 
-#: templates/content/home.html:123 templates/usecases/list.html:9
+#: templates/content/home.html:122 templates/usecases/list.html:9
 #: usecases/models.py:34 usecases/views.py:66 usecases/views.py:125
 msgid "Usecases"
 msgstr "Anwendungsfälle"
 
-#: templates/content/home.html:132
+#: templates/content/home.html:131
 msgid "No published content yet."
 msgstr "Noch keine veröffentlichten Inhalte."
 
