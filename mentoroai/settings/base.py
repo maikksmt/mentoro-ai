@@ -11,6 +11,8 @@ from typing import Iterable, List, Tuple
 import dj_database_url
 from dotenv import load_dotenv
 
+from mentoroai.settings import env_bool
+
 load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -220,10 +222,10 @@ PARLER_DEFAULT_LANGUAGE_CODE = 'en'
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "media/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 # Hashed filenames + Gzip/Brotli ausliefern
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -390,7 +392,7 @@ EMAIL_HOST = os.getenv("DJANGO_EMAIL_HOST")
 EMAIL_PORT = os.getenv("DJANGO_EMAIL_PORT")
 EMAIL_HOST_USER = os.getenv("DJANGO_EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("DJANGO_EMAIL_HOST_PASSWORD")
-EMAIL_USE_TLS = os.getenv("DJANGO_EMAIL_USE_TLS")
+EMAIL_USE_TLS = env_bool("DJANGO_EMAIL_USE_TLS")
 # EMAIL_USE_SSL = os.getenv("DJANGO_EMAIL_USE_SSL")
 EMAIL_TIMEOUT = 60
 # EMAIL_SSL_KEYFILE = os.getenv("DJANGO_EMAIL_SSL_KEYFILE")
