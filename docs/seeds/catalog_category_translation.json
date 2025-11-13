@@ -1,0 +1,222 @@
+[
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 1,
+    "fields": {
+      "language_code": "de",
+      "name": "Generative Chatbots",
+      "description": "Werkzeuge auf großen Sprachmodellen (LLMs), die natürliche Sprache verstehen und Antworten generieren—vom einfachen Chat bis zu komplexen Arbeitsabläufen.",
+      "slug": "",
+      "master": 1
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 2,
+    "fields": {
+      "language_code": "en",
+      "name": "Generative Chatbots",
+      "description": "Tools powered by large language models (LLMs) that understand natural language and generate responses—from simple chat to complex workflows.",
+      "slug": "",
+      "master": 1
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 3,
+    "fields": {
+      "language_code": "de",
+      "name": "Coding-Assistenten",
+      "description": "Assistenten, die Quellcode vorschlagen, erklären, Tests generieren und beim Debugging helfen—direkt in IDE oder Editor.",
+      "slug": "",
+      "master": 2
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 4,
+    "fields": {
+      "language_code": "en",
+      "name": "Coding Assistants",
+      "description": "Assistants that suggest and explain code, generate tests, and help debug—right inside your IDE or editor.",
+      "slug": "",
+      "master": 2
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 5,
+    "fields": {
+      "language_code": "de",
+      "name": "Computer Vision",
+      "description": "Dienste, die Bilder verstehen, Gegenstände erkennen und visuelle Suchen ermöglichen—nützlich von Ersatzteilen bis Dokumenten.",
+      "slug": "",
+      "master": 3
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 6,
+    "fields": {
+      "language_code": "en",
+      "name": "Computer Vision",
+      "description": "Services that understand images, detect objects and enable visual search—useful from spare parts to documents.",
+      "slug": "",
+      "master": 3
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 7,
+    "fields": {
+      "language_code": "de",
+      "name": "Übersetzung & Echtzeit-Untertitel",
+      "description": "KI-gestützte Systeme für Live-Untertitel, Simultan-Übersetzung und hochwertige Textübersetzungen.",
+      "slug": "",
+      "master": 4
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 8,
+    "fields": {
+      "language_code": "en",
+      "name": "Translation & Real-Time Captions",
+      "description": "AI-powered systems for live captions, simultaneous interpretation and high-quality text translation.",
+      "slug": "",
+      "master": 4
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 9,
+    "fields": {
+      "language_code": "de",
+      "name": "Schreiben & Berichte",
+      "description": "Werkzeuge, die Tabellen interpretieren, Trends finden und druckreife Texte erzeugen—von E-Mail-Briefings bis Vollberichten.",
+      "slug": "",
+      "master": 5
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 10,
+    "fields": {
+      "language_code": "en",
+      "name": "Writing & Reporting",
+      "description": "Tools that interpret tables, spot trends and produce publication-ready text—from email briefs to full reports.",
+      "slug": "",
+      "master": 5
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 11,
+    "fields": {
+      "language_code": "de",
+      "name": "Fitness & Gesundheit (KI-gesteuert)",
+      "description": "Algorithmen, die Biosignale auswerten und adaptive Trainings-Empfehlungen geben—z. B. Erholungs-Scores und Tagesform.",
+      "slug": "",
+      "master": 6
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 12,
+    "fields": {
+      "language_code": "en",
+      "name": "Fitness & Health (AI-Driven)",
+      "description": "Algorithms that read biosignals and provide adaptive training guidance—e.g., recovery scores and readiness.",
+      "slug": "",
+      "master": 6
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 13,
+    "fields": {
+      "language_code": "de",
+      "name": "Generatives Design & Bilder",
+      "description": "Modelle zur Bild-Synthese und Iteration (Logos, Mockups, Stile), oft mit Prompt-basierten Workflows.",
+      "slug": "",
+      "master": 7
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 14,
+    "fields": {
+      "language_code": "en",
+      "name": "Generative Design & Images",
+      "description": "Models for image synthesis and iteration (logos, mockups, styles), usually with prompt-based workflows.",
+      "slug": "",
+      "master": 7
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 15,
+    "fields": {
+      "language_code": "de",
+      "name": "Kochen & Rezepte (KI)",
+      "description": "Assistenten, die Zutaten interpretieren, passende Rezepte vorschlagen und Zubereitungsschritte strukturiert ausgeben.",
+      "slug": "",
+      "master": 8
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 16,
+    "fields": {
+      "language_code": "en",
+      "name": "Cooking & Recipes (AI)",
+      "description": "Assistants that interpret ingredients, propose recipes and output structured cooking steps.",
+      "slug": "",
+      "master": 8
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 17,
+    "fields": {
+      "language_code": "de",
+      "name": "Pflanzen-Diagnose",
+      "description": "Visuelle KI erkennt Blattmuster, Symptome und empfiehlt gezielte Maßnahmen—inkl. Düngung und Pflege.",
+      "slug": "",
+      "master": 9
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 18,
+    "fields": {
+      "language_code": "en",
+      "name": "Plant Diagnosis",
+      "description": "Visual AI detects leaf patterns and symptoms and recommends targeted actions—incl. fertilizing and care.",
+      "slug": "",
+      "master": 9
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 19,
+    "fields": {
+      "language_code": "de",
+      "name": "Reise-Planung (KI)",
+      "description": "Assistenten, die Budget, Präferenzen und Reiserhythmus berücksichtigen und strukturierte Reisepläne generieren.",
+      "slug": "",
+      "master": 10
+    }
+  },
+  {
+    "model": "catalog.categorytranslation",
+    "pk": 20,
+    "fields": {
+      "language_code": "en",
+      "name": "Travel Planning (AI)",
+      "description": "Assistants that factor in budget, preferences and travel pace to generate structured itineraries.",
+      "slug": "",
+      "master": 10
+    }
+  }
+]

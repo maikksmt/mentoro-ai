@@ -1,0 +1,125 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block extrastyle %}
+    <style>
+        .diff-ins {
+            background: #39be2f;
+            text-decoration: none;
+            padding: .05rem .2rem;
+            border-radius: .15rem;
+        }
+
+        .diff-del {
+            background: #ea5721;
+            text-decoration: line-through;
+            padding: .05rem .2rem;
+            border-radius: .15rem;
+        }
+
+        .diff-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.25rem;
+        }
+
+        .diff-table th, .diff-table td {
+            border: 1px solid var(--hairline-color, #ddd);
+            vertical-align: top;
+            padding: .5rem .6rem;
+        }
+
+        .diff-table th {
+            width: 14rem;
+            background: var(--header-bg, #39be2f);
+        }
+
+        .muted {
+            opacity: .7;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>{% trans "Draft vs. Live" %}: {{ object }}</h1>
+
+    {% if comparisons %}
+        {% for cmp in comparisons %}
+            <h2 style="margin-top:1rem;">{{ cmp.name }} <small class="muted">({{ cmp.code }})</small></h2>
+
+            {# --- Guide-Felder: nur Unterschiede --- #}
+            {% if cmp.changes %}
+                <table class="diff-table">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Field" %}</th>
+                        <th>{% trans "Draft (current form)" %}</th>
+                        <th>{% trans "Live (published)" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ch in cmp.changes %}
+                        <tr>
+                            <th scope="row">{{ ch.field|capfirst }}</th>
+                            <td>
+                                <div>{{ ch.left|safe }}</div>
+                            </td>
+                            <td>
+                                <div>{{ ch.right|safe }}</div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+
+            {# --- Sections: nur Änderungen --- #}
+            {% if cmp.section_changes %}
+                <h3 style="margin:.5rem 0">{% trans "Sections with changes" %}</h3>
+                <table class="diff-table">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Section" %}</th>
+                        <th>{% trans "Draft (current form)" %}</th>
+                        <th>{% trans "Live (published)" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for sc in cmp.section_changes %}
+                        {# Section Kopfzeile mit Badge added/changed #}
+                        {% for fld in sc.fields %}
+                            <tr>
+                                {% if forloop.first %}
+                                    <th scope="row" rowspan="{{ sc.fields|length }}">
+                                        <div>
+                                            {{ sc.label }}
+                                            {% if sc.kind == "added" %}
+                                                <span class="badge badge-added">{% trans "added" %}</span>
+                                            {% elif sc.kind == "changed" %}
+                                                <span class="badge badge-changed">{% trans "changed" %}</span>
+                                            {% endif %}
+                                        </div>
+                                    </th>
+                                {% endif %}
+                                <td>
+                                    <strong class="muted">{{ fld.field|capfirst }}:</strong>
+                                    <div>{{ fld.left|safe }}</div>
+                                </td>
+                                <td>
+                                    <strong class="muted">{{ fld.field|capfirst }}:</strong>
+                                    <div>{{ fld.right|safe }}</div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p class="muted">{% trans "No differences found across languages." %}</p>
+    {% endif %}
+
+    <p style="margin-top:1rem;">
+        <a href="{{ request.META.HTTP_REFERER|default:'..' }}">{% trans "Back" %}</a>
+    </p>
+{% endblock %}

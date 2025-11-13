@@ -1,0 +1,142 @@
+# ===============================
+# Django / Python .gitignore
+# ===============================
+
+# Bytecode / Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# OS / Finder / Explorer
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs / Local DBs
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+*.db
+
+# Environment files
+.env
+.env.local
+.env.prod
+.env.dev
+*.env
+.env.example.local
+
+# Static & Media (werden im Deployment generiert)
+staticfiles/
+static/
+media/
+
+# Build / Compiled assets
+*.mo
+*.compiled.js
+*.min.js
+*.map
+*.bundle.js
+*.lock
+*.cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python tooling
+pip-wheel-metadata/
+__pypackages__/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+develop-eggs/
+.installed.cfg
+
+# Celery / Redis / Cache
+celerybeat-schedule
+celerybeat.pid
+
+# Coverage / Testing
+.coverage
+*.cover
+coverage.xml
+htmlcov/
+.tox/
+nosetests.xml
+test-results.xml
+pytest_cache/
+.cache/
+
+# MyPy / Lint / Type Checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+ruff_cache/
+
+# Translations
+locale/*/django.mo
+
+# IDE settings / workspace
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+
+# Backup / Temp files
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*.kate-swp
+*.komodoproject
+.project
+.pydevproject
+
+# Docker / Deployment
+docker-compose.override.yml
+*.pid
+*.sock
+*.tar
+*.zip
+
+# Coverage and reports
+reports/
+htmlcov/
+coverage/
+logs/
+
+# Custom project paths
+media_backup/
+static_backup/
+media/tinymce/
+migrations_backup/
+
+node_modules/
+
+# Ignore generated migration files except init
+#**/migrations/*
+#!**/migrations/__init__.py
+
+*.sh

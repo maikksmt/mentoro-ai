@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}<title>{% trans "Unsubscribe from Newsletter" %} – MentoroAI</title>{% endblock %}
+{% block content %}
+    <h1 class="text-3xl font-semibold pt-4">{% trans "Unsubscribe from Newsletter" %}</h1>
+    <p class="py-2">{% trans "Enter your email address to unsubscribe from future emails." %}</p>
+
+    <form method="post" class="space-y-4 max-w-md py-4">
+        {% csrf_token %}
+        <label class="form-control w-full">
+            <span class="label-text">{{ form.email.label }}</span>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <span class="text-error text-sm">{{ form.email.errors|join:", " }}</span>{% endif %}
+        </label>
+        <label class="form-control w-full">
+            <span class="label-text">{{ form.reason.label }}</span>
+            {{ form.reason }}
+        </label>
+        <button type="submit" class="btn btn-error">{% trans "Unsubscribe" %}</button>
+    </form>
+
+    {% if messages %}
+        <ul class="space-y-2 py-4">
+            {% for message in messages %}
+                <li class="alert alert-info">{{ message }}</li>{% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

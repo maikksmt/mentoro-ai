@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}<title>{{ seo_title }} – MentoroAI</title>{% endblock %}
+
+
+
+{% block content %}
+    <div class="container mx-auto">
+        <h1 class="text-2xl mb-4 font-bold">{% blocktrans %}Review Queue{% endblocktrans %}</h1>
+        {% for key, qs in queues %}
+            <div class="mb-2">
+                <h2 class="text-xl font-semibold capitalize">{{ key }}</h2>
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>{% trans "Title" %}</th>
+                            <th>{% trans "Author" %}</th>
+                            <th>ID</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for it in qs %}
+                            <tr>
+                                <td>{{ it.title }}</td>
+                                <td>{% if it.author %}{{ it.author.get_full_name|default:it.author.username }}{% else %}
+                                    —{% endif %}</td>
+                                <td>#{{ it.pk }}</td>
+                                <td class="text-right">
+                                    <form method="post" action="{% url 'content:editorial:review_update' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="model" value="{{ key }}">
+                                        <input type="hidden" name="object_id" value="{{ it.pk }}">
+                                        <select name="status" class="select select-bordered select-sm mr-2">
+                                            <option value="review" selected>Review</option>
+                                            <option value="published">{% trans "Publish" %}</option>
+                                            <option value="draft">{% trans "Draft" %}</option>
+                                        </select>
+                                        <button class="btn btn-sm btn-primary">{% trans "Apply changes" %}</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="4" class="opacity-70">
+                                    {% blocktrans %}
+                                        No posts in review process
+                                    {% endblocktrans %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

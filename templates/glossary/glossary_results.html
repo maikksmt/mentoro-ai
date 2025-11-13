@@ -1,0 +1,20 @@
+{% load i18n %}
+{% if terms %}
+    <ul class="menu bg-base-100 rounded-box w-full">
+        {% for term in terms %}
+            <li class="border-b last:border-b-0">
+                <a href="{% url 'glossary:detail' term.slug %}"
+                   class="flex flex-col text-center py-3">
+                    <span class="font-semibold">{{ term.term }}</span>
+                    {% if not compact %}
+                        <span class="text-sm opacity-70">{{ term.short_definition|truncatewords:24 }}</span>
+                    {% else %}
+                        <span class="text-xs opacity-70">{{ term.short_definition|truncatewords:12 }}</span>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="text-sm opacity-70 py-2">{% blocktrans %}No hits.{% endblocktrans %}</div>
+{% endif %}

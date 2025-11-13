@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}<title>{% trans "Unsubscribe" %} – MentoroAI</title>{% endblock %}
+{% block content %}
+    <div class="prose max-w-2xl">
+        {% if invalid %}
+            <h1>{% trans "Invalid or expired link" %}</h1>
+            <p>{% trans "Please unsubscribe via the form instead." %}</p>
+        {% else %}
+            <h1>{% trans "You have been unsubscribed" %}</h1>
+            <p>{% blocktrans with email=email %}{{ email }} will no longer receive ournewsletter.{% endblocktrans %}</p>
+        {% endif %}
+    </div>
+{% endblock %}

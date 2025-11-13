@@ -1,0 +1,178 @@
+[
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 1,
+    "fields": {
+      "usecase_id": 1,
+      "tool_id": 104
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 2,
+    "fields": {
+      "usecase_id": 1,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 3,
+    "fields": {
+      "usecase_id": 1,
+      "tool_id": 103
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 4,
+    "fields": {
+      "usecase_id": 3,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 5,
+    "fields": {
+      "usecase_id": 3,
+      "tool_id": 102
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 6,
+    "fields": {
+      "usecase_id": 2,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 7,
+    "fields": {
+      "usecase_id": 4,
+      "tool_id": 105
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 8,
+    "fields": {
+      "usecase_id": 4,
+      "tool_id": 106
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 9,
+    "fields": {
+      "usecase_id": 4,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 10,
+    "fields": {
+      "usecase_id": 5,
+      "tool_id": 104
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 11,
+    "fields": {
+      "usecase_id": 5,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 12,
+    "fields": {
+      "usecase_id": 6,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 13,
+    "fields": {
+      "usecase_id": 7,
+      "tool_id": 107
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 14,
+    "fields": {
+      "usecase_id": 7,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 15,
+    "fields": {
+      "usecase_id": 8,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 16,
+    "fields": {
+      "usecase_id": 8,
+      "tool_id": 108
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 17,
+    "fields": {
+      "usecase_id": 8,
+      "tool_id": 109
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 18,
+    "fields": {
+      "usecase_id": 8,
+      "tool_id": 110
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 19,
+    "fields": {
+      "usecase_id": 9,
+      "tool_id": 101
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 20,
+    "fields": {
+      "usecase_id": 9,
+      "tool_id": 111
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 21,
+    "fields": {
+      "usecase_id": 10,
+      "tool_id": 112
+    }
+  },
+  {
+    "model": "usecases.usecase_tools",
+    "pk": 22,
+    "fields": {
+      "usecase_id": 10,
+      "tool_id": 101
+    }
+  }
+]

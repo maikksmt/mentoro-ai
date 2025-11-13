@@ -1,0 +1,376 @@
+[
+  {
+    "model": "guides.guide",
+    "pk": 14,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-11 17:44:48.976119 +00:00",
+      "published_at": "2025-11-11 17:44:48.932888 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-09 02:30:00.000000 +00:00",
+      "is_published": true,
+      "last_published_revision_id": null,
+      "review_note": "Admin-Action publish",
+      "reviewed_at": "2025-11-11 17:44:48.932883 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-09 02:30:00.000000 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<p>Künstliche Intelligenz ist heute für alle zugänglich. Viele Anbieter stellen kostenlose Versionen bereit, mit denen du sofort starten kannst. Hier lernst du die besten Einsteiger-Tools kennen – übersichtlich und nach Anwendungsgebiet sortiert.</p>",
+          "slug": "die-besten-kostenlosen-ki-tools",
+          "intro": "<p>Du willst erste Erfahrungen mit KI machen – aber ohne gleich Geld auszugeben? Kein Problem! Hier findest du eine Übersicht kostenloser Tools, mit denen du sofort loslegen kannst: Schreiben, Bilder erstellen, übersetzen und vieles mehr.</p>",
+          "title": "Die besten kostenlosen KI-Tools für Einsteiger – Texte und Bilder erstellen oder verändern, Übersetzung & mehr – ein schneller Überblick",
+          "public_slug": "die-besten-kostenlosen-ki-tools"
+        },
+        "en": {
+          "body": "<p>Artificial intelligence is now accessible to everyone. Many providers offer free versions you can use right away. This guide introduces the best beginner-friendly tools – organized by purpose.</p>",
+          "slug": "best-free-ai-tools",
+          "intro": "<p>Want to explore AI without spending money? No problem! This guide shows free tools to start right away – for writing, image generation, translation, and more.</p>",
+          "title": "The Best Free AI Tools for Beginners – Create and Edit Texts and Images, Translate & More – A Quick Overview",
+          "public_slug": "best-free-ai-tools"
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 12,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-11 17:44:49.061995 +00:00",
+      "published_at": "2025-11-11 17:44:49.025967 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-09 01:30:00.000000 +00:00",
+      "is_published": true,
+      "last_published_revision_id": null,
+      "review_note": "Admin-Action publish",
+      "reviewed_at": "2025-11-11 17:44:49.025961 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-09 01:30:00.000000 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<p>Ob ChatGPT, Bildgeneratoren oder Übersetzungs-Apps – fast alle modernen KI-Systeme basieren auf sogenannten <strong>neuronalen Netzen</strong>. Der Name klingt kompliziert, doch das Grundprinzip ist einfach: Ein neuronales Netz ist ein digitales Nachbild des menschlichen Gehirns.</p><p>Es besteht aus vielen kleinen „Neuronen“, also Rechenpunkten, die miteinander verbunden sind. Jedes Neuron empfängt Signale, gewichtet sie, verarbeitet sie und gibt ein Ergebnis weiter. Millionen solcher Verbindungen erzeugen komplexe Muster – ähnlich, wie unser Gehirn Eindrücke, Erinnerungen und Entscheidungen bildet.</p>",
+          "slug": "was-ist-ein-neuronales-netz",
+          "intro": "<p>Neuronale Netze sind das Herz moderner KI – sie ermöglichen es Computern, aus Beispielen zu lernen, Muster zu erkennen und erstaunlich menschlich zu wirken. Dieser Leitfaden erklärt, wie das Prinzip funktioniert – ohne Formeln, mit klaren Bildern.</p>",
+          "title": "Was ist ein neuronales Netz? – Die Grundidee hinter modernen KI-Systemen verständlich erklärt",
+          "public_slug": "was-ist-ein-neuronales-netz"
+        },
+        "en": {
+          "body": "<p>From ChatGPT and image generators to translation apps — most modern AI systems rely on <strong>neural networks</strong>. The term sounds complex, but the core idea is simple: a neural network is a digital echo of how the brain processes information.</p><p>It consists of many small \"neurons\"—computational units—connected by weighted links. Each neuron receives signals, weights them, computes a result, and passes it on. Millions of such connections form patterns, much like our brains form perceptions, memories, and decisions.</p>",
+          "slug": "what-is-a-neural-network",
+          "intro": "<p>Neural networks are the heart of modern AI—letting computers learn from examples and recognize patterns. This guide explains the idea clearly and visually, without formulas.</p>",
+          "title": "What is a Neural Network? – The Core Idea Behind Modern AI Explained Simply",
+          "public_slug": "what-is-a-neural-network"
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 7,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:08:55.334298 +00:00",
+      "published_at": "2025-11-08 15:08:55.229221 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-06 18:08:58.259959 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 600,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:08:55.229216 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:08:41.757893 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1031\" data-end=\"1046\">Einleitung</h2>\r\n<p data-start=\"1047\" data-end=\"1343\">Der K&uuml;hlschrank ist halb voll, aber dir fehlt die Idee, was du kochen k&ouml;nntest?<br data-start=\"1126\" data-end=\"1129\">Hier kommt <strong data-start=\"1140\" data-end=\"1171\">K&uuml;nstliche Intelligenz (KI)</strong> ins Spiel: Sie kann aus deinen vorhandenen Zutaten neue, &uuml;berraschende Rezepte vorschlagen &ndash; ganz nach deinem Geschmack, deinem Ern&auml;hrungsstil und der Zeit, die du hast.</p>\r\n<p data-start=\"1345\" data-end=\"1625\">In diesem Leitfaden erf&auml;hrst du, wie du KI ganz einfach als <strong data-start=\"1405\" data-end=\"1421\">K&uuml;chenhelfer</strong> nutzt:<br data-start=\"1428\" data-end=\"1431\">Zutaten eingeben, Vorschl&auml;ge pr&uuml;fen, Varianten ausw&auml;hlen und Gerichte anpassen.<br data-start=\"1510\" data-end=\"1513\">Perfekt f&uuml;r Einsteiger:innen, Familien, Studierende &ndash; und alle, die aus Resten etwas Leckeres zaubern m&ouml;chten.</p>\r\n<hr data-start=\"1627\" data-end=\"1630\">\r\n<h2 data-start=\"1632\" data-end=\"1652\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1653\" data-end=\"2006\">\r\n<li data-start=\"1653\" data-end=\"1734\"><strong data-start=\"1655\" data-end=\"1686\">Kreative Rezepte entdecken:</strong> KI liefert neue Ideen aus vorhandenen Zutaten</li>\r\n<li data-start=\"1735\" data-end=\"1796\"><strong data-start=\"1737\" data-end=\"1762\">Zeit und Geld sparen:</strong> Reste verwerten statt wegwerfen</li>\r\n<li data-start=\"1797\" data-end=\"1858\"><strong data-start=\"1799\" data-end=\"1817\">Gesund kochen:</strong> Vorschl&auml;ge an Ern&auml;hrungsweise anpassen</li>\r\n<li data-start=\"1859\" data-end=\"1931\"><strong data-start=\"1861\" data-end=\"1886\">Abwechslung schaffen:</strong> Varianten mit neuen Gew&uuml;rzen oder Beilagen</li>\r\n<li data-start=\"1932\" data-end=\"2006\"><strong data-start=\"1934\" data-end=\"1961\">Mehr Spa&szlig; in der K&uuml;che:</strong> KI als inspirierende K&uuml;chenfreundin nutzen</li>\r\n</ul>\r\n<hr data-start=\"2008\" data-end=\"2011\">\r\n<h2 data-start=\"2013\" data-end=\"2055\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"2056\" data-end=\"2288\">\r\n<li data-start=\"2056\" data-end=\"2117\">Menschen, die oft vor einem halbvollen K&uuml;hlschrank stehen</li>\r\n<li data-start=\"2118\" data-end=\"2175\">Familien, Studierende und Berufst&auml;tige mit wenig Zeit</li>\r\n<li data-start=\"2176\" data-end=\"2219\">Senior:innen, die neue Kochideen suchen</li>\r\n<li data-start=\"2220\" data-end=\"2288\">Einsteiger:innen, die spielerisch mit KI experimentieren m&ouml;chten</li>\r\n</ul>\r\n<hr data-start=\"2290\" data-end=\"2293\">\r\n<h2 data-start=\"2295\" data-end=\"2321\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2322\" data-end=\"2579\">\r\n<li data-start=\"2322\" data-end=\"2376\">Zutaten eingeben und passende Rezeptideen erhalten</li>\r\n<li data-start=\"2377\" data-end=\"2426\">Varianten und Alternativen vorschlagen lassen</li>\r\n<li data-start=\"2427\" data-end=\"2475\">Rezepte an Allergien oder Vorlieben anpassen</li>\r\n<li data-start=\"2476\" data-end=\"2524\">Zeit, Menge und Schwierigkeitsgrad bestimmen</li>\r\n<li data-start=\"2525\" data-end=\"2579\">KI kreativ und verantwortungsvoll im Alltag nutzen</li>\r\n</ul>\r\n<hr data-start=\"2581\" data-end=\"2584\">",
+          "slug": "aus-deinen-vorraten-leckere-rezepte-kreieren",
+          "intro": "<p>Ein unterhaltsamer und praktischer Leitfaden f&uuml;r alle, die mit Hilfe von K&uuml;nstlicher Intelligenz (KI) kreative Rezeptideen entwickeln m&ouml;chten &ndash; aus genau den Zutaten, die schon zu Hause sind.<br data-start=\"837\" data-end=\"840\">Lerne Schritt f&uuml;r Schritt, wie du KI zum smarten Kochassistenten machst: Zutaten eingeben, Rezeptvorschl&auml;ge erhalten, Varianten ausprobieren &ndash; einfach, gesund und lecker.</p>",
+          "title": "Aus deinen Vorräten leckere Rezepte kreieren – Zutaten eingeben, Rezeptideen erhalten – inkl. Varianten",
+          "public_slug": null
+        },
+        "en": {
+          "body": "<h2 data-start=\"1171\" data-end=\"1188\">Introduction</h2>\r\n<p data-start=\"1189\" data-end=\"1399\">The fridge is half full, but you don&rsquo;t know what to cook?<br data-start=\"1246\" data-end=\"1249\">That&rsquo;s where <strong data-start=\"1262\" data-end=\"1294\">Artificial Intelligence (AI)</strong> can help: it can turn your ingredients into new, exciting recipes that fit your time, diet, and taste.</p>\r\n<p data-start=\"1401\" data-end=\"1666\">In this guide, you&rsquo;ll learn how to use AI as your <strong data-start=\"1451\" data-end=\"1469\">kitchen helper</strong>:<br data-start=\"1470\" data-end=\"1473\">enter your ingredients, explore ideas, adjust recipes, and discover creative variants.<br data-start=\"1559\" data-end=\"1562\">Perfect for beginners, families, students &ndash; and anyone who loves to cook smart instead of complicated.</p>\r\n<hr data-start=\"1668\" data-end=\"1671\">\r\n<h2 data-start=\"1673\" data-end=\"1696\">Goals and Benefits</h2>\r\n<ul data-start=\"1697\" data-end=\"2058\">\r\n<li data-start=\"1697\" data-end=\"1781\"><strong data-start=\"1699\" data-end=\"1724\">Discover new recipes:</strong> AI suggests creative dishes from what you already have</li>\r\n<li data-start=\"1782\" data-end=\"1853\"><strong data-start=\"1784\" data-end=\"1808\">Save time and money:</strong> Reduce food waste and use leftovers wisely</li>\r\n<li data-start=\"1854\" data-end=\"1919\"><strong data-start=\"1856\" data-end=\"1875\">Cook healthier:</strong> Adapt recipes to your diet or preferences</li>\r\n<li data-start=\"1920\" data-end=\"1983\"><strong data-start=\"1922\" data-end=\"1938\">Add variety:</strong> Try different styles and seasoning options</li>\r\n<li data-start=\"1984\" data-end=\"2058\"><strong data-start=\"1986\" data-end=\"2004\">Enjoy cooking:</strong> Use AI as your friendly, creative kitchen companion</li>\r\n</ul>\r\n<hr data-start=\"2060\" data-end=\"2063\">\r\n<h2 data-start=\"2065\" data-end=\"2091\">Who This Guide Is For</h2>\r\n<ul data-start=\"2092\" data-end=\"2337\">\r\n<li data-start=\"2092\" data-end=\"2156\">Anyone staring at a half-empty fridge wondering what to cook</li>\r\n<li data-start=\"2157\" data-end=\"2225\">Families, students, or professionals who want quick, fresh ideas</li>\r\n<li data-start=\"2226\" data-end=\"2280\">Seniors looking for new inspiration in the kitchen</li>\r\n<li data-start=\"2281\" data-end=\"2337\">Beginners curious about using AI in everyday cooking</li>\r\n</ul>\r\n<hr data-start=\"2339\" data-end=\"2342\">\r\n<h2 data-start=\"2344\" data-end=\"2366\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2367\" data-end=\"2655\">\r\n<li data-start=\"2367\" data-end=\"2429\">How to enter ingredients and get personalized recipe ideas</li>\r\n<li data-start=\"2430\" data-end=\"2490\">How to ask for alternatives, versions, or faster options</li>\r\n<li data-start=\"2491\" data-end=\"2547\">How to adapt recipes to allergies or personal tastes</li>\r\n<li data-start=\"2548\" data-end=\"2596\">How to choose time, servings, and difficulty</li>\r\n<li data-start=\"2597\" data-end=\"2655\">How to use AI creatively and responsibly in daily life</li>\r\n</ul>",
+          "slug": "create-delicious-recipes-from-what-you-have",
+          "intro": "<p>A fun and practical guide for everyone who wants to use Artificial Intelligence (AI) to create tasty recipes with the ingredients already in their kitchen.<br data-start=\"967\" data-end=\"970\">Learn step by step how to turn AI into your smart cooking assistant: enter what you have, get creative recipe ideas, try different variations &ndash; simple, healthy, and full of flavor.</p>",
+          "title": "Create Delicious Recipes from What You Have – Enter Ingredients, Get Recipe Ideas – Including Variations",
+          "public_slug": null
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 5,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:08:55.412985 +00:00",
+      "published_at": "2025-11-08 15:08:55.338798 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-05 18:47:48.887585 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 609,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:08:55.338792 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:08:41.781091 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1083\" data-end=\"1098\">Einleitung</h2>\r\n<p data-start=\"1099\" data-end=\"1353\">Kreativit&auml;t lebt von Ideen &ndash; und manchmal auch von Unterst&uuml;tzung.<br data-start=\"1164\" data-end=\"1167\">K&uuml;nstliche Intelligenz (KI) kann heute nicht nur Texte schreiben, sondern auch Bilder malen, Musik komponieren oder Design-Vorschl&auml;ge machen. Doch viele fragen sich: <em data-start=\"1333\" data-end=\"1351\">Wo f&auml;ngt man an?</em></p>\r\n<p data-start=\"1355\" data-end=\"1595\">Dieser Leitfaden f&uuml;hrt dich Schritt f&uuml;r Schritt durch die Welt der KI-Tools f&uuml;r kreative K&ouml;pfe.<br data-start=\"1450\" data-end=\"1453\">Du lernst, wie du KI als <strong data-start=\"1478\" data-end=\"1497\">Ideenverst&auml;rker</strong>, <strong data-start=\"1499\" data-end=\"1519\">Sparringspartner</strong> und <strong data-start=\"1524\" data-end=\"1541\">Entwurfshilfe</strong> nutzt &ndash; ohne deine eigene Handschrift zu verlieren.</p>\r\n<hr data-start=\"1597\" data-end=\"1600\">\r\n<h2 data-start=\"1602\" data-end=\"1622\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1623\" data-end=\"1944\">\r\n<li data-start=\"1623\" data-end=\"1680\"><strong data-start=\"1625\" data-end=\"1651\">Neue Ideen entwickeln:</strong> Inspiration auf Knopfdruck</li>\r\n<li data-start=\"1681\" data-end=\"1756\"><strong data-start=\"1683\" data-end=\"1712\">Kreative Blockaden l&ouml;sen:</strong> KI als Gespr&auml;chspartner f&uuml;r Brainstorming</li>\r\n<li data-start=\"1757\" data-end=\"1816\"><strong data-start=\"1759\" data-end=\"1775\">Zeit sparen:</strong> Schneller zu ersten Entw&uuml;rfen gelangen</li>\r\n<li data-start=\"1817\" data-end=\"1873\"><strong data-start=\"1819\" data-end=\"1846\">Projekte strukturieren:</strong> Von der Idee zum Konzept</li>\r\n<li data-start=\"1874\" data-end=\"1944\"><strong data-start=\"1876\" data-end=\"1908\">Eigene Handschrift bewahren:</strong> KI als Werkzeug, nicht als Ersatz</li>\r\n</ul>\r\n<hr data-start=\"1946\" data-end=\"1949\">\r\n<h2 data-start=\"1951\" data-end=\"1993\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"1994\" data-end=\"2286\">\r\n<li data-start=\"1994\" data-end=\"2062\">Kreative Menschen in Kunst, Text, Musik, Foto, Design oder Video</li>\r\n<li data-start=\"2063\" data-end=\"2113\">Lehrende, Studierende und Hobby-K&uuml;nstler:innen</li>\r\n<li data-start=\"2114\" data-end=\"2193\">Selbstst&auml;ndige und Teams, die Ideen visualisieren oder pr&auml;sentieren m&ouml;chten</li>\r\n<li data-start=\"2194\" data-end=\"2286\">Einsteiger:innen, die wissen wollen, welche Tools sich lohnen und wie man sicher startet</li>\r\n</ul>\r\n<hr data-start=\"2288\" data-end=\"2291\">\r\n<h2 data-start=\"2293\" data-end=\"2319\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2320\" data-end=\"2604\">\r\n<li data-start=\"2320\" data-end=\"2400\">KI-Tools gezielt f&uuml;r Ideenfindung, Schreiben, Gestaltung und Musik einsetzen</li>\r\n<li data-start=\"2401\" data-end=\"2444\">Ergebnisse kritisch pr&uuml;fen und anpassen</li>\r\n<li data-start=\"2445\" data-end=\"2497\">Tools kombinieren, um Workflows zu beschleunigen</li>\r\n<li data-start=\"2498\" data-end=\"2550\">Rechte, Urheber- und Datenschutzfragen verstehen</li>\r\n<li data-start=\"2551\" data-end=\"2604\">Die eigene Kreativit&auml;t durch KI bewusst erweitern</li>\r\n</ul>",
+          "slug": "ki-tools-fur-kreative-kopfe",
+          "intro": "<p>Ein inspirierender Leitfaden f&uuml;r alle, die mit K&uuml;nstlicher Intelligenz kreativ arbeiten m&ouml;chten.<br data-start=\"823\" data-end=\"826\">Ob beim Schreiben, Gestalten, Illustrieren oder Komponieren &ndash; dieser Guide zeigt Schritt f&uuml;r Schritt, welche Tools wirklich helfen, wie man sie kombiniert und worauf man achten sollte, damit die eigene Kreativit&auml;t im Mittelpunkt bleibt.</p>",
+          "title": "KI-Tools für kreative Köpfe – Von Ideenfindung bis Entwurf: Welche Tools sich lohnen",
+          "public_slug": null
+        },
+        "en": {
+          "body": "<h2 data-start=\"989\" data-end=\"1006\">Introduction</h2>\r\n<p data-start=\"1007\" data-end=\"1259\">Creativity starts with an idea &ndash; and sometimes, a little help can take it further.<br data-start=\"1089\" data-end=\"1092\">Artificial Intelligence (AI) can now write stories, paint pictures, compose music, and even design layouts. But with so many tools available, where should you begin?</p>\r\n<p data-start=\"1261\" data-end=\"1495\">This guide walks you step by step through the world of <strong data-start=\"1316\" data-end=\"1347\">AI tools for creative minds</strong>.<br data-start=\"1348\" data-end=\"1351\">You&rsquo;ll learn how to use AI as an <strong data-start=\"1384\" data-end=\"1400\">idea booster</strong>, a <strong data-start=\"1404\" data-end=\"1424\">creative partner</strong>, and a <strong data-start=\"1432\" data-end=\"1451\">drafting helper</strong> &ndash; without losing your own artistic voice.</p>\r\n<hr data-start=\"1497\" data-end=\"1500\">\r\n<h2 data-start=\"1502\" data-end=\"1525\">Goals and Benefits</h2>\r\n<ul data-start=\"1526\" data-end=\"1825\">\r\n<li data-start=\"1526\" data-end=\"1576\"><strong data-start=\"1528\" data-end=\"1548\">Spark new ideas:</strong> Get inspiration instantly</li>\r\n<li data-start=\"1577\" data-end=\"1642\"><strong data-start=\"1579\" data-end=\"1608\">Overcome creative blocks:</strong> Use AI as a brainstorming buddy</li>\r\n<li data-start=\"1643\" data-end=\"1698\"><strong data-start=\"1645\" data-end=\"1659\">Save time:</strong> Move faster from idea to first draft</li>\r\n<li data-start=\"1699\" data-end=\"1762\"><strong data-start=\"1701\" data-end=\"1720\">Stay organized:</strong> Turn raw ideas into structured concepts</li>\r\n<li data-start=\"1763\" data-end=\"1825\"><strong data-start=\"1765\" data-end=\"1785\">Keep your style:</strong> Treat AI as a tool, not a replacement</li>\r\n</ul>\r\n<hr data-start=\"1827\" data-end=\"1830\">\r\n<h2 data-start=\"1832\" data-end=\"1858\">Who This Guide Is For</h2>\r\n<ul data-start=\"1859\" data-end=\"2087\">\r\n<li data-start=\"1859\" data-end=\"1920\">Writers, artists, designers, photographers, and musicians</li>\r\n<li data-start=\"1921\" data-end=\"1964\">Teachers, students, and hobby creatives</li>\r\n<li data-start=\"1965\" data-end=\"2026\">Freelancers and teams creating visual or written concepts</li>\r\n<li data-start=\"2027\" data-end=\"2087\">Beginners curious about how AI can support creative work</li>\r\n</ul>\r\n<hr data-start=\"2089\" data-end=\"2092\">\r\n<h2 data-start=\"2094\" data-end=\"2116\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2117\" data-end=\"2416\">\r\n<li data-start=\"2117\" data-end=\"2185\">How to use AI tools for ideation, writing, visual art, and music</li>\r\n<li data-start=\"2186\" data-end=\"2243\">How to critically review and refine AI-generated work</li>\r\n<li data-start=\"2244\" data-end=\"2299\">How to combine tools to speed up creative workflows</li>\r\n<li data-start=\"2300\" data-end=\"2358\">How to understand copyright and data protection basics</li>\r\n<li data-start=\"2359\" data-end=\"2416\">How to expand your creativity while staying authentic</li>\r\n</ul>",
+          "slug": "ai-tools-for-creative-minds",
+          "intro": "<p>A practical and inspiring guide for everyone who wants to use Artificial Intelligence creatively.<br data-start=\"775\" data-end=\"778\">From brainstorming and writing to design, illustration, and music &ndash; discover which AI tools truly help, how to combine them, and how to keep your personal style at the center of the process.</p>",
+          "title": "AI Tools for Creative Minds – From Ideas to Design: Which Tools Are Worth It",
+          "public_slug": null
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 8,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:07:16.861322 +00:00",
+      "published_at": "2025-11-08 15:07:16.765769 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-06 18:26:35.632346 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 580,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:07:16.765763 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:07:06.439270 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1053\" data-end=\"1068\">Einleitung</h2>\r\n<p data-start=\"1069\" data-end=\"1294\">Ob Zimmerpflanze, Balkonblume oder Gem&uuml;segarten &ndash; Pflanzen brauchen Aufmerksamkeit, und manchmal ist es gar nicht so leicht zu erkennen, was ihnen fehlt.<br data-start=\"1222\" data-end=\"1225\">Zu viel Wasser? Zu wenig Licht? Oder ein Sch&auml;dling an den Bl&auml;ttern?</p>\r\n<p data-start=\"1296\" data-end=\"1497\">Hier kommt <strong data-start=\"1307\" data-end=\"1338\">K&uuml;nstliche Intelligenz (KI)</strong> ins Spiel: Sie kann helfen, Pflanzenprobleme zu erkennen, Pflegetipps zu geben und die optimale D&uuml;ngung vorzuschlagen &ndash; schnell, verst&auml;ndlich und kostenlos.</p>\r\n<p data-start=\"1499\" data-end=\"1650\">Dieser Leitfaden zeigt dir Schritt f&uuml;r Schritt, wie du KI im Gartenalltag nutzt &ndash; mit Foto-Analyse, Pflegeplan und vielen Tipps f&uuml;r gesunde Pflanzen.</p>\r\n<hr data-start=\"1652\" data-end=\"1655\">\r\n<h2 data-start=\"1657\" data-end=\"1677\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1678\" data-end=\"2035\">\r\n<li data-start=\"1678\" data-end=\"1753\"><strong data-start=\"1680\" data-end=\"1701\">Gesunde Pflanzen:</strong> Krankheiten und Mangelerscheinungen fr&uuml;h erkennen</li>\r\n<li data-start=\"1754\" data-end=\"1831\"><strong data-start=\"1756\" data-end=\"1772\">Zeit sparen:</strong> KI liefert schnelle Diagnose und einfache Pflegehinweise</li>\r\n<li data-start=\"1832\" data-end=\"1904\"><strong data-start=\"1834\" data-end=\"1857\">Lernen statt raten:</strong> Ursachen verstehen und langfristig vermeiden</li>\r\n<li data-start=\"1905\" data-end=\"1961\"><strong data-start=\"1907\" data-end=\"1929\">Ressourcen sparen:</strong> D&uuml;ngen und Gie&szlig;en nach Bedarf</li>\r\n<li data-start=\"1962\" data-end=\"2035\"><strong data-start=\"1964\" data-end=\"1990\">Mehr Freude im Garten:</strong> Sicherheit durch verst&auml;ndliche Anleitungen</li>\r\n</ul>\r\n<hr data-start=\"2037\" data-end=\"2040\">\r\n<h2 data-start=\"2042\" data-end=\"2084\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"2085\" data-end=\"2357\">\r\n<li data-start=\"2085\" data-end=\"2153\">Hobbyg&auml;rtner:innen, Einsteiger:innen und Pflanzenliebhaber:innen</li>\r\n<li data-start=\"2154\" data-end=\"2233\">Senior:innen, die ihre Pflanzen mit digitaler Unterst&uuml;tzung pflegen m&ouml;chten</li>\r\n<li data-start=\"2234\" data-end=\"2288\">Familien, Schulen oder Vereine mit Gartenprojekten</li>\r\n<li data-start=\"2289\" data-end=\"2357\">Alle, die nachhaltiger und bewusster mit Pflanzen umgehen wollen</li>\r\n</ul>\r\n<hr data-start=\"2359\" data-end=\"2362\">\r\n<h2 data-start=\"2364\" data-end=\"2390\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2391\" data-end=\"2616\">\r\n<li data-start=\"2391\" data-end=\"2439\">Pflanzenprobleme mit KI-Fotoanalyse erkennen</li>\r\n<li data-start=\"2440\" data-end=\"2486\">Pflege- und Gie&szlig;pl&auml;ne individuell anpassen</li>\r\n<li data-start=\"2487\" data-end=\"2527\">Passende D&uuml;ngerempfehlungen erhalten</li>\r\n<li data-start=\"2528\" data-end=\"2569\">Symptome richtig deuten und vorbeugen</li>\r\n<li data-start=\"2570\" data-end=\"2616\">Deine Pflanzen langfristig ges&uuml;nder halten</li>\r\n</ul>",
+          "slug": "ki-im-garten-pflanzen-pflegen-wie-ein-profi",
+          "intro": "<p data-start=\"694\" data-end=\"1034\">Ein praktischer Leitfaden f&uuml;r Gartenfreunde, die ihre Pflanzen mit Hilfe von K&uuml;nstlicher Intelligenz (KI) besser verstehen und pflegen m&ouml;chten.<br data-start=\"837\" data-end=\"840\">Erfahre, wie du mit KI Fotos auswertest, Krankheiten erkennst, individuelle Pflegetipps erh&auml;ltst und den passenden D&uuml;ngeplan erstellst &ndash; einfach, sicher und auch f&uuml;r Einsteiger:innen geeignet.</p>",
+          "title": "KI im Garten – Pflanzen pflegen wie ein Profi: Diagnose mit Foto, Pflegehinweise und Dünge-Tipps",
+          "public_slug": "ki-im-garten-pflanzen-pflegen-wie-ein-profi"
+        },
+        "en": {
+          "body": "<h2 data-start=\"1126\" data-end=\"1143\">Introduction</h2>\r\n<p data-start=\"1144\" data-end=\"1345\">Whether it&rsquo;s a houseplant, balcony flower, or vegetable garden &ndash; every plant needs care, and it&rsquo;s not always easy to know what&rsquo;s wrong.<br data-start=\"1279\" data-end=\"1282\">Too much water? Too little sunlight? Or a pest on the leaves?</p>\r\n<p data-start=\"1347\" data-end=\"1548\">That&rsquo;s where <strong data-start=\"1360\" data-end=\"1392\">Artificial Intelligence (AI)</strong> can help.<br data-start=\"1402\" data-end=\"1405\">AI tools can identify plant problems, provide care advice, and suggest optimal fertilizer plans &ndash; quickly, accurately, and in plain language.</p>\r\n<p data-start=\"1550\" data-end=\"1711\">This guide will show you step by step how to use AI in your gardening routine: take a photo, analyze it, get advice, and grow healthier plants with confidence.</p>\r\n<hr data-start=\"1713\" data-end=\"1716\">\r\n<h2 data-start=\"1718\" data-end=\"1741\">Goals and Benefits</h2>\r\n<ul data-start=\"1742\" data-end=\"2076\">\r\n<li data-start=\"1742\" data-end=\"1815\"><strong data-start=\"1744\" data-end=\"1765\">Healthier plants:</strong> Detect diseases and nutrient deficiencies early</li>\r\n<li data-start=\"1816\" data-end=\"1873\"><strong data-start=\"1818\" data-end=\"1832\">Save time:</strong> Get quick, clear care guidance from AI</li>\r\n<li data-start=\"1874\" data-end=\"1942\"><strong data-start=\"1876\" data-end=\"1903\">Learn instead of guess:</strong> Understand causes, not just symptoms</li>\r\n<li data-start=\"1943\" data-end=\"2003\"><strong data-start=\"1945\" data-end=\"1964\">Save resources:</strong> Water and fertilize only when needed</li>\r\n<li data-start=\"2004\" data-end=\"2076\"><strong data-start=\"2006\" data-end=\"2031\">Enjoy gardening more:</strong> Gain confidence through clear explanations</li>\r\n</ul>\r\n<hr data-start=\"2078\" data-end=\"2081\">\r\n<h2 data-start=\"2083\" data-end=\"2109\">Who This Guide Is For</h2>\r\n<ul data-start=\"2110\" data-end=\"2327\">\r\n<li data-start=\"2110\" data-end=\"2163\">Hobby gardeners, beginners, and plant enthusiasts</li>\r\n<li data-start=\"2164\" data-end=\"2215\">Seniors who want digital support for plant care</li>\r\n<li data-start=\"2216\" data-end=\"2268\">Families, schools, and community garden projects</li>\r\n<li data-start=\"2269\" data-end=\"2327\">Anyone interested in sustainable and mindful gardening</li>\r\n</ul>\r\n<hr data-start=\"2329\" data-end=\"2332\">\r\n<h2 data-start=\"2334\" data-end=\"2356\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2357\" data-end=\"2613\">\r\n<li data-start=\"2357\" data-end=\"2414\">How to identify plant issues using AI photo diagnosis</li>\r\n<li data-start=\"2415\" data-end=\"2459\">How to build a care and watering routine</li>\r\n<li data-start=\"2460\" data-end=\"2514\">How to get personalized fertilizer recommendations</li>\r\n<li data-start=\"2515\" data-end=\"2560\">How to interpret plant symptoms correctly</li>\r\n<li data-start=\"2561\" data-end=\"2613\">How to maintain long-term plant health naturally</li>\r\n</ul>",
+          "slug": "ai-in-the-garden-care-for-your-plants-like-a-pro",
+          "intro": "<p data-start=\"812\" data-end=\"1107\">A hands-on guide for garden lovers who want to use Artificial Intelligence (AI) to understand and care for their plants better.<br data-start=\"939\" data-end=\"942\">Learn how to use AI for photo-based diagnosis, get personalized care and watering tips, and find the right fertilizer plan &ndash; easy, safe, and perfect for beginners.</p>",
+          "title": "AI in the Garden – Care for Your Plants Like a Pro: Diagnose with a Photo, Care Tips and Fertilizer Advice",
+          "public_slug": "ai-in-the-garden-care-for-your-plants-like-a-pro"
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 4,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:08:55.506616 +00:00",
+      "published_at": "2025-11-08 15:08:55.417041 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-05 18:47:48.887585 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 617,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:08:55.417035 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:08:41.795267 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1304\" data-end=\"1319\">Einleitung</h2>\r\n<p data-start=\"1320\" data-end=\"1685\">K&uuml;nstliche Intelligenz (KI) ist l&auml;ngst kein Zukunftsthema mehr &ndash; sie steckt heute in vielen Ger&auml;ten und Programmen, die wir t&auml;glich verwenden: im Smartphone, im Computer, in Sprachassistenten oder sogar in Haushaltsger&auml;ten.<br data-start=\"1543\" data-end=\"1546\">Doch gerade &auml;ltere Menschen fragen sich oft: <em data-start=\"1591\" data-end=\"1683\">Wie funktioniert das eigentlich &ndash; und kann ich das auch nutzen, ohne Technikprofi zu sein?</em></p>\r\n<p data-start=\"1687\" data-end=\"1949\">Die Antwort lautet: <strong data-start=\"1707\" data-end=\"1730\">Ja, auf jeden Fall!</strong><br data-start=\"1730\" data-end=\"1733\">Dieser Leitfaden zeigt dir Schritt f&uuml;r Schritt, wie KI im Alltag hilft &ndash; beim Schreiben, beim Kommunizieren mit Familie und Freunden, beim Strukturieren von Aufgaben und beim Schutz vor Betrug oder Falschmeldungen.</p>\r\n<hr data-start=\"1951\" data-end=\"1954\">\r\n<h2 data-start=\"1956\" data-end=\"1976\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1977\" data-end=\"2365\">\r\n<li data-start=\"1977\" data-end=\"2045\"><strong data-start=\"1979\" data-end=\"1998\">Sicher bleiben:</strong> KI verantwortungsvoll und ohne Risiko nutzen</li>\r\n<li data-start=\"2046\" data-end=\"2105\"><strong data-start=\"2048\" data-end=\"2064\">Zeit sparen:</strong> Wiederkehrende Aufgaben automatisieren</li>\r\n<li data-start=\"2106\" data-end=\"2181\"><strong data-start=\"2108\" data-end=\"2137\">Verstehen statt f&uuml;rchten:</strong> KI als Unterst&uuml;tzung, nicht als Bedrohung</li>\r\n<li data-start=\"2182\" data-end=\"2268\"><strong data-start=\"2184\" data-end=\"2202\">Kommunizieren:</strong> Briefe, Nachrichten und E-Mails klar und freundlich formulieren</li>\r\n<li data-start=\"2269\" data-end=\"2365\"><strong data-start=\"2271\" data-end=\"2294\">Alltag erleichtern:</strong> Erinnerungen, Einkaufslisten, &Uuml;bersetzungen oder Erkl&auml;rungen abrufen</li>\r\n</ul>\r\n<hr data-start=\"2367\" data-end=\"2370\">\r\n<h2 data-start=\"2372\" data-end=\"2414\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"2415\" data-end=\"2712\">\r\n<li data-start=\"2415\" data-end=\"2477\">Seniorinnen und Senioren mit Interesse an moderner Technik</li>\r\n<li data-start=\"2478\" data-end=\"2557\">Angeh&ouml;rige, Betreuerinnen und Betreuer, die erkl&auml;ren oder begleiten m&ouml;chten</li>\r\n<li data-start=\"2558\" data-end=\"2634\">Neulinge, die mit Sprachassistenten, ChatGPT oder Copilot starten wollen</li>\r\n<li data-start=\"2635\" data-end=\"2712\">Vereine, Seniorenb&uuml;ros und Bildungseinrichtungen, die Schulungen anbieten</li>\r\n</ul>\r\n<hr data-start=\"2714\" data-end=\"2717\">\r\n<h2 data-start=\"2719\" data-end=\"2745\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2746\" data-end=\"3082\">\r\n<li data-start=\"2746\" data-end=\"2827\">Mit KI in nat&uuml;rlicher Sprache kommunizieren (&bdquo;Wie schreibe ich eine E-Mail?&ldquo;)</li>\r\n<li data-start=\"2828\" data-end=\"2906\">KI f&uuml;r kleine Alltagsaufgaben nutzen (Listen, Erinnerungen, &Uuml;bersetzungen)</li>\r\n<li data-start=\"2907\" data-end=\"2967\">KI um einfache Erkl&auml;rungen oder Zusammenfassungen bitten</li>\r\n<li data-start=\"2968\" data-end=\"3030\">Sich vor Betrug, Phishing und Falschinformationen sch&uuml;tzen</li>\r\n<li data-start=\"3031\" data-end=\"3082\">Mit Spa&szlig; und Neugier selbstst&auml;ndig weiterlernen</li>\r\n</ul>\r\n<hr data-start=\"3084\" data-end=\"3087\">\r\n<h2 data-start=\"3089\" data-end=\"3109\">Voraussetzungen</h2>\r\n<ul data-start=\"3110\" data-end=\"3304\">\r\n<li data-start=\"3110\" data-end=\"3169\">Ein Smartphone, Tablet oder Computer mit Internetzugang</li>\r\n<li data-start=\"3170\" data-end=\"3250\">Zugang zu einem KI-Tool (z. B. ChatGPT, Copilot oder Alexa/Google Assistant)</li>\r\n<li data-start=\"3251\" data-end=\"3304\">Etwas Neugier und Geduld &ndash; mehr braucht es nicht!</li>\r\n</ul>",
+          "slug": "ki-fur-senioren-schritt-fur-schritt",
+          "intro": "<p>Ein leicht verst&auml;ndlicher Leitfaden f&uuml;r Seniorinnen und Senioren, die K&uuml;nstliche Intelligenz (KI) im Alltag sicher und sinnvoll nutzen m&ouml;chten.<br data-start=\"1110\" data-end=\"1113\">Ob beim Schreiben, Organisieren, Kommunizieren oder beim Schutz vor Betrug &ndash; dieser Guide erkl&auml;rt alles Schritt f&uuml;r Schritt, mit einfachen Beispielen und praktischen Tipps.</p>",
+          "title": "KI für Senioren – Schritt-für-Schritt: Einfache Anleitungen, große Wirkung – Kommunikation, Alltag, Sicherheit",
+          "public_slug": null
+        },
+        "en": {
+          "body": "<h2 data-start=\"1016\" data-end=\"1033\">Introduction</h2>\r\n<p data-start=\"1034\" data-end=\"1249\">Artificial Intelligence (AI) is part of our everyday lives &ndash; in smartphones, computers, voice assistants, and even home devices.<br data-start=\"1162\" data-end=\"1165\">Many older adults wonder: <em data-start=\"1191\" data-end=\"1247\">Can I really use this too, even if I&rsquo;m not tech-savvy?</em></p>\r\n<p data-start=\"1251\" data-end=\"1538\">The answer is: <strong data-start=\"1266\" data-end=\"1286\">Yes, absolutely!</strong><br data-start=\"1286\" data-end=\"1289\">This guide shows how AI can make life easier and more enjoyable &ndash; by helping you write messages, find information, organize tasks, and stay safe online.<br data-start=\"1441\" data-end=\"1444\">Everything is explained step by step, in plain language, with examples you can try yourself.</p>\r\n<hr data-start=\"1540\" data-end=\"1543\">\r\n<h2 data-start=\"1545\" data-end=\"1568\">Goals and Benefits</h2>\r\n<ul data-start=\"1569\" data-end=\"1914\">\r\n<li data-start=\"1569\" data-end=\"1631\"><strong data-start=\"1571\" data-end=\"1585\">Stay safe:</strong> Use AI responsibly and protect your privacy</li>\r\n<li data-start=\"1632\" data-end=\"1683\"><strong data-start=\"1634\" data-end=\"1648\">Save time:</strong> Automate small, repetitive tasks</li>\r\n<li data-start=\"1684\" data-end=\"1754\"><strong data-start=\"1686\" data-end=\"1713\">Understand, don&rsquo;t fear:</strong> See AI as a helpful tool, not a threat</li>\r\n<li data-start=\"1755\" data-end=\"1820\"><strong data-start=\"1757\" data-end=\"1780\">Communicate better:</strong> Write clear, kind messages and emails</li>\r\n<li data-start=\"1821\" data-end=\"1914\"><strong data-start=\"1823\" data-end=\"1850\">Simplify everyday life:</strong> Get reminders, shopping lists, explanations, and translations</li>\r\n</ul>\r\n<hr data-start=\"1916\" data-end=\"1919\">\r\n<h2 data-start=\"1921\" data-end=\"1947\">Who This Guide Is For</h2>\r\n<ul data-start=\"1948\" data-end=\"2197\">\r\n<li data-start=\"1948\" data-end=\"1991\">Seniors curious about modern technology</li>\r\n<li data-start=\"1992\" data-end=\"2047\">Families, caregivers, and trainers who want to help</li>\r\n<li data-start=\"2048\" data-end=\"2124\">Beginners using tools like ChatGPT, Copilot, or Alexa for the first time</li>\r\n<li data-start=\"2125\" data-end=\"2197\">Senior centers, clubs, or courses that introduce AI in everyday life</li>\r\n</ul>\r\n<hr data-start=\"2199\" data-end=\"2202\">\r\n<h2 data-start=\"2204\" data-end=\"2226\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2227\" data-end=\"2503\">\r\n<li data-start=\"2227\" data-end=\"2268\">How to talk to AI in natural language</li>\r\n<li data-start=\"2269\" data-end=\"2341\">How to use AI for small daily tasks (lists, reminders, translations)</li>\r\n<li data-start=\"2342\" data-end=\"2396\">How to ask AI for simple explanations or summaries</li>\r\n<li data-start=\"2397\" data-end=\"2452\">How to recognize scams, fake news, and unsafe links</li>\r\n<li data-start=\"2453\" data-end=\"2503\">How to keep learning and stay confident online</li>\r\n</ul>\r\n<hr data-start=\"2505\" data-end=\"2508\">\r\n<h2 data-start=\"2510\" data-end=\"2527\">Requirements</h2>\r\n<ul data-start=\"2528\" data-end=\"2721\">\r\n<li data-start=\"2528\" data-end=\"2586\">A smartphone, tablet, or computer with internet access</li>\r\n<li data-start=\"2587\" data-end=\"2662\">Access to an AI assistant (ChatGPT, Copilot, or Alexa/Google Assistant)</li>\r\n<li data-start=\"2663\" data-end=\"2721\">Curiosity and a bit of patience &ndash; that&rsquo;s all you need!</li>\r\n</ul>",
+          "slug": "ai-for-seniors-step-by-step",
+          "intro": "<p>A gentle, easy-to-follow guide for seniors who want to use Artificial Intelligence safely and confidently.<br data-start=\"832\" data-end=\"835\">Learn how AI can help you write messages, stay organized, communicate with family, and protect yourself from online scams &ndash; explained clearly, one step at a time.</p>",
+          "title": "AI for Seniors – Step by Step: Simple Guides, Big Impact – Communication, Everyday Life, Safety",
+          "public_slug": null
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 3,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:08:55.619582 +00:00",
+      "published_at": "2025-11-08 15:08:55.511800 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-05 18:47:48.887585 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 627,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:08:55.511793 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:08:41.811821 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1223\" data-end=\"1238\">Einleitung</h2>\r\n<p data-start=\"1239\" data-end=\"1589\">Viele Programmiererinnen und Programmierer &ndash; ob Anf&auml;nger oder Profis &ndash; verbringen einen Gro&szlig;teil ihrer Zeit nicht mit kreativem Coden, sondern mit Wiederholungen: Boilerplate-Code schreiben, Fehler suchen, StackOverflow-Posts lesen.<br data-start=\"1471\" data-end=\"1474\">Hier kann <strong data-start=\"1484\" data-end=\"1515\">K&uuml;nstliche Intelligenz (KI)</strong> wie ChatGPT, GitHub Copilot oder andere Tools echte Entlastung bringen.</p>\r\n<p data-start=\"1591\" data-end=\"1821\">Dieser Leitfaden zeigt dir, wie du KI als <strong data-start=\"1633\" data-end=\"1688\">verst&auml;ndnisvollen Lern- und Programmier-Assistenten</strong> nutzt: um Fehler zu verstehen, L&ouml;sungen zu finden und Routinecode zu vermeiden &ndash; ohne die Kontrolle &uuml;ber deinen Code zu verlieren.</p>\r\n<hr data-start=\"1823\" data-end=\"1826\">\r\n<h2 data-start=\"1828\" data-end=\"1848\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1849\" data-end=\"2179\">\r\n<li data-start=\"1849\" data-end=\"1911\"><strong data-start=\"1851\" data-end=\"1879\">Verstehen statt R&auml;tseln:</strong> Fehlerausgaben richtig deuten</li>\r\n<li data-start=\"1912\" data-end=\"1979\"><strong data-start=\"1914\" data-end=\"1940\">Lernen durch Erkl&auml;ren:</strong> KI gezielt nach Hintergr&uuml;nden fragen</li>\r\n<li data-start=\"1980\" data-end=\"2044\"><strong data-start=\"1982\" data-end=\"1998\">Zeit sparen:</strong> Wiederkehrenden Code automatisch generieren</li>\r\n<li data-start=\"2045\" data-end=\"2111\"><strong data-start=\"2047\" data-end=\"2069\">Struktur gewinnen:</strong> Besser planen, dokumentieren und testen</li>\r\n<li data-start=\"2112\" data-end=\"2179\"><strong data-start=\"2114\" data-end=\"2133\">Sicher bleiben:</strong> Datenschutz und geistiges Eigentum beachten</li>\r\n</ul>\r\n<hr data-start=\"2181\" data-end=\"2184\">\r\n<h2 data-start=\"2186\" data-end=\"2228\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"2229\" data-end=\"2509\">\r\n<li data-start=\"2229\" data-end=\"2297\">Einsteigerinnen und Einsteiger, die Programmieren lernen m&ouml;chten</li>\r\n<li data-start=\"2298\" data-end=\"2370\">Senioren oder Quereinsteiger, die sich mit Code noch unsicher f&uuml;hlen</li>\r\n<li data-start=\"2371\" data-end=\"2436\">Hobby-Coder, Studierende, Selbstst&auml;ndige und IT-Interessierte</li>\r\n<li data-start=\"2437\" data-end=\"2509\">Entwicklerinnen und Entwickler, die ihren Workflow optimieren wollen</li>\r\n</ul>\r\n<hr data-start=\"2511\" data-end=\"2514\">\r\n<h2 data-start=\"2516\" data-end=\"2542\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2543\" data-end=\"2849\">\r\n<li data-start=\"2543\" data-end=\"2605\">Fehlermeldungen Schritt f&uuml;r Schritt mit KI erkl&auml;ren lassen</li>\r\n<li data-start=\"2606\" data-end=\"2649\">Sinnvolle Debugging-Strategien anwenden</li>\r\n<li data-start=\"2650\" data-end=\"2712\">Typische Code-Bausteine automatisch erzeugen (Boilerplate)</li>\r\n<li data-start=\"2713\" data-end=\"2781\">KI-Antworten kritisch pr&uuml;fen und sicher in dein Projekt einbauen</li>\r\n<li data-start=\"2782\" data-end=\"2849\">Effizienter und stressfreier coden &ndash; mit wachsendem Verst&auml;ndnis</li>\r\n</ul>\r\n<hr data-start=\"2851\" data-end=\"2854\">\r\n<h2 data-start=\"2856\" data-end=\"2876\">Voraussetzungen</h2>\r\n<ul data-start=\"2877\" data-end=\"3151\">\r\n<li data-start=\"2877\" data-end=\"2952\">Eine Entwicklungsumgebung (z. B. VS Code, PyCharm oder eine Online-IDE)</li>\r\n<li data-start=\"2953\" data-end=\"3026\">Ein KI-Tool deiner Wahl (z. B. ChatGPT, Copilot, Codeium oder Cursor)</li>\r\n<li data-start=\"3027\" data-end=\"3107\">Grundkenntnisse in einer Programmiersprache (z. B. Python, JavaScript, Java)</li>\r\n<li data-start=\"3108\" data-end=\"3151\">20&ndash;30 Minuten Zeit zum &Uuml;ben pro Einheit</li>\r\n</ul>",
+          "slug": "ki-als-programmier-assistent",
+          "intro": "<p>Ein verst&auml;ndlicher Leitfaden f&uuml;r alle, die Programmieren lernen oder ihre t&auml;gliche Entwicklungsarbeit effizienter gestalten m&ouml;chten.<br data-start=\"978\" data-end=\"981\">Erfahre, wie K&uuml;nstliche Intelligenz beim Debuggen, beim Schreiben von Code-Vorlagen und beim besseren Verstehen komplexer Fehlermeldungen hilft &ndash; Schritt f&uuml;r Schritt erkl&auml;rt, mit Tipps, Beispielen und Sicherheits-Hinweisen.</p>",
+          "title": "KI als Programmier-Assistent – Fehler verstehen, Lösungen finden, Boilerplate sparen",
+          "public_slug": null
+        },
+        "en": {
+          "body": "<h2 data-start=\"1000\" data-end=\"1017\">Introduction</h2>\r\n<p data-start=\"1018\" data-end=\"1314\">Many programmers &ndash; beginners and professionals alike &ndash; spend most of their time fixing bugs or writing repetitive setup code.<br data-start=\"1143\" data-end=\"1146\">With <strong data-start=\"1151\" data-end=\"1183\">Artificial Intelligence (AI)</strong> tools like ChatGPT, GitHub Copilot, or Codeium, you can turn that time into learning, understanding, and faster problem-solving.</p>\r\n<p data-start=\"1316\" data-end=\"1508\">This guide shows you how to use AI as a <strong data-start=\"1356\" data-end=\"1395\">patient mentor and coding assistant</strong> &ndash; to understand errors, find better solutions, and reduce boring boilerplate work while still learning actively.</p>\r\n<hr data-start=\"1510\" data-end=\"1513\">\r\n<h2 data-start=\"1515\" data-end=\"1538\">Goals and Benefits</h2>\r\n<ul data-start=\"1539\" data-end=\"1861\">\r\n<li data-start=\"1539\" data-end=\"1606\"><strong data-start=\"1541\" data-end=\"1569\">Understand, don&rsquo;t guess:</strong> Learn what your errors really mean</li>\r\n<li data-start=\"1607\" data-end=\"1674\"><strong data-start=\"1609\" data-end=\"1627\">Solve smarter:</strong> Use AI to explore and compare possible fixes</li>\r\n<li data-start=\"1675\" data-end=\"1736\"><strong data-start=\"1677\" data-end=\"1691\">Save time:</strong> Let AI generate routine code and templates</li>\r\n<li data-start=\"1737\" data-end=\"1801\"><strong data-start=\"1739\" data-end=\"1759\">Improve quality:</strong> Write cleaner, more structured programs</li>\r\n<li data-start=\"1802\" data-end=\"1861\"><strong data-start=\"1804\" data-end=\"1818\">Stay safe:</strong> Use AI responsibly and protect your data</li>\r\n</ul>\r\n<hr data-start=\"1863\" data-end=\"1866\">\r\n<h2 data-start=\"1868\" data-end=\"1894\">Who This Guide Is For</h2>\r\n<ul data-start=\"1895\" data-end=\"2165\">\r\n<li data-start=\"1895\" data-end=\"1959\">Complete beginners learning their first programming language</li>\r\n<li data-start=\"1960\" data-end=\"2024\">Seniors or late learners exploring coding through AI support</li>\r\n<li data-start=\"2025\" data-end=\"2105\">Hobby developers, students, or freelancers who want to work more efficiently</li>\r\n<li data-start=\"2106\" data-end=\"2165\">Experienced coders looking to speed up repetitive tasks</li>\r\n</ul>\r\n<hr data-start=\"2167\" data-end=\"2170\">\r\n<h2 data-start=\"2172\" data-end=\"2194\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2195\" data-end=\"2491\">\r\n<li data-start=\"2195\" data-end=\"2249\">How to ask AI to explain any error message clearly</li>\r\n<li data-start=\"2250\" data-end=\"2309\">How to debug step by step instead of copy-pasting fixes</li>\r\n<li data-start=\"2310\" data-end=\"2369\">How to generate boilerplate code safely and efficiently</li>\r\n<li data-start=\"2370\" data-end=\"2420\">How to review and understand AI-generated code</li>\r\n<li data-start=\"2421\" data-end=\"2491\">How to develop a healthy coding workflow with AI as your assistant</li>\r\n</ul>\r\n<hr data-start=\"2493\" data-end=\"2496\">\r\n<h2 data-start=\"2498\" data-end=\"2515\">Requirements</h2>\r\n<ul data-start=\"2516\" data-end=\"2765\">\r\n<li data-start=\"2516\" data-end=\"2581\">An editor or IDE (e.g., VS Code, PyCharm, or a web-based IDE)</li>\r\n<li data-start=\"2582\" data-end=\"2638\">An AI assistant such as ChatGPT, Copilot, or Codeium</li>\r\n<li data-start=\"2639\" data-end=\"2719\">Basic knowledge of one programming language (Python, JavaScript, Java, etc.)</li>\r\n<li data-start=\"2720\" data-end=\"2765\">Around 20&ndash;30 minutes per practice session</li>\r\n</ul>",
+          "slug": "ai-as-a-coding-assistant",
+          "intro": "<p>A friendly, practical guide for everyone who wants to use AI as a helpful coding partner.<br data-start=\"795\" data-end=\"798\">Learn how Artificial Intelligence can explain errors in simple language, suggest clear solutions, and save time on repetitive boilerplate code &ndash; without losing control over your work.</p>",
+          "title": "AI as a Coding Assistant – Understanding Errors, Finding Solutions, Saving Boilerplate",
+          "public_slug": null
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 2,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 15:08:55.736145 +00:00",
+      "published_at": "2025-11-08 15:08:55.624258 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-05 18:47:48.887585 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 639,
+      "review_note": "",
+      "reviewed_at": "2025-11-08 15:08:55.624252 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 15:08:41.828761 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"978\" data-end=\"993\">Einleitung</h2>\r\n<p data-start=\"994\" data-end=\"1313\">Im modernen B&uuml;ro jagt oft eine Aufgabe die n&auml;chste: E-Mails, Meetings, Berichte, Listen. Doch anstatt noch schneller zu arbeiten, k&ouml;nnen wir <strong data-start=\"1135\" data-end=\"1145\">kl&uuml;ger</strong> arbeiten &ndash; mit <strong data-start=\"1161\" data-end=\"1193\">K&uuml;nstlicher Intelligenz (KI)</strong>.<br data-start=\"1194\" data-end=\"1197\">Dieser Leitfaden zeigt, wie du Routineaufgaben mit KI vereinfachst, Zeit sparst und trotzdem die Kontrolle beh&auml;ltst.</p>\r\n<hr data-start=\"1315\" data-end=\"1318\">\r\n<h2 data-start=\"1320\" data-end=\"1340\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1341\" data-end=\"1590\">\r\n<li data-start=\"1341\" data-end=\"1392\"><strong data-start=\"1343\" data-end=\"1359\">Zeit sparen:</strong> Routineaufgaben automatisieren</li>\r\n<li data-start=\"1393\" data-end=\"1452\"><strong data-start=\"1395\" data-end=\"1417\">Bessere &Uuml;bersicht:</strong> Informationen klar strukturieren</li>\r\n<li data-start=\"1453\" data-end=\"1510\"><strong data-start=\"1455\" data-end=\"1474\">Weniger Stress:</strong> Konzentration auf das Wesentliche</li>\r\n<li data-start=\"1511\" data-end=\"1590\"><strong data-start=\"1513\" data-end=\"1531\">Mehr Qualit&auml;t:</strong> Berichte, E-Mails und Protokolle professionell gestalten</li>\r\n</ul>\r\n<hr data-start=\"1592\" data-end=\"1595\">\r\n<h2 data-start=\"1597\" data-end=\"1639\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"1640\" data-end=\"1881\">\r\n<li data-start=\"1640\" data-end=\"1679\">Menschen ohne technisches Vorwissen</li>\r\n<li data-start=\"1680\" data-end=\"1750\">Seniorinnen und Senioren, die erste KI-Erfahrungen sammeln m&ouml;chten</li>\r\n<li data-start=\"1751\" data-end=\"1820\">Besch&auml;ftigte in B&uuml;ro, Verwaltung, Ehrenamt oder Selbstst&auml;ndigkeit</li>\r\n<li data-start=\"1821\" data-end=\"1881\">Alle, die viele Texte schreiben oder organisieren m&uuml;ssen</li>\r\n</ul>\r\n<hr data-start=\"1883\" data-end=\"1886\">\r\n<h2 data-start=\"1888\" data-end=\"1914\">Was du am Ende kannst</h2>\r\n<ul data-start=\"1915\" data-end=\"2189\">\r\n<li data-start=\"1915\" data-end=\"1974\">E-Mails vorsortieren und automatisch formulieren lassen</li>\r\n<li data-start=\"1975\" data-end=\"2015\">Meetings strukturiert zusammenfassen</li>\r\n<li data-start=\"2016\" data-end=\"2075\">Wochenberichte und Statusberichte automatisch erstellen</li>\r\n<li data-start=\"2076\" data-end=\"2125\">Texte vereinfachen oder in Klartext umwandeln</li>\r\n<li data-start=\"2126\" data-end=\"2189\">Datenschutz und Qualit&auml;tssicherung bei KI-Einsatz verstehen</li>\r\n</ul>\r\n<hr data-start=\"2191\" data-end=\"2194\">\r\n<h2 data-start=\"2196\" data-end=\"2216\">Voraussetzungen</h2>\r\n<ul data-start=\"2217\" data-end=\"2376\">\r\n<li data-start=\"2217\" data-end=\"2262\">Ein KI-Assistent wie ChatGPT oder Copilot</li>\r\n<li data-start=\"2263\" data-end=\"2333\">Zugriff auf E-Mail-Texte, Meeting-Notizen oder Berichtsstichpunkte</li>\r\n<li data-start=\"2334\" data-end=\"2376\">30&ndash;60 Minuten Zeit f&uuml;r das erste Setup</li>\r\n</ul>\r\n<hr data-start=\"6596\" data-end=\"6599\">\r\n<h3 data-start=\"6601\" data-end=\"6630\">Checklisten &amp; Beispiele</h3>\r\n<p data-start=\"6632\" data-end=\"6653\"><strong data-start=\"6632\" data-end=\"6651\">Mini-Selbsttest</strong></p>\r\n<ol data-start=\"6654\" data-end=\"6857\">\r\n<li data-start=\"6654\" data-end=\"6697\">Habe ich nur notwendige Infos geteilt?</li>\r\n<li data-start=\"6698\" data-end=\"6732\">Ist der Ton passend und klar?</li>\r\n<li data-start=\"6733\" data-end=\"6770\">Stimmen alle Fakten und Termine?</li>\r\n<li data-start=\"6771\" data-end=\"6817\">Ist der Text in 60 Sekunden verst&auml;ndlich?</li>\r\n<li data-start=\"6818\" data-end=\"6857\">Habe ich Aufgaben klar zugeordnet?</li>\r\n</ol>\r\n<p data-start=\"6859\" data-end=\"6918\">Wenn 4 von 5 Fragen mit &bdquo;Ja&ldquo; beantwortet sind: versenden.</p>",
+          "slug": "ki-im-buroalltag",
+          "intro": "<p>Ein praxisnaher Leitfaden f&uuml;r alle, die ihren B&uuml;roalltag smarter gestalten wollen &ndash; mit K&uuml;nstlicher Intelligenz als pers&ouml;nlicher Assistentin.<br data-start=\"760\" data-end=\"763\">Lerne Schritt f&uuml;r Schritt, wie du mit KI E-Mails strukturierst, Meetings automatisch zusammenfassen l&auml;sst und Berichte schneller erstellst &ndash; verst&auml;ndlich erkl&auml;rt, auch f&uuml;r Einsteiger und Senioren.</p>",
+          "title": "KI im Büroalltag – Zeit sparen leicht gemacht",
+          "public_slug": null
+        },
+        "en": {
+          "body": "<h2 data-start=\"938\" data-end=\"955\">Introduction</h2>\r\n<p data-start=\"956\" data-end=\"1275\">Modern office life can feel like an endless stream of tasks &ndash; emails, meetings, reports, lists.<br data-start=\"1051\" data-end=\"1054\">Instead of working faster and harder, we can work <strong data-start=\"1104\" data-end=\"1115\">smarter</strong> &ndash; with the help of <strong data-start=\"1135\" data-end=\"1167\">Artificial Intelligence (AI)</strong>.<br data-start=\"1168\" data-end=\"1171\">This guide shows how AI can take over repetitive tasks, help you save time, and let you stay in control.</p>\r\n<hr data-start=\"1277\" data-end=\"1280\">\r\n<h2 data-start=\"1282\" data-end=\"1304\">Goal and Benefits</h2>\r\n<ul data-start=\"1305\" data-end=\"1539\">\r\n<li data-start=\"1305\" data-end=\"1359\"><strong data-start=\"1307\" data-end=\"1321\">Save time:</strong> Automate repetitive office routines</li>\r\n<li data-start=\"1360\" data-end=\"1413\"><strong data-start=\"1362\" data-end=\"1381\">Stay organized:</strong> Structure information clearly</li>\r\n<li data-start=\"1414\" data-end=\"1464\"><strong data-start=\"1416\" data-end=\"1434\">Reduce stress:</strong> Focus on what truly matters</li>\r\n<li data-start=\"1465\" data-end=\"1539\"><strong data-start=\"1467\" data-end=\"1487\">Improve quality:</strong> Write professional reports, emails, and summaries</li>\r\n</ul>\r\n<hr data-start=\"1541\" data-end=\"1544\">\r\n<h2 data-start=\"1546\" data-end=\"1572\">Who This Guide Is For</h2>\r\n<ul data-start=\"1573\" data-end=\"1811\">\r\n<li data-start=\"1573\" data-end=\"1622\">People with little or no technical background</li>\r\n<li data-start=\"1623\" data-end=\"1679\">Seniors or beginners exploring AI for the first time</li>\r\n<li data-start=\"1680\" data-end=\"1745\">Office workers, administrative staff, freelancers, volunteers</li>\r\n<li data-start=\"1746\" data-end=\"1811\">Anyone who deals with a lot of text, emails, or meeting notes</li>\r\n</ul>\r\n<hr data-start=\"1813\" data-end=\"1816\">\r\n<h2 data-start=\"1818\" data-end=\"1848\">What You&rsquo;ll Be Able to Do</h2>\r\n<ul data-start=\"1849\" data-end=\"2097\">\r\n<li data-start=\"1849\" data-end=\"1898\">Prioritize and structure emails automatically</li>\r\n<li data-start=\"1899\" data-end=\"1946\">Summarize meetings clearly and consistently</li>\r\n<li data-start=\"1947\" data-end=\"1993\">Create weekly or status reports in minutes</li>\r\n<li data-start=\"1994\" data-end=\"2040\">Simplify complex texts into plain language</li>\r\n<li data-start=\"2041\" data-end=\"2097\">Use AI safely and in line with data protection rules</li>\r\n</ul>\r\n<hr data-start=\"2099\" data-end=\"2102\">\r\n<h2 data-start=\"2104\" data-end=\"2121\">Requirements</h2>\r\n<ul data-start=\"2122\" data-end=\"2272\">\r\n<li data-start=\"2122\" data-end=\"2168\">An AI assistant such as ChatGPT or Copilot</li>\r\n<li data-start=\"2169\" data-end=\"2225\">Access to your notes, emails, or meeting transcripts</li>\r\n<li data-start=\"2226\" data-end=\"2272\">Around 30&ndash;60 minutes for the initial setup</li>\r\n</ul>",
+          "slug": "ai-in-everyday-office-work",
+          "intro": "<p>A practical guide for anyone who wants to make their daily office work easier &ndash; with Artificial Intelligence as a friendly assistant.<br data-start=\"749\" data-end=\"752\">Learn step by step how to use AI to organize emails, summarize meetings, and write reports faster &ndash; explained clearly and patiently, perfect for beginners and seniors.</p>",
+          "title": "AI in Everyday Office Work – Save Time the Smart Way",
+          "public_slug": null
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 9,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-08 17:44:10.482357 +00:00",
+      "published_at": "2025-11-08 17:44:10.424260 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-06 18:49:07.433597 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 808,
+      "review_note": "Admin-Action publish",
+      "reviewed_at": "2025-11-08 17:44:10.424254 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-08 17:18:01.497010 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<h2 data-start=\"1012\" data-end=\"1027\">Einleitung</h2>\r\n<p data-start=\"1028\" data-end=\"1339\">K&uuml;nstliche Intelligenz ist heute in vielen Lebensbereichen pr&auml;sent &ndash; beim Schreiben, Suchen, &Uuml;bersetzen oder im Alltag &uuml;ber Sprachassistenten und Chatbots.<br data-start=\"1183\" data-end=\"1186\">Doch viele Menschen fragen sich: <em data-start=\"1219\" data-end=\"1262\">Was passiert eigentlich mit meinen Daten?</em><br data-start=\"1262\" data-end=\"1265\">Und wie kann ich KI sicher nutzen, ohne meine Privatsph&auml;re zu gef&auml;hrden?</p>\r\n<p data-start=\"1341\" data-end=\"1605\">Dieser Leitfaden erkl&auml;rt Schritt f&uuml;r Schritt, wie du KI-Anwendungen <strong data-start=\"1409\" data-end=\"1445\">bewusst, datensparsam und sicher</strong> nutzt.<br data-start=\"1452\" data-end=\"1455\">Er zeigt, welche Risiken bestehen, welche Rechte du hast und wie du einfache Ma&szlig;nahmen zum Schutz deiner pers&ouml;nlichen Informationen umsetzen kannst.</p>\r\n<hr data-start=\"1607\" data-end=\"1610\">\r\n<h2 data-start=\"1612\" data-end=\"1632\">Ziel und Nutzen</h2>\r\n<ul data-start=\"1633\" data-end=\"1916\">\r\n<li data-start=\"1633\" data-end=\"1677\"><strong data-start=\"1635\" data-end=\"1649\">Verstehen:</strong> Wie KI mit Daten arbeitet</li>\r\n<li data-start=\"1678\" data-end=\"1734\"><strong data-start=\"1680\" data-end=\"1693\">Sch&uuml;tzen:</strong> Eigene Informationen bewusst einsetzen</li>\r\n<li data-start=\"1735\" data-end=\"1784\"><strong data-start=\"1737\" data-end=\"1750\">Erkennen:</strong> Risiken bei unachtsamer Nutzung</li>\r\n<li data-start=\"1785\" data-end=\"1848\"><strong data-start=\"1787\" data-end=\"1799\">Handeln:</strong> Rechte wahrnehmen und Schutzma&szlig;nahmen umsetzen</li>\r\n<li data-start=\"1849\" data-end=\"1916\"><strong data-start=\"1851\" data-end=\"1874\">Vertrauen aufbauen:</strong> KI verantwortungsvoll und sicher nutzen</li>\r\n</ul>\r\n<hr data-start=\"1918\" data-end=\"1921\">\r\n<h2 data-start=\"1923\" data-end=\"1965\">F&uuml;r wen ist dieser Leitfaden gedacht?</h2>\r\n<ul data-start=\"1966\" data-end=\"2206\">\r\n<li data-start=\"1966\" data-end=\"2031\">Einsteiger:innen, die KI-Tools im Alltag ausprobieren m&ouml;chten</li>\r\n<li data-start=\"2032\" data-end=\"2088\">Senior:innen, Familien, Studierende und Berufst&auml;tige</li>\r\n<li data-start=\"2089\" data-end=\"2146\">Unternehmen und Vereine, die KI pr&uuml;fen oder einsetzen</li>\r\n<li data-start=\"2147\" data-end=\"2206\">Alle, die Privatsph&auml;re und Datensicherheit ernst nehmen</li>\r\n</ul>\r\n<hr data-start=\"2208\" data-end=\"2211\">\r\n<h2 data-start=\"2213\" data-end=\"2239\">Was du am Ende kannst</h2>\r\n<ul data-start=\"2240\" data-end=\"2474\">\r\n<li data-start=\"2240\" data-end=\"2282\">Verstehen, welche Daten KI verarbeitet</li>\r\n<li data-start=\"2283\" data-end=\"2313\">Risiken besser einsch&auml;tzen</li>\r\n<li data-start=\"2314\" data-end=\"2379\">Sicher mit Chatbots, Bild-Generatoren und Assistenten umgehen</li>\r\n<li data-start=\"2380\" data-end=\"2429\">Datenschutz-Einstellungen pr&uuml;fen und anpassen</li>\r\n<li data-start=\"2430\" data-end=\"2474\">Eigene Rechte gegen&uuml;ber Anbietern kennen</li>\r\n</ul>",
+          "slug": "ki-datenschutz-worauf-achten",
+          "intro": "<p>Ein klarer und praktischer Leitfaden f&uuml;r alle, die K&uuml;nstliche Intelligenz (KI) sicher und verantwortungsvoll nutzen m&ouml;chten. Erfahren Sie, welche Daten KI-Systeme verarbeiten, welche Rechte Sie haben, welche Risiken bestehen und wie Sie sich mit einfachen Datenschutz- und Sicherheitsma&szlig;nahmen sch&uuml;tzen k&ouml;nnen.</p>",
+          "title": "KI & Datenschutz – worauf achten? Sicher & bewusst nutzen: Rechte, Risiken, Schutzmaßnahmen",
+          "public_slug": "ki-datenschutz-worauf-achten"
+        },
+        "en": {
+          "body": "<h2 data-start=\"1011\" data-end=\"1028\">Introduction</h2>\r\n<p data-start=\"1029\" data-end=\"1295\">Artificial Intelligence is part of daily life &ndash; in writing tools, search engines, translation apps, and voice assistants.<br data-start=\"1150\" data-end=\"1153\">But many people wonder: <em data-start=\"1177\" data-end=\"1212\">What actually happens to my data?</em><br data-start=\"1212\" data-end=\"1215\">And how can I use AI safely without giving away too much personal information?</p>\r\n<p data-start=\"1297\" data-end=\"1550\">This guide explains step by step how to use AI <strong data-start=\"1344\" data-end=\"1400\">mindfully, safely, and with respect for your privacy</strong>.<br data-start=\"1401\" data-end=\"1404\">You&rsquo;ll learn what happens behind the scenes, what your rights are, what the risks look like, and how to protect yourself easily in everyday use.</p>\r\n<hr data-start=\"1552\" data-end=\"1555\">\r\n<h2 data-start=\"1557\" data-end=\"1580\">Goals and Benefits</h2>\r\n<ul data-start=\"1581\" data-end=\"1873\">\r\n<li data-start=\"1581\" data-end=\"1636\"><strong data-start=\"1583\" data-end=\"1598\">Understand:</strong> How AI systems use and process data</li>\r\n<li data-start=\"1637\" data-end=\"1701\"><strong data-start=\"1639\" data-end=\"1651\">Protect:</strong> Use personal information consciously and safely</li>\r\n<li data-start=\"1702\" data-end=\"1753\"><strong data-start=\"1704\" data-end=\"1718\">Recognize:</strong> Identify risks in careless usage</li>\r\n<li data-start=\"1754\" data-end=\"1813\"><strong data-start=\"1756\" data-end=\"1764\">Act:</strong> Know your rights and apply protective measures</li>\r\n<li data-start=\"1814\" data-end=\"1873\"><strong data-start=\"1816\" data-end=\"1832\">Build trust:</strong> Use AI responsibly and with confidence</li>\r\n</ul>\r\n<hr data-start=\"1875\" data-end=\"1878\">\r\n<h2 data-start=\"1880\" data-end=\"1906\">Who This Guide Is For</h2>\r\n<ul data-start=\"1907\" data-end=\"2114\">\r\n<li data-start=\"1907\" data-end=\"1953\">Beginners exploring AI tools for daily use</li>\r\n<li data-start=\"1954\" data-end=\"2004\">Seniors, families, students, and professionals</li>\r\n<li data-start=\"2005\" data-end=\"2064\">Companies, schools, or organizations testing AI systems</li>\r\n<li data-start=\"2065\" data-end=\"2114\">Anyone who values privacy and data protection</li>\r\n</ul>\r\n<hr data-start=\"2116\" data-end=\"2119\">\r\n<h2 data-start=\"2121\" data-end=\"2143\">What You&rsquo;ll Learn</h2>\r\n<ul data-start=\"2144\" data-end=\"2406\">\r\n<li data-start=\"2144\" data-end=\"2182\">How AI collects and processes data</li>\r\n<li data-start=\"2183\" data-end=\"2227\">How to recognize and avoid privacy risks</li>\r\n<li data-start=\"2228\" data-end=\"2295\">How to handle chatbots, image generators, and assistants safely</li>\r\n<li data-start=\"2296\" data-end=\"2340\">How to check and adjust privacy settings</li>\r\n<li data-start=\"2341\" data-end=\"2406\">What your user rights are under European data protection laws</li>\r\n</ul>",
+          "slug": "ai-data-privacy-what-to-watch-out-for",
+          "intro": "<p>A clear and practical guide for everyone who wants to use Artificial Intelligence (AI) safely and responsibly.<br data-start=\"829\" data-end=\"832\">Learn what kind of data AI systems process, what rights you have, what the main risks are, and how to protect yourself with simple privacy and security steps.</p>",
+          "title": "AI & Data Privacy – What to Watch Out For? Safe & Conscious Use: Rights, Risks, and Protection Measures",
+          "public_slug": "ai-data-privacy-what-to-watch-out-for"
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 13,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-11 17:44:49.021058 +00:00",
+      "published_at": "2025-11-11 17:44:48.981381 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-09 02:00:00.000000 +00:00",
+      "is_published": true,
+      "last_published_revision_id": null,
+      "review_note": "Admin-Action publish",
+      "reviewed_at": "2025-11-11 17:44:48.981376 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-09 02:00:00.000000 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<p>„Künstliche Intelligenz“ ist der Oberbegriff – sie beschreibt jedes System, das Aufgaben erledigt, die sonst menschliches Denken erfordern würden. <strong>Machine Learning</strong> ist ein Teil davon – der Bereich, in dem Computer selbstständig aus Daten lernen. Und <strong>Deep Learning</strong> ist die moderne Speerspitze dieser Entwicklung – ein Teilgebiet des Machine Learnings, das neuronale Netze nutzt, um Muster zu erkennen.</p>",
+          "slug": "ki-machine-learning-deep-learning",
+          "intro": "<p>Viele reden von „KI“, „Machine Learning“ und „Deep Learning“ – aber was unterscheidet die Begriffe wirklich? In diesem Beitrag erfährst du kurz, klar und praxisnah, wie sie zusammenhängen – mit leicht verständlichen Beispielen.</p>",
+          "title": "KI, Machine Learning & Deep Learning – Die drei Begriffe kurz und klar abgegrenzt – mit Beispielen",
+          "public_slug": "ki-machine-learning-deep-learning"
+        },
+        "en": {
+          "body": "<p>“Artificial Intelligence” is the umbrella term for systems that perform tasks requiring human-like reasoning. <strong>Machine Learning</strong> is part of it – the ability for computers to learn from data. <strong>Deep Learning</strong> is the modern frontier – using neural networks to recognize complex patterns.</p>",
+          "slug": "ai-machine-learning-deep-learning",
+          "intro": "<p>People often use “AI”, “Machine Learning”, and “Deep Learning” interchangeably. But they aren’t the same. This guide explains their relationship in simple terms – with clear, practical examples.</p>",
+          "title": "AI, Machine Learning & Deep Learning – The Three Terms Clearly Defined – with Examples",
+          "public_slug": "ai-machine-learning-deep-learning"
+        }
+      }
+    }
+  },
+  {
+    "model": "guides.guide",
+    "pk": 6,
+    "fields": {
+      "status": "published",
+      "updated_at": "2025-11-12 19:16:40.405403 +00:00",
+      "published_at": "2025-11-12 19:16:40.346889 +00:00",
+      "author_id": 1,
+      "reviewer_id": null,
+      "created_at": "2025-11-06 14:04:12.014762 +00:00",
+      "is_published": true,
+      "last_published_revision_id": 505,
+      "review_note": "Admin-Action publish",
+      "reviewed_at": "2025-11-12 19:16:40.346883 +00:00",
+      "reviewed_by_id": 1,
+      "submitted_for_review_at": "2025-11-12 19:07:02.758646 +00:00",
+      "live_i18n": {
+        "de": {
+          "body": "<p data-start=\"0\" data-end=\"259\"><strong>K&uuml;nstliche Intelligenz</strong> ist l&auml;ngst Teil unseres Alltags &ndash; oft, ohne dass wir es &uuml;berhaupt bemerken. Dieser kleine Leitfaden m&ouml;chte dir Schritt f&uuml;r Schritt zeigen, was KI eigentlich ist, wie sie funktioniert und wie sie dir ganz konkret im Alltag helfen kann.</p>\r\n<p data-start=\"261\" data-end=\"612\">Wenn du das hier liest, hast du wahrscheinlich schon von &bdquo;k&uuml;nstlicher Intelligenz&ldquo; geh&ouml;rt &ndash; vielleicht im Zusammenhang mit Chatbots, die Texte schreiben, Apps, die Bilder erschaffen, oder Autos, die selbstst&auml;ndig fahren. Aber was steckt wirklich dahinter? Und noch wichtiger: Wie kannst <strong data-start=\"548\" data-end=\"554\">du</strong> davon profitieren, auch wenn du kein Technikprofi bist?</p>\r\n<p data-start=\"614\" data-end=\"972\">In diesem Leitfaden schauen wir uns gemeinsam die <strong>Grundlagen</strong> an &ndash; ganz ohne Fachchinesisch, daf&uuml;r mit vielen greifbaren Beispielen. Ziel ist nicht, dich mit komplizierten Begriffen zu &uuml;berfordern, sondern dir ein Gef&uuml;hl daf&uuml;r zu geben, was KI heute schon kann, wo ihre Grenzen liegen &ndash; und warum sie dein Leben einfacher, kreativer oder spannender machen kann.</p>\r\n<p data-start=\"974\" data-end=\"1136\" data-is-last-node=\"\" data-is-only-node=\"\">Bereit? Dann lass uns gemeinsam in die Welt der k&uuml;nstlichen Intelligenz eintauchen &ndash; verst&auml;ndlich, alltagstauglich und mit einem offenen Blick f&uuml;r das, was kommt.</p>\r\n<blockquote>\r\n<p><strong>💡Gut zu wissen: <br></strong>Du musst kein Profi sein, um KI sinnvoll zu nutzen. Fang einfach an.</p>\r\n</blockquote>",
+          "slug": "start-guide-de",
+          "intro": "<p>Einfach erkl&auml;rt. Praxisnah. F&uuml;r alle Altersgruppen.</p>",
+          "title": "Künstliche Intelligenz: Dein Startleitfaden",
+          "public_slug": "start-guide-de"
+        },
+        "en": {
+          "body": "<p><strong>Artificial intelligence</strong> has long been a part of our everyday lives &ndash; often without us even realizing it. This short guide aims to show you, step by step, what AI actually is, how it works, and how it can specifically help you in your daily life.</p>\r\n<p>If you're reading this, you've probably already heard of \"artificial intelligence\" &ndash; perhaps in connection with chatbots that write texts, apps that create images, or cars that drive themselves. But what's really behind it? And more importantly: How can <strong>you</strong> benefit from it, even if you're not a tech expert?</p>\r\n<p>In this guide, we'll look at the <strong>basics</strong> together &ndash; without any technical jargon, but with plenty of tangible examples. The goal isn't to overwhelm you with complicated terms, but to give you a sense of what AI can already do today, where its limitations lie &ndash; and why it can make your life easier, more creative, or more exciting.</p>\r\n<p>Ready? Then let's dive into the world of artificial intelligence together &ndash; in an understandable, practical way, and with an open mind to what's to come.</p>\r\n<blockquote>\r\n<p>💡<strong>Good to know:</strong><br>You don't have to be a professional to use AI effectively. Just get started.</p>\r\n</blockquote>",
+          "slug": "start-guide-en",
+          "intro": "<p>Simply explained. Practical. For all age groups.</p>",
+          "title": "Artificial Intelligence: Your Starting Guide",
+          "public_slug": "start-guide-en"
+        }
+      }
+    }
+  }
+]

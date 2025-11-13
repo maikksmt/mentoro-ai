@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Legal Notice – MentoroAI" %}</title>
+{% endblock %}
+
+{% block content %}
+    <section class="prose max-w-3xl mx-auto py-4">
+        <h1>{% trans "Legal Notice" %}</h1>
+        <h2>{% trans "Information according to § 5 TMG (Germany)" %}</h2>
+        <p>
+            Maik Kusmat<br>
+            MentoroAI<br>
+            Sample Street 1<br>
+            123456 Sample City<br>
+            {% trans "Germany" %}
+        </p>
+
+        <h2>{% trans "Contact" %}</h2>
+        <p>
+            {% trans "Email" %}: <a href="mailto:contact@mentoro-ai.com">contact@mentoro-ai.com</a>
+        </p>
+
+        <h2>{% trans "Responsible for content (§ 18 (2) MStV)" %}</h2>
+        <p>
+            Maik Kusmat<br>
+            MentoroAI, Sample City
+        </p>
+
+        <h2>{% trans "Disclaimer" %}</h2>
+        <p>
+            {% blocktrans %}
+                Despite careful content control, we assume no liability for external links.
+                The operators of the linked pages are solely responsible for their content.
+            {% endblocktrans %}
+        </p>
+    </section>
+{% endblock %}

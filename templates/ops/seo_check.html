@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% with seo_title="SEO Check" seo_description="Internal SEO Smoke Test" seo_canonical=request.build_absolute_uri seo_robots="noindex,follow" %}
+    {# keine Ausgabe nötig – base.html liest die Variablen #}
+{% endwith %}
+
+{% block title %}<title>SEO Check – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+    {% with canonical=request.build_absolute_uri %}
+        <meta name="description" content="Interner SEO Smoke Test für Titel, Description, Canonical, OG, Hreflang.">
+        {% with seo_canonical=canonical %}{% endwith %}
+    {% endwith %}
+{% endblock %}
+{% block content %}
+    <div class="max-w-8xl mx-auto py-8">
+        <h1 class="text-2xl font-bold mb-4">{% blocktrans %}SEO Smoke Test{% endblocktrans %}</h1>
+        <p class="opacity-70 mb-6">{% blocktrans %}Check public pages for basic SEO tags.{% endblocktrans %}</p>
+
+        <form method="post" class="mb-8">
+            {% csrf_token %}
+            <label class="block mb-2 font-medium">{% blocktrans %}Path(s) – one path per line (e.g.
+                <code>/de/glossar/</code>){% endblocktrans %}</label>
+            <textarea name="paths" rows="8" class="textarea textarea-bordered w-full">{{ raw_paths }}</textarea>
+            <div class="mt-3">
+                <button class="btn btn-primary">{% trans "Check" %}</button>
+                <a class="btn btn-ghost ml-2" href="" title="Reset">Reset</a>
+            </div>
+        </form>
+
+        {% if results %}
+            <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Path" %}</th>
+                        <th>{% trans "Status" %}</th>
+                        <th>{% trans "Title" %}</th>
+                        <th>{% trans "Description" %}</th>
+                        <th>{% trans "Canonical" %}</th>
+                        <th>{% trans "OG-Image" %}</th>
+                        <th>{% trans "Hreflang" %}</th>
+                        <th>{% trans "Hints" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for r in results %}
+                        <tr>
+                            <td class="align-top"><code>{{ r.path }}</code></td>
+                            <td class="align-top">
+                                {% if r.status_code == 200 %}
+                                    <span class="badge badge-success">200</span>
+                                {% else %}
+                                    <span class="badge badge-error">{{ r.status_code }}</span>
+                                {% endif %}
+                            </td>
+                            <td class="align-top">{{ r.extracted.title|default:"—" }}</td>
+                            <td class="align-top">{{ r.extracted.description|default:"—" }}</td>
+                            <td class="align-top">
+                                {% if r.extracted.canonical %}<a href="{{ r.extracted.canonical }}"
+                                                                 class="link">{{ r.extracted.canonical }}</a>{% else %}
+                                    —{% endif %}
+                            </td>
+                            <td class="align-top">
+                                {% if r.extracted.og_image %}
+                                    <a href="{{ r.extracted.og_image }}" class="link">Bild</a>{% else %}—{% endif %}
+                            </td>
+                            <td class="align-top">
+                                {% if r.extracted.hreflang and r.extracted.hreflang|length > 0 %}
+                                    {% for h in r.extracted.hreflang %}
+                                        <div><span class="badge badge-ghost">{{ h.lang }}</span> <a href="{{ h.href }}"
+                                                                                                    class="link">{{ h.href }}</a>
+                                        </div>
+                                    {% endfor %}
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+                            <td class="align-top">
+                                {% if r.issues %}
+                                    <ul class="list-disc ml-4">
+                                        {% for i in r.issues %}
+                                            <li class="{% if i.level == 'error' %}text-error{% elif i.level == 'warn' %}text-warning{% endif %}">
+                                                <strong>{{ i.field }}:</strong> {{ i.msg }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    <span class="badge badge-success">OK</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

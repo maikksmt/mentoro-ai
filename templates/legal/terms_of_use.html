@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Terms of Use – MentoroAI" %}</title>
+{% endblock %}
+
+{% block content %}
+    <section class="prose max-w-3xl mx-auto py-4">
+        <h1>{% trans "Terms of Use" %}</h1>
+
+        <h2>{% trans "1. Scope" %}</h2>
+        <p>
+            {% blocktrans %}
+                These Terms of Use apply to all visitors and registered users of MentoroAI.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "2. Use of content" %}</h2>
+        <p>    {% blocktrans %}
+            The content on this website is provided for informational purposes only. Commercial use without the
+            operator’s consent
+            is not permitted.
+        {% endblocktrans %}
+        </p>
+        <h2>{% trans "3. User accounts" %}</h2>
+        <p>    {% blocktrans %}
+            Users must keep their login credentials confidential. The operator reserves the right to suspend or delete
+            accounts in case of misuse.
+        {% endblocktrans %}
+        </p>
+        <h2>{% trans "4. Liability" %}</h2>
+        <p>    {% blocktrans %}
+            The operator assumes no warranty for the correctness, completeness, or timeliness of the information
+            provided.
+            Any liability for damages arising directly or indirectly from the use is excluded.
+        {% endblocktrans %}
+        </p>
+        <h2>{% trans "5. Changes" %}</h2>
+        <p>    {% blocktrans %}
+            The operator may amend these Terms of Use at any time. The current version applies.
+        {% endblocktrans %}
+        </p>
+    </section>
+{% endblock %}

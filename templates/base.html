@@ -1,0 +1,338 @@
+{# templates/base.html #}
+<!DOCTYPE html>
+
+<html lang="{{ LANGUAGE_CODE|default:'en' }}">
+<head>
+    {% load static auth_extras i18n i18n_next %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src="{% url 'javascript-catalog' %}"></script>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css">
+    {% include "partials/_seo_meta.html" %}
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+            integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+            crossorigin="anonymous"></script>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="flex flex-col min-h-screen justify-between bg-base-100 text-base-content">
+
+<!-- Navbar -->
+<div class="navbar bg-base-100 shadow-sm z-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="{% trans "Mobile menu" %}">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16"></path>
+                </svg>
+            </div>
+            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                <li class="my-1"><a href="{% url 'glossary:list' %}"
+                                    class="btn btn-glossary btn-soft btn-sm text-base-content lg:btn-md xl:btn-lg">{% trans "Glossary" %}</a>
+                </li>
+                <li class="my-1"><a href="{% url 'guides:list' %}"
+                                    class="btn btn-guide btn-soft btn-sm text-base-content xl:btn-md">{% trans "Guides" %}</a>
+                </li>
+                <li class="my-1"><a href="{% url 'prompts:list' %}"
+                                    class="btn btn-prompt btn-soft text-base-content btn-sm xl:btn-md">{% trans "Prompts" %}</a>
+                </li>
+                <li class="my-1"><a href="{% url 'usecases:list' %}"
+                                    class="btn btn-usecase btn-soft text-base-content btn-sm xl:btn-md">{% trans "Use cases" %}</a>
+                </li>
+                <li class="my-1"><a href="{% url 'catalog:list' %}"
+                                    class="btn btn-tool btn-soft text-base-content btn-sm xl:btn-md">{% trans "Tools" %}</a>
+                </li>
+                <li class="my-1"><a href="{% url 'compare:index' %}"
+                                    class="btn btn-compare btn-soft text-base-content btn-sm xl:btn-md">{% trans "Comparisons" %}</a>
+                </li>
+            </ul>
+        </div>
+        <a href="/" class="btn btn-ghost text-xl font-bold">MentoroAI</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li class="mx-1"><a href="{% url 'glossary:list' %}"
+                                class="btn btn-glossary btn-soft btn-sm text-base-content xl:btn-md">{% trans "Glossary" %}</a>
+            </li>
+            <li class="mx-1"><a href="{% url 'guides:list' %}"
+                                class="btn btn-guide btn-soft btn-sm text-base-content xl:btn-md">{% trans "Guides" %}</a>
+            </li>
+            <li class="mx-1"><a href="{% url 'prompts:list' %}"
+                                class="btn btn-prompt btn-soft text-base-content btn-sm xl:btn-md">{% trans "Prompts" %}</a>
+            </li>
+            <li class="mx-1"><a href="{% url 'usecases:list' %}"
+                                class="btn btn-usecase btn-soft text-base-content btn-sm xl:btn-md">{% trans "Use cases" %}</a>
+            </li>
+            <li class="mx-1"><a href="{% url 'catalog:list' %}"
+                                class="btn btn-tool btn-soft text-base-content btn-sm xl:btn-md">{% trans "Tools" %}</a>
+            </li>
+            <li class="mx-1"><a href="{% url 'compare:index' %}"
+                                class="btn btn-compare btn-soft text-base-content btn-sm xl:btn-md">{% trans "Comparisons" %}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <!-- Search -->
+        <button class="btn btn-ghost btn-circle" aria-label="{% trans "Search" %}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </button>
+        <!-- Theme Swap -->
+        <label class="swap swap-rotate theme-swap btn btn-ghost btn-circle mx-2">
+            <input type="checkbox" aria-label="{% trans 'Toggle theme' %}"/>
+            <!-- sun icon (light) -->
+            <svg class="swap-on h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"></path>
+            </svg>
+            <!-- moon icon (dark) -->
+            <svg class="swap-off h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"></path>
+            </svg>
+        </label>
+
+        <!-- Language Select -->
+        <form action="{% url 'set_language' %}" method="post" class="inline">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}"/>
+
+            <select name="language" aria-label="{% trans 'Language select' %}"
+                    class="field-sizing-fixed w-16 select select-bordered select-sm"
+                    onchange="(function(sel){
+                            var form = sel.form;
+                            var opt = sel.options[sel.selectedIndex];
+                            var nextInput = form.querySelector('input[name=next]');
+                            var nx = opt.getAttribute('data-next');
+                            if (nx) { nextInput.value = nx; }
+                            form.submit();
+                        })(this)">
+                {% get_current_language as LANGUAGE_CODE %}
+                <option value="de"
+                        data-next="{% i18n_next 'de' %}"
+                        {% if LANGUAGE_CODE == 'de' %}selected{% endif %}>DE
+                </option>
+                <option value="en"
+                        data-next="{% i18n_next 'en' %}"
+                        {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>EN
+                </option>
+            </select>
+        </form>
+    </div>
+</div>
+<!-- Admin NAV -->
+{% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
+    <div class="navbar my-0 py-0">
+        <div class="flex-1  my-0 py-0">
+            <a class="btn btn-ghost text-xl"></a>
+        </div>
+        <div class="flex-none  my-0 py-0">
+
+            <a href="{% url 'content:editorial:my_drafts' %}"
+               class="btn btn-sm btn-outline my-0 py-0">{% trans "Drafts" %}</a>
+
+            {% if request.user|has_group:"editor" or request.user|has_group:"admin" %}
+
+                <a href="{% url 'content:editorial:review_queue' %}"
+                   class="btn btn-sm btn-outline my-0 py-0">{% trans "Reviews" %}</a>
+
+            {% endif %}
+
+        </div>
+    </div>
+{% endif %}
+
+<!-- Beta Badge -->
+<div class="fixed bottom-4 left-4 z-50 bg-warning text-warning-content text-xs font-semibold px-3 py-1.5 rounded-full shadow-md opacity-90 hover:opacity-100 transition"
+     title="This is a beta version of MentoroAI">
+    BETA
+</div>
+
+<!-- Page container -->
+<main class="p-2 lg:p-4 w-full max-w-7xl mx-auto mb-auto">
+    {% block content %}{% endblock %}
+</main>
+
+
+<!-- Footer -->
+<footer class="footer footer-center bg-base-300 text-base-content">
+    <div class="max-w-7xl mx-auto p-2 md:p-4 lg:p-6">
+        <nav class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2 text-sm pt-4">
+            <a href="{% url 'newsletter:subscribe' %}" class="link link-hover p-1 lg:p-2">{% trans "Newsletter" %}</a>
+            <a href="{% url 'what-to-find' %}"
+               class="link link-hover p-1 lg:p-2">{% trans "What can I find on MentoroAI?" %}</a>
+            <a href="{% url 'legal:legal-notice' %}" class="link link-hover p-1 lg:p-2">{% trans "Legal notice" %}</a>
+            <a href="{% url 'legal:privacy' %}" class="link link-hover p-1 lg:p-2">{% trans "Privacy policy" %}</a>
+            <a href="{% url 'legal:cookies' %}" class="link link-hover p-1 lg:p-2">Cookies</a>
+            <a href="{% url 'legal:terms-of-use' %}" class="link link-hover p-1 lg:p-2">{% trans "Terms of Use" %}</a>
+            <a href="{% url 'legal:copyright' %}" class="link link-hover p-1 lg:p-2">{% trans "Copyright" %}</a>
+            <a href="https://github.com/maikksmt" target="_blank" rel="noopener" class="link link-hover p-1 lg:p-2"><img
+                    id="github-logo" alt="GitHub Logo" width="24" height="24"
+                    src="{% static 'img/github-mark-white.png' %}" srcset="{% static 'img/github-mark-white.svg' %}"/>
+            </a>
+        </nav>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4">
+            <p class="text-xs opacity-70">
+                © {{ now|default:"2025" }} MentoroAI – Made with love for coding
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // --- Drawer open/close + ESC + Backdrop ---
+    (function () {
+        const drawer = document.getElementById('mobile-drawer');
+        const openBtn = document.getElementById('menu-open');
+        const closeBtn = document.getElementById('menu-close');
+        const backdrop = document.getElementById('mobile-backdrop');
+
+        function open() {
+            drawer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            drawer.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        openBtn?.addEventListener('click', open);
+        closeBtn?.addEventListener('click', close);
+        backdrop?.addEventListener('click', close);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') close();
+        });
+    })();
+
+    // --- Theme handling via Swap (cookie-aware, system default) ---
+    (function () {
+        const THEME_COOKIE = 'theme'; // stores 'mentoroai-light' or 'mentoroai-dark'
+        const COOKIE_MAX_DAYS = 365;
+
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        const systemTheme = () => (mq.matches ? 'mentoroai-dark' : 'mentoroai-light');
+
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/;SameSite=Lax`;
+        }
+
+        function getCookie(name) {
+            const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? decodeURIComponent(match[2]) : null;
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            // sync all swap checkboxes (checked => dark)
+            document.querySelectorAll('.theme-swap input[type="checkbox"]').forEach(cb => {
+                cb.checked = theme === 'mentoroai-light';
+            });
+        }
+
+        // Init: cookie wins, otherwise system
+        const saved = getCookie(THEME_COOKIE);
+        applyTheme(saved || systemTheme());
+
+        // React to OS changes only when no cookie is set
+        mq.addEventListener?.('change', () => {
+            if (!getCookie(THEME_COOKIE)) {
+                applyTheme(systemTheme());
+            }
+        });
+
+        // Wire up both swap controls
+        document.querySelectorAll('.theme-swap input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const next = e.currentTarget.checked ? 'mentoroai-light' : 'mentoroai-dark';
+                applyTheme(next);
+                setCookie(THEME_COOKIE, next, COOKIE_MAX_DAYS);
+            });
+        });
+    })();
+
+    // --- Function to copy Prompt text to clipboard ---
+    (function () {
+        function htmlToPrettyText(root) {
+            // Klonen, damit wir gefahrlos transformieren
+            const node = root.cloneNode(true);
+
+            // <br> → \n
+            node.querySelectorAll('br').forEach(br => br.replaceWith('\n'));
+
+            // <li> → "- ..." + newline
+            node.querySelectorAll('li').forEach(li => {
+                const prefix = li.closest('ol') ? '1. ' : '- ';
+                // Bei <ol> zahlen wir später nicht hoch – für Copy genügt ein einheitlicher Prefix
+                li.prepend(prefix);
+                li.insertAdjacentText('beforeend', '\n');
+            });
+
+            // Absatzende → doppelte Zeile
+            node.querySelectorAll('p').forEach(p => p.insertAdjacentText('beforeend', '\n\n'));
+
+            // Tabellen: jede Zelle mit Tab trennen, Zeilen umbrechen
+            node.querySelectorAll('tr').forEach(tr => tr.insertAdjacentText('beforeend', '\n'));
+            node.querySelectorAll('td,th').forEach(cell => cell.insertAdjacentText('beforeend', '\t'));
+
+            // Links: Text (URL)
+            node.querySelectorAll('a[href]').forEach(a => {
+                const url = a.getAttribute('href');
+                if (url && !a.textContent.includes(url)) {
+                    a.append(` (${url})`);
+                }
+            });
+
+            // Am Ende reines Textmaterial
+            return node.innerText
+                .replace(/\n{3,}/g, '\n\n')     // Mehrfach-Umbrüche glätten
+                .trim();
+        }
+
+        async function copy(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.setAttribute('readonly', '');
+                ta.style.position = 'fixed';
+                ta.style.top = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(ta);
+                return ok;
+            }
+        }
+
+        document.addEventListener('click', async (e) => {
+            const btn = e.target.closest('button .copy-label, button')?.closest('button');
+            if (!btn) return;
+
+            const wrapper = btn.closest('.relative');
+            const source = wrapper?.querySelector('[data-copy-source]');
+            if (!source) return;
+
+            const text = htmlToPrettyText(source);
+            const original = btn.querySelector('.copy-label')?.textContent || 'Copy';
+            const ok = await copy(text);
+
+            const label = btn.querySelector('.copy-label');
+            if (label) label.textContent = ok ? 'Kopiert' : 'Fehler';
+            btn.classList.add(ok ? 'text-success' : 'text-error');
+            setTimeout(() => {
+                if (label) label.textContent = original;
+                btn.classList.remove('text-success', 'text-error');
+            }, 1400);
+        });
+    })();
+</script>
+</body>
+</html>

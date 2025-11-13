@@ -1,0 +1,13 @@
+{% load i18n %}
+{# templates/partials/editorial_nav.html #}
+{% load auth_extras %}
+
+{% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
+    <div class="flex items-center gap-2">
+        <a href="{% url 'content:editorial:my_drafts' %}" class="btn btn-outline btn-sm">{% trans "Drafts" %}</a>
+        {% if request.user|has_group:"editor" or request.user|has_group:"admin" %}
+            <a href="{% url 'content:editorial:review_queue' %}"
+               class="btn btn-outline btn-sm">{% trans "Reviews" %}</a>
+        {% endif %}
+    </div>
+{% endif %}

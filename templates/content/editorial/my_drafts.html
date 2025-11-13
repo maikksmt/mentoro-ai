@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}<title>{{ seo_title }} – MentoroAI</title>{% endblock %}
+
+
+{% block content %}
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold">{% blocktrans %}Meine Entwürfe & Reviews{% endblocktrans %}</h1>
+        {% if messages %}
+            <div class="space-y-2">{% for m in messages %}
+                <div class="alert">{{ m }}</div>{% endfor %}</div>
+        {% endif %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>{% trans "Typ" %}</th>
+                <th>{% trans "Titel" %}</th>
+                <th>{% trans "Status" %}</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key, it in items %}
+                <tr>
+                    <td class="capitalize">{{ key }}</td>
+                    <td>{{ it.title }}</td>
+                    <td>{{ it.status }}</td>
+                    <td class="text-right">
+                        {% if it.status != "review" %}
+                            <form method="post" action="{% url 'content:editorial:submit_to_review' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="model" value="{{ key }}">
+                                <input type="hidden" name="object_id" value="{{ it.pk }}">
+                                <button class="btn btn-sm">{% blocktrans %}Zum Review
+                                    einreichen{% endblocktrans %}</button>
+                            </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4" class="opacity-70">{% blocktrans %}Keine Einträge{% endblocktrans %}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

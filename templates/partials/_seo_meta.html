@@ -1,0 +1,39 @@
+{% load i18n seo_extras %}
+
+{# Titel #}
+<title>{% if seo and seo.title %}{{ seo.title }}{% else %}{{ SITE_NAME|default:"MentoroAI" }}{% endif %}</title>
+
+{# Canonical #}
+{% if seo.canonical %}
+    <link rel="canonical" href="{{ seo.canonical }}">{% endif %}
+
+{# hreflang - gemäß Google Docs #}
+{# https://developers.google.com/search/docs/specialty/international/localized-versions #}
+{% for alt in seo.alternates %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">{% endfor %}
+
+{# Meta basics #}
+<meta name="description" content="{{ seo.description|default_if_none:'' }}">
+<meta name="robots" content="{{ seo.robots|default:'index,follow' }}">
+
+{# OpenGraph/Twitter #}
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ SITE_NAME|default:'MentoroAI' }}">
+<meta property="og:title" content="{{ seo.title }}">
+<meta property="og:description" content="{{ seo.description }}">
+<meta property="og:url" content="{{ seo.canonical }}">
+{% if seo.og_image %}
+    <meta property="og:image" content="{{ seo.og_image }}">{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo.title }}">
+<meta name="twitter:description" content="{{ seo.description }}">
+{% if seo.og_image %}
+    <meta name="twitter:image" content="{{ seo.og_image }}">{% endif %}
+
+{# JSON-LD (WebSite oder Article) #}
+{% if seo.json_ld %}
+    <script type="application/ld+json">
+{{ seo.json_ld|jsonld|safe }}
+</script>
+{% endif %}

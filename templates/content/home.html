@@ -1,0 +1,138 @@
+{# templates/content/home.html #}
+{% extends "base.html" %}
+{% load i18n static richtext %}
+
+{% block content %}
+    <!-- Beta Alert -->
+    <div id="beta-alert"
+         class="alert alert-outline text-base-content alert-warning shadow-md lg:mb-2 max-w-xl mx-auto opacity-0 transition-all duration-300 z-10">
+        {% heroicon_solid "beaker" size=18 class="mr-2" %}
+        <span>
+            {% trans "MentoroAI is currently in public beta. Some features may change or be incomplete." %} <br>
+            {% trans "Please provide feedback on" %} <a class="link"
+                                                        href="https://github.com/maikksmt/mentoro-ai/discussions/">
+            {% blocktrans %}Project Github{% endblocktrans %}</a>
+        </span>
+    </div>
+    <script defer>
+        window.addEventListener('DOMContentLoaded', () => {
+            const a = document.getElementById('beta-alert');
+            if (a) {
+                a.classList.remove('opacity-0');
+                {#a.classList.remove('translate-y-[-11px]');#}
+            }
+        });
+    </script>
+    <!-- Hero / Intro -->
+    <section class="container mx-auto">
+        <div class="hero rounded-lg">
+            <div class="hero-content">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold pb-4">
+                        MentoroAI — {% trans "Quick introduction to AI tools & practice." %}
+                    </h1>
+                    <p class="text-base md:text-lg opacity-80 max-w-2xl">
+                        {% blocktrans %}
+                            Find suitable AI tools, compare alternatives, and use practical guides and prompts for your
+                            everyday life.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Open the modal using ID.showModal() method -->
+    <div class="fab">
+        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()">
+            ?
+        </button>
+    </div>
+    {% include "partials/features_open.html" %}
+    <!-- Info Cards -->
+    <section class="container mx-auto mt-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+            {% include "partials/starter_guide_card.html" %}
+            {% include "partials/author_info_card.html" %}
+        </div>
+    </section>
+
+    <!-- Entry Cards -->
+    {% include "partials/_entry_cards.html" with card=c %}
+
+    <!-- Featured Tools -->
+    {% if featured_tools %}
+        <section class="container mx-auto mt-8">
+            <h2 class="text-xl font-semibold pb-4">{% trans "Featured Tools" %}</h2>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+                {% for t in featured_tools %}
+                    <a href="{% url 'catalog:detail' slug=t.slug %}"
+                       class="card border rounded-md hover:shadow-xl transition-shadow h-full">
+                        <div class="card-body">
+                            <div class="flex items-center gap-3">
+                                {% if t.logo %}
+                                    <div class="avatar">
+                                        <div class="w-10 h-10 rounded-full ring-1 ring-base-300">
+                                            <img src="{{ t.logo.url }}" alt="{{ t.name }}" loading="lazy" width="40"
+                                                 height="40">
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="w-10 h-10 rounded-full bg-base-200 grid place-items-center">
+                                        {% heroicon_solid "bolt" size=18 class="opacity-70" %}
+                                    </div>
+                                {% endif %}
+                                <div>
+                                    <h3 class="font-semibold leading-tight">{{ t.name }}</h3>
+                                    {% if t.vendor %}<p class="text-xs opacity-70">{{ t.vendor }}</p>{% endif %}
+                                </div>
+                            </div>
+                            {% if t.short_description %}
+                                <p class="opacity-80 mt-3 line-clamp-2">{{ t.short_description|richtext|safe|truncatewords:35 }}</p>{% endif %}
+                            <div class="card-actions mt-4 justify-between items-center">
+                                {% if t.rating %}
+                                    <span class="badge badge-primary badge-outline"
+                                          aria-label="Bewertung">{{ t.rating }}★</span>
+                                {% endif %}
+                                <span class="btn btn-sm btn-primary">{% trans "Details" %}</span>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+    <!-- Personalized recommendations -->
+    {% if recommended_items %}
+        <section class="container mx-auto mt-8">
+            <h2 class="text-xl font-semibold mb-4">{% trans "Recommended for you" %}</h2>
+            <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {% for item in recommended_items %}
+                    {% include "partials/_teaser_card.html" with item=item %}
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    <!-- Aktuelle Inhalte -->
+    <section class="container mx-auto mt-8">
+        <div class="flex items-baseline justify-between mb-4">
+            <h2 class="text-xl font-semibold">{% trans "Current content" %} <span class="opacity-60"><a
+                    class="link link-hover ml-2" href="{% url 'guides:list' %}">{% trans "Guides" %}</a> • <a
+                    class="link link-hover" href="{% url 'prompts:list' %}">{% trans "Prompts" %}</a> • <a
+                    class="link link-hover"
+                    href="{% url 'usecases:list' %}">{% trans "Usecases" %}</a></span>
+            </h2>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {% for item in latest_items %}
+                {% include "partials/_teaser_card.html" with item=item %}
+            {% empty %}
+                <div class="alert">
+                    {% heroicon_solid "information-circle" size=20 class="mr-2" %}
+                    <span>{% trans "No published content yet." %}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

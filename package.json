@@ -1,0 +1,34 @@
+{
+  "name": "django_mentoroai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./static/css/output.css --watch",
+    "build": "NODE_ENV=production tailwindcss -i ./assets/css/input.css -o ./static/css/output.css --minify",
+    "makemessages": "python manage.py makemessages -a -i 'venv/**' -i '.venv/**' -i 'node_modules/**' -i 'htmlcov/**' -i 'coverage/**' -i '**/site-packages/**' -i '**/*.html.py' -i '**/*.txt.py' -i 'requirements*.txt'",
+    "compilemessages": "python manage.py compilemessages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maikksmt/mentoroai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maikksmt/mentoroai/issues"
+  },
+  "homepage": "https://github.com/maikksmt/mentoroai#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.3.7",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14"
+  }
+}

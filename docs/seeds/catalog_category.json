@@ -1,0 +1,52 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 7,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 8,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 9,
+    "fields": {}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 10,
+    "fields": {}
+  }
+]

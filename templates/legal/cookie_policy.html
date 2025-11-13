@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Cookie Policy – MentoroAI" %}</title>
+{% endblock %}
+
+{% block content %}
+    <section class="prose max-w-3xl mx-auto py-4">
+        <h1>{% trans "Cookie Policy" %}</h1>
+
+        <h2>{% trans "What are cookies?" %}</h2>
+        <p>
+            {% blocktrans %}
+                Cookies are small text files stored on your device when you visit a website.
+                They provide technical functionality or convenience features (e.g., language selection).
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "Cookies we use" %}</h2>
+        <ul>
+            <li><strong>csrftoken</strong> — {% trans "security cookie for form submissions" %}</li>
+            <li><strong>sessionid</strong> — {% trans "stores the current session ID" %}</li>
+            <li><strong>preferred_theme</strong> — {% trans "remembers your selected theme (light/dark)" %}</li>
+        </ul>
+
+        <h2>{% trans "Cookie control" %}</h2>
+        <p>
+            {% blocktrans %}
+                You can delete or block cookies at any time in your browser. The core functionality of the website
+                remains available.
+            {% endblocktrans %}
+        </p>
+    </section>
+{% endblock %}

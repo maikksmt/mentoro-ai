@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% load i18n static richtext %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <article class="prose max-w-none">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold">{{ display_title }}</h1>
+            <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
+                {% if object.published_at %}
+                    <time datetime="{{ object.published_at|date:'c' }}">
+                        📅 {{ object.published_at|date:"d.m.Y" }}
+                    </time>
+                {% endif %}
+                {% if object.reading_time %}
+                    <span>⏱ {{ object.reading_time }}&nbsp;min</span>
+                {% endif %}
+            </div>
+        </header>
+
+        {% if display_intro %}
+            <p class="prose text-base-content/80">{{ display_intro|richtext|safe }}</p>
+            <div class="divider"></div>
+        {% endif %}
+        <p class="prose content">
+            {{ display_body|richtext|safe }}
+        </p>
+        {% for section in object.sections.all %}
+            <div class="divider"></div>
+            <div class="">
+                <h2>{{ section.display_title }}</h2>
+                {% if section.display_body %}
+                    <p class="opacity-80">{{ section.display_body|richtext|safe }}</p>{% endif %}
+            </div>
+            <div class="grid gap-2 lg:gap-4 grid-cols-2 xl:grid-cols-3">
+                {% for item in section.items.all %}
+                    {% if item.is_published %}
+                        {% include "partials/_guideitem_card.html" with item=item %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+        {% endfor %}
+    </article>
+
+    {% if related_guides %}
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4">{% trans "Related Guides" %}</h2>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {% for item in related_guides %}
+                    {% include "partials/_teaser_card.html" with item=item %}
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

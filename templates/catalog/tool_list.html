@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n richtext %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <header class="mb-6 card-header-tool">
+        <h1 class="text-3xl font-bold">{% trans "All tools" %}</h1>
+    </header>
+
+    <form method="get" class="py-2 md:py-4 grid gap-3 grid-cols-3 md:grid-cols-4 justify-items">
+        <input type="search" name="q" value="{{ q|default_if_none:'' }}" placeholder="{% trans 'Search…' %}"
+               class="col-span-2 input input-bordered w-full"/>
+
+        <label class="col-span-2 md:col-span-1 label cursor-pointer justify-start gap-3">
+            <input type="checkbox" class="checkbox" name="free" value="1" {% if free %}checked{% endif %}/>
+            <span class="label-text">{% trans "Only with Free-Tier" %}</span>
+        </label>
+        <div class="col-span-1 md:col-span-4 flex gap-2 justify-start">
+            <button class="btn btn-primary ">{% trans "Filter" %}</button>
+            {% if q or language or free %}
+                <a href="." class="btn">{% trans "Reset" %}</a>
+            {% endif %}
+        </div>
+    </form>
+    <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {% for t in object_list %}
+            <article class="card bg-base-100 shadow hover:shadow-lg transition">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <a class="link link-hover" href="{% url 'catalog:detail' slug=t.slug %}">{{ t.name }}</a>
+                    </h2>
+                    {% if t.short_description %}
+                        <p class="line-clamp-3">{{ t.short_description|richtext|safe }}</p>{% endif %}
+                    <div class="flex flex-wrap items-center gap-2 text-sm">
+                        {% if t.free_tier %}<span class="badge badge-success">Free Tier</span>{% endif %}
+                        {% if t.pricing_model %}
+                            <span class="badge badge-outline">{{ t.pricing_model }}</span>{% endif %}
+                        {% if t.language_support %}
+                            {% for lang in t.language_support|slice:":3" %}
+                                <span class="badge badge-outline">{{ lang }}</span>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="card-actions justify-end">
+                        {% if t.website %}
+                            <a href="{{ t.website }}"
+                               class="btn btn-sm"
+                               target="_blank"
+                               rel="noopener nofollow ugc">
+                                Website
+                            </a>
+                        {% endif %}
+                        <a href="{% url 'catalog:detail' slug=t.slug %}"
+                           class="btn btn-sm btn-primary">{% trans "Details" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% empty %}
+            <div class="col-span-full alert">
+                <span>{% trans "No tools found." %}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "partials/pagination.html" %}
+{% endblock %}

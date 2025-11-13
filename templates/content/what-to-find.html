@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <!-- Hero / Intro -->
+    <section id="content" class="container mx-auto">
+        <div class="hero rounded-2xl">
+            <div class="hero-content">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold pb-4">
+                        📚 {% trans "Overview and distinction of content areas on MentoroAI" %}
+                    </h1>
+                    <p class="text-base md:text-lg opacity-80 max-w-2xl">
+                        {% blocktrans %}
+                            MentoroAI offers different types of content – each format has a clear purpose, its own
+                            depth,
+                            and addresses specific user needs. The following overview explains the structure, goal,
+                            and focus of the six key content categories.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local TOC -->
+    <nav class="">
+        <div class="container mx-auto px-4">
+            <div class="breadcrumbs py-3 text-sm overflow-x-auto">
+                <ul class="flex gap-4">
+                    <li><a href="#glossary" class="link">🧠 {% trans "Glossary" %}</a></li>
+                    <li><a href="#guides" class="link">📖 {% trans "Guides" %}</a></li>
+                    <li><a href="#prompts" class="link">💬 {% trans "Prompts" %}</a></li>
+                    <li><a href="#usecases" class="link">💡 {% trans "Use Cases" %}</a></li>
+                    <li><a href="#tools" class="link">🧰 {% trans "Tools" %}</a></li>
+                    <li><a href="#comparisons" class="link">⚖️ {% trans "Comparisons" %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="divider"></div>
+    <!-- Content Sections -->
+    <section class="container mx-auto px-4 py-12 lg:py-16 space-y-14">
+
+        <!-- Glossary -->
+        <article id="glossary" class="anchor">
+            <div class="prose max-w-none">
+                <h2>🧠 {% trans "Glossary – Understand key terms" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>{% trans "Explain core concepts of artificial intelligence – simple, clear, and with context." %}</p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Term (e.g. “Neural Network”)" %}</li>
+                    <li>{% trans "Short definition (“A computer model inspired by the human brain…”) " %}</li>
+                    <li>{% trans "Detailed explanation with examples or analogies" %}</li>
+                    <li>{% trans "Category (e.g. Models & Architectures, Ethics & Society)" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "Understand terminology and relationships." %}</p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% trans "Prompt – a command or question given to an AI model describing what output to generate." %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/glossary/" class="btn btn-primary btn-sm">{% trans "Go to Glossary" %}</a>
+                </div>
+            </div>
+        </article>
+
+        <div class="divider"></div>
+
+        <!-- Guides -->
+        <article id="guides" class="anchor">
+            <div class="prose max-w-none">
+                <h2>📖 {% trans "Guides – Learn & apply step by step" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>
+                    {% blocktrans %}
+                        Instructional texts that explain a topic from the ground up – practical and easy to follow.
+                        They combine knowledge, motivation, and actionable steps.
+                    {% endblocktrans %}
+                </p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Introduction to a topic (“AI in everyday office work”)" %}</li>
+                    <li>{% trans "Step-by-step instructions or checklists" %}</li>
+                    <li>{% trans "Tips, case studies, and common mistakes" %}</li>
+                    <li>{% trans "Hands-on tone, often including screenshots or example prompts" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "How to use AI effectively, safely, and confidently." %}</p>
+
+                <h3>{% trans "Audience:" %}</h3>
+                <p>{% trans "Beginners, learners, and curious users." %}</p>
+
+                <h3>{% trans "Distinction:" %}</h3>
+                <p>
+                    {% blocktrans %}
+                        Guides explain and accompany – they are not direct examples but structured learning or
+                        application tutorials.
+                    {% endblocktrans %}
+                </p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% trans "Guide: “Save time with AI in everyday office tasks – reports, emails & meetings.”" %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/guides/" class="btn btn-primary btn-sm">{% trans "Explore Guides" %}</a>
+                </div>
+            </div>
+        </article>
+
+        <div class="divider"></div>
+        <!-- Prompts -->
+        <article id="prompts" class="anchor">
+            <div class="prose max-w-none">
+                <h2>💬 {% trans "Prompts – Ready-to-use input examples" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>
+                    {% blocktrans %}
+                        Immediately usable input templates (“prompts”) for different goals, tailored to task and
+                        audience.
+                    {% endblocktrans %}
+                </p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Title (e.g. “Create a structured email summary”)" %}</li>
+                    <li>{% trans "Description of the intended use" %}</li>
+                    <li>{% trans "Prompt text (formatted and copy-friendly)" %}</li>
+                    <li>{% trans "Example outputs or variations" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "Start right away – with a well-crafted input." %}</p>
+
+                <h3>{% trans "Distinction:" %}</h3>
+                <p>
+                    {% blocktrans %}
+                        Prompts are tools (text building blocks), guides are explanations,
+                        and use cases are real-life examples.
+                    {% endblocktrans %}
+                </p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% trans "Prompt: “Summarize the following email in three sentences and mark open items with an asterisk.”" %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/prompts/" class="btn btn-primary btn-sm">{% trans "Browse Prompts" %}</a>
+                </div>
+            </div>
+        </article>
+        <div class="divider"></div>
+        <!-- Use Cases -->
+        <article id="usecases" class="anchor">
+            <div class="prose max-w-none">
+                <h2>💡 {% trans "Use Cases – Real-world examples" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>{% trans "Illustrate where and how AI is used in real-life situations." %}</p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Description of a specific application or industry" %}</li>
+                    <li>{% trans "Problem → AI solution → Result" %}</li>
+                    <li>{% trans "Benefits, limitations, and success factors" %}</li>
+                    <li>{% trans "Optionally: links to related tools or prompts" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "How does AI create value in my field or daily life?" %}</p>
+
+                <h3>{% trans "Distinction:" %}</h3>
+                <p>
+                    {% trans "A use case shows what’s possible – a guide explains how to do it yourself." %}
+                </p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% trans 'Use Case: "Summarizing insurance reports with AI – saving 60 % of processing time."' %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/usecases/" class="btn btn-primary btn-sm">{% trans "Explore Use Cases" %}</a>
+                </div>
+            </div>
+        </article>
+
+        <div class="divider"></div>
+        <!-- Tools -->
+        <article id="tools" class="anchor">
+            <div class="prose max-w-none">
+                <h2>🧰 {% trans "Tools – Discover AI apps & platforms" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>{% trans "Introducing and classifying AI tools, apps, and platforms." %}</p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Short description, main functions, and typical use cases" %}</li>
+                    <li>{% trans "Screenshots or sample workflows" %}</li>
+                    <li>{% trans "Links to the official website or app" %}</li>
+                    <li>{% trans "Comparative overview with similar tools" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "What can this tool do, and when is it worth using?" %}</p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% blocktrans %}
+                        ChatGPT – a language model by OpenAI for text generation, ideal for idea creation, drafts,
+                        and analysis.
+                    {% endblocktrans %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/catalog/tools/" class="btn btn-primary btn-sm">{% trans "Explore Tools" %}</a>
+                </div>
+            </div>
+        </article>
+        <div class="divider"></div>
+        <!-- Comparisons -->
+        <article id="comparisons" class="anchor">
+            <div class="prose max-w-none">
+                <h2>⚖️ {% trans "Comparisons – Orientation & decision help" %}</h2>
+
+                <h3>{% trans "Purpose:" %}</h3>
+                <p>
+                    {% blocktrans %}
+                        Compare similar tools, models, or approaches to highlight differences and ideal use cases.
+                    {% endblocktrans %}
+                </p>
+
+                <h3>{% trans "Content:" %}</h3>
+                <ul>
+                    <li>{% trans "Comparison tables (e.g. “ChatGPT vs Claude vs Gemini”)" %}</li>
+                    <li>{% trans "Evaluation by criteria such as price, quality, privacy, strengths / weaknesses" %}</li>
+                    <li>{% trans "Summary and recommendations" %}</li>
+                </ul>
+
+                <h3>{% trans "Focus:" %}</h3>
+                <p>→ {% trans "Which tool or approach fits my needs best?" %}</p>
+
+                <h3>{% trans "Example:" %}</h3>
+                <blockquote>
+                    {% trans "Comparison: “ChatGPT vs Gemini – Which model works better for office productivity?”" %}
+                </blockquote>
+
+                <div class="mt-4">
+                    <a href="/en/compare/" class="btn btn-primary btn-sm">{% trans "View Comparisons" %}</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Back to top -->
+        <div class="text-right">
+            <a href="#content" class="btn btn-default">{% trans "Back to top" %} {% heroicon_solid "arrow-up" size=20 %}
+            </a>
+        </div>
+    </section>
+{% endblock %}

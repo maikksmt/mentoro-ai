@@ -1,0 +1,26 @@
+{# templates/partials/starter_guide_card.html #}
+{% load auth_extras %}
+{% load i18n static %}
+
+<div class="card border rounded-md shadow-lg items-center">
+    <div class="card-body">
+        <h2 class="card-title text-xl">{% blocktrans %}New to AI? Start here{% endblocktrans %}</h2>
+        <p class="opacity-80">
+            {% blocktrans %}
+                The Starter Guide introduces you to artificial intelligence step by step – easy to understand and
+                practical. Ideal for beginners with no prior knowledge.
+            {% endblocktrans %}
+        </p>
+        <div class="card-actions justify-center mt-4">
+            {% if start_guide_url %}
+                <a href="{{ start_guide_url }}" class="btn btn-primary">{% trans "To the starter guide" %}</a>
+            {% else %}
+                <span class="btn btn-disabled">{% trans "To the starter guide" %}</span>
+            {% endif %}
+            <a href="{% url 'catalog:list' %}" class="btn btn-ghost">
+                {% blocktrans %}Discover tools{% endblocktrans %}
+            </a>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}<title>{{ seo_title }} – MentoroAI</title>{% endblock %}
+
+{% block content %}
+    <div class="prose max-w-2xl">
+        <h1>{% trans "Confirmation failed" %}</h1>
+        <p>{{ message }}</p>
+        <p>{% trans "Please request a new confirmation email or contact support if the issue persists." %}</p>
+    </div>
+{% endblock %}

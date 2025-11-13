@@ -1,0 +1,11 @@
+{% load i18n %}
+<nav class="text-sm breadcrumbs" aria-label="{% trans 'Breadcrumbs' %}">
+    <ul>
+        <li><a href="/">{% trans "Start" %}</a></li>
+        {% for name, url in crumbs %} {% if forloop.last %}
+            <li class="text-base-content/70" aria-current="page">{{ name|truncatewords:5 }}</li>
+        {% else %}
+            <li><a href="{{ url }}">{{ name|truncatewords:5 }}</a></li>
+        {% endif %} {% endfor %}
+    </ul>
+</nav>

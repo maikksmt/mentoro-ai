@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Copyright & Licenses – MentoroAI" %}</title>
+{% endblock %}
+
+{% block content %}
+    <section class="prose max-w-3xl mx-auto py-4">
+        <h1>{% trans "Copyright & Licenses" %}</h1>
+
+        <h2>{% trans "1. Copyright" %}</h2>
+        <p>
+            {% blocktrans %}
+                All content published on this website (texts, images, code, layouts) is protected by copyright.
+                Third-party contributions are marked accordingly.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "2. Open-source license" %}</h2>
+        <p>
+            {% blocktrans %}
+                The MentoroAI project is licensed under the GNU General Public License v3.0 (GPLv3). A copy of the
+                license can be found in the file
+            {% endblocktrans %}
+            <a href="/LICENSE.txt">LICENSE.txt</a>
+            {% trans "in the source repository." %}
+        </p>
+
+        <h2>{% trans "3. Use of content" %}</h2>
+        <p>    {% blocktrans %}
+            Reuse or reproduction of the content is only permitted within the scope of the license terms.
+        {% endblocktrans %}
+        </p>
+        <h2>{% trans "4. Trademarks and logos" %}</h2>
+        <p> {% blocktrans %}
+            Third-party trademarks and logos are the property of their respective owners.
+        {% endblocktrans %}
+        </p>
+    </section>
+{% endblock %}

@@ -1,0 +1,64 @@
+[run]
+# Quelle: alle Projekt-Apps (nicht Python- oder Django-Pakete)
+source =
+    accounts
+    api
+    catalog
+    compare
+    content
+    core
+    glossary
+    guides
+    newsletter
+    prompts
+    usecases
+    mentoroai
+branch = True
+parallel = True
+omit =
+    */migrations/*
+    */tests/*
+    */admin.py
+    */apps.py
+    */wsgi.py
+    */asgi.py
+    */__init__.py
+    manage.py
+    project_context.py
+    */site-packages/*
+    */lib/python*/*
+    */settings/*
+    */sitemaps.py
+    */templatetags/*
+    */fixtures/*
+    */scripts/*
+    */urls.py
+
+[report]
+# Lücken aufzeigen, aber nur für echte Projektmodule
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    def __str__
+    if self\.debug
+    if settings\.DEBUG
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+show_missing = True
+skip_covered = False
+precision = 1
+fail_under = 10
+
+[html]
+directory = htmlcov
+title = MentoroAI – Coverage Report
+show_contexts = True
+
+[xml]
+output = coverage.xml
+
+[paths]
+# Zusammenführung von Coverage-Daten bei parallelen Runs
+source =
+    .

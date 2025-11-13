@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktrans %}Confirm your MentoroAI newsletter subscription{% endblocktrans %}

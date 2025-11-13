@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n static richtext %}
+
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <header class="mb-6 card-header-guide">
+        <h1 class="text-3xl font-bold">{% trans "Guides" %}</h1>
+        <p class="text-base-content/70 mt-2">
+            {% trans "Step-by-step instructions on AI topics – understandable and practical." %}
+        </p>
+    </header>
+    <div class="grid gap-2 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {% for obj in object_list %}
+            <article class="card bg-base-100 shadow-md hover:shadow-lg transition">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <a href="{{ obj.get_absolute_url }}" class="link link-hover">{{ obj.display_title }}</a>
+                    </h2>
+                    {% if obj.display_intro %}
+                        <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords:30 }}</p>
+                    {% endif %}
+                    <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
+                        {% if obj.reading_time %}<span>⏱ {{ obj.reading_time }}&nbsp;min</span
+                        >{% endif %} {% if obj.published_at %}
+                        <time datetime="{{ obj.published_at|date:'c' }}">
+                            📅 {{ obj.published_at|date:"d.m.Y" }}</time>{% endif %}
+                    </div>
+                    <div class="card-actions justify-end mt-4">
+                        <a href="{{ obj.get_absolute_url }}"
+                           class="btn btn-primary btn-sm">{% trans "Read more" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% empty %}
+            <div class="col-span-full alert">
+                <span>{% trans "No published guides available." %}</span>
+            </div>
+        {% endfor %}
+    </div>
+    {% include "partials/pagination.html" %} {% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <header class="mb-6 card-header-compare">
+        <h1 class="text-3xl font-bold">{% trans "Tool comparison" %}</h1>
+        <p class="text-base-content/70 mt-2">{% trans "Comparisons based on criteria such as price, functionality and quality." %}</p>
+    </header>
+    <form method="get" class="my-4 pb-4 grid gap-3 md:grid-cols-3">
+        <input type="search" name="q" value="{{ q|default_if_none:'' }}" class="input input-bordered w-full"
+               placeholder="{% trans 'Search…' %}">
+        <select name="category" class="select select-bordered w-full">
+            <option value="">{% trans "All categories" %}</option>
+            {% for c in available_categories %}
+                <option value="{{ c.slug }}" {% if category == c.slug %}selected{% endif %}>{{ c.name }}</option>
+            {% endfor %}
+        </select>
+        <div>
+            <button class="btn btn-primary">{% trans "Filter" %}</button>
+            {% if q or category %}<a href="." class="btn ml-2">{% trans "Reset" %}</a>{% endif %}
+        </div>
+    </form>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {% for cmp in object_list %}
+            <article class="card bg-base-100 shadow hover:shadow-lg transition">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <a class="link link-hover" href="{% url 'compare:detail' slug=cmp.slug %}">{{ cmp.title }}</a>
+                    </h2>
+                    {% if cmp.intro %}<p class="line-clamp-3">{{ cmp.intro }}</p>{% endif %}
+                    <div class="mt-3 flex flex-wrap gap-2 text-sm">
+                        {% if cmp.tools.all %}
+                            {% for t in cmp.tools.all|slice:":3" %}
+                                <span class="badge badge-outline">{{ t.name }}</span>
+                            {% endfor %}
+                            {% if cmp.tools.all|length > 3 %}
+                                <span class="badge">+{{ cmp.tools.all|length|add:"-3" }}</span>{% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="card-actions justify-end mt-4">
+                        <a class="btn btn-sm btn-primary"
+                           href="{% url 'compare:detail' slug=cmp.slug %}">{% trans "Details" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% empty %}
+            <div class="col-span-full alert my-4">
+                <span>{% trans "No comparisons found." %}</span>
+            </div>
+        {% endfor %}
+    </div>
+    {% include "partials/pagination.html" %}
+{% endblock %}

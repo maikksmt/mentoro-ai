@@ -1,0 +1,31 @@
+{% load richtext static %}
+{% load i18n %}
+<article class="card border rounded-md h-full focus-within:ring-2 focus-within:ring-primary/30">
+    <div class="card-body">
+        <div class="flex items-center gap-2 text-xs opacity-70">
+            {% if item.kind == "guide" %}
+                <span class="badge badge-guide">{{ item.kind }}</span>
+            {% elif item.kind == "prompt" %}
+                <span class="badge badge-prompt">{{ item.kind }}</span>
+            {% elif item.kind == "usecase" %}
+                <span class="badge badge-usecase">{{ item.kind }}</span>
+            {% elif item.kind == "tool" %}
+                <span class="badge badge-prompt">{{ item.kind }}</span>
+            {% elif item.kind == "comparison" %}
+                <span class="badge badge-compare">{{ item.kind }}</span>
+            {% elif item.kind == "link" %}
+                <span class="badge badge-info">{{ item.kind }}</span>
+            {% endif %}
+        </div>
+        <h3 class="card-title text-base leading-snug">
+            <a href="{{ item.get_url }}" class="link link-hover"
+               aria-label="{{ item.get_title }}">{{ item.get_title }}</a>
+        </h3>
+        {% if item.get_teaser %}
+            <div class="text-sm lg:text-base opacity-80 h-full">{{ item.get_teaser|richtext|safe }}</div>
+        {% endif %}
+        <div class="card-actions mt-4 justify-end">
+            <a href="{{ item.get_url }}" class="btn btn-primary">{% trans "Read" %}</a>
+        </div>
+    </div>
+</article>

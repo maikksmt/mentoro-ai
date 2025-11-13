@@ -1,0 +1,303 @@
+@import "tailwindcss";
+
+@source not "./tailwindcss";
+@source not "./daisyui{,*}.mjs";
+
+@plugin "@tailwindcss/typography";
+@plugin "./daisyui.mjs";
+
+@plugin "daisyui/theme" {
+    name: "mentoroai-light";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(93% 0 0);
+    --color-base-300: oklch(86% 0 0);
+    --color-base-content: oklch(22.389% 0.031 278.072);
+    --color-primary: oklch(58% 0.158 241.966);
+    --color-primary-content: oklch(100% 0 0);
+    --color-secondary: oklch(55% 0.046 257.417);
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: oklch(60% 0.118 184.704);
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(0% 0 0);
+    --color-neutral-content: oklch(100% 0 0);
+    --color-info: oklch(60% 0.126 221.723);
+    --color-info-content: oklch(100% 0 0);
+    --color-success: oklch(62% 0.194 149.214);
+    --color-success-content: oklch(100% 0 0);
+    --color-warning: oklch(85% 0.199 91.936);
+    --color-warning-content: oklch(0% 0 0);
+    --color-error: oklch(70% 0.191 22.216);
+    --color-error-content: oklch(0% 0 0);
+    --radius-selector: 0.25rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
+
+@plugin "daisyui/theme" {
+    name: "mentoroai-dark";
+    default: false;
+    prefersdark: false;
+    color-scheme: "dark";
+    --color-base-100: oklch(24.353% 0 0);
+    --color-base-200: oklch(22.648% 0 0);
+    --color-base-300: oklch(20.944% 0 0);
+    --color-base-content: oklch(84.87% 0 0);
+    --color-primary: oklch(41.703% 0.099 251.473);
+    --color-primary-content: oklch(88.34% 0.019 251.473);
+    --color-secondary: oklch(64.092% 0.027 229.389);
+    --color-secondary-content: oklch(12.818% 0.005 229.389);
+    --color-accent: oklch(67.271% 0.167 35.791);
+    --color-accent-content: oklch(13.454% 0.033 35.791);
+    --color-neutral: oklch(27.441% 0.013 253.041);
+    --color-neutral-content: oklch(85.488% 0.002 253.041);
+    --color-info: oklch(62.616% 0.143 240.033);
+    --color-info-content: oklch(12.523% 0.028 240.033);
+    --color-success: oklch(70.226% 0.094 156.596);
+    --color-success-content: oklch(14.045% 0.018 156.596);
+    --color-warning: oklch(77.482% 0.115 81.519);
+    --color-warning-content: oklch(15.496% 0.023 81.519);
+    --color-error: oklch(51.61% 0.146 29.674);
+    --color-error-content: oklch(90.322% 0.029 29.674);
+    --radius-selector: 0.25rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
+@custom-variant dark (&:where([data-theme=mentoroai-dark], [data-theme=mentoroai-dark] *));
+
+@font-face {
+    font-display: swap;
+}
+
+/* === Globale Basis-Schriftgröße; alles rem-basiert skaliert mit === */
+:root {
+    --font-size-root: 16px;
+}
+
+html {
+    font-size: var(--font-size-root);
+}
+
+/* Smartphones: global kleiner */
+@media (max-width: 640px) {
+    :root {
+        --font-size-root: 13px;
+    }
+
+    /* ggf. 13px wählen */
+}
+
+/* --- Default (light theme) --- */
+html[data-theme='mentoroai-light'] #github-logo {
+    content: url("/static/img/github-mark.png");
+}
+
+html[data-theme='mentoroai-light'] #github-logo[srcset] {
+    content: url("/static/img/github-mark.svg");
+}
+
+/* --- Dark theme --- */
+html[data-theme='mentoroai-dark'] #github-logo {
+    content: url("/static/img/github-mark-white.png");
+}
+
+html[data-theme='mentoroai-dark'] #github-logo[srcset] {
+    content: url("/static/img/github-mark-white.svg");
+}
+
+/* ===========================================================
+   MentoroAI – Category Color Extensions
+   Compatible with DaisyUI v5 / Tailwind v4
+   =========================================================== */
+
+/* === 1) Farbvariablen je Theme === */
+
+/* Light Theme */
+[data-theme="mentoroai-light"] {
+    --glossary: oklch(68% 0.13 120); /* türkis-grün */
+    --tool: oklch(67% 0.16 200); /* Teal */
+    --guide: oklch(62% 0.16 300); /* Violet */
+    --usecase: oklch(68% 0.14 170); /* Mint */
+    --prompt: oklch(70% 0.19 30); /* Orange */
+    --compare: oklch(66% 0.17 280); /* violett-blau */
+    --base-bg: var(--color-base-100);
+    --base-bg-strong: var(--color-base-200);
+    --base-text: var(--color-base-content);
+}
+
+/* Dark Theme */
+[data-theme="mentoroai-dark"] {
+    --glossary: oklch(60% 0.11 120);
+    --tool: oklch(58% 0.13 200);
+    --guide: oklch(54% 0.14 300);
+    --usecase: oklch(60% 0.12 170);
+    --prompt: oklch(62% 0.17 30);
+    --compare: oklch(58% 0.15 280);
+    --base-bg: var(--color-base-200);
+    --base-bg-strong: var(--color-base-300);
+    --base-text: var(--color-base-content);
+}
+
+/* ===========================================================
+   MentoroAI Category Styles (DaisyUI v5 / Tailwind v4)
+   works with variables for each Theme:
+   --glossary, --tool, --guide, --usecase, --prompt, --compare
+   and --base-bg, --base-bg-strong, --base-text
+   =========================================================== */
+
+@layer components {
+    /* 1) Intent-Bindung (eine Klasse → Farbe für alle Komponenten) */
+    .btn-glossary, .badge-glossary, .card-glossary, .card-header-glossary, .alert-glossary {
+        --intent: var(--glossary);
+    }
+
+    .btn-tool, .badge-tool, .card-tool, .card-header-tool, .alert-tool {
+        --intent: var(--tool);
+    }
+
+    .btn-guide, .badge-guide, .card-guide, .card-header-guide, .alert-guide {
+        --intent: var(--guide);
+    }
+
+    .btn-usecase, .badge-usecase, .card-usecase, .card-header-usecase, .alert-usecase {
+        --intent: var(--usecase);
+    }
+
+    .btn-prompt, .badge-prompt, .card-prompt, .card-header-prompt, .alert-prompt {
+        --intent: var(--prompt);
+    }
+
+    .btn-compare, .badge-compare, .card-compare, .card-header-compare, .alert-compare {
+        --intent: var(--compare);
+    }
+
+    /* 2) Buttons – DaisyUI nutzt --btn-color, Varianten bleiben intakt */
+    .btn[class*="btn-"] {
+        --btn-color: var(--intent);
+    }
+
+    /* 3) Cards – sichtbare Bordüre + dezente Body-Tönung */
+    .card[class*="card-"] {
+        @apply border rounded-lg overflow-hidden;
+        border-color: color-mix(in oklab, var(--intent) 80%, var(--base-bg));
+        background: color-mix(in oklab, var(--intent) 40%, var(--base-bg)); /* sehr leicht getönt */
+    }
+
+    /* 3a) Card-Header – gut sichtbare Tönung, angenehmer Verlauf */
+    .card-header-glossary,
+    .card-header-tool,
+    .card-header-guide,
+    .card-header-usecase,
+    .card-header-prompt,
+    .card-header-compare {
+        @apply p-2 font-semibold;
+        border-color: var(--intent);
+        background: linear-gradient(
+                to right,
+                color-mix(in oklab, var(--intent) 22%, var(--base-bg)) 0%,
+                color-mix(in oklab, var(--intent) 12%, var(--base-bg-strong)) 100%
+        );
+        color: oklch(24% 0 0);
+        display: block;
+    }
+
+    /* Optional: Header-Intensität steuerbar (einfach Klasse dazusetzen) */
+    .card-accent-soft .card-header-glossary,
+    .card-accent-soft .card-header-tool,
+    .card-accent-soft .card-header-guide,
+    .card-accent-soft .card-header-usecase,
+    .card-accent-soft .card-header-prompt,
+    .card-accent-soft .card-header-compare {
+        background: linear-gradient(
+                to right,
+                color-mix(in oklab, var(--intent) 18%, var(--base-bg)) 0%,
+                color-mix(in oklab, var(--intent) 10%, var(--base-bg-strong)) 100%
+        );
+    }
+
+    .card-accent-solid .card-header-glossary,
+    .card-accent-solid .card-header-tool,
+    .card-accent-solid .card-header-guide,
+    .card-accent-solid .card-header-usecase,
+    .card-accent-solid .card-header-prompt,
+    .card-accent-solid .card-header-compare {
+        background: linear-gradient(
+                to right,
+                color-mix(in oklab, var(--intent) 28%, var(--base-bg)) 0%,
+                color-mix(in oklab, var(--intent) 16%, var(--base-bg-strong)) 100%
+        );
+    }
+
+    .card-accent-none .card-header-glossary,
+    .card-accent-none .card-header-tool,
+    .card-accent-none .card-header-guide,
+    .card-accent-none .card-header-usecase,
+    .card-accent-none .card-header-prompt,
+    .card-accent-none .card-header-compare {
+        background: var(--base-bg);
+        color: var(--base-text);
+    }
+
+    /* 4) Badges – thematisch getönt */
+    /* Spezifität-Booster pro Kategorie (überstimmt .badge) */
+    .badge.badge-glossary,
+    .badge.badge-tool,
+    .badge.badge-guide,
+    .badge.badge-usecase,
+    .badge.badge-prompt,
+    .badge.badge-compare {
+        background-color: color-mix(in oklab, var(--intent) 20%, var(--base-bg)) !important;
+        border-color: color-mix(in oklab, var(--intent) 60%, var(--base-bg)) !important;
+    }
+
+    /*5) Alerts – universell nutzbar (z.B. .alert.alert-guide)*/
+    .alert[class*="alert-"] {
+        border-color: color-mix(in oklab, var(--intent) 60%, black);
+        background-color: color-mix(in oklab, var(--intent) 18%, var(--base-bg));
+        color: oklch(24% 0 0);
+    }
+}
+
+/* 6) Dark-Mode Feintuning */
+@media (prefers-color-scheme: dark) {
+    [data-theme="mentoroai-dark"] {
+        /* Header/Badge/Alert – kräftigerer Kontrast in Dark */
+
+        .badge[class*="badge-"],
+        .card-header-glossary,
+        .card-header-tool,
+        .card-header-guide,
+        .card-header-usecase,
+        .card-header-prompt,
+        .card-header-compare {
+            background-color: color-mix(in oklab, var(--intent) 80%, black);
+            color: white;
+            border-color: color-mix(in oklab, var(--intent) 65%, black);
+        }
+    }
+}
+
+
+/* ===========================================================
+   Verwendung im Template:
+   <a class="btn btn-tool btn-soft">Tools</a>
+   <a class="btn btn-guide btn-outline">Guides</a>
+   <div class="card card-usecase"><div class="card-header-usecase">...</div></div>
+   <span class="badge badge-prompt">Prompt</span>
+   =========================================================== */
+
+

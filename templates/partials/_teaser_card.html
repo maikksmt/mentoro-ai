@@ -1,0 +1,29 @@
+{% load richtext static %}
+{% load i18n %}
+<article class="card border rounded-md h-full focus-within:ring-2 focus-within:ring-primary/30">
+    <div class="card-body">
+        <div class="flex items-center gap-2 text-sm opacity-70 mb-1">
+            {% if item.badge == "Guide" %}
+                <span class="badge badge-guide">{{ item.badge }}</span>
+            {% elif item.badge == "Prompt" %}
+                <span class="badge badge-prompt">{{ item.badge }}</span>
+            {% elif item.badge == "Usecase" %}
+                <span class="badge badge-usecase">{{ item.badge }}</span>
+            {% endif %}
+
+            {% if item.date %}
+                <time datetime="{{ item.date|date:'c' }}"
+                      aria-label="{% trans 'Published on' %} {{ item.date|date:'d.m.Y' }}">{{ item.date|date:"d.m.Y" }}</time>
+            {% endif %}
+        </div>
+        <h3 class="card-title text-base leading-snug">
+            <a href="{{ item.url }}" class="link link-hover" aria-label="{{ item.title }}">{{ item.title }}</a>
+        </h3>
+        {% if item.teaser %}
+            <div class="opacity-80 mt-1 line-clamp-3 h-full">{{ item.teaser|richtext|safe }}</div>
+        {% endif %}
+        <div class="card-actions mt-4 justify-end">
+            <a href="{{ item.url }}" class="btn btn-primary">{% trans "Read" %}</a>
+        </div>
+    </div>
+</article>

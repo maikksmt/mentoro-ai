@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% block content %}
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-6 card-header-glossary">
+            <h1 class="text-3xl font-bold">{% trans "AI Glossary" %}</h1>
+        </header>
+
+        <!-- Search input with HTMX Autocomplete -->
+        <div class=" ">
+            <input type="text" name="q" value="{{ q }}" placeholder="Begriff suchen…"
+                   class="input input-bordered w-full"
+                   hx-get="{% url 'glossary:autocomplete' %}"
+                   hx-trigger="keyup changed delay:250ms" hx-target="#live-results" hx-swap="innerHTML"/>
+            <div id="live-results" class="mt-2"></div>
+        </div>
+
+        <!-- A–Z Navigation -->
+        <div class="flex flex-wrap gap-2">
+            <a href="{% url 'glossary:list' %}"
+               class="btn btn-sm {% if not letter %}btn-primary{% else %}btn-ghost{% endif %}">
+                {% trans "All" %}
+            </a>
+            {% for L in letters %}
+                <a href="{% url 'glossary:list' %}?letter={{ L }}"
+                   class="btn btn-sm {% if letter == L %}btn-primary{% else %}btn-ghost{% endif %}">
+                    {{ L }}
+                </a>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if is_paginated %}
+            <div class="mt-4 lg:mt-6 flex gap-2">
+                {% if page_obj.has_previous %}
+                    <a class="btn btn-sm"
+                       href="?page={{ page_obj.previous_page_number }}&q={{ q }}&letter={{ letter }}">
+                        {% heroicon_outline "chevron-double-left" %} {% trans "Previous" %}
+                    </a>
+                {% else %}
+                    <button class="btn btn-sm btn-disabled">
+                        {% heroicon_outline "chevron-double-left" %} {% trans "Previous" %}
+                    </button>
+                {% endif %}
+                <div class="btn btn-sm btn-ghost">{% trans "Site" %} {{ page_obj.number }}
+                    / {{ page_obj.paginator.num_pages }}</div>
+                {% if page_obj.has_next %}
+                    <a class="btn btn-sm"
+                       href="?page={{ page_obj.next_page_number }}&q={{ q }}&letter={{ letter }}">
+                        {% trans "Next" %} {% heroicon_outline "chevron-double-right" %}
+                    </a>
+                {% else %}
+                    <button class="btn btn-sm btn-disabled">
+                        {% trans "Next" %} {% heroicon_outline "chevron-double-right" %}
+                    </button>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <!-- Server-rendered Ergebnisliste (voll) -->
+        <div id="full-list">
+            {% include "glossary/glossary_results.html" with terms=terms %}
+        </div>
+
+        <!-- Pagination -->
+        {% if is_paginated %}
+            <div class="mt-4 lg:mt-6 flex gap-2">
+                {% if page_obj.has_previous %}
+                    <a class="btn btn-sm"
+                       href="?page={{ page_obj.previous_page_number }}&q={{ q }}&letter={{ letter }}">
+                        {% heroicon_outline "chevron-double-left" %} {% trans "Previous" %}
+                    </a>
+                {% else %}
+                    <button class="btn btn-sm btn-disabled">
+                        {% heroicon_outline "chevron-double-left" %} {% trans "Previous" %}
+                    </button>
+                {% endif %}
+                <div class="btn btn-sm btn-ghost">Seite {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</div>
+                {% if page_obj.has_next %}
+                    <a class="btn btn-sm"
+                       href="?page={{ page_obj.next_page_number }}&q={{ q }}&letter={{ letter }}">
+                        {% trans "Next" %} {% heroicon_outline "chevron-double-right" %}
+                    </a>
+                {% else %}
+                    <button class="btn btn-sm btn-disabled">
+                        {% trans "Next" %} {% heroicon_outline "chevron-double-right" %}
+                    </button>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

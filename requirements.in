@@ -1,0 +1,39 @@
+Django==5.2.8
+dj-database-url==3.0.1
+psycopg2-binary==2.9.11
+python-dotenv==1.1.1
+
+# Django-Apps / Erweiterungen
+django-allauth==65.12.1
+django-celery-beat==2.8.1
+django-extensions==4.1
+django-filer==3.3.2
+django-imagekit==6.0.0
+django-rosetta==0.10.2
+django-taggit==6.1.0
+django-tinymce==5.0.0
+django-widget-tweaks==1.5.0
+djangorestframework==3.16.1
+heroicons==2.13.0
+bleach==6.2.0
+whitenoise==6.11.0
+gunicorn==23.0.0
+uvicorn==0.38.0
+redis==6.4.0
+django_parler==2.3
+django-fsm-2==4.1.0
+django-fsm-2-admin==2.0.1
+rules==3.5
+django-reversion==6.0.0
+
+# Entwicklung / Tests
+coverage==7.11.0
+pytest-django==4.11.1
+pip-audit==2.9.0
+bandit==1.8.6
+
+
+# Social Auth
+PyJWT==2.10.1
+cryptography==46.0.3
+

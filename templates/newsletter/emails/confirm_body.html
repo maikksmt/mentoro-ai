@@ -1,0 +1,20 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% trans "Confirm your subscription" %}</title>
+</head>
+<body>
+<p>{% blocktrans with email=subscriber.email %}Hi {{ email }},{% endblocktrans %}</p>
+<p>{% trans "Please confirm your subscription to the MentoroAI newsletter by clicking the button below:" %}</p>
+<p style="padding: 20px;"><a href="{{ confirmation_url }}"
+                             style="background:#2563eb;color:#ffffff;padding:12px 16px;border-radius:6px;text-decoration:none;">{% trans "Confirm subscription" %}</a>
+</p>
+<p>{% trans "If you did not request this email you can safely ignore it." %}</p>
+
+<p style="margin-top:24px;font-size:12px;color:#6b7280;">
+    {% trans "To unsubscribe at any time, click here:" %} <a href="{{ unsubscribe_url }}">{{ unsubscribe_url }}</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    {% if original and original.pk %}
+        <li>
+            <a href="{% url 'admin:usecases_usecase_diff' original.pk %}" class="historylink"
+               title="{% trans 'Compare draft vs live' %}">
+                {% trans "Draft ↔ Live" %}
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}

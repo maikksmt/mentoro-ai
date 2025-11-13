@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}<title>{{ seo_title }} – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block meta_og %}
+    {{ block.super }}
+{% endblock %}
+
+{% block jsonld %}
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"WebPage",
+         "name":{{ seo_title }},"url":"{{ request.build_absolute_uri }}"}
+    </script>
+{% endblock %}
+{% block content %}
+    <h1 class="text-3xl font-semibold pt-4">{% trans "Subscribe to Newsletter" %}</h1>
+    {% if messages %}
+        <ul class="space-y-2 py-2 lg:py-4">
+            {% for message in messages %}
+                <li class="alert alert-info">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form method="post" class="space-y-4 max-w-md py-2 lg:py-4">{% csrf_token %}
+        <div>
+            <label class="form-control w-full">
+                <span class="label-text">{{ form.email.label }}</span>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <span class="text-error text-sm">{{ form.email.errors|join:', ' }}</span>
+                {% endif %}
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">{% trans "Subscribe" %}</button>
+    </form>
+
+    <p>
+        <a href="{% url 'newsletter:unsubscribe' %}"
+           class="link link-hover">{% trans "Unsubscribe from newsletter" %}</a>
+    </p>
+{% endblock %}

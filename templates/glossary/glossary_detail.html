@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n richtext %}
+
+{% block content %}
+    <div class="max-w-3xl mx-auto">
+        <a href="{% url 'glossary:list' %}" class="btn btn-sm btn-outline">
+            {% heroicon_outline "arrow-uturn-left" %}{% blocktrans %}Back to Glossary{% endblocktrans %}
+        </a>
+        <h1 class="text-3xl font-bold mt-2">{{ term.term }}</h1>
+        {% if term.category %}
+            <div class="badge badge-neutral mt-2">{{ term.category }}</div>
+        {% endif %}
+
+        <div class="prose mt-6">
+            <p>{{ term.short_definition }}</p>
+            {% if term.long_definition %}
+                <hr/>
+                <p>{{ term.long_definition|richtext|safe|linebreaks }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

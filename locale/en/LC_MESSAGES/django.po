@@ -1,0 +1,2212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-13 19:37+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: catalog/models.py:16 catalog/models.py:49 compare/models.py:20
+#: glossary/models.py:11 guides/models.py:21 prompts/models.py:24
+#: usecases/models.py:23
+msgid "Slug"
+msgstr ""
+
+#: catalog/models.py:22 glossary/models.py:16
+msgid "Category"
+msgstr ""
+
+#: catalog/models.py:23
+msgid "Categories"
+msgstr ""
+
+#: catalog/models.py:85
+msgid "Pricing tier"
+msgstr ""
+
+#: catalog/models.py:86
+msgid "Pricing tiers"
+msgstr ""
+
+#: catalog/models.py:91
+msgid "Flat"
+msgstr ""
+
+#: catalog/models.py:92
+msgid "% of sales"
+msgstr ""
+
+#: catalog/models.py:93
+msgid "Recurring"
+msgstr ""
+
+#: catalog/models.py:108
+msgid "Affiliate-Program"
+msgstr ""
+
+#: catalog/models.py:109
+msgid "Affiliate-Programs"
+msgstr ""
+
+#: catalog/views.py:59
+msgid "Tools · MentoroAI"
+msgstr ""
+
+#: catalog/views.py:60
+msgid "Filter, compare and discover AI tools."
+msgstr ""
+
+#: catalog/views.py:77 catalog/views.py:148 catalog/views.py:191
+#: catalog/views.py:227
+msgid "Catalog"
+msgstr ""
+
+#: catalog/views.py:78 catalog/views.py:149 catalog/views.py:193
+#: catalog/views.py:228 templates/catalog/tool_list.html:6
+msgid "All tools"
+msgstr ""
+
+#: catalog/views.py:188
+msgid "AI tools at a glance"
+msgstr ""
+
+#: catalog/views.py:189
+msgid "All AI tools at a glance – filterable and sortable."
+msgstr ""
+
+#: catalog/views.py:219
+msgid "Overview of features, prices and alternatives"
+msgstr ""
+
+#: compare/admin.py:33 guides/admin.py:66 prompts/admin.py:50
+#: usecases/admin.py:49
+msgid "Meta"
+msgstr ""
+
+#: compare/admin.py:36 guides/admin.py:84 prompts/admin.py:63
+#: usecases/admin.py:62
+msgid "Routing"
+msgstr ""
+
+#: compare/admin.py:39 guides/admin.py:87 prompts/admin.py:66
+#: usecases/admin.py:65
+msgid "Content (translated)"
+msgstr ""
+
+#: compare/admin.py:42 guides/admin.py:89 prompts/admin.py:68
+#: usecases/admin.py:68
+msgid "These fields are language-specific. Use the language tabs above."
+msgstr ""
+
+#: compare/admin.py:45 guides/admin.py:81
+msgid "Relations"
+msgstr ""
+
+#: compare/admin.py:48
+msgid "Scoring"
+msgstr ""
+
+#: compare/admin.py:62 compare/models.py:18 guides/admin.py:98
+#: guides/admin.py:385 guides/models.py:18 guides/models.py:124
+#: guides/models.py:198 prompts/models.py:20
+#: templates/content/editorial/review_queue.html:17
+#: templates/ops/seo_check.html:41 usecases/admin.py:143 usecases/models.py:19
+msgid "Title"
+msgstr ""
+
+#: compare/admin.py:71
+msgid "Publish now"
+msgstr ""
+
+#: compare/admin.py:79
+#, python-format
+msgid "%(n)d comparison(s) published."
+msgstr ""
+
+#: compare/admin.py:81
+msgid "Unpublish (revert to draft)"
+msgstr ""
+
+#: compare/admin.py:88
+#, python-format
+msgid "%(n)d comparison(s) reverted to draft."
+msgstr ""
+
+#: compare/models.py:19 guides/models.py:19 prompts/models.py:21
+#: usecases/models.py:20
+msgid "Intro"
+msgstr ""
+
+#: compare/models.py:31
+msgid "Comparison"
+msgstr ""
+
+#: compare/models.py:32 compare/views.py:64 compare/views.py:179
+#: compare/views.py:217 compare/views.py:248 compare/views.py:251
+#: templates/base.html:48 templates/base.html:72
+#: templates/content/what-to-find.html:36
+#: templates/partials/_entry_cards.html:46
+msgid "Comparisons"
+msgstr ""
+
+#: compare/models.py:55
+msgid "At least one tool is required if a score breakdown is provided."
+msgstr ""
+
+#: compare/views.py:50
+msgid "Comparisons · MentoroAI"
+msgstr ""
+
+#: compare/views.py:51 compare/views.py:214
+msgid ""
+"Comparisons of AI tools based on criteria such as price, functionality, and "
+"quality."
+msgstr ""
+
+#: compare/views.py:212
+msgid "Tool comparisons"
+msgstr ""
+
+#: compare/views.py:249
+msgid "Discover side-by-side tool comparisons."
+msgstr ""
+
+#: content/views/editorial.py:55
+msgid "Editorial – My Drafts."
+msgstr ""
+
+#: content/views/editorial.py:56
+msgid "Internal editorial area."
+msgstr ""
+
+#: content/views/editorial.py:71
+msgid "Only the author can submit the article."
+msgstr ""
+
+#: content/views/editorial.py:79
+msgid "Submitted for review."
+msgstr ""
+
+#: content/views/editorial.py:87
+msgid "Editorial – Submit for Review."
+msgstr ""
+
+#: content/views/editorial.py:88 content/views/editorial.py:113
+#: content/views/editorial.py:151
+msgid "Internal editorial area"
+msgstr ""
+
+#: content/views/editorial.py:112
+msgid "Editorial – Review Queue"
+msgstr ""
+
+#: content/views/editorial.py:142
+msgid "Post updated."
+msgstr ""
+
+#: content/views/editorial.py:150
+msgid "Editorial – Review."
+msgstr ""
+
+#: content/views/editorial.py:164
+msgid "You are now registered as an author. Good luck with your writing!"
+msgstr ""
+
+#: content/views/home.py:47
+msgid "AI tools & comparisons for beginners · MentoroAI"
+msgstr ""
+
+#: content/views/home.py:48
+msgid "Quick introduction to AI tools & practice"
+msgstr ""
+
+#: core/admin.py:96
+msgid "Mark as published"
+msgstr ""
+
+#: core/admin.py:101
+msgid "Mark as Draft"
+msgstr ""
+
+#: glossary/models.py:10
+msgid "Term"
+msgstr ""
+
+#: glossary/models.py:13
+msgid "Short definition"
+msgstr ""
+
+#: glossary/models.py:14
+msgid "Long definition"
+msgstr ""
+
+#: glossary/models.py:19
+msgid "Language"
+msgstr ""
+
+#: glossary/models.py:26
+msgid "Glossary term"
+msgstr ""
+
+#: glossary/models.py:27
+msgid "Glossary terms"
+msgstr ""
+
+#: glossary/views.py:42
+msgid "Glossary · MentoroAI"
+msgstr ""
+
+#: glossary/views.py:43
+msgid "AI Glossary – Terms explained simply"
+msgstr ""
+
+#: guides/admin.py:188
+msgid "Auto: Change to GuideSection (Inline)"
+msgstr ""
+
+#: guides/admin.py:196
+msgid "Send to review"
+msgstr ""
+
+#: guides/admin.py:203
+msgid "You are not authorized to perform this action."
+msgstr ""
+
+#: guides/admin.py:211
+#, python-format
+msgid "%(n)d Article(s) → Review."
+msgstr ""
+
+#: guides/admin.py:213
+msgid "Request changes (→ Rework)"
+msgstr ""
+
+#: guides/admin.py:229
+#, python-format
+msgid "%(n)d Article(s) → Rework."
+msgstr ""
+
+#: guides/admin.py:231
+msgid "Publish selected guides"
+msgstr ""
+
+#: guides/admin.py:265
+msgid "Archiving (Soft Delete)"
+msgstr ""
+
+#: guides/admin.py:284
+#, python-format
+msgid "%(n)d Article(s) archived."
+msgstr ""
+
+#: guides/admin.py:286
+msgid "Restore (→ Draft)"
+msgstr ""
+
+#: guides/admin.py:305
+#, python-format
+msgid "%(n)d Article(s) restored (draft)."
+msgstr ""
+
+#: guides/models.py:20 guides/models.py:125 prompts/models.py:22
+#: usecases/models.py:21
+msgid "Body"
+msgstr ""
+
+#: guides/models.py:22 prompts/models.py:25 usecases/models.py:24
+msgid "Public slug"
+msgstr ""
+
+#: guides/models.py:28
+msgid "Guide"
+msgstr ""
+
+#: guides/models.py:29 guides/views.py:49 guides/views.py:113
+#: templates/base.html:36 templates/base.html:60
+#: templates/content/home.html:120 templates/content/what-to-find.html:32
+#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
+msgid "Guides"
+msgstr ""
+
+#: guides/models.py:130
+msgid "Guide Section"
+msgstr ""
+
+#: guides/models.py:131
+msgid "Guide Sections"
+msgstr ""
+
+#: guides/models.py:199
+msgid "Teaser"
+msgstr ""
+
+#: guides/models.py:207
+msgid "Guide Item"
+msgstr ""
+
+#: guides/models.py:208
+msgid "Guide Items"
+msgstr ""
+
+#: guides/models.py:244
+msgid "Either content_object (content_type + object_id) OR a URL."
+msgstr ""
+
+#: guides/signals.py:22
+msgid "Auto: Change to GuideSection (save)"
+msgstr ""
+
+#: guides/signals.py:27
+msgid "Auto: Change to GuideSection (delete)"
+msgstr ""
+
+#: guides/views.py:37
+msgid "Guides · MentoroAI"
+msgstr ""
+
+#: guides/views.py:38
+msgid "Discover AI guides with step-by-step instructions."
+msgstr ""
+
+#: newsletter/forms.py:7 newsletter/forms.py:23
+msgid "email"
+msgstr ""
+
+#: newsletter/forms.py:33
+msgid "Reason (optional)"
+msgstr ""
+
+#: newsletter/views.py:20 templates/base.html:164
+msgid "Newsletter"
+msgstr ""
+
+#: newsletter/views.py:23
+msgid ""
+"Subscribe to the MentoroAI newsletter: updates on tools, comparisons, and "
+"guides."
+msgstr ""
+
+#: newsletter/views.py:37
+msgid "Please check your inbox to confirm your subscription."
+msgstr ""
+
+#: newsletter/views.py:39
+msgid "You are already subscribed."
+msgstr ""
+
+#: newsletter/views.py:53
+msgid "Confirm newsletter subscription"
+msgstr ""
+
+#: newsletter/views.py:63
+msgid "This confirmation link is invalid or has already been used."
+msgstr ""
+
+#: newsletter/views.py:82
+msgid "No active subscription found for this email."
+msgstr ""
+
+#: newsletter/views.py:86
+msgid "This email is already unsubscribed."
+msgstr ""
+
+#: newsletter/views.py:90
+msgid "You have been unsubscribed."
+msgstr ""
+
+#: prompts/admin.py:70 usecases/admin.py:71
+msgid "Internals"
+msgstr ""
+
+#: prompts/admin.py:177
+msgid "Auto: Change in the admin form (prompt)"
+msgstr ""
+
+#: prompts/admin.py:183
+msgid "Prompt was automatically set to \"Review\" due to changes."
+msgstr ""
+
+#: prompts/admin.py:187
+msgid "Submit for Review"
+msgstr ""
+
+#: prompts/admin.py:205
+#, python-format
+msgid "%d Article(s) set for review."
+msgstr ""
+
+#: prompts/admin.py:210 usecases/admin.py:193
+msgid "Request rework"
+msgstr ""
+
+#: prompts/admin.py:228
+#, python-format
+msgid "%d Article(s) set to rework."
+msgstr ""
+
+#: prompts/admin.py:233 templates/content/editorial/review_queue.html:37
+#: usecases/admin.py:214
+msgid "Publish"
+msgstr ""
+
+#: prompts/admin.py:253
+#, python-format
+msgid "%d Article(s) published."
+msgstr ""
+
+#: prompts/admin.py:258
+msgid "Archive (Soft-Delete)"
+msgstr ""
+
+#: prompts/admin.py:273
+#, python-format
+msgid "%d Article(s) archived."
+msgstr ""
+
+#: prompts/admin.py:278
+msgid "Restore as draft"
+msgstr ""
+
+#: prompts/admin.py:293
+#, python-format
+msgid "%d Article(s) restored (Draft)."
+msgstr ""
+
+#: prompts/models.py:23 usecases/models.py:22
+msgid "Outro"
+msgstr ""
+
+#: prompts/models.py:31 prompts/views.py:129
+#: templates/prompts/prompt_detail.html:22
+msgid "Prompt"
+msgstr ""
+
+#: prompts/models.py:32 prompts/views.py:67 prompts/views.py:128
+#: templates/base.html:39 templates/base.html:63
+#: templates/content/home.html:121 templates/content/what-to-find.html:33
+#: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
+msgid "Prompts"
+msgstr ""
+
+#: prompts/views.py:54
+msgid "Prompts · MentoroAI"
+msgstr ""
+
+#: prompts/views.py:55
+msgid "Curated AI prompts with review/publish workflow."
+msgstr ""
+
+#: templates/account/login.html:2 templates/account/login.html:15
+#: templates/account/login.html:35 templates/partials/author_info_card.html:22
+msgid "Login"
+msgstr ""
+
+#: templates/account/login.html:8
+msgid "Login for MentoroAI."
+msgstr ""
+
+#: templates/account/login.html:23
+msgid "eMail or username"
+msgstr ""
+
+#: templates/account/login.html:27
+msgid "Password"
+msgstr ""
+
+#: templates/account/login.html:32
+msgid "Forgot your password?"
+msgstr ""
+
+#: templates/account/login.html:36
+msgid "Sign up for free"
+msgstr ""
+
+#: templates/account/logout.html:2 templates/account/logout.html:15
+#: templates/account/logout.html:19
+msgid "Logout"
+msgstr ""
+
+#: templates/account/logout.html:8
+msgid "Logout for MentoroAI."
+msgstr ""
+
+#: templates/account/logout.html:18
+msgid "Do you really want to logout?"
+msgstr ""
+
+#: templates/account/signup.html:2 templates/account/signup.html:34
+msgid "Signup"
+msgstr ""
+
+#: templates/account/signup.html:15
+msgid "Create Account"
+msgstr ""
+
+#: templates/account/signup.html:30
+msgid ""
+"Please confirm your email address. Your account will then be activated by "
+"an\n"
+"                            administrator."
+msgstr ""
+
+#: templates/account/signup.html:36
+msgid "I have an account already"
+msgstr ""
+
+#: templates/admin/guides/guide/change_form.html:9
+#: templates/admin/prompts/prompt/change_form.html:10
+#: templates/admin/usecases/usecase/change_form.html:9
+msgid "Compare draft vs live"
+msgstr ""
+
+#: templates/admin/guides/guide/change_form.html:10
+#: templates/admin/prompts/prompt/change_form.html:11
+#: templates/admin/usecases/usecase/change_form.html:10
+msgid "Draft ↔ Live"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:43
+msgid "Draft vs. Live"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:54
+#: templates/admin/prompts/prompt_diff.html:56
+#: templates/admin/usecases/usecase_diff.html:55
+msgid "Field"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:55
+#: templates/admin/guides/guide_diff.html:82
+#: templates/admin/prompts/prompt_diff.html:57
+#: templates/admin/usecases/usecase_diff.html:56
+msgid "Draft (current form)"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:56
+#: templates/admin/guides/guide_diff.html:83
+#: templates/admin/prompts/prompt_diff.html:58
+#: templates/admin/usecases/usecase_diff.html:57
+msgid "Live (published)"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:77
+msgid "Sections with changes"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:81
+msgid "Section"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:96
+msgid "added"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:98
+msgid "changed"
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:119
+#: templates/admin/prompts/prompt_diff.html:80
+#: templates/admin/usecases/usecase_diff.html:80
+msgid "No differences found across languages."
+msgstr ""
+
+#: templates/admin/guides/guide_diff.html:123
+#: templates/admin/prompts/prompt_diff.html:84
+#: templates/admin/usecases/usecase_diff.html:84
+msgid "Back"
+msgstr ""
+
+#: templates/admin/prompts/prompt_diff.html:46
+#: templates/admin/usecases/usecase_diff.html:46
+msgid "Draft vs Live"
+msgstr ""
+
+#: templates/admin/prompts/prompt_diff.html:76
+#: templates/admin/usecases/usecase_diff.html:75
+msgid "No differences in this language."
+msgstr ""
+
+#: templates/base.html:24
+msgid "Mobile menu"
+msgstr ""
+
+#: templates/base.html:33 templates/base.html:57
+#: templates/content/what-to-find.html:31
+#: templates/partials/_entry_cards.html:11
+msgid "Glossary"
+msgstr ""
+
+#: templates/base.html:42 templates/base.html:66
+#: templates/partials/_entry_cards.html:32
+msgid "Use cases"
+msgstr ""
+
+#: templates/base.html:45 templates/base.html:69
+#: templates/content/what-to-find.html:35
+#: templates/partials/_entry_cards.html:39
+msgid "Tools"
+msgstr ""
+
+#: templates/base.html:78
+msgid "Search"
+msgstr ""
+
+#: templates/base.html:87
+msgid "Toggle theme"
+msgstr ""
+
+#: templates/base.html:103
+msgid "Language select"
+msgstr ""
+
+#: templates/base.html:135 templates/partials/editorial_nav.html:7
+msgid "Drafts"
+msgstr ""
+
+#: templates/base.html:140 templates/partials/editorial_nav.html:10
+msgid "Reviews"
+msgstr ""
+
+#: templates/base.html:166 templates/partials/_entry_cards.html:5
+msgid "What can I find on MentoroAI?"
+msgstr ""
+
+#: templates/base.html:167
+msgid "Legal notice"
+msgstr ""
+
+#: templates/base.html:168
+msgid "Privacy policy"
+msgstr ""
+
+#: templates/base.html:170 templates/legal/terms_of_use.html:10
+msgid "Terms of Use"
+msgstr ""
+
+#: templates/base.html:171
+msgid "Copyright"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:12
+msgid "To the website"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:17
+msgid "Free Tier"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:38 templates/ops/seo_check.html:42
+msgid "Description"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:46
+msgid "Functions"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:56
+msgid "Pricing"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:73
+msgid "Integrations"
+msgstr ""
+
+#: templates/catalog/tool_detail.html:85
+msgid "Similar Tools"
+msgstr ""
+
+#: templates/catalog/tool_list.html:10 templates/compare/index.html:11
+msgid "Search…"
+msgstr ""
+
+#: templates/catalog/tool_list.html:15
+msgid "Only with Free-Tier"
+msgstr ""
+
+#: templates/catalog/tool_list.html:18 templates/compare/index.html:19
+msgid "Filter"
+msgstr ""
+
+#: templates/catalog/tool_list.html:20 templates/compare/index.html:20
+msgid "Reset"
+msgstr ""
+
+#: templates/catalog/tool_list.html:53 templates/compare/index.html:43
+#: templates/content/home.html:96 templates/prompts/prompt_list.html:28
+#: templates/usecases/list.html:37
+msgid "Details"
+msgstr ""
+
+#: templates/catalog/tool_list.html:59
+msgid "No tools found."
+msgstr ""
+
+#: templates/compare/detail.html:11
+msgid "Winner"
+msgstr ""
+
+#: templates/compare/detail.html:23
+msgid "Evaluation according to criteria"
+msgstr ""
+
+#: templates/compare/detail.html:30
+msgid "Criteria"
+msgstr ""
+
+#: templates/compare/detail.html:52
+msgid "Remarks"
+msgstr ""
+
+#: templates/compare/detail.html:59
+msgid "Similar comparisons"
+msgstr ""
+
+#: templates/compare/index.html:6
+msgid "Tool comparison"
+msgstr ""
+
+#: templates/compare/index.html:7
+msgid "Comparisons based on criteria such as price, functionality and quality."
+msgstr ""
+
+#: templates/compare/index.html:13
+msgid "All categories"
+msgstr ""
+
+#: templates/compare/index.html:49
+msgid "No comparisons found."
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:8
+msgid "Meine Entwürfe & Reviews"
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:16
+msgid "Typ"
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:17
+msgid "Titel"
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:18
+#: templates/content/editorial/review_update.html:20
+#: templates/ops/seo_check.html:40
+msgid "Status"
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:34
+msgid ""
+"Zum Review\n"
+"                                    einreichen"
+msgstr ""
+
+#: templates/content/editorial/my_drafts.html:42
+msgid "Keine Einträge"
+msgstr ""
+
+#: templates/content/editorial/review_queue.html:9
+msgid "Review Queue"
+msgstr ""
+
+#: templates/content/editorial/review_queue.html:18
+msgid "Author"
+msgstr ""
+
+#: templates/content/editorial/review_queue.html:38
+msgid "Draft"
+msgstr ""
+
+#: templates/content/editorial/review_queue.html:40
+msgid "Apply changes"
+msgstr ""
+
+#: templates/content/editorial/review_queue.html:47
+msgid ""
+"\n"
+"                                        No posts in review process\n"
+"                                    "
+msgstr ""
+
+#: templates/content/editorial/review_update.html:7
+msgid "Change status"
+msgstr ""
+
+#: templates/content/editorial/review_update.html:12
+msgid "Type"
+msgstr ""
+
+#: templates/content/editorial/review_update.html:16
+msgid "Object ID"
+msgstr ""
+
+#: templates/content/editorial/review_update.html:24
+msgid "Save"
+msgstr ""
+
+#: templates/content/editorial/submit_to_review.html:9
+msgid "Beitrag zum Review einreichen"
+msgstr ""
+
+#: templates/content/editorial/submit_to_review.html:18
+msgid "Objekt-ID"
+msgstr ""
+
+#: templates/content/editorial/submit_to_review.html:22
+msgid "Einreichen"
+msgstr ""
+
+#: templates/content/home.html:11
+msgid ""
+"MentoroAI is currently in public beta. Some features may change or be "
+"incomplete."
+msgstr ""
+
+#: templates/content/home.html:12
+msgid "Please provide feedback on"
+msgstr ""
+
+#: templates/content/home.html:14
+msgid "Project Github"
+msgstr ""
+
+#: templates/content/home.html:32
+msgid "Quick introduction to AI tools & practice."
+msgstr ""
+
+#: templates/content/home.html:35
+msgid ""
+"\n"
+"                            Find suitable AI tools, compare alternatives, "
+"and use practical guides and prompts for your\n"
+"                            everyday life.\n"
+"                        "
+msgstr ""
+
+#: templates/content/home.html:65
+msgid "Featured Tools"
+msgstr ""
+
+#: templates/content/home.html:107
+msgid "Recommended for you"
+msgstr ""
+
+#: templates/content/home.html:119
+msgid "Current content"
+msgstr ""
+
+#: templates/content/home.html:123 templates/usecases/list.html:9
+#: usecases/models.py:34 usecases/views.py:66 usecases/views.py:125
+msgid "Usecases"
+msgstr ""
+
+#: templates/content/home.html:132
+msgid "No published content yet."
+msgstr ""
+
+#: templates/content/what-to-find.html:11
+msgid "Overview and distinction of content areas on MentoroAI"
+msgstr ""
+
+#: templates/content/what-to-find.html:14
+msgid ""
+"\n"
+"                            MentoroAI offers different types of content – "
+"each format has a clear purpose, its own\n"
+"                            depth,\n"
+"                            and addresses specific user needs. The following "
+"overview explains the structure, goal,\n"
+"                            and focus of the six key content categories.\n"
+"                        "
+msgstr ""
+
+#: templates/content/what-to-find.html:34
+msgid "Use Cases"
+msgstr ""
+
+#: templates/content/what-to-find.html:48
+msgid "Glossary – Understand key terms"
+msgstr ""
+
+#: templates/content/what-to-find.html:50
+#: templates/content/what-to-find.html:82
+#: templates/content/what-to-find.html:129
+#: templates/content/what-to-find.html:172
+#: templates/content/what-to-find.html:208
+#: templates/content/what-to-find.html:241
+msgid "Purpose:"
+msgstr ""
+
+#: templates/content/what-to-find.html:51
+msgid ""
+"Explain core concepts of artificial intelligence – simple, clear, and with "
+"context."
+msgstr ""
+
+#: templates/content/what-to-find.html:53
+#: templates/content/what-to-find.html:90
+#: templates/content/what-to-find.html:137
+#: templates/content/what-to-find.html:175
+#: templates/content/what-to-find.html:211
+#: templates/content/what-to-find.html:248
+msgid "Content:"
+msgstr ""
+
+#: templates/content/what-to-find.html:55
+msgid "Term (e.g. “Neural Network”)"
+msgstr ""
+
+#: templates/content/what-to-find.html:56
+msgid "Short definition (“A computer model inspired by the human brain…”) "
+msgstr ""
+
+#: templates/content/what-to-find.html:57
+msgid "Detailed explanation with examples or analogies"
+msgstr ""
+
+#: templates/content/what-to-find.html:58
+msgid "Category (e.g. Models & Architectures, Ethics & Society)"
+msgstr ""
+
+#: templates/content/what-to-find.html:61
+#: templates/content/what-to-find.html:98
+#: templates/content/what-to-find.html:145
+#: templates/content/what-to-find.html:183
+#: templates/content/what-to-find.html:219
+#: templates/content/what-to-find.html:255
+msgid "Focus:"
+msgstr ""
+
+#: templates/content/what-to-find.html:62
+msgid "Understand terminology and relationships."
+msgstr ""
+
+#: templates/content/what-to-find.html:64
+#: templates/content/what-to-find.html:112
+#: templates/content/what-to-find.html:156
+#: templates/content/what-to-find.html:191
+#: templates/content/what-to-find.html:222
+#: templates/content/what-to-find.html:258
+msgid "Example:"
+msgstr ""
+
+#: templates/content/what-to-find.html:66
+msgid ""
+"Prompt – a command or question given to an AI model describing what output "
+"to generate."
+msgstr ""
+
+#: templates/content/what-to-find.html:70
+msgid "Go to Glossary"
+msgstr ""
+
+#: templates/content/what-to-find.html:80
+msgid "Guides – Learn & apply step by step"
+msgstr ""
+
+#: templates/content/what-to-find.html:84
+msgid ""
+"\n"
+"                        Instructional texts that explain a topic from the "
+"ground up – practical and easy to follow.\n"
+"                        They combine knowledge, motivation, and actionable "
+"steps.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:92
+msgid "Introduction to a topic (“AI in everyday office work”)"
+msgstr ""
+
+#: templates/content/what-to-find.html:93
+msgid "Step-by-step instructions or checklists"
+msgstr ""
+
+#: templates/content/what-to-find.html:94
+msgid "Tips, case studies, and common mistakes"
+msgstr ""
+
+#: templates/content/what-to-find.html:95
+msgid "Hands-on tone, often including screenshots or example prompts"
+msgstr ""
+
+#: templates/content/what-to-find.html:99
+msgid "How to use AI effectively, safely, and confidently."
+msgstr ""
+
+#: templates/content/what-to-find.html:101
+msgid "Audience:"
+msgstr ""
+
+#: templates/content/what-to-find.html:102
+msgid "Beginners, learners, and curious users."
+msgstr ""
+
+#: templates/content/what-to-find.html:104
+#: templates/content/what-to-find.html:148
+#: templates/content/what-to-find.html:186
+msgid "Distinction:"
+msgstr ""
+
+#: templates/content/what-to-find.html:106
+msgid ""
+"\n"
+"                        Guides explain and accompany – they are not direct "
+"examples but structured learning or\n"
+"                        application tutorials.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:114
+msgid ""
+"Guide: “Save time with AI in everyday office tasks – reports, emails & "
+"meetings.”"
+msgstr ""
+
+#: templates/content/what-to-find.html:118
+msgid "Explore Guides"
+msgstr ""
+
+#: templates/content/what-to-find.html:127
+msgid "Prompts – Ready-to-use input examples"
+msgstr ""
+
+#: templates/content/what-to-find.html:131
+msgid ""
+"\n"
+"                        Immediately usable input templates (“prompts”) for "
+"different goals, tailored to task and\n"
+"                        audience.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:139
+msgid "Title (e.g. “Create a structured email summary”)"
+msgstr ""
+
+#: templates/content/what-to-find.html:140
+msgid "Description of the intended use"
+msgstr ""
+
+#: templates/content/what-to-find.html:141
+msgid "Prompt text (formatted and copy-friendly)"
+msgstr ""
+
+#: templates/content/what-to-find.html:142
+msgid "Example outputs or variations"
+msgstr ""
+
+#: templates/content/what-to-find.html:146
+msgid "Start right away – with a well-crafted input."
+msgstr ""
+
+#: templates/content/what-to-find.html:150
+msgid ""
+"\n"
+"                        Prompts are tools (text building blocks), guides are "
+"explanations,\n"
+"                        and use cases are real-life examples.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:158
+msgid ""
+"Prompt: “Summarize the following email in three sentences and mark open "
+"items with an asterisk.”"
+msgstr ""
+
+#: templates/content/what-to-find.html:162
+msgid "Browse Prompts"
+msgstr ""
+
+#: templates/content/what-to-find.html:170
+msgid "Use Cases – Real-world examples"
+msgstr ""
+
+#: templates/content/what-to-find.html:173
+msgid "Illustrate where and how AI is used in real-life situations."
+msgstr ""
+
+#: templates/content/what-to-find.html:177
+msgid "Description of a specific application or industry"
+msgstr ""
+
+#: templates/content/what-to-find.html:178
+msgid "Problem → AI solution → Result"
+msgstr ""
+
+#: templates/content/what-to-find.html:179
+msgid "Benefits, limitations, and success factors"
+msgstr ""
+
+#: templates/content/what-to-find.html:180
+msgid "Optionally: links to related tools or prompts"
+msgstr ""
+
+#: templates/content/what-to-find.html:184
+msgid "How does AI create value in my field or daily life?"
+msgstr ""
+
+#: templates/content/what-to-find.html:188
+msgid ""
+"A use case shows what’s possible – a guide explains how to do it yourself."
+msgstr ""
+
+#: templates/content/what-to-find.html:193
+#, python-format
+msgid ""
+"Use Case: \"Summarizing insurance reports with AI – saving 60 %% of "
+"processing time.\""
+msgstr ""
+
+#: templates/content/what-to-find.html:197
+msgid "Explore Use Cases"
+msgstr ""
+
+#: templates/content/what-to-find.html:206
+msgid "Tools – Discover AI apps & platforms"
+msgstr ""
+
+#: templates/content/what-to-find.html:209
+msgid "Introducing and classifying AI tools, apps, and platforms."
+msgstr ""
+
+#: templates/content/what-to-find.html:213
+msgid "Short description, main functions, and typical use cases"
+msgstr ""
+
+#: templates/content/what-to-find.html:214
+msgid "Screenshots or sample workflows"
+msgstr ""
+
+#: templates/content/what-to-find.html:215
+msgid "Links to the official website or app"
+msgstr ""
+
+#: templates/content/what-to-find.html:216
+msgid "Comparative overview with similar tools"
+msgstr ""
+
+#: templates/content/what-to-find.html:220
+msgid "What can this tool do, and when is it worth using?"
+msgstr ""
+
+#: templates/content/what-to-find.html:224
+msgid ""
+"\n"
+"                        ChatGPT – a language model by OpenAI for text "
+"generation, ideal for idea creation, drafts,\n"
+"                        and analysis.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:231
+msgid "Explore Tools"
+msgstr ""
+
+#: templates/content/what-to-find.html:239
+msgid "Comparisons – Orientation & decision help"
+msgstr ""
+
+#: templates/content/what-to-find.html:243
+msgid ""
+"\n"
+"                        Compare similar tools, models, or approaches to "
+"highlight differences and ideal use cases.\n"
+"                    "
+msgstr ""
+
+#: templates/content/what-to-find.html:250
+msgid "Comparison tables (e.g. “ChatGPT vs Claude vs Gemini”)"
+msgstr ""
+
+#: templates/content/what-to-find.html:251
+msgid ""
+"Evaluation by criteria such as price, quality, privacy, strengths / "
+"weaknesses"
+msgstr ""
+
+#: templates/content/what-to-find.html:252
+msgid "Summary and recommendations"
+msgstr ""
+
+#: templates/content/what-to-find.html:256
+msgid "Which tool or approach fits my needs best?"
+msgstr ""
+
+#: templates/content/what-to-find.html:260
+msgid ""
+"Comparison: “ChatGPT vs Gemini – Which model works better for office "
+"productivity?”"
+msgstr ""
+
+#: templates/content/what-to-find.html:264
+msgid "View Comparisons"
+msgstr ""
+
+#: templates/content/what-to-find.html:271
+msgid "Back to top"
+msgstr ""
+
+#: templates/glossary/glossary_detail.html:7
+msgid "Back to Glossary"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:6
+msgid "AI Glossary"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:22
+msgid "All"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:38
+#: templates/glossary/glossary_list.html:42
+#: templates/glossary/glossary_list.html:71
+#: templates/glossary/glossary_list.html:75
+msgid "Previous"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:45
+#: templates/partials/pagination.html:11
+msgid "Site"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:50
+#: templates/glossary/glossary_list.html:54
+#: templates/glossary/glossary_list.html:82
+#: templates/glossary/glossary_list.html:86
+msgid "Next"
+msgstr ""
+
+#: templates/glossary/glossary_results.html:19
+msgid "No hits."
+msgstr ""
+
+#: templates/guides/guide_detail.html:46
+msgid "Related Guides"
+msgstr ""
+
+#: templates/guides/guide_list.html:9
+msgid "Step-by-step instructions on AI topics – understandable and practical."
+msgstr ""
+
+#: templates/guides/guide_list.html:30
+msgid "Read more"
+msgstr ""
+
+#: templates/guides/guide_list.html:36
+msgid "No published guides available."
+msgstr ""
+
+#: templates/legal/cookie_policy.html:5
+msgid "Cookie Policy – MentoroAI"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:10
+msgid "Cookie Policy"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:12
+msgid "What are cookies?"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:14
+msgid ""
+"\n"
+"                Cookies are small text files stored on your device when you "
+"visit a website.\n"
+"                They provide technical functionality or convenience features "
+"(e.g., language selection).\n"
+"            "
+msgstr ""
+
+#: templates/legal/cookie_policy.html:19
+msgid "Cookies we use"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:21
+msgid "security cookie for form submissions"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:22
+msgid "stores the current session ID"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:23
+msgid "remembers your selected theme (light/dark)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:26
+msgid "Cookie control"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:28
+msgid ""
+"\n"
+"                You can delete or block cookies at any time in your browser. "
+"The core functionality of the website\n"
+"                remains available.\n"
+"            "
+msgstr ""
+
+#: templates/legal/copyright.html:5
+msgid "Copyright & Licenses – MentoroAI"
+msgstr ""
+
+#: templates/legal/copyright.html:10
+msgid "Copyright & Licenses"
+msgstr ""
+
+#: templates/legal/copyright.html:12
+msgid "1. Copyright"
+msgstr ""
+
+#: templates/legal/copyright.html:14
+msgid ""
+"\n"
+"                All content published on this website (texts, images, code, "
+"layouts) is protected by copyright.\n"
+"                Third-party contributions are marked accordingly.\n"
+"            "
+msgstr ""
+
+#: templates/legal/copyright.html:19
+msgid "2. Open-source license"
+msgstr ""
+
+#: templates/legal/copyright.html:21
+msgid ""
+"\n"
+"                The MentoroAI project is licensed under the GNU General "
+"Public License v3.0 (GPLv3). A copy of the\n"
+"                license can be found in the file\n"
+"            "
+msgstr ""
+
+#: templates/legal/copyright.html:26
+msgid "in the source repository."
+msgstr ""
+
+#: templates/legal/copyright.html:29
+msgid "3. Use of content"
+msgstr ""
+
+#: templates/legal/copyright.html:30
+msgid ""
+"\n"
+"            Reuse or reproduction of the content is only permitted within "
+"the scope of the license terms.\n"
+"        "
+msgstr ""
+
+#: templates/legal/copyright.html:34
+msgid "4. Trademarks and logos"
+msgstr ""
+
+#: templates/legal/copyright.html:35
+msgid ""
+"\n"
+"            Third-party trademarks and logos are the property of their "
+"respective owners.\n"
+"        "
+msgstr ""
+
+#: templates/legal/legal_notice.html:5
+msgid "Legal Notice – MentoroAI"
+msgstr ""
+
+#: templates/legal/legal_notice.html:10
+msgid "Legal Notice"
+msgstr ""
+
+#: templates/legal/legal_notice.html:11
+msgid "Information according to § 5 TMG (Germany)"
+msgstr ""
+
+#: templates/legal/legal_notice.html:17
+msgid "Germany"
+msgstr ""
+
+#: templates/legal/legal_notice.html:20
+msgid "Contact"
+msgstr ""
+
+#: templates/legal/legal_notice.html:22 templates/legal/privacy_policy.html:15
+msgid "Email"
+msgstr ""
+
+#: templates/legal/legal_notice.html:25
+msgid "Responsible for content (§ 18 (2) MStV)"
+msgstr ""
+
+#: templates/legal/legal_notice.html:31
+msgid "Disclaimer"
+msgstr ""
+
+#: templates/legal/legal_notice.html:33
+msgid ""
+"\n"
+"                Despite careful content control, we assume no liability for "
+"external links.\n"
+"                The operators of the linked pages are solely responsible for "
+"their content.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:5
+msgid "Privacy Policy – MentoroAI"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:10
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:11
+msgid "1. Controller"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:13
+msgid "Controller under data protection law, in particular the EU GDPR, is:"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:18
+msgid "2. Collection and storage of personal data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:20
+msgid ""
+"\n"
+"                When you visit this website, information sent by your "
+"browser is automatically collected (e.g., IP\n"
+"                address,\n"
+"                date and time, pages viewed, browser used). These data are "
+"technically required to display the website\n"
+"                correctly\n"
+"                and serve the security of the system.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:28
+msgid "3. Contact"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:30
+msgid ""
+"\n"
+"                If you contact us by email, we store your details to process "
+"the request and for possible follow-up\n"
+"                questions.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:35
+msgid "4. Registration / User accounts"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:37
+msgid ""
+"\n"
+"                If you create a user account, we process your entered data "
+"(name, email address, password) solely for\n"
+"                providing\n"
+"                your account and managing your content.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:43
+msgid "5. Cookies"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:45
+msgid ""
+"\n"
+"                This website only uses technically necessary cookies "
+"required for operation. Tracking or marketing\n"
+"                cookies are not used.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:50
+msgid "6. Your rights"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:52
+msgid "Access to your stored data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:53
+msgid "Rectification of inaccurate data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:54
+msgid "Erasure (\\"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:55
+msgid "Restriction of processing"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:56
+msgid "Data portability"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:57
+msgid "Objection to processing"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:60
+msgid "7. Data security"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:62
+msgid ""
+"\n"
+"                We use technical and organizational measures to protect your "
+"data against manipulation, loss, or\n"
+"                unauthorized access.\n"
+"                These measures are continuously adapted in line with "
+"technological developments.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:68
+msgid "8. Changes to this Privacy Policy"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:70
+msgid ""
+"\n"
+"                We reserve the right to update this Privacy Policy to "
+"reflect current legal requirements.\n"
+"            "
+msgstr ""
+
+#: templates/legal/terms_of_use.html:5
+msgid "Terms of Use – MentoroAI"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:12
+msgid "1. Scope"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:14
+msgid ""
+"\n"
+"                These Terms of Use apply to all visitors and registered "
+"users of MentoroAI.\n"
+"            "
+msgstr ""
+
+#: templates/legal/terms_of_use.html:18
+msgid "2. Use of content"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:19
+msgid ""
+"\n"
+"            The content on this website is provided for informational "
+"purposes only. Commercial use without the\n"
+"            operator’s consent\n"
+"            is not permitted.\n"
+"        "
+msgstr ""
+
+#: templates/legal/terms_of_use.html:25
+msgid "3. User accounts"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:26
+msgid ""
+"\n"
+"            Users must keep their login credentials confidential. The "
+"operator reserves the right to suspend or delete\n"
+"            accounts in case of misuse.\n"
+"        "
+msgstr ""
+
+#: templates/legal/terms_of_use.html:31
+msgid "4. Liability"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:32
+msgid ""
+"\n"
+"            The operator assumes no warranty for the correctness, "
+"completeness, or timeliness of the information\n"
+"            provided.\n"
+"            Any liability for damages arising directly or indirectly from "
+"the use is excluded.\n"
+"        "
+msgstr ""
+
+#: templates/legal/terms_of_use.html:38
+msgid "5. Changes"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:39
+msgid ""
+"\n"
+"            The operator may amend these Terms of Use at any time. The "
+"current version applies.\n"
+"        "
+msgstr ""
+
+#: templates/newsletter/confirm_error.html:7
+msgid "Confirmation failed"
+msgstr ""
+
+#: templates/newsletter/confirm_error.html:9
+msgid ""
+"Please request a new confirmation email or contact support if the issue "
+"persists."
+msgstr ""
+
+#: templates/newsletter/confirm_success.html:7
+msgid "Subscription confirmed"
+msgstr ""
+
+#: templates/newsletter/confirm_success.html:8
+#, python-format
+msgid "Thank you! %(email)s is now subscribed to the MentoroAI newsletter."
+msgstr ""
+
+#: templates/newsletter/confirm_success.html:9
+msgid "You will receive future updates and resources directly in your inbox."
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:6
+msgid "Confirm your subscription"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:9
+#: templates/newsletter/emails/confirm_body.txt:2
+#, python-format
+msgid "Hi %(email)s,"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:10
+msgid ""
+"Please confirm your subscription to the MentoroAI newsletter by clicking the "
+"button below:"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:12
+msgid "Confirm subscription"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:14
+#: templates/newsletter/emails/confirm_body.txt:7
+msgid "If you did not request this email you can safely ignore it."
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.html:17
+msgid "To unsubscribe at any time, click here:"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.txt:4
+msgid ""
+"Please confirm your subscription to the MentoroAI newsletter by clicking the "
+"link below:"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_body.txt:9
+msgid "To unsubscribe at any time, visit:"
+msgstr ""
+
+#: templates/newsletter/emails/confirm_subject.txt:1
+msgid "Confirm your MentoroAI newsletter subscription"
+msgstr ""
+
+#: templates/newsletter/subscribe.html:21
+msgid "Subscribe to Newsletter"
+msgstr ""
+
+#: templates/newsletter/subscribe.html:39
+msgid "Subscribe"
+msgstr ""
+
+#: templates/newsletter/subscribe.html:44
+msgid "Unsubscribe from newsletter"
+msgstr ""
+
+#: templates/newsletter/unsubscribe.html:3
+#: templates/newsletter/unsubscribe.html:5
+msgid "Unsubscribe from Newsletter"
+msgstr ""
+
+#: templates/newsletter/unsubscribe.html:6
+msgid "Enter your email address to unsubscribe from future emails."
+msgstr ""
+
+#: templates/newsletter/unsubscribe.html:20
+#: templates/newsletter/unsubscribe_confirm.html:3
+msgid "Unsubscribe"
+msgstr ""
+
+#: templates/newsletter/unsubscribe_confirm.html:7
+msgid "Invalid or expired link"
+msgstr ""
+
+#: templates/newsletter/unsubscribe_confirm.html:8
+msgid "Please unsubscribe via the form instead."
+msgstr ""
+
+#: templates/newsletter/unsubscribe_confirm.html:10
+#: templates/newsletter/unsubscribe_success.html:6
+msgid "You have been unsubscribed"
+msgstr ""
+
+#: templates/newsletter/unsubscribe_confirm.html:11
+#, python-format
+msgid "%(email)s will no longer receive ournewsletter."
+msgstr ""
+
+#: templates/newsletter/unsubscribe_success.html:3
+msgid "Unsubscribed"
+msgstr ""
+
+#: templates/newsletter/unsubscribe_success.html:7
+msgid ""
+"You will no longer receive our newsletter. You can resubscribe anytime on "
+"our website."
+msgstr ""
+
+#: templates/ops/seo_check.html:20
+msgid "SEO Smoke Test"
+msgstr ""
+
+#: templates/ops/seo_check.html:21
+msgid "Check public pages for basic SEO tags."
+msgstr ""
+
+#: templates/ops/seo_check.html:25
+msgid ""
+"Path(s) – one path per line (e.g.\n"
+"                <code>/de/glossar/</code>)"
+msgstr ""
+
+#: templates/ops/seo_check.html:29
+msgid "Check"
+msgstr ""
+
+#: templates/ops/seo_check.html:39
+msgid "Path"
+msgstr ""
+
+#: templates/ops/seo_check.html:43
+msgid "Canonical"
+msgstr ""
+
+#: templates/ops/seo_check.html:44
+msgid "OG-Image"
+msgstr ""
+
+#: templates/ops/seo_check.html:45
+msgid "Hreflang"
+msgstr ""
+
+#: templates/ops/seo_check.html:46
+msgid "Hints"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:6
+msgid ""
+"Our areas of expertise at a glance – from definitions to practical examples."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:12
+msgid "AI terms explained simply – understandable, concise and with examples."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:13
+msgid "To glossary"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:19
+msgid ""
+"Step-by-step instructions for using AI safely in everyday life or at work."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:20
+msgid "To the guides"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:26
+msgid ""
+"Ready-made input templates for ChatGPT & Co. – simply copy and get started."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:27
+msgid "To the prompts"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:33
+msgid ""
+"Others are already using AI – real-world examples from everyday life and "
+"work."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:34
+msgid "To the use cases"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:40
+msgid ""
+"AI tools and platforms presented – with features and areas of application."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:41
+msgid "To the tools"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:47
+msgid "Find out which AI tool or model best suits your needs."
+msgstr ""
+
+#: templates/partials/_entry_cards.html:48
+msgid "To the comparisons"
+msgstr ""
+
+#: templates/partials/_guideitem_card.html:28
+#: templates/partials/_teaser_card.html:26
+msgid "Read"
+msgstr ""
+
+#: templates/partials/_teaser_card.html:16
+msgid "Published on"
+msgstr ""
+
+#: templates/partials/author_info_card.html:5
+msgid "Participate as an author"
+msgstr ""
+
+#: templates/partials/author_info_card.html:7
+msgid ""
+"Want to publish guides, use cases, or prompts?\n"
+"                Submit drafts and collaborate with our editorial team during "
+"the review process."
+msgstr ""
+
+#: templates/partials/author_info_card.html:13
+msgid ""
+"\n"
+"                        My drafts"
+msgstr ""
+
+#: templates/partials/author_info_card.html:20
+msgid ""
+"Signup coming soon\n"
+"                    ..."
+msgstr ""
+
+#: templates/partials/author_info_card.html:25
+msgid ""
+"\n"
+"                        Note: You need a user account. After Signup in, an "
+"administrator needs to activate you as an\n"
+"                        author.\n"
+"                    "
+msgstr ""
+
+#: templates/partials/breadcrumbs.html:2
+msgid "Breadcrumbs"
+msgstr ""
+
+#: templates/partials/breadcrumbs.html:4
+msgid "Start"
+msgstr ""
+
+#: templates/partials/features_open.html:6
+msgid "What’s coming to MentoroAI"
+msgstr ""
+
+#: templates/partials/features_open.html:9
+msgid "A quick preview of features we’re building next."
+msgstr ""
+
+#: templates/partials/features_open.html:16
+msgid "Editorial system"
+msgstr ""
+
+#: templates/partials/features_open.html:18
+msgid ""
+"Draft → review → publish workflow with roles (Author, Editor, Admin) and "
+"status history."
+msgstr ""
+
+#: templates/partials/features_open.html:19
+msgid "Per-object review checklist and required approvals before publishing."
+msgstr ""
+
+#: templates/partials/features_open.html:20
+msgid "Versioning & change log for all content (diffs, rollbacks)."
+msgstr ""
+
+#: templates/partials/features_open.html:21
+msgid "Scheduled publishing and unpublishing."
+msgstr ""
+
+#: templates/partials/features_open.html:27
+msgid "Prompt Studio"
+msgstr ""
+
+#: templates/partials/features_open.html:28
+msgid "planned"
+msgstr ""
+
+#: templates/partials/features_open.html:30
+msgid ""
+"Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
+"model tips."
+msgstr ""
+
+#: templates/partials/features_open.html:31
+msgid ""
+"Structured prompt templates with variables, examples, and tone/style presets."
+msgstr ""
+
+#: templates/partials/features_open.html:32
+msgid "Guardrails: context hints, do/don’t lists, and input validation."
+msgstr ""
+
+#: templates/partials/features_open.html:33
+msgid "One-click copy, shareable links, and export (Markdown/JSON)."
+msgstr ""
+
+#: templates/partials/features_open.html:34
+msgid "Execution notes: record outputs to compare iterations."
+msgstr ""
+
+#: templates/partials/features_open.html:40
+msgid "Discovery & navigation"
+msgstr ""
+
+#: templates/partials/features_open.html:42
+msgid ""
+"Unified search across Tools, Guides, Prompts, Use-Cases with filters and "
+"tags."
+msgstr ""
+
+#: templates/partials/features_open.html:43
+msgid "Collections & bookmarks (save for later, custom lists)."
+msgstr ""
+
+#: templates/partials/features_open.html:44
+msgid "Compare view: side-by-side feature comparison for tools and prompts."
+msgstr ""
+
+#: templates/partials/features_open.html:45
+msgid "RSS/Atom feeds for new and updated content."
+msgstr ""
+
+#: templates/partials/features_open.html:51
+msgid "Quality & accessibility"
+msgstr ""
+
+#: templates/partials/features_open.html:53
+msgid ""
+"A11y passes (focus states, landmarks, color contrast) and keyboard-first UX."
+msgstr ""
+
+#: templates/partials/features_open.html:54
+msgid "Reading modes: compact vs. comfortable layout."
+msgstr ""
+
+#: templates/partials/features_open.html:55
+msgid "Glossary hover cards for terms used in content."
+msgstr ""
+
+#: templates/partials/features_open.html:56
+msgid "Feedback widget on every page (quick rating + free text)."
+msgstr ""
+
+#: templates/partials/features_open.html:62
+msgid "Multilingual & localization"
+msgstr ""
+
+#: templates/partials/features_open.html:64
+msgid "Side-by-side DE/EN editing and translation status indicators."
+msgstr ""
+
+#: templates/partials/features_open.html:65
+msgid "Per-language slugs and canonical links."
+msgstr ""
+
+#: templates/partials/features_open.html:66
+msgid "Language-aware search and filters."
+msgstr ""
+
+#: templates/partials/features_open.html:72
+msgid "Integrations & API"
+msgstr ""
+
+#: templates/partials/features_open.html:74
+msgid "Optional API keys to try prompts live (bring-your-own-key)."
+msgstr ""
+
+#: templates/partials/features_open.html:75
+msgid "Plugin endpoints for external tooling (read-only API first)."
+msgstr ""
+
+#: templates/partials/features_open.html:76
+msgid "Privacy-friendly analytics and opt-in telemetry."
+msgstr ""
+
+#: templates/partials/features_open.html:82
+msgid "Performance & reliability"
+msgstr ""
+
+#: templates/partials/features_open.html:84
+msgid "Image optimization and smart caching."
+msgstr ""
+
+#: templates/partials/features_open.html:85
+msgid "Offline-friendly error pages and graceful fallbacks."
+msgstr ""
+
+#: templates/partials/features_open.html:86
+msgid "CI coverage gates for editorial and schema changes."
+msgstr ""
+
+#: templates/partials/features_open.html:92
+msgid ""
+"Heads-up: Priorities may shift based on user feedback. If a feature is "
+"critical for you, please tell us!"
+msgstr ""
+
+#: templates/partials/features_open.html:98
+msgid "Close"
+msgstr ""
+
+#: templates/partials/features_open.html:106
+msgid "Close modal"
+msgstr ""
+
+#: templates/partials/pagination.html:6
+msgid "Previous Page"
+msgstr ""
+
+#: templates/partials/pagination.html:15
+msgid "Next Page"
+msgstr ""
+
+#: templates/partials/starter_guide_card.html:7
+msgid "New to AI? Start here"
+msgstr ""
+
+#: templates/partials/starter_guide_card.html:9
+msgid ""
+"\n"
+"                The Starter Guide introduces you to artificial intelligence "
+"step by step – easy to understand and\n"
+"                practical. Ideal for beginners with no prior knowledge.\n"
+"            "
+msgstr ""
+
+#: templates/partials/starter_guide_card.html:16
+#: templates/partials/starter_guide_card.html:18
+msgid "To the starter guide"
+msgstr ""
+
+#: templates/partials/starter_guide_card.html:21
+msgid "Discover tools"
+msgstr ""
+
+#: templates/prompts/prompt_detail.html:32
+msgid "Suitable tools"
+msgstr ""
+
+#: templates/prompts/prompt_detail.html:38 templates/usecases/detail.html:48
+msgid "No tools linked."
+msgstr ""
+
+#: templates/prompts/prompt_detail.html:46
+msgid "More Prompts"
+msgstr ""
+
+#: templates/prompts/prompt_list.html:34
+msgid "No published prompts found."
+msgstr ""
+
+#: templates/usecases/detail.html:12 templates/usecases/list.html:21
+msgid "Persona:"
+msgstr ""
+
+#: templates/usecases/detail.html:39
+msgid "Tools used"
+msgstr ""
+
+#: templates/usecases/detail.html:56
+msgid "Similar use cases"
+msgstr ""
+
+#: templates/usecases/list.html:43
+msgid "No published use cases found."
+msgstr ""
+
+#: usecases/admin.py:172
+msgid "Submit for review"
+msgstr ""
+
+#: usecases/admin.py:187
+#, python-format
+msgid "%d item(s) moved to review."
+msgstr ""
+
+#: usecases/admin.py:208
+#, python-format
+msgid "%d item(s) moved to rework."
+msgstr ""
+
+#: usecases/admin.py:229
+#, python-format
+msgid "%d item(s) published."
+msgstr ""
+
+#: usecases/admin.py:235
+msgid "Archive"
+msgstr ""
+
+#: usecases/admin.py:249
+#, python-format
+msgid "%d item(s) archived."
+msgstr ""
+
+#: usecases/admin.py:255
+msgid "Restore to draft"
+msgstr ""
+
+#: usecases/admin.py:269
+#, python-format
+msgid "%d item(s) restored to draft."
+msgstr ""
+
+#: usecases/models.py:25
+msgid "Persona"
+msgstr ""
+
+#: usecases/models.py:33 usecases/views.py:126
+msgid "Usecase"
+msgstr ""
+
+#: usecases/views.py:54
+msgid "Usecases · MentoroAI"
+msgstr ""
+
+#: usecases/views.py:55
+msgid "Discover how people used ai in real usecases"
+msgstr ""

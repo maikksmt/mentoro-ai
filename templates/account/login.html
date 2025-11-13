@@ -1,0 +1,52 @@
+{% extends "base.html" %}{% load i18n widget_tweaks %}
+{% block title %}<title>{% trans "Login" %} – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+    {% with canonical=request.build_absolute_uri %}{% with seo_canonical=canonical %}{% endwith %}{% endwith %}
+    <meta name="description" content="{% trans 'Login for MentoroAI.' %}">
+{% endblock %}
+
+{% block meta_og %}{{ block.super }}{% endblock %}
+{% block jsonld %}{% endblock %}
+{% block content %}
+    <div class="container mx-auto p-4 max-w-md">
+        <h1 class="text-2xl font-bold mb-4">{% trans "Login" %}</h1>
+        <div class="card bg-base-100 shadow">
+            <div class="card-body">
+                <form method="post" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-control mb-3">
+                        <label class="label"><span
+                                class="label-text">{% trans "eMail or username" %}</span></label>
+                        {{ form.login|add_class:"input input-bordered" }} {{ form.login.errors }}
+                    </div>
+                    <div class="form-control mb-4">
+                        <label class="label"><span class="label-text">{% trans "Password" %}</span></label>
+                        {{ form.password|add_class:"input input-bordered" }} {{ form.password.errors }}
+                    </div>
+                    <div class="mb-4">
+                        <a class="link link-hover text-sm"
+                           href="{% url 'account_reset_password' %}">{% trans "Forgot your password?" %}</a>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="btn btn-primary">{% trans "Login" %}</button>
+                        <a class="btn btn-ghost cursor-not-allowed" href="">{% trans "Sign up for free" %}</a>
+                    </div>
+                    {# Social Logins #}
+                    {#                    <div class="flex flex-col gap-2 mt-4">#}
+                    {#                        <a class="btn cursor-not-allowed"#}
+                    {#                           href="{% url 'google_login' %}">{% trans "Continue with Google" %}</a>#}
+                    {#                        <a class="btn cursor-not-allowed"#}
+                    {#                           href="{% url 'github_login' %}">{% trans "Continue with Github" %}</a>#}
+                    {#                        <a class="btn cursor-not-allowed"#}
+                    {#                           href="{% url 'apple_login' %}">{% trans "Continue with Apple" %}</a>#}
+                    {#                    </div>#}
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

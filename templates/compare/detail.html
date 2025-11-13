@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% load i18n richtext %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <article class="prose max-w-none">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold">{{ object.title }}</h1>
+            {% if object.intro %}
+                <p class="text-base-content/80 mt-2">{{ object.intro|richtext|safe }}</p>
+            {% endif %} {% if object.winner %}
+            <div class="mt-3 alert alert-success">
+                <span>🏆 {% trans "Winner" %}: <strong>{{ object.winner.name }}</strong></span>
+            </div>
+        {% endif %}
+            <div class="mt-2 flex flex-wrap gap-2">
+                {% if object.tools.all %} {% for t in object.tools.all %}
+                    <a href="{% url 'catalog:detail' slug=t.slug %}" class="badge badge-outline">{{ t.name }}</a>
+                {% endfor %} {% endif %}
+            </div>
+        </header>
+        {% if object.score_breakdown %}
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold">
+                    {% trans "Evaluation according to criteria" %}
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        {# Kopfzeile mit Tools #}
+                        <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">{% trans "Criteria" %}</th>
+                            {% for t in tools_list %}
+                                <th class="whitespace-nowrap">{{ t.name }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for criterion, scores in score_rows %}
+                            <tr>
+                                <th class="whitespace-nowrap">{{ criterion }}</th>
+                                {% for score in scores %}
+                                    <td>{{ score }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        {% endif %} {% if object.notes %}
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold">{% trans "Remarks" %}</h2>
+            <div>{{ object.notes|safe }}</div>
+        </section>
+    {% endif %}
+    </article>
+    {% if related %}
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4">{% trans "Similar comparisons" %}</h2>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {% for c in related %}
+                    <article class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-base">
+                                <a href="{% url 'compare:detail' slug=c.slug %}"
+                                   class="link link-hover">{{ c.title }}</a>
+                            </h3>
+                            {% if c.intro %}
+                                <p class="text-sm text-base-content/70 line-clamp-3">{{ c.intro }}</p>
+                            {% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %} {% endblock %}

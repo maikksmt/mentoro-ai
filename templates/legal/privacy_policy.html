@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Privacy Policy – MentoroAI" %}</title>
+{% endblock %}
+
+{% block content %}
+    <section class="prose max-w-3xl mx-auto py-4">
+        <h1>{% trans "Privacy Policy" %}</h1>
+        <h2>{% trans "1. Controller" %}</h2>
+        <p>
+            {% trans "Controller under data protection law, in particular the EU GDPR, is:" %}<br>
+            <strong>Maik Kusmat</strong><br>
+            {% trans "Email" %}: <a href="mailto:contact@mentoro-ai.com">contact@mentoro-ai.com</a>
+        </p>
+
+        <h2>{% trans "2. Collection and storage of personal data" %}</h2>
+        <p>
+            {% blocktrans %}
+                When you visit this website, information sent by your browser is automatically collected (e.g., IP
+                address,
+                date and time, pages viewed, browser used). These data are technically required to display the website
+                correctly
+                and serve the security of the system.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "3. Contact" %}</h2>
+        <p>
+            {% blocktrans %}
+                If you contact us by email, we store your details to process the request and for possible follow-up
+                questions.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "4. Registration / User accounts" %}</h2>
+        <p>
+            {% blocktrans %}
+                If you create a user account, we process your entered data (name, email address, password) solely for
+                providing
+                your account and managing your content.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "5. Cookies" %}</h2>
+        <p>
+            {% blocktrans %}
+                This website only uses technically necessary cookies required for operation. Tracking or marketing
+                cookies are not used.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "6. Your rights" %}</h2>
+        <ul>
+            <li>{% trans "Access to your stored data" %}</li>
+            <li>{% trans "Rectification of inaccurate data" %}</li>
+            <li>{% trans "Erasure (\"right to be forgotten\")" %}</li>
+            <li>{% trans "Restriction of processing" %}</li>
+            <li>{% trans "Data portability" %}</li>
+            <li>{% trans "Objection to processing" %}</li>
+        </ul>
+
+        <h2>{% trans "7. Data security" %}</h2>
+        <p>
+            {% blocktrans %}
+                We use technical and organizational measures to protect your data against manipulation, loss, or
+                unauthorized access.
+                These measures are continuously adapted in line with technological developments.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "8. Changes to this Privacy Policy" %}</h2>
+        <p>
+            {% blocktrans %}
+                We reserve the right to update this Privacy Policy to reflect current legal requirements.
+            {% endblocktrans %}
+        </p>
+    </section>
+{% endblock %}

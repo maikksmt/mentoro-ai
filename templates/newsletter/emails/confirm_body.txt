@@ -1,0 +1,11 @@
+{% load i18n %}
+{% blocktrans with email=subscriber.email %}Hi {{ email }},{% endblocktrans %}
+
+{% blocktrans %}Please confirm your subscription to the MentoroAI newsletter by clicking the link below:{% endblocktrans %}
+{{ confirmation_url }}
+
+{% blocktrans %}If you did not request this email you can safely ignore it.{% endblocktrans %}
+
+{% blocktrans %}To unsubscribe at any time, visit:{% endblocktrans %}
+{{ unsubscribe_url }}
+

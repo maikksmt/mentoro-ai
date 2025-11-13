@@ -1,0 +1,86 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block extrastyle %}
+    <style>
+        .diff-ins {
+            background: #39be2f;
+            text-decoration: none;
+            padding: .05rem .2rem;
+            border-radius: .15rem;
+        }
+
+        .diff-del {
+            background: #ea5721;
+            text-decoration: line-through;
+            padding: .05rem .2rem;
+            border-radius: .15rem;
+        }
+
+        .muted {
+            color: #666;
+        }
+
+        .prewrap {
+            white-space: pre-wrap;
+        }
+
+        table.listing {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table.listing th, table.listing td {
+            border: 1px solid #ddd;
+            padding: .5rem;
+            vertical-align: top;
+        }
+
+        thead th {
+            background: #f7f7f7;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Draft vs Live" %}: {{ object }}</h1>
+
+    {% if comparisons %}
+        {% for cmp in comparisons %}
+            <h2>{{ cmp.name }} ({{ cmp.code }})</h2>
+
+            {% if cmp.changes %}
+                <table class="listing">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Field" %}</th>
+                        <th>{% trans "Draft (current form)" %}</th>
+                        <th>{% trans "Live (published)" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ch in cmp.changes %}
+                        <tr>
+                            <th scope="row">{{ ch.field|capfirst }}</th>
+                            <td>
+                                <div class="prewrap">{{ ch.left|safe }}</div>
+                            </td>
+                            <td>
+                                <div class="prewrap">{{ ch.right|safe }}</div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p class="muted">{% trans "No differences in this language." %}</p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p class="muted">{% trans "No differences found across languages." %}</p>
+    {% endif %}
+
+    <p style="margin-top:1rem;">
+        <a href="{{ request.META.HTTP_REFERER|default:'..' }}">{% trans "Back" %}</a>
+    </p>
+{% endblock %}

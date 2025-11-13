@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-27 23:53+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: static/i18n/intro_strings.js:4
+msgid "What is AI?"
+msgstr ""
+
+#: static/i18n/intro_strings.js:5
+msgid "Terms and concepts explained clearly."
+msgstr ""
+
+#: static/i18n/intro_strings.js:6
+msgid "Prompting fundamentals"
+msgstr ""
+
+#: static/i18n/intro_strings.js:7
+msgid "Structured prompts, roles, examples."
+msgstr ""
+
+#: static/i18n/intro_strings.js:8
+msgid "Become more productive with AI"
+msgstr ""
+
+#: static/i18n/intro_strings.js:9
+msgid "Workflows for everyday life and work."
+msgstr ""
+
+#: static/i18n/intro_strings.js:10
+msgid "Automate with AI tools"
+msgstr ""
+
+#: static/i18n/intro_strings.js:11
+msgid "From simple macros to integrations."
+msgstr ""
+
+#: static/i18n/intro_strings.js:12
+msgid "Start your own AI project"
+msgstr ""
+
+#: static/i18n/intro_strings.js:13
+msgid "Stack, MVP, evaluation."
+msgstr ""
+
+#: templates/ops/seo_check.html:19
+msgid "SEO Smoke Test"
+msgstr ""
+#: templates/ops/seo_check.html:25
+msgid "Path(s) – one path per line (e.g. <code>/de/glossar/</code>)"
+msgstr ""
+#: templates/ops/seo_check.html:21
+msgid "Check public pages for basic SEO tags."
+msgstr ""
+#: templates/ops/seo_check.html:28
+msgid "Check"
+msgstr ""
+#: templates/ops/seo_check.html:38
+msgid "Pfad"
+msgstr ""
+#: templates/ops/seo_check.html:39
+msgid "Status"
+msgstr ""
+#: templates/ops/seo_check.html:40
+msgid "Titel"
+msgstr ""
+#: templates/ops/seo_check.html:41
+msgid "Description"
+msgstr ""
+#: templates/ops/seo_check.html:42
+msgid "Canonical"
+msgstr ""
+#: templates/ops/seo_check.html:43
+msgid "OG-Image"
+msgstr ""
+#: templates/ops/seo_check.html:44
+msgid "Hreflang"
+msgstr ""
+#: templates/ops/seo_check.html:45
+msgid "Hinweise"
+msgstr ""
+#: templates/partials/pagination.html:11
+msgid "Seite"
+msgstr ""
+#: templates/partials/pagination.html:11
+msgid "of"
+msgstr ""
+#: templates/content/home.html:37
+msgid "Project Github"
+msgstr ""
+#: templates/base.html:75
+msgid "Search"
+msgstr ""
+#: templates/base.html:24
+msgid "Mobile menu"
+msgstr ""

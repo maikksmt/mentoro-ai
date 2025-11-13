@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load richtext i18n %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    <header class="mb-6 card-header-prompt">
+        <h1 class="text-3xl font-bold">{% trans "Prompts" %}</h1>
+    </header>
+    <div class="grid gap-2 lg:gap-6  md:grid-cols-2 lg:grid-cols-3">
+        {% for obj in object_list %}
+            <article class="card bg-base-100 shadow hover:shadow-lg transition">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <a href="{{ obj.get_absolute_url }}" class="link link-hover">{{ obj.display_title }}</a>
+                    </h2>
+                    {% if obj.display_intro %}
+                        <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords:30 }}</p>
+                    {% else %}
+                        <p class="line-clamp-3">{{ obj.display_body|richtext|safe|truncatewords:30 }}</p>
+                    {% endif %}
+                    <div class="card-actions justify-between items-center mt-4">
+                        <div class="text-sm text-base-content/70">
+                            {% if obj.published_at %}
+                                <time datetime="{{ obj.published_at|date:'c' }}">
+                                    📅 {{ obj.published_at|date:"d.m.Y" }}
+                                </time>
+                            {% endif %}
+                        </div>
+                        <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">{% trans "Details" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% empty %}
+            <div class="col-span-full alert">
+                <span>{% trans "No published prompts found." %}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "partials/pagination.html" %} {% endblock %}

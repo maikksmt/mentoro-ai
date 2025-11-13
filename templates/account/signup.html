@@ -1,0 +1,52 @@
+{% extends "base.html" %}{% load i18n widget_tweaks %}
+{% block title %}<title>{% trans "Signup" %} – MentoroAI</title>{% endblock %} {# pro Seite anpassen #}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+    {% with canonical=request.build_absolute_uri %}{% with seo_canonical=canonical %}{% endwith %}{% endwith %}
+    <meta name="description" content="signup for MentoroAI.">
+{% endblock %}
+
+{% block meta_og %}{{ block.super }}{% endblock %}
+{% block jsonld %}{% endblock %}
+{% block content %}
+    <div class="container mx-auto p-4 max-w-xl">
+        <h1 class="text-2xl font-bold mb-4">{% trans "Create Account" %}</h1>
+        <div class="card bg-base-100 shadow">
+            <div class="card-body">
+                <form method="post" action="{% url 'account_signup' %}">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    {% for field in form %}
+                        <div class="form-control mb-3">
+                            <label class="label"><span class="label-text">{{ field.label }}</span></label>
+                            {{ field|add_class:"input input-bordered" }} {{ field.errors }}
+                            {% if field.help_text %}<label class="label"><span
+                                    class="label-text-alt opacity-70">{{ field.help_text }}</span></label>{% endif %}
+                        </div>
+                    {% endfor %}
+                    <p class="text-sm opacity-70 mb-3">
+                        {% blocktrans %}Please confirm your email address. Your account will then be activated by an
+                            administrator.{% endblocktrans %}
+                    </p>
+                    <div class="flex gap-2">
+                        <button class="btn btn-primary cursor-not-allowed">{% trans "Signup" %}</button>
+                        <a class="btn btn-ghost"
+                           href="{% url 'account_login' %}">{% trans "I have an account already" %}</a>
+                    </div>
+                </form>
+
+                {#                <div class="divider">{% trans "or" %}</div>#}
+                {#                <div class="flex flex-col gap-2">#}
+                {#                    <a class="btn cursor-not-allowed" href="{% url 'google_login' %}">#}
+                {#                        {% blocktrans %}Continue with Google{% endblocktrans %}</a>#}
+                {#                    <a class="btn cursor-not-allowed" href="{% url 'github_login' %}">#}
+                {#                        {% blocktrans %}Continue with GitHub{% endblocktrans %}</a>#}
+                {#                    <a class="btn cursor-not-allowed" href="{% url 'apple_login' %}">#}
+                {#                        {% blocktrans %}Continue with Apple{% endblocktrans %}</a>#}
+                {#                </div>#}
+            </div>
+        </div>
+    </div>
+{% endblock %}

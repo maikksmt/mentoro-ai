@@ -1,0 +1,12 @@
+from django.contrib import admin
+from .models import Subscriber
+from core.admin import TranslatableTinyMCEMixin
+
+admin.site.site_header = "MentoroAI – Admin"
+
+
+@admin.register(Subscriber)
+class SubscriberAdmin(TranslatableTinyMCEMixin):
+    list_display = ("email", "double_opt_in", "is_subscribed", "created_at", "unsubscribed_at")
+    search_fields = ("email",)
+    readonly_fields = ("confirmed_at", "unsubscribed_at")
