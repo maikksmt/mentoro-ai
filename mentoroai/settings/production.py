@@ -1,5 +1,3 @@
-import os
-import dj_database_url
 from django.core.exceptions import ImproperlyConfigured
 
 from .base import *  # noqa: F403,F401
