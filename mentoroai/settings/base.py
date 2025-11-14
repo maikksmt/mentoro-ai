@@ -231,7 +231,7 @@ PARLER_DEFAULT_LANGUAGE_CODE = 'en'
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
 
-STATIC_URL = "/static/"
+STATIC_URL: str = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/media/"
