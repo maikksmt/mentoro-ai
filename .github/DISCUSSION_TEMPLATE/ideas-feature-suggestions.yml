@@ -1,0 +1,37 @@
+title: "[Idea] "
+labels: ["enhancement", "community-idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to improve **MentoroAI**?  
+        Tell us about the problem and your proposed solution.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Use case
+      description: What problem should this feature solve?
+      placeholder: "Editors currently cannot see if a translation exists for…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should this feature work?
+      placeholder: |
+        - Add a column in the admin…
+        - Show links to existing translations…
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who benefits and how?
+      placeholder: "This would help editors publish multilingual guides faster…"
+    validations:
+      required: false

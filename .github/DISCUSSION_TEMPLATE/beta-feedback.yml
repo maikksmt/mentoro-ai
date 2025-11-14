@@ -1,0 +1,40 @@
+title: "[Beta Feedback] "
+labels: ["beta-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing the **MentoroAI Beta** 🚀  
+        Share what works well and what should be improved.
+
+  - type: textarea
+    id: positives
+    attributes:
+      label: What works well?
+      placeholder: "The glossary search is very helpful because…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: issues
+    attributes:
+      label: What is confusing or not working?
+      placeholder: "I didn’t understand how to change the language on…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: missing
+    attributes:
+      label: What is missing?
+      placeholder: "I would like to see guides about…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Who are you and how do you use MentoroAI?
+      placeholder: "I’m using it as…, mainly on mobile/desktop…"
+    validations:
+      required: false
