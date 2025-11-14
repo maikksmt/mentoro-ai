@@ -101,8 +101,10 @@ class ToolDetailView(DetailView, SeoMixin):
 
     def get_object(self, queryset=None):
         slug = self.kwargs["slug"]
+        lang = get_language()
         obj = (
             Tool.objects
+            .language(lang)
             .filter(Q(translations__slug=slug))
             .distinct()
             .first()

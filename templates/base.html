@@ -30,22 +30,22 @@
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li class="my-1"><a href="{% url 'glossary:list' %}"
-                                    class="btn btn-glossary btn-soft btn-sm text-base-content lg:btn-md xl:btn-lg">{% trans "Glossary" %}</a>
+                                    class="btn btn-glossary btn-soft btn-lg text-base-content">{% trans "Glossary" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'guides:list' %}"
-                                    class="btn btn-guide btn-soft btn-sm text-base-content xl:btn-md">{% trans "Guides" %}</a>
+                                    class="btn btn-guide btn-soft btn-lg text-base-content">{% trans "Guides" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'prompts:list' %}"
-                                    class="btn btn-prompt btn-soft text-base-content btn-sm xl:btn-md">{% trans "Prompts" %}</a>
+                                    class="btn btn-prompt btn-soft btn-lg text-base-content">{% trans "Prompts" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'usecases:list' %}"
-                                    class="btn btn-usecase btn-soft text-base-content btn-sm xl:btn-md">{% trans "Use cases" %}</a>
+                                    class="btn btn-usecase btn-soft btn-lg text-base-content">{% trans "Use cases" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'catalog:list' %}"
-                                    class="btn btn-tool btn-soft text-base-content btn-sm xl:btn-md">{% trans "Tools" %}</a>
+                                    class="btn btn-tool btn-soft btn-lg text-base-content">{% trans "Tools" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'compare:index' %}"
-                                    class="btn btn-compare btn-soft text-base-content btn-sm xl:btn-md">{% trans "Comparisons" %}</a>
+                                    class="btn btn-compare btn-soft btn-lg text-base-content">{% trans "Comparisons" %}</a>
                 </li>
             </ul>
         </div>
@@ -54,22 +54,22 @@
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
             <li class="mx-1"><a href="{% url 'glossary:list' %}"
-                                class="btn btn-glossary btn-soft btn-sm text-base-content xl:btn-md">{% trans "Glossary" %}</a>
+                                class="btn btn-glossary btn-soft text-base-content">{% trans "Glossary" %}</a>
             </li>
             <li class="mx-1"><a href="{% url 'guides:list' %}"
-                                class="btn btn-guide btn-soft btn-sm text-base-content xl:btn-md">{% trans "Guides" %}</a>
+                                class="btn btn-guide btn-soft text-base-content">{% trans "Guides" %}</a>
             </li>
             <li class="mx-1"><a href="{% url 'prompts:list' %}"
-                                class="btn btn-prompt btn-soft text-base-content btn-sm xl:btn-md">{% trans "Prompts" %}</a>
+                                class="btn btn-prompt btn-soft text-base-content">{% trans "Prompts" %}</a>
             </li>
             <li class="mx-1"><a href="{% url 'usecases:list' %}"
-                                class="btn btn-usecase btn-soft text-base-content btn-sm xl:btn-md">{% trans "Use cases" %}</a>
+                                class="btn btn-usecase btn-soft text-base-content">{% trans "Use cases" %}</a>
             </li>
             <li class="mx-1"><a href="{% url 'catalog:list' %}"
-                                class="btn btn-tool btn-soft text-base-content btn-sm xl:btn-md">{% trans "Tools" %}</a>
+                                class="btn btn-tool btn-soft text-base-content">{% trans "Tools" %}</a>
             </li>
             <li class="mx-1"><a href="{% url 'compare:index' %}"
-                                class="btn btn-compare btn-soft text-base-content btn-sm xl:btn-md">{% trans "Comparisons" %}</a>
+                                class="btn btn-compare btn-soft text-base-content">{% trans "Comparisons" %}</a>
             </li>
         </ul>
     </div>
@@ -152,7 +152,7 @@
 </div>
 
 <!-- Page container -->
-<main class="p-2 lg:p-4 w-full max-w-7xl mx-auto mb-auto">
+<main class="p-4 w-full max-w-7xl mx-auto mb-auto">
     {% block content %}{% endblock %}
 </main>
 
