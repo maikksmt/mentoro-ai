@@ -153,12 +153,13 @@ TEMPLATES = [
 WSGI_APPLICATION = "mentoroai.wsgi.application"
 
 # Database
+SSL_REQUIRE = env_bool("DJANGO_DATABASE_SSL_REQUIRE", False)
 if os.getenv("DJANGO_DATABASE_URL"):
     DATABASES = {
         "default": dj_database_url.config(
             env="DJANGO_DATABASE_URL",
             conn_max_age=600,
-            ssl_require=True,
+            ssl_require=SSL_REQUIRE,
         )
     }
 else:
