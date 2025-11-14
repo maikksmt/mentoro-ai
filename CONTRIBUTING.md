@@ -33,7 +33,7 @@ Minimum requirements:
 Setup example:
 
 ```bash
-git clone https://github.com/maikksmt/mentoroai.git
+git clone https://github.com/maikksmt/mentoro-ai.git
 cd mentoroai
 python -m venv venv
 source venv/bin/activate
