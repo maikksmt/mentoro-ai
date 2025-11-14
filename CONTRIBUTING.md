@@ -70,9 +70,9 @@ feat(starter): enable section editing in admin
 
 ## Branch Strategy & Pull Requests
 
-- Main branches: `main` (stable) and `development` (active)  
-- Create feature branches from `development`: `feature/<short-description>`  
-- Open pull requests against `development`  
+- Main branches: `main` (stable) and `dev` (active)  
+- Create feature branches from `dev`: `feature/<short-description>`  
+- Open pull requests against `dev`  
 - Describe motivation, changes, and migration steps in PR description  
 - Link related issues  
 

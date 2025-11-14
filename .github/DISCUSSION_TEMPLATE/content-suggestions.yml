@@ -1,0 +1,44 @@
+title: "[Content] "
+labels: ["content-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest new **guides, prompts, use cases, tools, or glossary terms** for MentoroAI.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content type
+      options:
+        - Guide
+        - Prompt
+        - Use Case
+        - Tool
+        - Glossary term
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Working title
+      placeholder: "AI for seniors – getting started safely"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Idea description
+      description: What should this content cover? What’s the main value?
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Target audience
+      placeholder: "Beginners, office workers, parents, students…"
+    validations:
+      required: false

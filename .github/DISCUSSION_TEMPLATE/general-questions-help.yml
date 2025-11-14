@@ -1,0 +1,26 @@
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question about **MentoroAI** 👋  
+        Please describe your situation as clearly as possible.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What do you want to know or solve?
+      placeholder: "How do I…?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Where did you run into this? (page, feature, use case, etc.)
+      placeholder: "On the Use Case detail page…, when I try to…"
+    validations:
+      required: false
