@@ -6,7 +6,7 @@
       "language_code": "de",
       "name": "Generative Chatbots",
       "description": "Werkzeuge auf großen Sprachmodellen (LLMs), die natürliche Sprache verstehen und Antworten generieren—vom einfachen Chat bis zu komplexen Arbeitsabläufen.",
-      "slug": "",
+      "slug": "generative-chatbots-de",
       "master": 1
     }
   },
@@ -17,7 +17,7 @@
       "language_code": "en",
       "name": "Generative Chatbots",
       "description": "Tools powered by large language models (LLMs) that understand natural language and generate responses—from simple chat to complex workflows.",
-      "slug": "",
+      "slug": "generative-chatbots-en",
       "master": 1
     }
   },
@@ -28,7 +28,7 @@
       "language_code": "de",
       "name": "Coding-Assistenten",
       "description": "Assistenten, die Quellcode vorschlagen, erklären, Tests generieren und beim Debugging helfen—direkt in IDE oder Editor.",
-      "slug": "",
+      "slug": "coding-assistenten",
       "master": 2
     }
   },
@@ -39,7 +39,7 @@
       "language_code": "en",
       "name": "Coding Assistants",
       "description": "Assistants that suggest and explain code, generate tests, and help debug—right inside your IDE or editor.",
-      "slug": "",
+      "slug": "coding-assistants",
       "master": 2
     }
   },
@@ -50,7 +50,7 @@
       "language_code": "de",
       "name": "Computer Vision",
       "description": "Dienste, die Bilder verstehen, Gegenstände erkennen und visuelle Suchen ermöglichen—nützlich von Ersatzteilen bis Dokumenten.",
-      "slug": "",
+      "slug": "computer-vision-de",
       "master": 3
     }
   },
@@ -61,7 +61,7 @@
       "language_code": "en",
       "name": "Computer Vision",
       "description": "Services that understand images, detect objects and enable visual search—useful from spare parts to documents.",
-      "slug": "",
+      "slug": "computer-vision-en",
       "master": 3
     }
   },
@@ -72,7 +72,7 @@
       "language_code": "de",
       "name": "Übersetzung & Echtzeit-Untertitel",
       "description": "KI-gestützte Systeme für Live-Untertitel, Simultan-Übersetzung und hochwertige Textübersetzungen.",
-      "slug": "",
+      "slug": "ubersetzung-echtzeituntertitel",
       "master": 4
     }
   },
@@ -83,7 +83,7 @@
       "language_code": "en",
       "name": "Translation & Real-Time Captions",
       "description": "AI-powered systems for live captions, simultaneous interpretation and high-quality text translation.",
-      "slug": "",
+      "slug": "translation-realtime-captions",
       "master": 4
     }
   },
@@ -94,7 +94,7 @@
       "language_code": "de",
       "name": "Schreiben & Berichte",
       "description": "Werkzeuge, die Tabellen interpretieren, Trends finden und druckreife Texte erzeugen—von E-Mail-Briefings bis Vollberichten.",
-      "slug": "",
+      "slug": "schreiben-berichte",
       "master": 5
     }
   },
@@ -105,7 +105,7 @@
       "language_code": "en",
       "name": "Writing & Reporting",
       "description": "Tools that interpret tables, spot trends and produce publication-ready text—from email briefs to full reports.",
-      "slug": "",
+      "slug": "writing-reporting",
       "master": 5
     }
   },
@@ -116,7 +116,7 @@
       "language_code": "de",
       "name": "Fitness & Gesundheit (KI-gesteuert)",
       "description": "Algorithmen, die Biosignale auswerten und adaptive Trainings-Empfehlungen geben—z. B. Erholungs-Scores und Tagesform.",
-      "slug": "",
+      "slug": "fitness-gesundheit-kigesteuert",
       "master": 6
     }
   },
@@ -127,7 +127,7 @@
       "language_code": "en",
       "name": "Fitness & Health (AI-Driven)",
       "description": "Algorithms that read biosignals and provide adaptive training guidance—e.g., recovery scores and readiness.",
-      "slug": "",
+      "slug": "fitness-health-aidriven",
       "master": 6
     }
   },
@@ -138,7 +138,7 @@
       "language_code": "de",
       "name": "Generatives Design & Bilder",
       "description": "Modelle zur Bild-Synthese und Iteration (Logos, Mockups, Stile), oft mit Prompt-basierten Workflows.",
-      "slug": "",
+      "slug": "generatives-design-bilder",
       "master": 7
     }
   },
@@ -149,7 +149,7 @@
       "language_code": "en",
       "name": "Generative Design & Images",
       "description": "Models for image synthesis and iteration (logos, mockups, styles), usually with prompt-based workflows.",
-      "slug": "",
+      "slug": "generative-design-images",
       "master": 7
     }
   },
@@ -160,7 +160,7 @@
       "language_code": "de",
       "name": "Kochen & Rezepte (KI)",
       "description": "Assistenten, die Zutaten interpretieren, passende Rezepte vorschlagen und Zubereitungsschritte strukturiert ausgeben.",
-      "slug": "",
+      "slug": "kochen-rezepte-ki",
       "master": 8
     }
   },
@@ -171,7 +171,7 @@
       "language_code": "en",
       "name": "Cooking & Recipes (AI)",
       "description": "Assistants that interpret ingredients, propose recipes and output structured cooking steps.",
-      "slug": "",
+      "slug": "cooking-recipes-ai",
       "master": 8
     }
   },
@@ -182,7 +182,7 @@
       "language_code": "de",
       "name": "Pflanzen-Diagnose",
       "description": "Visuelle KI erkennt Blattmuster, Symptome und empfiehlt gezielte Maßnahmen—inkl. Düngung und Pflege.",
-      "slug": "",
+      "slug": "pflanzendiagnose",
       "master": 9
     }
   },
@@ -193,7 +193,7 @@
       "language_code": "en",
       "name": "Plant Diagnosis",
       "description": "Visual AI detects leaf patterns and symptoms and recommends targeted actions—incl. fertilizing and care.",
-      "slug": "",
+      "slug": "plant-diagnosis",
       "master": 9
     }
   },
@@ -204,7 +204,7 @@
       "language_code": "de",
       "name": "Reise-Planung (KI)",
       "description": "Assistenten, die Budget, Präferenzen und Reiserhythmus berücksichtigen und strukturierte Reisepläne generieren.",
-      "slug": "",
+      "slug": "reiseplanung-ki",
       "master": 10
     }
   },
@@ -215,7 +215,7 @@
       "language_code": "en",
       "name": "Travel Planning (AI)",
       "description": "Assistants that factor in budget, preferences and travel pace to generate structured itineraries.",
-      "slug": "",
+      "slug": "travel-planning-ai",
       "master": 10
     }
   }
