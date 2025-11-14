@@ -30,7 +30,7 @@
                 {% if section.display_body %}
                     <p class="opacity-80">{{ section.display_body|richtext|safe }}</p>{% endif %}
             </div>
-            <div class="grid gap-2 lg:gap-4 grid-cols-2 xl:grid-cols-3">
+            <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {% for item in section.items.all %}
                     {% if item.is_published %}
                         {% include "partials/_guideitem_card.html" with item=item %}

@@ -1,14 +1,20 @@
 name: Deploy to Oracle VM
 
 on:
-  push:
+  workflow_run:
+    workflows: ["CI"]
     branches: [ "main" ]
+    types:
+      - completed
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout ist für den reinen SSH-Deploy nicht zwingend nötig,
+      # schadet aber auch nicht. Du kannst ihn auch weglassen.
       - name: Checkout
         uses: actions/checkout@v4
 
