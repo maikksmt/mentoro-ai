@@ -91,7 +91,7 @@ This means:
 ## Contributors
 
 - **Lead Developer / Owner:** Maik Kusmat
-- Community contributions are welcome (see [CONTRIBUTING.md](.github/CONTRIBUTING.md))
+- Community contributions are welcome (see [CONTRIBUTING.md](CONTRIBUTING.md))
 
 ---
 
