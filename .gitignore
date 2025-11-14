@@ -42,7 +42,6 @@ db.sqlite3
 
 # Static & Media (werden im Deployment generiert)
 staticfiles/
-static/
 media/
 
 # Build / Compiled assets

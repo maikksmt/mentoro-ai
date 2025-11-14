@@ -1,5 +1,4 @@
 import os
-import dj_database_url
 from django.core.exceptions import ImproperlyConfigured
 
 from .base import *  # noqa: F403,F401
@@ -46,14 +45,6 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS
 SECURE_HSTS_PRELOAD = env_bool("DJANGO_SECURE_HSTS_PRELOAD", True)
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_REFERRER_POLICY = os.getenv("DJANGO_SECURE_REFERRER_POLICY", "same-origin")
-
-SSL_REQUIRE = env_bool("DJANGO_DATABASE_SSL_REQUIRE", False)
-if os.getenv("DJANGO_DATABASE_URL"):
-    DATABASES["default"] = dj_database_url.config(
-        env="DJANGO_DATABASE_URL",
-        conn_max_age=600,
-        ssl_require=SSL_REQUIRE,  # DB ist lokale Instanz auf VM, daher False
-    )
 
 LOGGING = {
     "version": 1,
