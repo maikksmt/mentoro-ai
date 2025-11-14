@@ -1,0 +1,41 @@
+name: 📚 Documentation Issue
+description: Report mistakes or missing documentation in MentoroAI
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us keep the MentoroAI documentation up to date.
+
+  - type: input
+    id: location
+    attributes:
+      label: Location / File
+      description: Where is the documentation problem?
+      placeholder: "README.md, SEO docs, seeds guide, deployment.md..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong?
+      description: Describe what's missing or incorrect.
+      placeholder: "The deployment docs mention the old VM setup..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      placeholder: "Update Oracle VM section, add GitHub Actions note..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Notes

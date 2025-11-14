@@ -1,0 +1,67 @@
+name: 🌟 Feature Request
+description: Suggest a new feature or improvement for MentoroAI
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve **MentoroAI**!  
+        Please explain your idea clearly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-sentence summary of the feature.
+      placeholder: "Add admin overview for translation_group relations"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Use Case
+      description: What problem does the feature solve?
+      placeholder: "Currently, editors cannot see whether translations exist..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should this feature work?
+      placeholder: |
+        - Add column in admin
+        - Link related translations
+        - Provide inline creation fields
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Any other ways this could be implemented?
+      placeholder: "Alternative: separate overview page"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - 🔴 High – blocks workflow or publishing
+        - 🟠 Medium – helpful improvement
+        - 🟡 Low – nice to have
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra Information
+      description: Designs, references, related issues.

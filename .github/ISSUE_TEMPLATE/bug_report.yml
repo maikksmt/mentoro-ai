@@ -1,0 +1,95 @@
+name: 🐞 Bug Report
+description: Report a problem in MentoroAI so it can be fixed quickly
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug in **MentoroAI**!  
+        Please provide clear steps so we can reproduce and fix the issue.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence describing the bug.
+      placeholder: "Language switch on Use Case detail page fails"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? When does it occur?
+      placeholder: "When changing the language on ... an error is thrown ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide exact steps to trigger the bug.
+      placeholder: |
+        1. Open /de/usecases/...
+        2. Click language switch
+        3. Error appears in log
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+      placeholder: "Redirect to the correct translated Use Case"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What really happened?
+      placeholder: "404 redirect, missing translation_group, KeyError, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Tracebacks / Screenshots
+      description: Paste relevant error logs (Django, browser console, CI).
+      placeholder: "Paste stack trace from runserver or production logs"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - 🔴 Critical – production broken
+        - 🟠 Major – important feature broken
+        - 🟡 Minor – issue but project works
+        - 🔵 Cosmetic – only visual/UI
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Where does the issue occur?
+      placeholder: "Local macOS dev, Oracle VM production, GitHub Actions CI..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Notes
+      description: Any hints, related PRs, or files to check?
