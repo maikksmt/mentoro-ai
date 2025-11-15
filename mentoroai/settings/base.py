@@ -343,9 +343,7 @@ REST_FRAMEWORK = {
 
 # --- SEO / Site Info ---
 SITE_NAME = "MentoroAI"
-# Stelle sicher, dass die Domain hier korrekt ist (Prod-Domain nehmen)
 SITE_URL = "https://www.mentoro-ai.com"
-
 SITE_ID = int(os.getenv("SITE_ID", "1"))
 
 AUTHENTICATION_BACKENDS = [
