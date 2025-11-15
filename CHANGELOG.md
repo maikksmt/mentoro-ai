@@ -5,7 +5,23 @@ This project follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## [1.0.0-beta-1] – 2025-11-13
+
+## [Unreleased]
+### Added
+- (New changes are placed here as the beta phase progresses.)
+
+---
+## [1.0.0-beta_2] – 2025-11-16
+### Added
+- bugfixes for Comparison Category select dropdown 
+  - every category were shown twice due to translation query issue
+  - the category value causing a server error due to wrong query handling.
+  - limit selectable categories to only available categories in available comparisons.
+
+- minor UI updates
+
+---
+## [1.0.0-beta_1] – 2025-11-13
 ### Added
 - First public **Beta release** of the MentoroAI platform.  
 - Complete **multilingual content framework** (German/English) using *django-parler*.  
@@ -30,12 +46,6 @@ n.a
 
 ### Fixed
 n.a.
-
----
-
-## [Unreleased]
-### Added
-- (Place new changes here as the beta phase progresses.)
 
 ---
 

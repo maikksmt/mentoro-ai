@@ -1,104 +1,161 @@
 # MentoroAI
 
-**MentoroAI** is a modern, multilingual web platform that helps people — from beginners to experts — get practical with
-Artificial Intelligence. It curates **AI tools**, **guides**, **prompts**, **use cases**, and **comparisons** in a
-clean, editorial experience.
-
-- **Tech**: Django 5.2 (Python 3.12), Tailwind CSS, DaisyUI, Heroicons.
-- **License**: GPL-3.0-or-later.
-
-> Public site: https://www.mentoro-ai.com
+[🇬🇧 English](#-english-version) | [🇩🇪 Deutsch](#-deutsche-version)
 
 ---
 
-## Target Audience
+# 🇬🇧 English Version
 
-MentoroAI is designed for:
+![Stars](https://img.shields.io/github/stars/maikksmt/mentoro-ai?style=for-the-badge)
+![License](https://img.shields.io/github/license/maikksmt/mentoro-ai?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge)
 
-- **Beginners** seeking an accessible introduction to AI concepts
-- **Developers & students** comparing tools and workflows
-- **Professionals** exploring real-world use cases and task-specific prompts
-- **Authors & editors** creating or reviewing AI-related content
+**MentoroAI** is a multilingual **AI learning platform** designed to make Artificial Intelligence accessible for beginners, creators, and professionals.
+It brings together **AI tools**, **guides**, **prompt libraries**, **use cases**, and **tool comparisons** in a clean and structured way.
 
----
-
-## Features
-
-- **Tool Catalog** – searchable overview of AI tools.
-- **Guides** – curated, beginner‑friendly articles with sections.
-- **Prompts** – ready‑to‑use prompt collections.
-- **Use Cases** – real‑world workflows and examples.
-- **Comparisons** – feature‑by‑feature “X vs Y”.
-- **Multilingual** – English & German content structure (i18n).
-- **Editorial Admin** – content is fully manageable via Django Admin.
+- **Tech Stack:** Django 5.2 (Python 3.12), Tailwind CSS, DaisyUI, Heroicons
+- **License:** GPL-3.0-or-later
+- **Live Site:** <https://www.mentoro-ai.com>
 
 ---
 
-## Website Concept
+## ⭐ Why MentoroAI Exists
 
-The platform follows three guiding principles: **Simplicity**, **Transparency**, and **Structure**.  
-Users can access most content immediately — no registration required.
+Many newcomers struggle with AI: unclear answers, hallucinations, poor prompts, or overwhelming information.
+MentoroAI solves this by offering a friendly, structured, and practical entry into the AI world.
 
-### Main Sections
-
-- **Starter Guide** – a step-by-step introduction
-- **Tool Catalog** – searchable overview of AI tools
-- **Comparisons** – feature-by-feature matchups (“X vs Y”)
-- **Guides** – curated editorial articles
-- **Prompts** – collections for practical tasks
-- **Use Cases** – real-world examples and workflows
+If you support this mission, leaving a ⭐ helps others discover the project.
 
 ---
 
-## Development Status
+## 🚀 Key Features
 
-The project is actively under development.
-Public release date is planned in 2025. Beta version for user feedback is released.
-
----
-
-## Editorial Roles
-
-The Editorial system holds three Roles:
-
-- **Admin** – full access to all models and permissions; ideal for technical maintainers.
-- **Editor** – can create, edit, view and delete content within editorial apps (guides, prompts, use cases,
-  tools, etc.).
-- **Author** – can create new content, edit or archive existing content.
-
-Staff users can be assigned to one or more groups to control editorial workflows
+| Feature                | Description                                |
+|------------------------|--------------------------------------------|
+| **AI Tool Catalog**    | Find tools quickly with filtering & search |
+| **Guides**             | Beginner-friendly explanations             |
+| **Prompts**            | Ready-to-use prompts                       |
+| **Use Cases**          | Real-world examples                        |
+| **Comparisons**        | Tool vs Tool insights                      |
+| **Multilingual**       | English + German content                   |
+| **Starter Guide**      | Step-by-step introduction                  |
+| **Editorial Workflow** | Author / Editor / Admin roles              |
 
 ---
 
-## License & Contributions
+## 🧪 Tech & Architecture
 
-This project is licensed under the **GNU General Public License v3 (or later)**.
-
-This means:
-
-- Contributions are welcome (issues & pull requests)
-- By contributing, you agree your work is released under GPLv3+
-- Commercial use is permitted (e.g. ad-supported)
-- Source redistribution must comply with GPLv3+
-- Full license text available in `LICENSE.txt`
-
-### Notes
-
-- Uses TinyMCE 7.x (GPLv2 or later), compatible with GPLv3+
+- **Backend:** Django 5.2
+- **Frontend:** Tailwind CSS, DaisyUI
+- **Database:** PostgreSQL
+- **Rich Text:** TinyMCE
+- **Translations:** django-parler
+- **CI/CD:** GitHub Actions
 
 ---
 
-## Contributors
+## 📝 License & Contributions
 
-- **Lead Developer / Owner:** Maik Kusmat
-- Community contributions are welcome (see [CONTRIBUTING.md](CONTRIBUTING.md))
+MentoroAI is licensed under the **GNU GPLv3 (or later)**.
+
+- Contributions are welcome
+- All contributions are GPLv3+
+- Commercial use allowed
+- Redistribution must follow GPL rules
+
+See: `LICENSE.txt`
+
+---
+
+## 👥 Contributors
+
+- **Lead Developer:** Maik Kusmat
+- Contributions welcome → see `CONTRIBUTING.md`
 
 ---
 
-## Contact
+## 📬 Contact
 
-- Maintainer: Maik Kusmat
-- GitHub: [github.com/maikksmt/mentoro-ai](https://github.com/maikksmt/mentoro-ai)
-- Email: [contact@mentoro-ai.com](mailto:contact@mentoro-ai.com)
+- Website: <https://www.mentoro-ai.com>
+- GitHub: <https://github.com/maikksmt/mentoro-ai>
+- Email: <contact@mentoro-ai.com>
 
 ---
+
+# 🇩🇪 Deutsche Version
+
+![Stars](https://img.shields.io/github/stars/maikksmt/mentoro-ai?style=for-the-badge)
+![License](https://img.shields.io/github/license/maikksmt/mentoro-ai?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge)
+
+**MentoroAI** ist eine moderne, mehrsprachige **Lernplattform für Künstliche Intelligenz**, die Anfänger, Kreative und Profis unterstützt, KI richtig zu verstehen und praktisch einzusetzen.
+Die Plattform bietet **AI-Tools**, **Guides**, **Prompts**, **Use Cases** und **Vergleiche** in einer klar strukturierten Oberfläche.
+
+- **Tech Stack:** Django 5.2 (Python 3.12), Tailwind CSS, DaisyUI, Heroicons
+- **Lizenz:** GPL-3.0-or-later
+- **Live:** <https://www.mentoro-ai.com>
+
+---
+
+## ⭐ Warum gibt es MentoroAI?
+
+Viele Menschen probieren KI-Tools aus und sind enttäuscht: unklare Antworten, Halluzinationen oder einfach Überforderung.
+MentoroAI schafft Klarheit, Orientierung und verständliche Inhalte — ohne Fachjargon.
+
+Wenn dir die Mission gefällt, freue ich mich über ein ⭐ Sternchen.
+
+---
+
+## 🚀 Hauptfunktionen
+
+| Funktion               | Beschreibung                               |
+|------------------------|--------------------------------------------|
+| **AI Tool Catalog**    | durchsuchbare Übersicht aktueller KI-Tools |
+| **Guides**             | Verständliche Erklärungen                  |
+| **Prompts**            | Nutzbare Prompts                           |
+| **Use Cases**          | Praxisbeispiele                            |
+| **Comparisons**        | Tool-Vergleiche                            |
+| **Mehrsprachig**       | Deutsch + Englisch                         |
+| **Starter Guide**      | Leichter Einstieg                          |
+| **Editorial Workflow** | Rollen-System                              |
+
+---
+
+## 🧪 Technik & Architektur
+
+- **Backend:** Django 5.2
+- **Frontend:** Tailwind CSS, DaisyUI
+- **Datenbank:** PostgreSQL
+- **Rich Text:** TinyMCE
+- **Übersetzungen:** django-parler
+- **CI/CD:** GitHub Actions
+
+---
+
+## 📝 Lizenz & Beiträge
+
+MentoroAI steht unter der **GNU GPLv3 (oder später)**.
+
+- Beiträge sind willkommen
+- Alle Beiträge werden GPLv3+
+- Kommerzielle Nutzung erlaubt
+- Weitergabe muss GPL-konform erfolgen
+
+Siehe: `LICENSE.txt`
+
+---
+
+## 👥 Mitwirkende
+
+- **Lead Developer:** Maik Kusmat
+- Beiträge willkommen → siehe `CONTRIBUTING.md`
+
+---
+
+## 📬 Kontakt
+
+- Webseite: <https://www.mentoro-ai.com>
+- GitHub: <https://github.com/maikksmt/mentoro-ai>
+- Email: <contact@mentoro-ai.com>

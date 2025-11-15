@@ -439,3 +439,8 @@ CACHES = {
         "LOCATION": "mentoroai_cache_table",
     }
 }
+
+# GOOGLE
+
+ENABLE_GA = False
+GA_MEASUREMENT_ID = ""
