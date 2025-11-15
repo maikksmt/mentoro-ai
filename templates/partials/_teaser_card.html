@@ -20,7 +20,7 @@
             <a href="{{ item.url }}" class="link link-hover" aria-label="{{ item.title }}">{{ item.title }}</a>
         </h3>
         {% if item.teaser %}
-            <div class="opacity-80 mt-1 line-clamp-3 h-full">{{ item.teaser|richtext|safe }}</div>
+            <div class="prose opacity-80 mt-1 line-clamp-3 h-full">{{ item.teaser|richtext|safe }}</div>
         {% endif %}
         <div class="card-actions mt-4 justify-end">
             <a href="{{ item.url }}" class="btn btn-primary btn-wide">{% trans "Read" %}</a>
