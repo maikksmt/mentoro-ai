@@ -3,9 +3,9 @@
     <ul>
         <li><a href="/">{% trans "Start" %}</a></li>
         {% for name, url in crumbs %} {% if forloop.last %}
-            <li class="text-base-content/70" aria-current="page">{{ name|truncatewords:5 }}</li>
+            <li class="text-base-content/70" aria-current="page">{{ name|truncatechars:38 }}</li>
         {% else %}
-            <li><a href="{{ url }}">{{ name|truncatewords:5 }}</a></li>
+            <li><a href="{{ url }}">{{ name|truncatewords:3 }}</a></li>
         {% endif %} {% endfor %}
     </ul>
 </nav>

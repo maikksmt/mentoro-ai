@@ -24,28 +24,27 @@
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="{% trans "Mobile menu" %}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
                 </svg>
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li class="my-1"><a href="{% url 'glossary:list' %}"
-                                    class="btn btn-glossary btn-soft btn-lg text-base-content">{% trans "Glossary" %}</a>
+                                    class="btn btn-glossary btn-soft btn-xl text-base-content text-lg">{% trans "Glossary" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'guides:list' %}"
-                                    class="btn btn-guide btn-soft btn-lg text-base-content">{% trans "Guides" %}</a>
+                                    class="btn btn-guide btn-soft btn-xl text-base-content text-lg">{% trans "Guides" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'prompts:list' %}"
-                                    class="btn btn-prompt btn-soft btn-lg text-base-content">{% trans "Prompts" %}</a>
+                                    class="btn btn-prompt btn-soft btn-xl text-base-content text-lg">{% trans "Prompts" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'usecases:list' %}"
-                                    class="btn btn-usecase btn-soft btn-lg text-base-content">{% trans "Use cases" %}</a>
+                                    class="btn btn-usecase btn-soft btn-xl text-base-content text-lg">{% trans "Use cases" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'catalog:list' %}"
-                                    class="btn btn-tool btn-soft btn-lg text-base-content">{% trans "Tools" %}</a>
+                                    class="btn btn-tool btn-soft btn-xl text-base-content text-lg">{% trans "Tools" %}</a>
                 </li>
                 <li class="my-1"><a href="{% url 'compare:index' %}"
-                                    class="btn btn-compare btn-soft btn-lg text-base-content">{% trans "Comparisons" %}</a>
+                                    class="btn btn-compare btn-soft btn-xl text-base-content text-lg">{% trans "Comparisons" %}</a>
                 </li>
             </ul>
         </div>

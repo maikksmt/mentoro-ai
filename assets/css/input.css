@@ -97,9 +97,14 @@ html {
     :root {
         --font-size-root: 13px;
     }
-
-    /* ggf. 13px wählen */
 }
+
+@media (hover: none) {
+    .copy-btn {
+        opacity: 1 !important;
+    }
+}
+
 
 /* --- Default (light theme) --- */
 html[data-theme='mentoroai-light'] #github-logo {

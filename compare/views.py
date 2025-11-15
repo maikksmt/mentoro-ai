@@ -18,13 +18,13 @@ class ComparisonListView(ListView, SeoMixin):
     paginate_by = 12
 
     def get_queryset(self):
-        qs = Comparison.objects.language().prefetch_related("tools", "tools__categories")
+        qs = Comparison.published.language().prefetch_related("tools", "tools__categories")
         cat = self.request.GET.get("category") or self.request.GET.get("cat")
         if cat:
             qs = qs.filter(
-                Q(tools__categories__slug=cat)
+                Q(tools__categories__translations__slug=cat)
                 | Q(tools__categories__pk__iexact=cat)
-            )
+            ).distinct()
 
         q = self.request.GET.get("q")
         if q:
@@ -42,7 +42,15 @@ class ComparisonListView(ListView, SeoMixin):
         lang = get_language()
         q = self.request.GET.get("q", "").strip()
         category = self.request.GET.get("category")
-        available_categories = Category.objects.all().active_translations(lang).order_by('translations__name')
+        available_categories = (
+            Category.objects.filter(
+                tools__comparisons__in=ctx["object_list"]
+            )
+            .active_translations(lang)
+            .distinct()
+            .order_by("translations__name")
+        )
+
         canonical = absolute_url(self.request.path)
         alts = localized_alternates(self.request, "compare:index")
         ctx["seo"] = self.build_seo(

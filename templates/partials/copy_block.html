@@ -7,18 +7,13 @@
 
     <div class="bg-base-200 rounded-lg border border-base-300/60 p-3">
         <div class="max-h-[70vh] overflow-auto">
-            <div class="prose max-w-none text-base-content"
-                 data-copy-source>
+            <div class="prose max-w-none text-base-content" data-copy-source>
                 {{ content|richtext|safe }}
             </div>
         </div>
     </div>
 
-    <button
-            type="button"
-            class="btn btn-ghost btn-xs absolute right-8 top-2 opacity-0 group-hover:opacity-100 transition"
-            data-copy-text="{{ content|striptags|escapejs }}"
-            aria-live="polite">
+    <button type="button" class="btn btn-neutral btn-sm absolute right-8 top-2 opacity-0 group-hover:opacity-100 transition" data-copy-text="{{ content|striptags|escapejs }}" aria-live="polite">
         {% heroicon_outline "clipboard" size=16 %}
         <span class="copy-label">Copy</span>
     </button>
