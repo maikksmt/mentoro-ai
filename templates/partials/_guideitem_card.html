@@ -22,7 +22,7 @@
                aria-label="{{ item.get_title }}">{{ item.get_title }}</a>
         </h3>
         {% if item.get_teaser %}
-            <div class="opacity-80 h-full">{{ item.get_teaser|richtext|safe }}</div>
+            <div class="prose opacity-80 h-full">{{ item.get_teaser|richtext|safe }}</div>
         {% endif %}
         <div class="card-actions mt-4 justify-end">
             <a href="{{ item.get_url }}" class="btn btn-primary btn-wide">{% trans "Read" %}</a>
