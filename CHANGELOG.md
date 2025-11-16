@@ -24,6 +24,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     - limit selectable categories to only available categories in available comparisons.
 
 - minor UI updates
+- bugfixes for wrong url links
 
 ---
 
