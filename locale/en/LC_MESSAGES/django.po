@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 23:26+0100\n"
+"POT-Creation-Date: 2025-11-16 09:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: catalog/models.py:16 catalog/models.py:49 compare/models.py:20
 #: glossary/models.py:11 guides/models.py:21 prompts/models.py:24
-#: usecases/models.py:23
+#: usecases/models.py:24
 msgid "Slug"
 msgstr ""
 
@@ -68,25 +68,25 @@ msgstr ""
 msgid "Filter, compare and discover AI tools."
 msgstr ""
 
-#: catalog/views.py:77 catalog/views.py:148 catalog/views.py:191
-#: catalog/views.py:227
+#: catalog/views.py:77 catalog/views.py:150 catalog/views.py:193
+#: catalog/views.py:229
 msgid "Catalog"
 msgstr ""
 
-#: catalog/views.py:78 catalog/views.py:149 catalog/views.py:193
-#: catalog/views.py:228 templates/catalog/tool_list.html:6
+#: catalog/views.py:78 catalog/views.py:151 catalog/views.py:195
+#: catalog/views.py:230 templates/catalog/tool_list.html:6
 msgid "All tools"
 msgstr ""
 
-#: catalog/views.py:188
+#: catalog/views.py:190
 msgid "AI tools at a glance"
 msgstr ""
 
-#: catalog/views.py:189
+#: catalog/views.py:191
 msgid "All AI tools at a glance – filterable and sortable."
 msgstr ""
 
-#: catalog/views.py:219
+#: catalog/views.py:221
 msgid "Overview of features, prices and alternatives"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 #: guides/admin.py:385 guides/models.py:18 guides/models.py:124
 #: guides/models.py:198 prompts/models.py:20
 #: templates/content/editorial/review_queue.html:17
-#: templates/ops/seo_check.html:41 usecases/admin.py:143 usecases/models.py:19
+#: templates/ops/seo_check.html:41 usecases/admin.py:143 usecases/models.py:20
 msgid "Title"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgid "%(n)d comparison(s) reverted to draft."
 msgstr ""
 
 #: compare/models.py:19 guides/models.py:19 prompts/models.py:21
-#: usecases/models.py:20
+#: usecases/models.py:21
 msgid "Intro"
 msgstr ""
 
@@ -153,8 +153,8 @@ msgstr ""
 msgid "Comparison"
 msgstr ""
 
-#: compare/models.py:32 compare/views.py:64 compare/views.py:179
-#: compare/views.py:217 compare/views.py:248 compare/views.py:251
+#: compare/models.py:32 compare/views.py:73 compare/views.py:188
+#: compare/views.py:226 compare/views.py:257 compare/views.py:260
 #: templates/base.html:48 templates/base.html:72
 #: templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:46
@@ -165,21 +165,21 @@ msgstr ""
 msgid "At least one tool is required if a score breakdown is provided."
 msgstr ""
 
-#: compare/views.py:50
+#: compare/views.py:59
 msgid "Comparisons · MentoroAI"
 msgstr ""
 
-#: compare/views.py:51 compare/views.py:214
+#: compare/views.py:60 compare/views.py:223
 msgid ""
 "Comparisons of AI tools based on criteria such as price, functionality, and "
 "quality."
 msgstr ""
 
-#: compare/views.py:212
+#: compare/views.py:221
 msgid "Tool comparisons"
 msgstr ""
 
-#: compare/views.py:249
+#: compare/views.py:258
 msgid "Discover side-by-side tool comparisons."
 msgstr ""
 
@@ -321,11 +321,11 @@ msgid "%(n)d Article(s) restored (draft)."
 msgstr ""
 
 #: guides/models.py:20 guides/models.py:125 prompts/models.py:22
-#: usecases/models.py:21
+#: usecases/models.py:22
 msgid "Body"
 msgstr ""
 
-#: guides/models.py:22 prompts/models.py:25 usecases/models.py:24
+#: guides/models.py:22 prompts/models.py:25 usecases/models.py:25
 msgid "Public slug"
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
 #: templates/base.html:36 templates/base.html:60
-#: templates/content/home.html:119 templates/content/what-to-find.html:32
+#: templates/content/home.html:120 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr ""
@@ -484,27 +484,27 @@ msgstr ""
 msgid "%d Article(s) restored (Draft)."
 msgstr ""
 
-#: prompts/models.py:23 usecases/models.py:22
+#: prompts/models.py:23 usecases/models.py:23
 msgid "Outro"
 msgstr ""
 
-#: prompts/models.py:31 prompts/views.py:129
+#: prompts/models.py:31 prompts/views.py:130
 #: templates/prompts/prompt_detail.html:22
 msgid "Prompt"
 msgstr ""
 
-#: prompts/models.py:32 prompts/views.py:67 prompts/views.py:128
+#: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
 #: templates/base.html:39 templates/base.html:63
-#: templates/content/home.html:120 templates/content/what-to-find.html:33
+#: templates/content/home.html:121 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
 
-#: prompts/views.py:54
+#: prompts/views.py:55
 msgid "Prompts · MentoroAI"
 msgstr ""
 
-#: prompts/views.py:55
+#: prompts/views.py:56
 msgid "Curated AI prompts with review/publish workflow."
 msgstr ""
 
@@ -700,31 +700,31 @@ msgstr ""
 msgid "Copyright"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:12
+#: templates/catalog/tool_detail.html:13
 msgid "To the website"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:17
+#: templates/catalog/tool_detail.html:18
 msgid "Free Tier"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:38 templates/ops/seo_check.html:42
+#: templates/catalog/tool_detail.html:39 templates/ops/seo_check.html:42
 msgid "Description"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:46
+#: templates/catalog/tool_detail.html:47
 msgid "Functions"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:56
+#: templates/catalog/tool_detail.html:57
 msgid "Pricing"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:73
+#: templates/catalog/tool_detail.html:74
 msgid "Integrations"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:85
+#: templates/catalog/tool_detail.html:87
 msgid "Similar Tools"
 msgstr ""
 
@@ -745,7 +745,7 @@ msgid "Reset"
 msgstr ""
 
 #: templates/catalog/tool_list.html:53 templates/compare/index.html:43
-#: templates/content/home.html:95 templates/prompts/prompt_list.html:28
+#: templates/content/home.html:96 templates/prompts/prompt_list.html:28
 #: templates/usecases/list.html:37
 msgid "Details"
 msgstr ""
@@ -754,23 +754,23 @@ msgstr ""
 msgid "No tools found."
 msgstr ""
 
-#: templates/compare/detail.html:11
+#: templates/compare/detail.html:12
 msgid "Winner"
 msgstr ""
 
-#: templates/compare/detail.html:23
+#: templates/compare/detail.html:24
 msgid "Evaluation according to criteria"
 msgstr ""
 
-#: templates/compare/detail.html:30
+#: templates/compare/detail.html:31
 msgid "Criteria"
 msgstr ""
 
-#: templates/compare/detail.html:52
+#: templates/compare/detail.html:53
 msgid "Remarks"
 msgstr ""
 
-#: templates/compare/detail.html:59
+#: templates/compare/detail.html:61
 msgid "Similar comparisons"
 msgstr ""
 
@@ -879,15 +879,15 @@ msgstr ""
 msgid "Please provide feedback on"
 msgstr ""
 
-#: templates/content/home.html:13
+#: templates/content/home.html:14
 msgid "Project Github"
 msgstr ""
 
-#: templates/content/home.html:31
+#: templates/content/home.html:32
 msgid "Quick introduction to AI tools & practice."
 msgstr ""
 
-#: templates/content/home.html:34
+#: templates/content/home.html:35
 msgid ""
 "\n"
 "                            Find suitable AI tools, compare alternatives, "
@@ -896,24 +896,24 @@ msgid ""
 "                        "
 msgstr ""
 
-#: templates/content/home.html:64
+#: templates/content/home.html:65
 msgid "Featured Tools"
 msgstr ""
 
-#: templates/content/home.html:106
+#: templates/content/home.html:107
 msgid "Recommended for you"
 msgstr ""
 
-#: templates/content/home.html:118
+#: templates/content/home.html:119
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:122 templates/usecases/list.html:9
-#: usecases/models.py:34 usecases/views.py:66 usecases/views.py:125
+#: templates/content/home.html:123 templates/usecases/list.html:9
+#: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
 
-#: templates/content/home.html:131
+#: templates/content/home.html:132
 msgid "No published content yet."
 msgstr ""
 
@@ -1296,7 +1296,7 @@ msgstr ""
 msgid "No hits."
 msgstr ""
 
-#: templates/guides/guide_detail.html:46
+#: templates/guides/guide_detail.html:47
 msgid "Related Guides"
 msgstr ""
 
@@ -1393,7 +1393,7 @@ msgid ""
 "\n"
 "                The MentoroAI project is licensed under the GNU General "
 "Public License v3.0 (GPLv3). A copy of the\n"
-"                license can be found in the file\n"
+"                license can be found on Github in the file\n"
 "            "
 msgstr ""
 
@@ -1681,10 +1681,12 @@ msgstr ""
 
 #: templates/newsletter/confirm_success.html:8
 #, python-format
-msgid "Thank you! %(email)s is now subscribed to the MentoroAI newsletter."
+msgid ""
+"Thank you! %(email)s is now subscribed to the MentoroAI\n"
+"            newsletter."
 msgstr ""
 
-#: templates/newsletter/confirm_success.html:9
+#: templates/newsletter/confirm_success.html:10
 msgid "You will receive future updates and resources directly in your inbox."
 msgstr ""
 
@@ -1731,28 +1733,28 @@ msgstr ""
 msgid "Confirm your MentoroAI newsletter subscription"
 msgstr ""
 
-#: templates/newsletter/subscribe.html:21
+#: templates/newsletter/subscribe.html:22
 msgid "Subscribe to Newsletter"
 msgstr ""
 
-#: templates/newsletter/subscribe.html:39
+#: templates/newsletter/subscribe.html:40
 msgid "Subscribe"
 msgstr ""
 
-#: templates/newsletter/subscribe.html:44
+#: templates/newsletter/subscribe.html:45
 msgid "Unsubscribe from newsletter"
 msgstr ""
 
 #: templates/newsletter/unsubscribe.html:3
-#: templates/newsletter/unsubscribe.html:5
+#: templates/newsletter/unsubscribe.html:6
 msgid "Unsubscribe from Newsletter"
 msgstr ""
 
-#: templates/newsletter/unsubscribe.html:6
+#: templates/newsletter/unsubscribe.html:7
 msgid "Enter your email address to unsubscribe from future emails."
 msgstr ""
 
-#: templates/newsletter/unsubscribe.html:20
+#: templates/newsletter/unsubscribe.html:21
 #: templates/newsletter/unsubscribe_confirm.html:3
 msgid "Unsubscribe"
 msgstr ""
@@ -2130,11 +2132,11 @@ msgstr ""
 msgid "Suitable tools"
 msgstr ""
 
-#: templates/prompts/prompt_detail.html:38 templates/usecases/detail.html:48
+#: templates/prompts/prompt_detail.html:38 templates/usecases/detail.html:50
 msgid "No tools linked."
 msgstr ""
 
-#: templates/prompts/prompt_detail.html:46
+#: templates/prompts/prompt_detail.html:47
 msgid "More Prompts"
 msgstr ""
 
@@ -2142,15 +2144,15 @@ msgstr ""
 msgid "No published prompts found."
 msgstr ""
 
-#: templates/usecases/detail.html:12 templates/usecases/list.html:21
+#: templates/usecases/detail.html:13 templates/usecases/list.html:21
 msgid "Persona:"
 msgstr ""
 
-#: templates/usecases/detail.html:39
+#: templates/usecases/detail.html:41
 msgid "Tools used"
 msgstr ""
 
-#: templates/usecases/detail.html:56
+#: templates/usecases/detail.html:59
 msgid "Similar use cases"
 msgstr ""
 
@@ -2195,18 +2197,18 @@ msgstr ""
 msgid "%d item(s) restored to draft."
 msgstr ""
 
-#: usecases/models.py:25
+#: usecases/models.py:26
 msgid "Persona"
 msgstr ""
 
-#: usecases/models.py:33 usecases/views.py:126
+#: usecases/models.py:34 usecases/views.py:127
 msgid "Usecase"
 msgstr ""
 
-#: usecases/views.py:54
+#: usecases/views.py:55
 msgid "Usecases · MentoroAI"
 msgstr ""
 
-#: usecases/views.py:55
+#: usecases/views.py:56
 msgid "Discover how people used ai in real usecases"
 msgstr ""
