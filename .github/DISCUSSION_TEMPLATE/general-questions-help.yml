@@ -1,5 +1,5 @@
 title: "[Question] "
-labels: ["question"]
+labels: [ "question" ]
 body:
   - type: markdown
     attributes:

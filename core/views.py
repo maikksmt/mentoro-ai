@@ -1,5 +1,5 @@
-from core.seo.types import SeoMeta, AltHref
 from core.seo.context import defaults
+from core.seo.types import SeoMeta, AltHref
 
 
 class SeoMixin:

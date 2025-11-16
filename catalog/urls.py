@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import ToolListView, ToolDetailView
 
 app_name = "catalog"

@@ -1,7 +1,8 @@
-from django.test import TestCase
 from django.db import IntegrityError
+from django.test import TestCase
 from django.utils import timezone
 from parler.utils.context import switch_language
+
 from catalog.models import Tool, Category
 
 

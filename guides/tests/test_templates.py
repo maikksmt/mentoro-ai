@@ -2,8 +2,8 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone, translation
 
-from guides.models import Guide
 from core.models.editorial import EditorialWorkflowMixin
+from guides.models import Guide
 
 
 def make_pub():

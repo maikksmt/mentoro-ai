@@ -5,10 +5,10 @@ from django.utils.translation import get_language
 
 from catalog.models import Tool
 from compare.models import Comparison
+from glossary.models import GlossaryTerm
 from guides.models import Guide
 from prompts.models import Prompt
 from usecases.models import UseCase
-from glossary.models import GlossaryTerm
 
 DEFAULT_LANG = "de"
 

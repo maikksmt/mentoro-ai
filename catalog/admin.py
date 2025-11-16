@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Category, Tool, PricingTier, AffiliateProgram
 from core.admin import TranslatableTinyMCEMixin
+from .models import Category, Tool, PricingTier, AffiliateProgram
 
 admin.site.site_header = "MentoroAI – Admin"
 

@@ -1,14 +1,14 @@
-from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Q
-from django.utils.translation import gettext as _, get_language
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
+from django.utils.translation import gettext as _, get_language
 from django.views.generic import ListView, DetailView
 
+from catalog.models import Category
 from core.seo.utils import absolute_url, localized_alternates
 from core.views import SeoMixin
 from .models import Comparison
-from catalog.models import Category
 
 
 class ComparisonListView(ListView, SeoMixin):
@@ -34,7 +34,8 @@ class ComparisonListView(ListView, SeoMixin):
                 | Q(translations__public_slug__icontains=q)
                 | Q(tools__translations__name__icontains=q)
             ).distinct()
-
+        if not qs.ordered:
+            qs = qs.order_by("-published_at", "-updated_at")
         return qs
 
     def get_context_data(self, **kwargs):

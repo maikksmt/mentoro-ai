@@ -1,7 +1,8 @@
 # content/views/home.py
-from django.views.generic import TemplateView
 from django.utils.translation import gettext as _, get_language
+from django.views.generic import TemplateView
 
+from catalog.models import Tool
 from core.seo.utils import absolute_url, localized_alternates
 from core.services import (
     get_latest_items,
@@ -10,7 +11,6 @@ from core.services import (
 )
 from core.views import SeoMixin
 from guides.models import Guide
-from catalog.models import Tool
 from mentoroai import settings
 
 

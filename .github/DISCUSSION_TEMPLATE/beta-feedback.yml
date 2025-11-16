@@ -1,5 +1,5 @@
 title: "[Beta Feedback] "
-labels: ["beta-feedback"]
+labels: [ "beta-feedback" ]
 body:
   - type: markdown
     attributes:

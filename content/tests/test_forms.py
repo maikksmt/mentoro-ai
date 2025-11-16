@@ -1,5 +1,6 @@
-from django.test import SimpleTestCase
 from importlib import import_module
+
+from django.test import SimpleTestCase
 
 
 class ContentEditorialFormsTests(SimpleTestCase):

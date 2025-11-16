@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.utils import timezone
-from tinymce.widgets import TinyMCE
-from parler.admin import TranslatableAdmin
 from django.utils.translation import gettext_lazy as _
+from parler.admin import TranslatableAdmin
+from tinymce.widgets import TinyMCE
 
 
 class TranslatableTinyMCEMixin(TranslatableAdmin):

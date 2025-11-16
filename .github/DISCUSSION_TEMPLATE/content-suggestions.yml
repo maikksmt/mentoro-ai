@@ -1,5 +1,5 @@
 title: "[Content] "
-labels: ["content-suggestion"]
+labels: [ "content-suggestion" ]
 body:
   - type: markdown
     attributes:

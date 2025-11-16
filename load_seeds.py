@@ -31,6 +31,7 @@ import sys
 from pathlib import Path
 from typing import Iterable, List, Tuple
 
+
 # --- Arg parsing ------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
@@ -43,7 +44,7 @@ def parse_args() -> argparse.Namespace:
                         help="Glob filter (applied to filenames after extension check), e.g. '*.json'.")
     parser.add_argument("--recursive", action="store_true", help="Search folder recursively.")
     parser.add_argument("--dry-run", action="store_true", help="Do not persist changes (wrap in atomic rollback).")
-    parser.add_argument("--verbosity", type=int, choices=[0,1,2,3], default=1, help="Django verbosity (default: 1).")
+    parser.add_argument("--verbosity", type=int, choices=[0, 1, 2, 3], default=1, help="Django verbosity (default: 1).")
     return parser.parse_args()
 
 
@@ -54,6 +55,7 @@ VALID_EXTS = {
     ".yaml", ".yml", ".yaml.gz", ".yml.gz",
     ".xml", ".xml.gz",
 }
+
 
 def discover_files(root: Path, recursive: bool, pattern: str) -> List[Path]:
     if not root.exists() or not root.is_dir():
@@ -96,7 +98,6 @@ def load_files(files: Iterable[Path], db_alias: str, verbosity: int, dry_run: bo
     Returns: (ok_count, fail_count)
     """
     from django.core.management import call_command
-    from django.db import transaction
 
     ok = 0
     fail = 0

@@ -33,9 +33,9 @@ def load_production_settings(extra_env=None):
 
     # Restore default development settings for the rest of the test suite
     with mock.patch.dict(
-        os.environ,
-        {"DJANGO_ENV": "development", "TEST_DB": original_test_db},
-        clear=False,
+            os.environ,
+            {"DJANGO_ENV": "development", "TEST_DB": original_test_db},
+            clear=False,
     ):
         importlib.reload(importlib.import_module("mentoroai.settings.base"))
         importlib.reload(importlib.import_module("mentoroai.settings.development"))

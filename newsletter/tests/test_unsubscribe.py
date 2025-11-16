@@ -1,6 +1,7 @@
 # newsletter/tests/test_unsubscribe.py
 from django.test import TestCase
 from django.urls import reverse
+
 from newsletter.models import Subscriber
 
 

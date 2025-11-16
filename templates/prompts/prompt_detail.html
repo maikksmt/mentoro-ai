@@ -1,46 +1,47 @@
 {% extends "base.html" %} {% load i18n richtext %}
-
-
 {% block content %}
-    {% include "partials/breadcrumbs.html" %}
+    <div class="max-w-2xl mx-auto">
+        {% include "partials/breadcrumbs.html" %}
 
-    <article class="max-w-6xl">
-        <header class="mb-6">
-            <h1 class="text-3xl font-bold">{{ display_title }}</h1>
-            <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
-                {% if object.published_at %}
-                    <time datetime="{{ object.published_at|date:'c' }}">📅 {{ object.published_at|date:"d.m.Y" }}</time>
-                {% endif %}
-            </div>
-        </header>
-        {% if display_intro %}
-            <section class="prose my-6 text-base-content/80 max-w-full">
-                {{ display_intro|richtext|safe }}
-            </section>
-        {% endif %}
-        <section class="prose my-6 max-w-full">
-            <h2 class="text-2xl font-semibold mb-2">{% trans "Prompt" %}</h2>
-            {% include "partials/copy_block.html" with content=display_body %}
-        </section>
-        {% if display_outro %}
-            <section class="prose text-base-content/80 max-w-full">
-                {{ display_outro|richtext|safe }}
-            </section>
-        {% endif %}
-        {% if object.tools.all %}
-            <section class="my-6">
-                <h2 class="text-2xl font-semibold mb-2">{% trans "Suitable tools" %}</h2>
-                <div class="flex flex-wrap gap-2">
-                    {% for t in object.tools.all %}
-                        <a href="{% url 'catalog:detail' slug=t.slug %}"
-                           class="badge badge-outline">{{ t.name }}</a>
-                    {% empty %}
-                        <span class="text-base-content/70">{% trans "No tools linked." %}</span>
-                    {% endfor %}
+        <article class="max-w-6xl">
+            <header class="mb-6">
+                <h1 class="text-3xl font-bold">{{ display_title }}</h1>
+                <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
+                    {% if object.published_at %}
+                        <time datetime="{{ object.published_at|date:'c' }}">
+                            📅 {{ object.published_at|date:"d.m.Y" }}</time>
+                    {% endif %}
                 </div>
+            </header>
+            {% if display_intro %}
+                <section class="prose my-6 text-base-content/80 max-w-full">
+                    {{ display_intro|richtext|safe }}
+                </section>
+            {% endif %}
+            <section class="prose my-6 max-w-full">
+                <h2 class="text-2xl font-semibold mb-2">{% trans "Prompt" %}</h2>
+                {% include "partials/copy_block.html" with content=display_body %}
             </section>
-        {% endif %}
-    </article>
+            {% if display_outro %}
+                <section class="prose text-base-content/80 max-w-full">
+                    {{ display_outro|richtext|safe }}
+                </section>
+            {% endif %}
+            {% if object.tools.all %}
+                <section class="my-6">
+                    <h2 class="text-2xl font-semibold mb-2">{% trans "Suitable tools" %}</h2>
+                    <div class="flex flex-wrap gap-2">
+                        {% for t in object.tools.all %}
+                            <a href="{% url 'catalog:detail' slug=t.slug %}"
+                               class="badge badge-outline">{{ t.name }}</a>
+                        {% empty %}
+                            <span class="text-base-content/70">{% trans "No tools linked." %}</span>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        </article>
+    </div>
     {% if more %}
         <section class="mt-10">
             <h2 class="text-2xl font-semibold mb-4">{% trans "More Prompts" %}</h2>

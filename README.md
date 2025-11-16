@@ -11,8 +11,10 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
 ![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge)
 
-**MentoroAI** is a multilingual **AI learning platform** designed to make Artificial Intelligence accessible for beginners, creators, and professionals.
-It brings together **AI tools**, **guides**, **prompt libraries**, **use cases**, and **tool comparisons** in a clean and structured way.
+**MentoroAI** is a multilingual **AI learning platform** designed to make Artificial Intelligence accessible for
+beginners, creators, and professionals.
+It brings together **AI tools**, **guides**, **prompt libraries**, **use cases**, and **tool comparisons** in a clean
+and structured way.
 
 - **Tech Stack:** Django 5.2 (Python 3.12), Tailwind CSS, DaisyUI, Heroicons
 - **License:** GPL-3.0-or-later
@@ -90,8 +92,10 @@ See: `LICENSE.txt`
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
 ![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge)
 
-**MentoroAI** ist eine moderne, mehrsprachige **Lernplattform für Künstliche Intelligenz**, die Anfänger, Kreative und Profis unterstützt, KI richtig zu verstehen und praktisch einzusetzen.
-Die Plattform bietet **AI-Tools**, **Guides**, **Prompts**, **Use Cases** und **Vergleiche** in einer klar strukturierten Oberfläche.
+**MentoroAI** ist eine moderne, mehrsprachige **Lernplattform für Künstliche Intelligenz**, die Anfänger, Kreative und
+Profis unterstützt, KI richtig zu verstehen und praktisch einzusetzen.
+Die Plattform bietet **AI-Tools**, **Guides**, **Prompts**, **Use Cases** und **Vergleiche** in einer klar
+strukturierten Oberfläche.
 
 - **Tech Stack:** Django 5.2 (Python 3.12), Tailwind CSS, DaisyUI, Heroicons
 - **Lizenz:** GPL-3.0-or-later
@@ -101,7 +105,8 @@ Die Plattform bietet **AI-Tools**, **Guides**, **Prompts**, **Use Cases** und **
 
 ## ⭐ Warum gibt es MentoroAI?
 
-Viele Menschen probieren KI-Tools aus und sind enttäuscht: unklare Antworten, Halluzinationen oder einfach Überforderung.
+Viele Menschen probieren KI-Tools aus und sind enttäuscht: unklare Antworten, Halluzinationen oder einfach
+Überforderung.
 MentoroAI schafft Klarheit, Orientierung und verständliche Inhalte — ohne Fachjargon.
 
 Wenn dir die Mission gefällt, freue ich mich über ein ⭐ Sternchen.

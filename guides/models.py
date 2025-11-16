@@ -7,8 +7,8 @@ from django.utils.translation import gettext_lazy as _, get_language
 from parler.models import TranslatableModel, TranslatedFields
 from parler.utils.context import switch_language
 
-from core.models.editorial import EditorialMixin, EditorialWorkflowMixin
 from catalog.models import Category, Tool
+from core.models.editorial import EditorialMixin, EditorialWorkflowMixin
 
 
 class Guide(EditorialMixin, TranslatableModel, EditorialWorkflowMixin):

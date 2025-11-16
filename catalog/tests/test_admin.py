@@ -1,16 +1,16 @@
-from django.test import TestCase
 from django.contrib import admin as django_admin
 from django.db import models
+from django.test import RequestFactory
+from django.test import TestCase
 
-from catalog.models import Category, Tool, PricingTier, AffiliateProgram
 from catalog.admin import (
     ToolAdmin,
     CategoryAdmin,
     PricingInline,
     AffiliateInline,
 )
+from catalog.models import Category, Tool, PricingTier, AffiliateProgram
 from core.admin import TranslatableTinyMCEMixin
-from django.test import RequestFactory
 
 
 class CatalogAdminSmokeTests(TestCase):

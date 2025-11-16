@@ -1,4 +1,5 @@
 from typing import Any, Dict, Optional
+
 from django.db.models import Q, QuerySet
 from django.http import HttpRequest, HttpResponse, Http404
 from django.urls import reverse

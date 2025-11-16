@@ -1,8 +1,9 @@
-from django.test import TestCase
 from django.contrib import admin
-from django.urls import reverse
-from usecases.models import UseCase
 from django.contrib.auth import get_user_model
+from django.test import TestCase
+from django.urls import reverse
+
+from usecases.models import UseCase
 
 
 class TestAdmin(TestCase):

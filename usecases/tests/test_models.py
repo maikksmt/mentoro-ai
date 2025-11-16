@@ -1,6 +1,7 @@
 # usecases/tests/test_models.py
 from django.test import TestCase
 from django.utils import timezone
+
 from core.models.editorial import EditorialWorkflowMixin
 from usecases.models import UseCase
 

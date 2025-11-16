@@ -7,6 +7,9 @@ from django.http import HttpResponse
 from django.urls import include, path, re_path
 from django.views.generic import TemplateView
 from django.views.i18n import JavaScriptCatalog
+
+from content.views.seo_check import seo_check_view
+from content.views.uploads import tinymce_image_list, tinymce_upload
 from core.sitemaps import (
     GlossaryDetailSitemap,
     GlossaryIndexSitemap,
@@ -17,8 +20,6 @@ from core.sitemaps import (
     ComparisonSitemap,
     LegalStaticSitemap,
 )
-from content.views.seo_check import seo_check_view
-from content.views.uploads import tinymce_image_list, tinymce_upload
 from core.views_i18n import set_language_smart
 
 sitemaps = {

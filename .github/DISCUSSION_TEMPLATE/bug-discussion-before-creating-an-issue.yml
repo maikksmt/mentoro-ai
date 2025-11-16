@@ -1,5 +1,5 @@
 title: "[Suspected Bug] "
-labels: ["needs-triage"]
+labels: [ "needs-triage" ]
 body:
   - type: markdown
     attributes:

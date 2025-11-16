@@ -1,11 +1,12 @@
 # core/views_i18n.py
 from urllib.parse import urlparse
+
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import resolve, Resolver404, reverse
 from django.utils import translation
-from django.views.decorators.http import require_POST
 from django.utils.translation import check_for_language
-from django.conf import settings
+from django.views.decorators.http import require_POST
 
 
 def _persist_language(request, lang_code: str):

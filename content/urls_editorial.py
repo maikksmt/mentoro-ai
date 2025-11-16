@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import editorial as views
 
 app_name = "editorial"
