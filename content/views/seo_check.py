@@ -62,9 +62,14 @@ def _is_absolute(url: str) -> bool:
 
 
 def run_checks(request: HttpRequest, path: str) -> SeoResult:
-    base = request.build_absolute_uri("/")  # z. B. https://example.com/
+    base = request.build_absolute_uri("/")
     client = Client()
-    resp = client.get(path, follow=True)
+    resp = client.get(
+        path,
+        follow=True,
+        secure=request.is_secure(),
+        HTTP_HOST=request.get_host(),
+        )
     status = getattr(resp, "status_code", 0)
     html = strip_spaces_between_tags((resp.content or b"").decode("utf-8", "ignore"))
 
@@ -170,9 +175,9 @@ def seo_check_view(request: HttpRequest) -> HttpResponse:
         "/de/guides/",
         "/de/prompts/",
         "/de/usecases/",
-        "/de/tools/",
+        "/de/catalog/",
         "/de/compare/",
-        "/de/starter-guide/",
+        "/de/guides/start-guide-de/",
         "/de/newsletter/",
         "/de/accounts/login/",
         "/de/accounts/signup/",
@@ -183,9 +188,9 @@ def seo_check_view(request: HttpRequest) -> HttpResponse:
         "/en/guides/",
         "/en/prompts/",
         "/en/usecases/",
-        "/en/tools/",
+        "/en/catalog/",
         "/en/compare/",
-        "/en/starter-guide/",
+        "/en/guides/start-guide-en/",
         "/en/newsletter/",
         "/en/accounts/login/",
         "/en/accounts/signup/",
