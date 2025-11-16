@@ -1,47 +1,47 @@
 /* Breitere Inputs im Admin */
-.vTextField {           /* CharField/TextInput */
-  width: 60em !important;
-  max-width: 100%;
+.vTextField { /* CharField/TextInput */
+    width: 60em !important;
+    max-width: 100%;
 }
 
-.vLargeTextField {      /* TextField/Textarea */
-  width: 60em !important;
-  max-width: 100%;
+.vLargeTextField { /* TextField/Textarea */
+    width: 60em !important;
+    max-width: 100%;
 }
 
 /* Optional: Select2-Felder (z.B. ManyToMany, ForeignKey mit Autocomplete) */
 .select2-container {
-  min-width: 40em !important;
-  width: 60em !important;
-  max-width: 100% !important;
+    min-width: 40em !important;
+    width: 60em !important;
+    max-width: 100% !important;
 }
 
 /* Optional: Slugs etwas schmaler als Titel */
 #id_slug.vTextField {
-  width: 40em !important;
+    width: 40em !important;
 }
 
 /* Breitere CharField-Inputs in Parler-Sprachtabs (TranslatableAdmin) */
 .parler-language .form-row input[type="text"],
 .parler-language .field-box input[type="text"],
 .parler-language .vTextField {
-  width: 60em !important;
-  max-width: 100%;
+    width: 60em !important;
+    max-width: 100%;
 }
 
 /* Optional: mach Textareas in den Tabs ebenfalls breiter */
 .parler-language textarea,
 .parler-language .vLargeTextField {
-  width: 60em !important;
-  max-width: 100%;
+    width: 60em !important;
+    max-width: 100%;
 }
 
 /* Falls der Titel trotzdem anders gestylt ist, geh direkt auf den Namen */
 .parler-language input[name="title"] {
-  width: 60em !important;
+    width: 60em !important;
 }
 
 /* Slug kannst du separat enger lassen, wenn du willst */
 #id_slug.vTextField {
-  width: 40em !important;
+    width: 40em !important;
 }

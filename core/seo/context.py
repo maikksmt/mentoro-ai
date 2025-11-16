@@ -1,6 +1,7 @@
+from django.conf import settings
+
 from .types import SeoMeta
 from .utils import absolute_url
-from django.conf import settings
 
 
 def defaults(request) -> SeoMeta:

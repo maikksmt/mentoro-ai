@@ -1,6 +1,6 @@
 # content/tests/utils.py
-import logging
 import contextlib
+import logging
 
 
 @contextlib.contextmanager

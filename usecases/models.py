@@ -1,9 +1,10 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _, get_language
 from parler.models import TranslatableModel, TranslatedFields
 from parler.utils.context import switch_language
-from django.urls import reverse
+
 from catalog.models import Tool
 from core.models.editorial import (
     EditorialMixin,

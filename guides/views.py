@@ -1,13 +1,13 @@
 from django.db.models import Prefetch, Q
 from django.http import Http404
 from django.urls import reverse
+from django.utils.translation import gettext as _, get_language
 from django.views.generic import ListView, DetailView
 
 from core.seo.utils import absolute_url, localized_alternates
-from .models import Guide, GuideSection, GuideItem
-from django.utils.translation import gettext as _, get_language
 from core.services import related_guides, to_teaser_item
 from core.views import SeoMixin
+from .models import Guide, GuideSection, GuideItem
 
 
 class GuideListView(ListView, SeoMixin):

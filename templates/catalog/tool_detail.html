@@ -1,84 +1,86 @@
 {% extends "base.html" %} {% load i18n richtext %}
 
 {% block content %}
-    {% include "partials/breadcrumbs.html" %}
+    <div class="max-w-2xl mx-auto">
+        {% include "partials/breadcrumbs.html" %}
 
-    <article class="prose max-w-none">
-        <header class="mb-6">
-            <h1 class="text-3xl font-bold">{{ object.name }}</h1>
-            {% if object.website %}
-                <p class="mt-2">
-                    <a class="link" href="{{ object.website }}" target="_blank"
-                       rel="nofollow noopener">{% trans "To the website" %} ↗</a>
-                </p>
-            {% endif %}
-            <div class="mt-3 flex flex-wrap gap-2">
-                {% if object.free_tier %}
-                    <span class="badge badge-success">{% trans "Free Tier" %}</span>
+        <article class="prose max-w-none">
+            <header class="mb-6">
+                <h1 class="text-3xl font-bold">{{ object.name }}</h1>
+                {% if object.website %}
+                    <p class="mt-2">
+                        <a class="link" href="{{ object.website }}" target="_blank"
+                           rel="nofollow noopener">{% trans "To the website" %} ↗</a>
+                    </p>
                 {% endif %}
-                {% if object.pricing_model %}
-                    <span class="badge badge-outline">
+                <div class="mt-3 flex flex-wrap gap-2">
+                    {% if object.free_tier %}
+                        <span class="badge badge-success">{% trans "Free Tier" %}</span>
+                    {% endif %}
+                    {% if object.pricing_model %}
+                        <span class="badge badge-outline">
                         {{ object.pricing_model }}
                     </span>
-                {% endif %}
-                {% if object.categories.all %}
-                    {% for c in object.categories.all %}
-                        <span class="badge badge-tool">{{ c.name }}</span>
-                    {% endfor %}
-                {% endif %}
-                {% if object.language_support %}
-                    {% for lang in object.language_support %}
-                        <span class="badge badge-outline">{{ lang }}</span>
-                    {% endfor %}
-                {% endif %}
-            </div>
-        </header>
-        {% if object.long_description %}
-            <section class="mb-6">
-                <h2 class="text-2xl font-semibold">{% trans "Description" %}</h2>
-                <p>{{ object.long_description|richtext|safe }}</p>
-            </section>
-        {% elif object.short_description %}
-            <p class="text-base-content/80">{{ object.short_description|richtext|safe }}</p>
-        {% endif %}
-        {% if object.features %}
-            <section class="mb-6">
-                <h2 class="text-2xl font-semibold">{% trans "Functions" %}</h2>
-                <ul class="list-disc pl-6 space-y-1">
-                    {% for f in object.features %}
-                        <li>{{ f }}</li>
-                    {% endfor %}
-                </ul>
-            </section>
-        {% endif %}
-        {% if object.pricing %}
-            <section class="mb-6">
-                <h2 class="text-2xl font-semibold">{% trans "Pricing" %}</h2>
-                <div class="overflow-x-auto">
-                    <table class="table">
-                        <tbody>
-                        {% for plan, price in object.pricing.items %}
-                            <tr>
-                                <th class="whitespace-nowrap">{{ plan }}</th>
-                                <td>{{ price }}</td>
-                            </tr>
+                    {% endif %}
+                    {% if object.categories.all %}
+                        {% for c in object.categories.all %}
+                            <span class="badge badge-tool">{{ c.name }}</span>
                         {% endfor %}
-                        </tbody>
-                    </table>
+                    {% endif %}
+                    {% if object.language_support %}
+                        {% for lang in object.language_support %}
+                            <span class="badge badge-outline">{{ lang }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
-            </section>
-        {% endif %}
-        {% if object.integrations %}
-            <section class="mb-6">
-                <h2 class="text-2xl font-semibold">{% trans "Integrations" %}</h2>
-                <div class="flex flex-wrap gap-2">
-                    {% for integ in object.integrations %}
-                        <span class="badge badge-outline">{{ integ }}</span>
-                    {% endfor %}
-                </div>
-            </section>
-        {% endif %}
-    </article>
+            </header>
+            {% if object.long_description %}
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold">{% trans "Description" %}</h2>
+                    <p>{{ object.long_description|richtext|safe }}</p>
+                </section>
+            {% elif object.short_description %}
+                <p class="text-base-content/80">{{ object.short_description|richtext|safe }}</p>
+            {% endif %}
+            {% if object.features %}
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold">{% trans "Functions" %}</h2>
+                    <ul class="list-disc pl-6 space-y-1">
+                        {% for f in object.features %}
+                            <li>{{ f }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+            {% if object.pricing %}
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold">{% trans "Pricing" %}</h2>
+                    <div class="overflow-x-auto">
+                        <table class="table">
+                            <tbody>
+                            {% for plan, price in object.pricing.items %}
+                                <tr>
+                                    <th class="whitespace-nowrap">{{ plan }}</th>
+                                    <td>{{ price }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            {% endif %}
+            {% if object.integrations %}
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold">{% trans "Integrations" %}</h2>
+                    <div class="flex flex-wrap gap-2">
+                        {% for integ in object.integrations %}
+                            <span class="badge badge-outline">{{ integ }}</span>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        </article>
+    </div>
 
     {% if related_tools %}
         <section class="mt-10">

@@ -1,12 +1,12 @@
 # usecases/admin.py
+from django.conf import settings
 from django.contrib import admin, messages
 from django.db import transaction
-from django.urls import path
 from django.template.response import TemplateResponse
+from django.urls import path
 from django.utils.formats import date_format
 from django.utils.translation import gettext_lazy as _, get_language, get_language_info
 from django_fsm import can_proceed
-from django.conf import settings
 from parler.utils.context import switch_language
 
 from core.admin import TranslatableTinyMCEMixin

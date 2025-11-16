@@ -1,18 +1,20 @@
 from __future__ import annotations
 
+import difflib
 import re
 from html import escape
 from typing import Any, Dict, List, Tuple, Optional, Iterable
+
 from django.db.models import Count, Q, QuerySet
 from django.urls import reverse
 from django.utils.html import strip_tags
 from django.utils.translation import get_language
 from parler.utils.context import switch_language
+from reversion.models import Version
+
 from guides.models import Guide
 from prompts.models import Prompt
 from usecases.models import UseCase
-import difflib
-from reversion.models import Version
 
 
 def get_latest_items(limit: int = 6, mix: Tuple[int, int, int] = (3, 2, 1)) -> List[Dict[str, Any]]:

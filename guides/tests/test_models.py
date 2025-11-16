@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.utils import timezone
 
-from guides.models import Guide
 from core.models.editorial import EditorialWorkflowMixin
+from guides.models import Guide
 
 
 def create_guide(*, slug, en_title, de_title=None,

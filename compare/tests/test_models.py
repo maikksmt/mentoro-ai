@@ -1,5 +1,5 @@
-from django.test import TestCase
 from django.db import models
+from django.test import TestCase
 from django.utils import timezone, translation
 
 from catalog.models import Tool

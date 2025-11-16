@@ -1,12 +1,12 @@
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from django.template.loader import render_to_string
+from django.utils.translation import gettext as _, get_language
 from django.views.generic import ListView, DetailView, View
 
 from core.seo.utils import absolute_url, localized_alternates
 from core.views import SeoMixin
 from .models import GlossaryTerm
-from django.utils.translation import gettext as _, get_language
 
 
 class GlossaryListView(ListView, SeoMixin):

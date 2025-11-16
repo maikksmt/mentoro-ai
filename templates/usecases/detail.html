@@ -2,54 +2,57 @@
 {% load i18n richtext %}
 
 {% block content %}
-    {% include "partials/breadcrumbs.html" %}
+    <div class="max-w-2xl mx-auto">
+        {% include "partials/breadcrumbs.html" %}
 
-    <article class="prose max-w-none">
-        <header class="mb-6">
-            <h1 class="text-3xl font-bold">{{ display_title }}</h1>
-            <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
-                {% if display_persona %}
-                    <span><strong>{% trans "Persona:" %}</strong> {{ display_persona }}</span>
-                {% endif %}
-                {% if object.published_at %}
-                    <time datetime="{{ object.published_at|date:'c' }}">📅 {{ object.published_at|date:"d.m.Y" }}</time>
-                {% endif %}
-            </div>
-        </header>
-
-        {% if display_intro %}
-            <section class="prose my-6 text-base-content/80 max-w-full">
-                {{ display_intro|richtext|safe }}
-            </section>
-        {% endif %}
-
-        {% if display_body %}
-            <section class="prose my-6 max-w-full">
-                <div>{{ display_body|richtext|safe }}</div>
-            </section>
-        {% endif %}
-
-        {% if display_outro %}
-            <section class="prose text-base-content/80 max-w-full">
-                {{ display_outro|richtext|safe }}
-            </section>
-        {% endif %}
-
-        <section class="mt-8">
-            <h2 class="text-2xl font-semibold">{% trans "Tools used" %}</h2>
-            <div class="flex flex-wrap gap-2">
-                {% for t in object.tools.all %}
-                    {% if t.get_absolute_url %}
-                        <a href="{{ t.get_absolute_url }}" class="badge badge-outline">{{ t.name }}</a>
-                    {% else %}
-                        <span class="badge badge-outline">{{ t.name }}</span>
+        <article class="prose max-w-none">
+            <header class="mb-6">
+                <h1 class="text-3xl font-bold">{{ display_title }}</h1>
+                <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
+                    {% if display_persona %}
+                        <span><strong>{% trans "Persona:" %}</strong> {{ display_persona }}</span>
                     {% endif %}
-                {% empty %}
-                    <span class="text-base-content/70">{% trans "No tools linked." %}</span>
-                {% endfor %}
-            </div>
-        </section>
-    </article>
+                    {% if object.published_at %}
+                        <time datetime="{{ object.published_at|date:'c' }}">
+                            📅 {{ object.published_at|date:"d.m.Y" }}</time>
+                    {% endif %}
+                </div>
+            </header>
+
+            {% if display_intro %}
+                <section class="prose my-6 text-base-content/80 max-w-full">
+                    {{ display_intro|richtext|safe }}
+                </section>
+            {% endif %}
+
+            {% if display_body %}
+                <section class="prose my-6 max-w-full">
+                    <div>{{ display_body|richtext|safe }}</div>
+                </section>
+            {% endif %}
+
+            {% if display_outro %}
+                <section class="prose text-base-content/80 max-w-full">
+                    {{ display_outro|richtext|safe }}
+                </section>
+            {% endif %}
+
+            <section class="mt-8">
+                <h2 class="text-2xl font-semibold">{% trans "Tools used" %}</h2>
+                <div class="flex flex-wrap gap-2">
+                    {% for t in object.tools.all %}
+                        {% if t.get_absolute_url %}
+                            <a href="{{ t.get_absolute_url }}" class="badge badge-outline">{{ t.name }}</a>
+                        {% else %}
+                            <span class="badge badge-outline">{{ t.name }}</span>
+                        {% endif %}
+                    {% empty %}
+                        <span class="text-base-content/70">{% trans "No tools linked." %}</span>
+                    {% endfor %}
+                </div>
+            </section>
+        </article>
+    </div>
 
     {% if similar %}
         <section class="mt-10">

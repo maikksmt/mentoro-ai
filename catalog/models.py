@@ -1,13 +1,13 @@
 # catalog/models.py
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import get_language
+from django.utils.translation import gettext_lazy as _
 from parler.managers import TranslatableManager
+from parler.models import TranslatableModel, TranslatedFields
 from parler.utils.context import switch_language
 from taggit.managers import TaggableManager
-from django.urls import reverse
-from parler.models import TranslatableModel, TranslatedFields
-from django.utils.translation import gettext_lazy as _
 
 
 class Category(TranslatableModel):

@@ -1,9 +1,10 @@
 import os
 import uuid
+
+from django.contrib.admin.views.decorators import staff_member_required
 from django.core.files.storage import default_storage
 from django.http import JsonResponse, HttpRequest
 from django.views.decorators.csrf import csrf_protect
-from django.contrib.admin.views.decorators import staff_member_required
 from filer.models import Image as FilerImage
 
 

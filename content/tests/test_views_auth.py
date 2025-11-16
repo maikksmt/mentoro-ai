@@ -1,5 +1,6 @@
-from django.test import TestCase, override_settings
 from django.contrib.auth import get_user_model
+from django.test import TestCase, override_settings
+
 from mentoroai.tests.utils import silence_django_request_warnings
 
 User = get_user_model()
