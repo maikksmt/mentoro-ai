@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% with seo_title="SEO Check" seo_description="Internal SEO Smoke Test" seo_canonical=request.build_absolute_uri seo_robots="noindex,follow" %}
-    {# keine Ausgabe nötig – base.html liest die Variablen #}
+
 {% endwith %}
 
 {% block title %}<title>SEO Check – MentoroAI</title>{% endblock %}
@@ -16,7 +16,7 @@
     {% endwith %}
 {% endblock %}
 {% block content %}
-    <div class="max-w-8xl mx-auto py-8">
+    <div class="max-w-none mx-auto py-8">
         <h1 class="text-2xl font-bold mb-4">{% blocktrans %}SEO Smoke Test{% endblocktrans %}</h1>
         <p class="opacity-70 mb-6">{% blocktrans %}Check public pages for basic SEO tags.{% endblocktrans %}</p>
 
