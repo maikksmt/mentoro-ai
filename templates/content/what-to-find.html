@@ -67,7 +67,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/glossary/" class="btn btn-primary btn-sm">{% trans "Go to Glossary" %}</a>
+                    <a href="{% url 'glossary:list' %}" class="btn btn-primary btn-sm">{% trans "Go to Glossary" %}</a>
                 </div>
             </div>
         </article>
@@ -115,7 +115,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/guides/" class="btn btn-primary btn-sm">{% trans "Explore Guides" %}</a>
+                    <a href="{% url 'guides:list' %}" class="btn btn-primary btn-sm">{% trans "Explore Guides" %}</a>
                 </div>
             </div>
         </article>
@@ -159,7 +159,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/prompts/" class="btn btn-primary btn-sm">{% trans "Browse Prompts" %}</a>
+                    <a href="{% url 'prompts:list' %}" class="btn btn-primary btn-sm">{% trans "Browse Prompts" %}</a>
                 </div>
             </div>
         </article>
@@ -194,7 +194,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/usecases/" class="btn btn-primary btn-sm">{% trans "Explore Use Cases" %}</a>
+                    <a href="{% url 'usecases:list' %}" class="btn btn-primary btn-sm">{% trans "Explore Use Cases" %}</a>
                 </div>
             </div>
         </article>
@@ -228,7 +228,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/catalog/tools/" class="btn btn-primary btn-sm">{% trans "Explore Tools" %}</a>
+                    <a href="{% url 'catalog:list' %}" class="btn btn-primary btn-sm">{% trans "Explore Tools" %}</a>
                 </div>
             </div>
         </article>
@@ -261,7 +261,7 @@
                 </blockquote>
 
                 <div class="mt-4">
-                    <a href="/en/compare/" class="btn btn-primary btn-sm">{% trans "View Comparisons" %}</a>
+                    <a href="{% url 'compare:index' %}" class="btn btn-primary btn-sm">{% trans "View Comparisons" %}</a>
                 </div>
             </div>
         </article>
