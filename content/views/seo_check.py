@@ -1,9 +1,10 @@
 # content/views/seo_check.py
 from __future__ import annotations
+
 import re
-from urllib.parse import urlparse
 from dataclasses import dataclass
 from typing import List, Dict, Any
+from urllib.parse import urlparse
 
 from django.contrib.auth.decorators import user_passes_test, login_required
 from django.http import HttpRequest, HttpResponse

@@ -3,8 +3,8 @@ from django.urls import reverse
 from django.utils import timezone
 from taggit.models import Tag
 
-from prompts.models import Prompt
 from core.models.editorial import EditorialWorkflowMixin
+from prompts.models import Prompt
 
 
 def create_prompt(*, slug, en_title, de_title=None,

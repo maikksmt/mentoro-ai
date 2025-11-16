@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone, translation
+
 from prompts.models import Prompt
 
 COPY_MARKERS = (

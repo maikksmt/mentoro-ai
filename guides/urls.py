@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import GuideListView, GuideDetailView
 
 app_name = "guides"

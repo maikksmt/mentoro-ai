@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import ComparisonListView, ComparisonDetailView
 
 app_name = "compare"

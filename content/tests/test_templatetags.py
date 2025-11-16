@@ -1,7 +1,8 @@
-from django.test import SimpleTestCase
-from compare.templatetags.get_item import get_item
 from django.template import Template, Context
+from django.test import SimpleTestCase
 from django.test import TestCase
+
+from compare.templatetags.get_item import get_item
 
 
 class TestTemplateTagsCore(TestCase):

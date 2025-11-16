@@ -1,8 +1,9 @@
 from django.test import TestCase
-from parler.utils.context import switch_language
-from usecases.models import UseCase
-from core.models.editorial import EditorialWorkflowMixin
 from django.utils import timezone
+from parler.utils.context import switch_language
+
+from core.models.editorial import EditorialWorkflowMixin
+from usecases.models import UseCase
 
 
 class TestTemplates(TestCase):

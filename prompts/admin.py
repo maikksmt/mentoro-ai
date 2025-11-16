@@ -1,5 +1,6 @@
 # prompts/admin.py
 import reversion
+from django.conf import settings
 from django.contrib import admin, messages
 from django.db import transaction
 from django.template.response import TemplateResponse
@@ -11,7 +12,6 @@ from parler.utils.context import switch_language
 
 from core.admin import TranslatableTinyMCEMixin
 from core.services import get_live_display_instance, build_field_diffs
-from django.conf import settings
 from .models import Prompt
 
 

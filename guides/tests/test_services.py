@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.utils import timezone
 
-from guides.models import Guide
-from core.models.editorial import EditorialWorkflowMixin
 from core import services as core_services
+from core.models.editorial import EditorialWorkflowMixin
+from guides.models import Guide
 
 
 def make_guide(*, title, slug, status=EditorialWorkflowMixin.STATUS_PUBLISHED, published_at=None):

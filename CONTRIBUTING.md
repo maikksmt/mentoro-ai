@@ -25,9 +25,9 @@ Constructive criticism is welcome and should include actionable suggestions.
 
 Minimum requirements:
 
-- Python 3.12  
-- Django 5.x  
-- Node.js and npm (for frontend builds with TailwindCSS/DaisyUI)  
+- Python 3.12
+- Django 5.x
+- Node.js and npm (for frontend builds with TailwindCSS/DaisyUI)
 - Git
 
 Setup example:
@@ -53,11 +53,11 @@ npm run dev
 
 ## Code Quality & Style
 
-- Python: Follow **PEP 8**, include type hints when possible  
-- Formatting: e.g. **black** and **ruff**  
-- Tests: Required for all new features and bug fixes  
-- Security: Never commit secrets or `.env` files  
-- Accessibility and performance should always be considered for templates and CSS changes  
+- Python: Follow **PEP 8**, include type hints when possible
+- Formatting: e.g. **black** and **ruff**
+- Tests: Required for all new features and bug fixes
+- Security: Never commit secrets or `.env` files
+- Accessibility and performance should always be considered for templates and CSS changes
 
 Commit message examples:
 
@@ -70,25 +70,25 @@ feat(starter): enable section editing in admin
 
 ## Branch Strategy & Pull Requests
 
-- Main branches: `main` (stable) and `dev` (active)  
-- Create feature branches from `dev`: `feature/<short-description>`  
-- Open pull requests against `dev`  
-- Describe motivation, changes, and migration steps in PR description  
-- Link related issues  
+- Main branches: `main` (stable) and `dev` (active)
+- Create feature branches from `dev`: `feature/<short-description>`
+- Open pull requests against `dev`
+- Describe motivation, changes, and migration steps in PR description
+- Link related issues
 
 Review checklist:
 
-- No regressions; all tests must pass  
-- Clean structure, meaningful commits, proper documentation  
-- External dependencies must be license-compatible  
+- No regressions; all tests must pass
+- Clean structure, meaningful commits, proper documentation
+- External dependencies must be license-compatible
 
 ---
 
 ## Editorial Content Contributions
 
-- Use clear, neutral, and precise language  
-- Always cite external sources and data  
-- Do not include copyrighted material without permission  
+- Use clear, neutral, and precise language
+- Always cite external sources and data
+- Do not include copyrighted material without permission
 
 ---
 
@@ -104,15 +104,15 @@ More details: see `LICENSE.txt`.
 
 ## Security Policy
 
-- Report vulnerabilities privately to the maintainer  
-- Do not include secrets, API keys, or tokens in pull requests  
+- Report vulnerabilities privately to the maintainer
+- Do not include secrets, API keys, or tokens in pull requests
 
 ---
 
 ## Contact
 
-- Maintainer: Maik Kusmat  
-- Email: contact@mentoro-ai.com  
+- Maintainer: Maik Kusmat
+- Email: contact@mentoro-ai.com
 
 ---
 

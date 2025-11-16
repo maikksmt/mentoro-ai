@@ -1,4 +1,3 @@
-import os
 from django.core.exceptions import ImproperlyConfigured
 
 from .base import *  # noqa: F403,F401

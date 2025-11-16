@@ -5,7 +5,8 @@
 {% block content %}
     <div class="prose max-w-2xl">
         <h1>{% trans "Subscription confirmed" %}</h1>
-        <p>{% blocktrans with email=email %}Thank you! {{ email }} is now subscribed to the MentoroAI newsletter.{% endblocktrans %}</p>
+        <p>{% blocktrans with email=email %}Thank you! {{ email }} is now subscribed to the MentoroAI
+            newsletter.{% endblocktrans %}</p>
         <p>{% trans "You will receive future updates and resources directly in your inbox." %}</p>
     </div>
 {% endblock %}

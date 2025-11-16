@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
+from parler.utils.context import switch_language
 
 from catalog.models import Tool, Category
-from parler.utils.context import switch_language
 
 
 class CatalogTemplateTests(TestCase):

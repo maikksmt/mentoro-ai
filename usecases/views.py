@@ -1,5 +1,6 @@
 # usecases/views.py
 from typing import Any, Dict, Optional
+
 from django.db.models import Q, QuerySet
 from django.http import Http404
 from django.urls import reverse
@@ -7,9 +8,9 @@ from django.utils.translation import gettext as _, get_language
 from django.views.generic import ListView, DetailView
 
 from core.seo.utils import absolute_url, localized_alternates
+from core.services import related_usecases, to_teaser_item
 from core.views import SeoMixin
 from .models import UseCase
-from core.services import related_usecases, to_teaser_item
 
 
 def _resolve_by_slug(qs: QuerySet[UseCase], slug: str) -> Optional[UseCase]:

@@ -2,7 +2,7 @@ name: Deploy to Oracle VM
 
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: [ "CI" ]
     branches: [ "main" ]
     types:
       - completed
