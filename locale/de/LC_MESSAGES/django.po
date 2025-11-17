@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 20:29+0100\n"
-"PO-Revision-Date: 2025-11-17 20:32+0100\n"
+"POT-Creation-Date: 2025-11-17 20:51+0100\n"
+"PO-Revision-Date: 2025-11-17 20:52+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -232,12 +232,15 @@ msgid "You are now registered as an author. Good luck with your writing!"
 msgstr "Sie sind jetzt als Autor registriert. Viel Spaß beim Schreiben!"
 
 #: content/views/home.py:47
-msgid "AI tools & comparisons for beginners · MentoroAI"
-msgstr "KI Tools & Vergleiche für Einsteiger · MentoroAI"
+#| msgid "AI tools & comparisons for beginners · MentoroAI"
+msgid ""
+"AI tools, guides & usecases for beginners and professionals · MentoroAI"
+msgstr ""
+"KI-Tools, Leitfäden und Anwendungsfälle für Anfänger und Profis · MentoroAI"
 
-#: content/views/home.py:48
-msgid "Quick introduction to AI tools & practice"
-msgstr "Schnelle Einführung in KI-Tools und Praxis."
+#: content/views/home.py:48 templates/content/home.html:12
+msgid "Understand AI tools and use them effectively"
+msgstr "KI-Tools verstehen und effektiv nutzen"
 
 #: core/admin.py:96
 msgid "Mark as published"
@@ -914,16 +917,7 @@ msgstr "Objekt-ID"
 msgid "Einreichen"
 msgstr "Einreichen"
 
-#: templates/content/home.html:12
-msgid "Understand AI tools and use them effectively"
-msgstr "KI-Tools verstehen und effektiv nutzen"
-
 #: templates/content/home.html:15
-#| msgid ""
-#| "\n"
-#| "                            Find the right tools, compare real alternatives, and follow practical guides and prompts to\n"
-#| "                            apply AI confidently in everyday life.\n"
-#| "                        "
 msgid ""
 " Find the right tools, compare real alternatives, and follow practical "
 "guides and prompts to apply AI confidently in everyday life."
@@ -2338,6 +2332,9 @@ msgstr "Anwendungsfälle · MentoroAI"
 #: usecases/views.py:56
 msgid "Discover how people used ai in real usecases"
 msgstr "Entdecken Sie, wie Menschen KI in realen Fällen verwendet haben."
+
+#~ msgid "Quick introduction to AI tools & practice"
+#~ msgstr "Schnelle Einführung in KI-Tools und Praxis."
 
 #~ msgid "Project Github"
 #~ msgstr "Projekt Github"
