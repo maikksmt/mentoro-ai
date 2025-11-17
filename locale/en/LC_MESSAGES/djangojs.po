@@ -127,3 +127,9 @@ msgstr ""
 #: templates/glossary/glossary_list.html:12
 msgid "Search term..."
 msgstr ""
+#: templates/content/home.html:25
+msgid "Discover AI Tools"
+msgstr ""
+#: templates/content/home.html:22
+msgid "Start with the Starter Guide"
+msgstr ""

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-17 19:51+0100\n"
+"PO-Revision-Date: 2025-11-17 20:30+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -154,3 +154,11 @@ msgstr ""
 #: templates/glossary/glossary_list.html:12
 msgid "Search term..."
 msgstr "Suchbegriff..."
+
+#: templates/content/home.html:25
+msgid "Discover AI Tools"
+msgstr "KI-Tools entdecken"
+
+#: templates/content/home.html:22
+msgid "Start with the Starter Guide"
+msgstr "Beginnen Sie mit dem Start-Leitfaden"
