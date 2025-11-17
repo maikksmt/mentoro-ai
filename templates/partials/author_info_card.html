@@ -1,11 +1,12 @@
 {% load auth_extras %}
 {% load i18n static %}
-<div class="card border rounded-md shadow-lg items-center">
-    <div class="card-body prose">
+<div class="card border rounded-md shadow-lg items-center max-w-2xl mx-auto">
+    <div class="card-body">
         <h2 class="card-title">{% blocktrans %}Participate as an author{% endblocktrans %} ✍️</h2>
         <p>
-            {% blocktrans %}Want to publish guides, use cases, or prompts?
-                Submit drafts and collaborate with our editorial team during the review process.{% endblocktrans %}
+            {% blocktrans %}Want to publish guides, use cases, or prompts?{% endblocktrans %}<br>
+                {% blocktrans %}Author accounts are in private beta. If you’re interested, please contact us on GitHub.{% endblocktrans %}
+
         </p>
         <div class="card-actions justify-center mt-4">
             {% if request.user.is_authenticated %}
@@ -17,16 +18,15 @@
                         Please be patient.</p>
                 {% endif %}
             {% else %}
-                <a href="" class="btn btn-primary btn-wide cursor-not-allowed">{% blocktrans %}Signup coming soon
-                    ...{% endblocktrans %}</a>
+                <a href="https://github.com/maikksmt/mentoro-ai/discussions/" target="_blank" rel="noopener" class="btn btn-primary">{% blocktrans %}Go to Github Discussions{% endblocktrans %}</a>
                 <a href="{% url 'account_login' %}" class="btn btn-primary">{% trans 'Login' %}</a>
 
-                <p class="opacity-80 mt-2">
-                    {% blocktrans %}
-                        Note: You need a user account. After Signup in, an administrator needs to activate you as an
-                        author.
-                    {% endblocktrans %}
-                </p>
+{#                <p class="opacity-80 mt-2">#}
+{#                    {% blocktrans %}#}
+{#                        Note: You need a user account. After Signup in, an administrator needs to activate you as an#}
+{#                        author.#}
+{#                    {% endblocktrans %}#}
+{#                </p>#}
             {% endif %}
         </div>
     </div>

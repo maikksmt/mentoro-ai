@@ -112,11 +112,15 @@ class GlossaryAutocompleteView(View):
     damit das Suchergebnis live unter dem Input erscheint.
     """
     template_name = "glossary/glossary_results.html"
+    context_object_name = "terms"
+    MIN_QUERY_LENGTH = 2
 
     def get(self, request, *args, **kwargs):
         lang = get_language() or "en"
         q = (request.GET.get("q") or "").strip()
         letter = (request.GET.get("letter") or "").strip()
+        if len(q) < self.MIN_QUERY_LENGTH:
+            return HttpResponse("")
         qs = GlossaryTerm.objects.filter(language=lang)
         if letter:
             qs = qs.filter(term__istartswith=letter)
