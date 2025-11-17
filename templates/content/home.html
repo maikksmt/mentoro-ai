@@ -12,17 +12,14 @@
                     MentoroAI — {% trans "Understand AI tools and use them effectively" %}
                 </h1>
                 <p class="text-base md:text-lg opacity-80">
-                   {% blocktrans %}
-                            Find the right tools, compare real alternatives, and follow practical guides and prompts to
-                            apply AI confidently in everyday life.
-                        {% endblocktrans %}
+                   {% blocktrans %} Find the right tools, compare real alternatives, and follow practical guides and prompts to apply AI confidently in everyday life.{% endblocktrans %}
                 </p>
                 <div class="flex flex-wrap gap-3 mt-6 justify-center items-center">
                     <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg">
-                        Start with the Starter Guide
+                        {% blocktrans %}Start with the Starter Guide{% endblocktrans %}
                     </a>
                     <a href="{% url 'catalog:list' %}" class="btn btn-outline">
-                        Discover AI Tools
+                        {% blocktrans %}Discover AI Tools{% endblocktrans %}
                     </a>
                 </div>
             </div>
