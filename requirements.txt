@@ -121,6 +121,8 @@ filelock==3.20.0
     # via cachecontrol
 freetype-py==2.5.1
     # via rlpycairo
+graphviz==0.21
+    # via -r requirements.in
 gunicorn==23.0.0
     # via -r requirements.in
 h11==0.16.0

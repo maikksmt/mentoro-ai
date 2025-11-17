@@ -3,22 +3,21 @@
 {% load i18n static %}
 
 <div class="card border rounded-md shadow-lg items-center">
-    <div class="prose card-body">
+    <div class="card-body prose">
         <h2 class="card-title text-xl">{% blocktrans %}New to AI? Start here{% endblocktrans %}</h2>
         <p>
             {% blocktrans %}
-                The Starter Guide introduces you to artificial intelligence step by step – easy to understand and
-                practical. Ideal for beginners with no prior knowledge.
+              Perfect if you’ve never used AI before. No jargon, just practical steps.
             {% endblocktrans %}
         </p>
-        <div class="card-actions justify-center mt-4">
+        <div class="card-actions justify-between mt-4">
             {% if start_guide_url %}
-                <a href="{{ start_guide_url }}" class="btn btn-primary">{% trans "To the starter guide" %}</a>
+                <a href="{{ start_guide_url }}" class="btn btn-primary">{% trans "Open the Starter Guide" %}</a>
             {% else %}
-                <span class="btn btn-disabled">{% trans "To the starter guide" %}</span>
+                <span class="btn btn-disabled">{% trans "Open the Starter Guide" %}</span>
             {% endif %}
-            <a href="{% url 'catalog:list' %}" class="btn btn-ghost">
-                {% blocktrans %}Discover tools{% endblocktrans %}
+            <a href="{% url 'catalog:list' %}" class="btn btn-outline">
+                {% blocktrans %}Browse beginner-friendly tools{% endblocktrans %}
             </a>
         </div>
     </div>

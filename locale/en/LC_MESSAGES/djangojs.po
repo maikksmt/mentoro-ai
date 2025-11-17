@@ -109,3 +109,21 @@ msgstr ""
 #: templates/base.html:24
 msgid "Mobile menu"
 msgstr ""
+#: templates/base.html:159
+msgid "Close"
+msgstr ""
+#: templates/base.html:154
+msgid "MentoroAI is currently in public beta"
+msgstr ""
+#: templates/base.html:159
+msgid "Github"
+msgstr ""
+#: templates/partials/starter_guide_card.html:7
+msgid "Recommended for beginners"
+msgstr ""
+#: templates/partials/author_info_card.html:8
+msgid "Author accounts are in private beta. If you’re interested, please contact us on GitHub."
+msgstr ""
+#: templates/glossary/glossary_list.html:12
+msgid "Search term..."
+msgstr ""

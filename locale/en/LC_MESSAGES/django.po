@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-16 09:46+0100\n"
+"POT-Creation-Date: 2025-11-17 19:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:48 templates/base.html:72
+#: templates/base.html:44 templates/base.html:68
 #: templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:46
 msgid "Comparisons"
@@ -334,8 +334,8 @@ msgid "Guide"
 msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:36 templates/base.html:60
-#: templates/content/home.html:120 templates/content/what-to-find.html:32
+#: templates/base.html:32 templates/base.html:56
+#: templates/content/home.html:107 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr ""
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Reason (optional)"
 msgstr ""
 
-#: newsletter/views.py:20 templates/base.html:164
+#: newsletter/views.py:20 templates/base.html:183
 msgid "Newsletter"
 msgstr ""
 
@@ -494,8 +494,8 @@ msgid "Prompt"
 msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:39 templates/base.html:63
-#: templates/content/home.html:121 templates/content/what-to-find.html:33
+#: templates/base.html:35 templates/base.html:59
+#: templates/content/home.html:108 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
@@ -643,60 +643,84 @@ msgstr ""
 msgid "Mobile menu"
 msgstr ""
 
-#: templates/base.html:33 templates/base.html:57
+#: templates/base.html:29 templates/base.html:53
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr ""
 
-#: templates/base.html:42 templates/base.html:66
+#: templates/base.html:38 templates/base.html:62
 #: templates/partials/_entry_cards.html:32
 msgid "Use cases"
 msgstr ""
 
-#: templates/base.html:45 templates/base.html:69
+#: templates/base.html:41 templates/base.html:65
 #: templates/content/what-to-find.html:35
 #: templates/partials/_entry_cards.html:39
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:78
+#: templates/base.html:74
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:87
+#: templates/base.html:83
 msgid "Toggle theme"
 msgstr ""
 
-#: templates/base.html:103
+#: templates/base.html:99
 msgid "Language select"
 msgstr ""
 
-#: templates/base.html:135 templates/partials/editorial_nav.html:7
+#: templates/base.html:131 templates/partials/editorial_nav.html:7
 msgid "Drafts"
 msgstr ""
 
-#: templates/base.html:140 templates/partials/editorial_nav.html:10
+#: templates/base.html:136 templates/partials/editorial_nav.html:10
 msgid "Reviews"
 msgstr ""
 
-#: templates/base.html:166 templates/partials/_entry_cards.html:5
+#: templates/base.html:151
+msgid "MentoroAI is currently in public beta"
+msgstr ""
+
+#: templates/base.html:153
+msgid "Some features may change or be incomplete."
+msgstr ""
+
+#: templates/base.html:154
+msgid "Please provide feedback on"
+msgstr ""
+
+#: templates/base.html:156
+msgid "Github Discussions"
+msgstr ""
+
+#: templates/base.html:162 templates/partials/features_open.html:98
+msgid "Close"
+msgstr ""
+
+#: templates/base.html:168 templates/partials/features_open.html:106
+msgid "Close modal"
+msgstr ""
+
+#: templates/base.html:185 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr ""
 
-#: templates/base.html:167
+#: templates/base.html:186
 msgid "Legal notice"
 msgstr ""
 
-#: templates/base.html:168
+#: templates/base.html:187
 msgid "Privacy policy"
 msgstr ""
 
-#: templates/base.html:170 templates/legal/terms_of_use.html:10
+#: templates/base.html:189 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr ""
 
-#: templates/base.html:171
+#: templates/base.html:190
 msgid "Copyright"
 msgstr ""
 
@@ -728,29 +752,29 @@ msgstr ""
 msgid "Similar Tools"
 msgstr ""
 
-#: templates/catalog/tool_list.html:10 templates/compare/index.html:11
-msgid "Search…"
+#: templates/catalog/tool_list.html:12
+msgid "Search tools …"
 msgstr ""
 
-#: templates/catalog/tool_list.html:15
+#: templates/catalog/tool_list.html:17
 msgid "Only with Free-Tier"
 msgstr ""
 
-#: templates/catalog/tool_list.html:18 templates/compare/index.html:19
+#: templates/catalog/tool_list.html:20 templates/compare/index.html:23
 msgid "Filter"
 msgstr ""
 
-#: templates/catalog/tool_list.html:20 templates/compare/index.html:20
+#: templates/catalog/tool_list.html:22 templates/compare/index.html:24
 msgid "Reset"
 msgstr ""
 
-#: templates/catalog/tool_list.html:53 templates/compare/index.html:43
-#: templates/content/home.html:96 templates/prompts/prompt_list.html:28
+#: templates/catalog/tool_list.html:55 templates/compare/index.html:47
+#: templates/content/home.html:83 templates/prompts/prompt_list.html:28
 #: templates/usecases/list.html:37
 msgid "Details"
 msgstr ""
 
-#: templates/catalog/tool_list.html:59
+#: templates/catalog/tool_list.html:61
 msgid "No tools found."
 msgstr ""
 
@@ -782,11 +806,15 @@ msgstr ""
 msgid "Comparisons based on criteria such as price, functionality and quality."
 msgstr ""
 
-#: templates/compare/index.html:13
+#: templates/compare/index.html:12
+msgid "Search…"
+msgstr ""
+
+#: templates/compare/index.html:16
 msgid "All categories"
 msgstr ""
 
-#: templates/compare/index.html:49
+#: templates/compare/index.html:53
 msgid "No comparisons found."
 msgstr ""
 
@@ -869,51 +897,37 @@ msgstr ""
 msgid "Einreichen"
 msgstr ""
 
-#: templates/content/home.html:11
-msgid ""
-"MentoroAI is currently in public beta. Some features may change or be "
-"incomplete."
-msgstr ""
-
 #: templates/content/home.html:12
-msgid "Please provide feedback on"
+msgid "Understand AI tools and use them effectively"
 msgstr ""
 
-#: templates/content/home.html:14
-msgid "Project Github"
-msgstr ""
-
-#: templates/content/home.html:32
-msgid "Quick introduction to AI tools & practice."
-msgstr ""
-
-#: templates/content/home.html:35
+#: templates/content/home.html:15
 msgid ""
 "\n"
-"                            Find suitable AI tools, compare alternatives, "
-"and use practical guides and prompts for your\n"
-"                            everyday life.\n"
+"                            Find the right tools, compare real alternatives, "
+"and follow practical guides and prompts to\n"
+"                            apply AI confidently in everyday life.\n"
 "                        "
 msgstr ""
 
-#: templates/content/home.html:65
+#: templates/content/home.html:52
 msgid "Featured Tools"
 msgstr ""
 
-#: templates/content/home.html:107
+#: templates/content/home.html:94
 msgid "Recommended for you"
 msgstr ""
 
-#: templates/content/home.html:119
+#: templates/content/home.html:106
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:123 templates/usecases/list.html:9
+#: templates/content/home.html:110 templates/usecases/list.html:9
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
 
-#: templates/content/home.html:132
+#: templates/content/home.html:119
 msgid "No published content yet."
 msgstr ""
 
@@ -1269,26 +1283,30 @@ msgstr ""
 msgid "AI Glossary"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:22
+#: templates/glossary/glossary_list.html:13
+msgid "Search term..."
+msgstr ""
+
+#: templates/glossary/glossary_list.html:24
 msgid "All"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:38
-#: templates/glossary/glossary_list.html:42
-#: templates/glossary/glossary_list.html:71
-#: templates/glossary/glossary_list.html:75
+#: templates/glossary/glossary_list.html:40
+#: templates/glossary/glossary_list.html:44
+#: templates/glossary/glossary_list.html:73
+#: templates/glossary/glossary_list.html:77
 msgid "Previous"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:45
+#: templates/glossary/glossary_list.html:47
 #: templates/partials/pagination.html:11
 msgid "Site"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:50
-#: templates/glossary/glossary_list.html:54
-#: templates/glossary/glossary_list.html:82
-#: templates/glossary/glossary_list.html:86
+#: templates/glossary/glossary_list.html:52
+#: templates/glossary/glossary_list.html:56
+#: templates/glossary/glossary_list.html:84
+#: templates/glossary/glossary_list.html:88
 msgid "Next"
 msgstr ""
 
@@ -1897,31 +1915,23 @@ msgid "Participate as an author"
 msgstr ""
 
 #: templates/partials/author_info_card.html:7
-msgid ""
-"Want to publish guides, use cases, or prompts?\n"
-"                Submit drafts and collaborate with our editorial team during "
-"the review process."
+msgid "Want to publish guides, use cases, or prompts?"
 msgstr ""
 
-#: templates/partials/author_info_card.html:13
+#: templates/partials/author_info_card.html:8
+msgid ""
+"Author accounts are in private beta. If you’re interested, please contact us "
+"on GitHub."
+msgstr ""
+
+#: templates/partials/author_info_card.html:14
 msgid ""
 "\n"
 "                        My drafts"
 msgstr ""
 
-#: templates/partials/author_info_card.html:20
-msgid ""
-"Signup coming soon\n"
-"                    ..."
-msgstr ""
-
-#: templates/partials/author_info_card.html:25
-msgid ""
-"\n"
-"                        Note: You need a user account. After Signup in, an "
-"administrator needs to activate you as an\n"
-"                        author.\n"
-"                    "
+#: templates/partials/author_info_card.html:21
+msgid "Go to Github Discussions"
 msgstr ""
 
 #: templates/partials/breadcrumbs.html:2
@@ -2090,14 +2100,6 @@ msgid ""
 "critical for you, please tell us!"
 msgstr ""
 
-#: templates/partials/features_open.html:98
-msgid "Close"
-msgstr ""
-
-#: templates/partials/features_open.html:106
-msgid "Close modal"
-msgstr ""
-
 #: templates/partials/pagination.html:6
 msgid "Previous Page"
 msgstr ""
@@ -2113,19 +2115,18 @@ msgstr ""
 #: templates/partials/starter_guide_card.html:9
 msgid ""
 "\n"
-"                The Starter Guide introduces you to artificial intelligence "
-"step by step – easy to understand and\n"
-"                practical. Ideal for beginners with no prior knowledge.\n"
+"              Perfect if you’ve never used AI before. No jargon, just "
+"practical steps.\n"
 "            "
 msgstr ""
 
-#: templates/partials/starter_guide_card.html:16
-#: templates/partials/starter_guide_card.html:18
-msgid "To the starter guide"
+#: templates/partials/starter_guide_card.html:15
+#: templates/partials/starter_guide_card.html:17
+msgid "Open the Starter Guide"
 msgstr ""
 
-#: templates/partials/starter_guide_card.html:21
-msgid "Discover tools"
+#: templates/partials/starter_guide_card.html:20
+msgid "Browse beginner-friendly tools"
 msgstr ""
 
 #: templates/prompts/prompt_detail.html:32

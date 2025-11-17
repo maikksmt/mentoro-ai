@@ -7,8 +7,10 @@
     </header>
 
     <form method="get" class="py-2 md:py-4 grid gap-3 grid-cols-3 md:grid-cols-4 justify-items">
-        <input type="search" name="q" value="{{ q|default_if_none:'' }}" placeholder="{% trans 'Search…' %}"
-               class="col-span-2 input input-bordered w-full"/>
+        <label class="input">
+            {% heroicon_solid "magnifying-glass" class="opacity-70" %}
+            <input type="search" name="q" value="{{ q|default_if_none:'' }}" placeholder="{% trans 'Search tools …' %}" class="grow"/>
+        </label>
 
         <label class="col-span-2 md:col-span-1 label cursor-pointer justify-start gap-3">
             <input type="checkbox" class="checkbox" name="free" value="1" {% if free %}checked{% endif %}/>
