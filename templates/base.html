@@ -22,11 +22,7 @@
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="{% trans "Mobile menu" %}">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16"></path>
-                </svg>
+                {% heroicon_solid "bars-3" size=28 %}{% heroicon_solid "chevron-down" size=18 %}
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li class="my-1"><a href="{% url 'glossary:list' %}"
@@ -146,10 +142,33 @@
 {% endif %}
 
 <!-- Beta Badge -->
-<div class="fixed bottom-4 left-4 z-50 bg-warning text-warning-content text-xs font-semibold px-3 py-1.5 rounded-full shadow-md opacity-90 hover:opacity-100 transition"
-     title="This is a beta version of MentoroAI">
-    BETA
+<div class="fixed bottom-4 left-4 z-50 btn btn-warning btn-sm rounded-full" title="This is a beta version of MentoroAI"
+     onclick="beta_modal.showModal()">
+    BETA{% heroicon_solid "chevron-up" size=18 class="opacity-80" %}
 </div>
+<dialog id="beta_modal" class="modal">
+    <div class="modal-box">
+        <h3 class="text-lg font-bold">{% blocktrans %}MentoroAI is currently in public beta{% endblocktrans %}</h3>
+        <p>
+            {% trans "Some features may change or be incomplete." %} <br>
+            {% trans "Please provide feedback on" %}
+            <a class="link" target="_blank" rel="noopener"
+               href="https://github.com/maikksmt/mentoro-ai/discussions/categories/beta-feedback"> {% trans "Github Discussions" %}</a>
+
+        </p>
+
+        <div class="modal-action">
+            <form method="dialog">
+                <button class="btn">{% trans "Close" %}</button>
+            </form>
+        </div>
+
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button aria-label="{% trans 'Close modal' %}">close</button>
+    </form>
+</dialog>
+
 
 <!-- Page container -->
 <main class="p-4 w-full max-w-7xl mx-auto mb-auto">

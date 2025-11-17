@@ -3,62 +3,49 @@
 {% load i18n static richtext %}
 
 {% block content %}
-    <!-- Beta Alert -->
-    <div id="beta-alert"
-         class="alert alert-outline text-base-content alert-warning shadow-md lg:mb-2 max-w-xl mx-auto opacity-0 transition-all duration-300 z-10">
-        {% heroicon_solid "beaker" size=18 class="mr-2" %}
-        <span>
-            {% trans "MentoroAI is currently in public beta. Some features may change or be incomplete." %} <br>
-            {% trans "Please provide feedback on" %} <a class="link" target="_blank" rel="noopener"
-                                                        href="https://github.com/maikksmt/mentoro-ai/discussions/categories/beta-feedback">
-            {% blocktrans %}Project Github{% endblocktrans %}</a>
-        </span>
-    </div>
-    <script defer>
-        window.addEventListener('DOMContentLoaded', () => {
-            const a = document.getElementById('beta-alert');
-            if (a) {
-                a.classList.remove('opacity-0');
-                {#a.classList.remove('translate-y-[-11px]');#}
-            }
-        });
-    </script>
     <!-- Hero / Intro -->
     <section class="container mx-auto">
-        <div class="hero rounded-lg">
-            <div class="hero-content">
-                <div>
-                    <h1 class="text-3xl md:text-4xl font-bold pb-4">
-                        MentoroAI — {% trans "Quick introduction to AI tools & practice." %}
-                    </h1>
-                    <p class="text-base md:text-lg opacity-80 max-w-2xl">
-                        {% blocktrans %}
-                            Find suitable AI tools, compare alternatives, and use practical guides and prompts for your
-                            everyday life.
+    <div class="hero min-h-[40vh]">
+        <div class="hero-content text-center">
+            <div class="max-w-2xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold pb-4">
+                    MentoroAI — {% trans "Understand AI tools and use them effectively" %}
+                </h1>
+                <p class="text-base md:text-lg opacity-80">
+                   {% blocktrans %}
+                            Find the right tools, compare real alternatives, and follow practical guides and prompts to
+                            apply AI confidently in everyday life.
                         {% endblocktrans %}
-                    </p>
+                </p>
+                <div class="flex flex-wrap gap-3 mt-6 justify-center items-center">
+                    <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg">
+                        Start with the Starter Guide
+                    </a>
+                    <a href="{% url 'catalog:list' %}" class="btn btn-outline">
+                        Discover AI Tools
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Open the modal using ID.showModal() method -->
-    <div class="fab">
-        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()">
-            ?
-        </button>
     </div>
-    {% include "partials/features_open.html" %}
+</section>
+
     <!-- Info Cards -->
-    <section class="container mx-auto mt-4">
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            {% include "partials/starter_guide_card.html" %}
-            {% include "partials/author_info_card.html" %}
-        </div>
-    </section>
+{#    <section class="container mx-auto mt-4">#}
+{#        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">#}
+{#            {% include "partials/starter_guide_card.html" %}#}
+{#            {% include "partials/author_info_card.html" %}#}
+{#        </div>#}
+{#    </section>#}
 
     <!-- Entry Cards -->
     {% include "partials/_entry_cards.html" with card=c %}
+<section class="container mx-auto mt-4">
 
+{#            {% include "partials/starter_guide_card.html" %}#}
+            {% include "partials/author_info_card.html" %}
+
+    </section>
     <!-- Featured Tools -->
     {% if featured_tools %}
         <section class="container mx-auto mt-8">
@@ -78,7 +65,7 @@
                                     </div>
                                 {% else %}
                                     <div class="w-10 h-10 rounded-full bg-base-200 grid place-items-center">
-                                        {% heroicon_solid "bolt" size=18 class="opacity-70" %}
+                                        {% heroicon_solid "bolt" size=18 class="opacity-80" %}
                                     </div>
                                 {% endif %}
                                 <div>
@@ -134,5 +121,13 @@
             {% endfor %}
         </div>
     </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <div class="fab">
+        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()">
+            ?
+        </button>
+    </div>
+    {% include "partials/features_open.html" %}
 
 {% endblock %}

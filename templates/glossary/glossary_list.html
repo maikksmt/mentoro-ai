@@ -8,10 +8,12 @@
 
         <!-- Search input with HTMX Autocomplete -->
         <div class=" ">
-            <input type="text" name="q" value="{{ q }}" placeholder="Begriff suchen…"
-                   class="input input-bordered w-full"
-                   hx-get="{% url 'glossary:autocomplete' %}"
-                   hx-trigger="keyup changed delay:250ms" hx-target="#live-results" hx-swap="innerHTML"/>
+            <label class="input">
+                {% heroicon_solid "magnifying-glass" class="opacity-70" %}
+                <input type="search" name="q" value="{{ q }}" placeholder="{% trans "Search term..." %}" class="grow"
+                       hx-get="{% url 'glossary:autocomplete' %}" hx-trigger="keyup changed delay:250ms, input"
+                       hx-target="#live-results" hx-swap="innerHTML"/>
+            </label>
             <div id="live-results" class="mt-2"></div>
         </div>
 

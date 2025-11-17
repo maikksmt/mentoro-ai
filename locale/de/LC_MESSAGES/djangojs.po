@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-13 19:39+0100\n"
+"PO-Revision-Date: 2025-11-17 19:51+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -126,3 +126,31 @@ msgstr "Suche"
 #: templates/base.html:24
 msgid "Mobile menu"
 msgstr "Mobiles Menü"
+
+#: templates/base.html:159
+msgid "Close"
+msgstr "Schließen"
+
+#: templates/base.html:154
+msgid "MentoroAI is currently in public beta"
+msgstr "MentoroAI befindet sich derzeit in der öffentlichen Beta"
+
+#: templates/base.html:159
+msgid "Github"
+msgstr "Github"
+
+#: templates/partials/starter_guide_card.html:7
+msgid "Recommended for beginners"
+msgstr "Empfohlen für Anfänger"
+
+#: templates/partials/author_info_card.html:8
+msgid ""
+"Author accounts are in private beta. If you’re interested, please contact us"
+" on GitHub."
+msgstr ""
+"Autorenkonten befinden sich in der privaten Beta. Wenn Sie interessiert "
+"sind, kontaktieren Sie uns bitte auf GitHub."
+
+#: templates/glossary/glossary_list.html:12
+msgid "Search term..."
+msgstr "Suchbegriff..."

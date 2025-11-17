@@ -6,15 +6,19 @@
         <h1 class="text-3xl font-bold">{% trans "Tool comparison" %}</h1>
         <p class="text-base-content/70 mt-2">{% trans "Comparisons based on criteria such as price, functionality and quality." %}</p>
     </header>
-    <form method="get" class="my-4 pb-4 grid gap-3 md:grid-cols-3">
-        <input type="search" name="q" value="{{ q|default_if_none:'' }}" class="input input-bordered w-full"
-               placeholder="{% trans 'Search…' %}">
-        <select name="category" class="select select-bordered w-full">
-            <option value="">{% trans "All categories" %}</option>
-            {% for c in available_categories %}
-                <option value="{{ c.slug }}" {% if category == c.slug %}selected{% endif %}>{{ c.name }}</option>
-            {% endfor %}
-        </select>
+    <form method="get" class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl">
+        <label class="input col-span-2">
+            {% heroicon_solid "magnifying-glass" class="opacity-70" %}
+            <input type="search" name="q" value="{{ q|default_if_none:'' }}" class="grow" placeholder="{% trans 'Search…' %}">
+        </label>
+        <label class="col-span-2">
+            <select name="category" class="select appearance-none">
+                <option value="">{% trans "All categories" %}</option>
+                {% for c in available_categories %}
+                    <option value="{{ c.slug }}" {% if category == c.slug %}selected{% endif %}>{{ c.name }}</option>
+                {% endfor %}
+            </select>
+        </label>
         <div>
             <button class="btn btn-primary">{% trans "Filter" %}</button>
             {% if q or category %}<a href="." class="btn ml-2">{% trans "Reset" %}</a>{% endif %}
