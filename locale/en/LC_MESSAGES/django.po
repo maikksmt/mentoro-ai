@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 19:55+0100\n"
+"POT-Creation-Date: 2025-11-17 20:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,11 +225,11 @@ msgid "You are now registered as an author. Good luck with your writing!"
 msgstr ""
 
 #: content/views/home.py:47
-msgid "AI tools & comparisons for beginners · MentoroAI"
+msgid "AI tools, guides & usecases for beginners and professionals · MentoroAI"
 msgstr ""
 
-#: content/views/home.py:48
-msgid "Quick introduction to AI tools & practice"
+#: content/views/home.py:48 templates/content/home.html:12
+msgid "Understand AI tools and use them effectively"
 msgstr ""
 
 #: core/admin.py:96
@@ -335,7 +335,7 @@ msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
 #: templates/base.html:32 templates/base.html:56
-#: templates/content/home.html:107 templates/content/what-to-find.html:32
+#: templates/content/home.html:104 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr ""
@@ -495,7 +495,7 @@ msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
 #: templates/base.html:35 templates/base.html:59
-#: templates/content/home.html:108 templates/content/what-to-find.html:33
+#: templates/content/home.html:105 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
@@ -769,7 +769,7 @@ msgid "Reset"
 msgstr ""
 
 #: templates/catalog/tool_list.html:55 templates/compare/index.html:47
-#: templates/content/home.html:83 templates/prompts/prompt_list.html:28
+#: templates/content/home.html:80 templates/prompts/prompt_list.html:28
 #: templates/usecases/list.html:37
 msgid "Details"
 msgstr ""
@@ -897,37 +897,38 @@ msgstr ""
 msgid "Einreichen"
 msgstr ""
 
-#: templates/content/home.html:12
-msgid "Understand AI tools and use them effectively"
-msgstr ""
-
 #: templates/content/home.html:15
 msgid ""
-"\n"
-"                            Find the right tools, compare real alternatives, "
-"and follow practical guides and prompts to\n"
-"                            apply AI confidently in everyday life.\n"
-"                        "
+" Find the right tools, compare real alternatives, and follow practical "
+"guides and prompts to apply AI confidently in everyday life."
 msgstr ""
 
-#: templates/content/home.html:52
+#: templates/content/home.html:19
+msgid "Start with the Starter Guide"
+msgstr ""
+
+#: templates/content/home.html:22
+msgid "Discover AI Tools"
+msgstr ""
+
+#: templates/content/home.html:49
 msgid "Featured Tools"
 msgstr ""
 
-#: templates/content/home.html:94
+#: templates/content/home.html:91
 msgid "Recommended for you"
 msgstr ""
 
-#: templates/content/home.html:106
+#: templates/content/home.html:103
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:110 templates/usecases/list.html:9
+#: templates/content/home.html:107 templates/usecases/list.html:9
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
 
-#: templates/content/home.html:119
+#: templates/content/home.html:116
 msgid "No published content yet."
 msgstr ""
 
