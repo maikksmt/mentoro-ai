@@ -44,8 +44,8 @@ class HomePageView(TemplateView, SeoMixin):
         alts = localized_alternates(self.request, "guides:list")
         ctx["seo"] = self.build_seo(
             self.request,
-            title=_("AI tools & comparisons for beginners · MentoroAI"),
-            description=_("Quick introduction to AI tools & practice"),
+            title=_("AI tools, guides & usecases for beginners and professionals · MentoroAI"),
+            description=_("Understand AI tools and use them effectively"),
             canonical=canonical,
             alternates=alts,
             json_ld={

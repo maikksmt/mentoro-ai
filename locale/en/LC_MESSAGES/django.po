@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 20:29+0100\n"
+"POT-Creation-Date: 2025-11-17 20:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,11 +225,11 @@ msgid "You are now registered as an author. Good luck with your writing!"
 msgstr ""
 
 #: content/views/home.py:47
-msgid "AI tools & comparisons for beginners · MentoroAI"
+msgid "AI tools, guides & usecases for beginners and professionals · MentoroAI"
 msgstr ""
 
-#: content/views/home.py:48
-msgid "Quick introduction to AI tools & practice"
+#: content/views/home.py:48 templates/content/home.html:12
+msgid "Understand AI tools and use them effectively"
 msgstr ""
 
 #: core/admin.py:96
@@ -895,10 +895,6 @@ msgstr ""
 
 #: templates/content/editorial/submit_to_review.html:22
 msgid "Einreichen"
-msgstr ""
-
-#: templates/content/home.html:12
-msgid "Understand AI tools and use them effectively"
 msgstr ""
 
 #: templates/content/home.html:15
