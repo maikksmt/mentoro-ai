@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 20:51+0100\n"
-"PO-Revision-Date: 2025-11-17 20:52+0100\n"
+"POT-Creation-Date: 2025-11-17 22:39+0100\n"
+"PO-Revision-Date: 2025-11-17 22:40+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -232,7 +232,6 @@ msgid "You are now registered as an author. Good luck with your writing!"
 msgstr "Sie sind jetzt als Autor registriert. Viel Spaß beim Schreiben!"
 
 #: content/views/home.py:47
-#| msgid "AI tools & comparisons for beginners · MentoroAI"
 msgid ""
 "AI tools, guides & usecases for beginners and professionals · MentoroAI"
 msgstr ""
@@ -1924,16 +1923,20 @@ msgid "Hints"
 msgstr "Hinweise"
 
 #: templates/partials/_entry_cards.html:6
+#| msgid ""
+#| "Our areas of expertise at a glance – from definitions to practical examples."
 msgid ""
-"Our areas of expertise at a glance – from definitions to practical examples."
+"Our areas of expertise at a glance - from definitions to practical examples."
 msgstr ""
-"Unsere Kompetenzbereiche im Überblick – von Definitionen bis zu praktischen "
+"Unsere Kompetenzbereiche im Überblick - von Definitionen bis zu praktischen "
 "Beispielen."
 
 #: templates/partials/_entry_cards.html:12
-msgid "AI terms explained simply – understandable, concise and with examples."
+#| msgid ""
+#| "AI terms explained simply – understandable, concise and with examples."
+msgid "AI terms explained simply - understandable, concise and with examples."
 msgstr ""
-"KI-Begriffe einfach erklärt – verständlich, prägnant und mit Beispielen."
+"KI-Begriffe einfach erklärt - verständlich, prägnant und mit Beispielen."
 
 #: templates/partials/_entry_cards.html:13
 msgid "To glossary"
@@ -1951,10 +1954,12 @@ msgid "To the guides"
 msgstr "Zu den Leitfäden"
 
 #: templates/partials/_entry_cards.html:26
+#| msgid ""
+#| "Ready-made input templates for ChatGPT & Co. – simply copy and get started."
 msgid ""
-"Ready-made input templates for ChatGPT & Co. – simply copy and get started."
+"Ready-made input templates for ChatGPT & Co. - simply copy and get started."
 msgstr ""
-"Fertig vorgefertigte Eingabevorlagen für ChatGPT & Co. – einfach kopieren "
+"Fertig vorgefertigte Eingabevorlagen für ChatGPT & Co. - einfach kopieren "
 "und loslegen."
 
 #: templates/partials/_entry_cards.html:27
@@ -1962,21 +1967,26 @@ msgid "To the prompts"
 msgstr "Zu den Prompts"
 
 #: templates/partials/_entry_cards.html:33
+#| msgid ""
+#| "Others are already using AI – real-world examples from everyday life and "
+#| "work."
 msgid ""
-"Others are already using AI – real-world examples from everyday life and "
+"Others are already using AI - real-world examples from everyday life and "
 "work."
 msgstr ""
-"Andere nutzen KI bereits – Beispiele aus dem Alltag und der Berufswelt."
+"Andere nutzen KI bereits - Beispiele aus dem Alltag und der Berufswelt."
 
 #: templates/partials/_entry_cards.html:34
 msgid "To the use cases"
 msgstr "Zu den Anwendungsfällen"
 
 #: templates/partials/_entry_cards.html:40
+#| msgid ""
+#| "AI tools and platforms presented – with features and areas of application."
 msgid ""
-"AI tools and platforms presented – with features and areas of application."
+"AI tools and platforms presented - with features and areas of application."
 msgstr ""
-"KI-Tools und -Plattformen vorgestellt – mit Funktionen und "
+"KI-Tools und -Plattformen vorgestellt - mit Funktionen und "
 "Anwendungsbereichen."
 
 #: templates/partials/_entry_cards.html:41

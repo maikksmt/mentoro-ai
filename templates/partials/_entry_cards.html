@@ -3,13 +3,13 @@
 <section class="container mx-auto mt-4 md:mt-8">
     <div class="mx-auto text-center mb-4 lg:mb-8">
         <h2 class="text-2xl font-semibold mb-4">{% trans "What can I find on MentoroAI?" %}</h2>
-        <p class="text-lg text-base-content/70">{% trans "Our areas of expertise at a glance – from definitions to practical examples." %}</p>
+        <p class="text-lg text-base-content/70">{% trans "Our areas of expertise at a glance - from definitions to practical examples." %}</p>
     </div>
     <div class="grid gap-2 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <a href="{% url 'glossary:list' %}" class="card shadow-md">
             <div class="prose card-body">
                 <h3 class="card-title">🧠 {% trans "Glossary" %}</h3>
-                <p>{% trans "AI terms explained simply – understandable, concise and with examples." %}</p>
+                <p>{% trans "AI terms explained simply - understandable, concise and with examples." %}</p>
                 <button class="btn btn-glossary text-base">{% trans "To glossary" %}</button>
             </div>
         </a>
@@ -23,21 +23,21 @@
         <a href="{% url 'prompts:list' %}" class="card bg-base-100 shadow-md">
             <div class="prose card-body">
                 <h3 class="card-title">💬 {% trans "Prompts" %}</h3>
-                <p>{% trans "Ready-made input templates for ChatGPT & Co. – simply copy and get started." %}</p>
+                <p>{% trans "Ready-made input templates for ChatGPT & Co. - simply copy and get started." %}</p>
                 <button class="btn btn-prompt text-base">{% trans "To the prompts" %}</button>
             </div>
         </a>
         <a href="{% url 'usecases:list' %}" class="card bg-base-100 shadow-md">
             <div class="prose card-body">
                 <h3 class="card-title">💡 {% trans "Use cases" %}</h3>
-                <p>{% trans "Others are already using AI – real-world examples from everyday life and work." %} </p>
+                <p>{% trans "Others are already using AI - real-world examples from everyday life and work." %} </p>
                 <button class="btn btn-usecase text-base">{% trans "To the use cases" %} </button>
             </div>
         </a>
         <a href="{% url 'catalog:list' %}" class="card bg-base-100 shadow-md">
             <div class="prose card-body">
                 <h3 class="card-title">🧰 {% trans "Tools" %}</h3>
-                <p>{% trans "AI tools and platforms presented – with features and areas of application." %} </p>
+                <p>{% trans "AI tools and platforms presented - with features and areas of application." %} </p>
                 <button class="btn btn-tool text-base">{% trans "To the tools" %}</button>
             </div>
         </a>
