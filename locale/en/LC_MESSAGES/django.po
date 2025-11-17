@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 20:51+0100\n"
+"POT-Creation-Date: 2025-11-17 22:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1846,11 +1846,11 @@ msgstr ""
 
 #: templates/partials/_entry_cards.html:6
 msgid ""
-"Our areas of expertise at a glance – from definitions to practical examples."
+"Our areas of expertise at a glance - from definitions to practical examples."
 msgstr ""
 
 #: templates/partials/_entry_cards.html:12
-msgid "AI terms explained simply – understandable, concise and with examples."
+msgid "AI terms explained simply - understandable, concise and with examples."
 msgstr ""
 
 #: templates/partials/_entry_cards.html:13
@@ -1868,7 +1868,7 @@ msgstr ""
 
 #: templates/partials/_entry_cards.html:26
 msgid ""
-"Ready-made input templates for ChatGPT & Co. – simply copy and get started."
+"Ready-made input templates for ChatGPT & Co. - simply copy and get started."
 msgstr ""
 
 #: templates/partials/_entry_cards.html:27
@@ -1877,7 +1877,7 @@ msgstr ""
 
 #: templates/partials/_entry_cards.html:33
 msgid ""
-"Others are already using AI – real-world examples from everyday life and "
+"Others are already using AI - real-world examples from everyday life and "
 "work."
 msgstr ""
 
@@ -1887,7 +1887,7 @@ msgstr ""
 
 #: templates/partials/_entry_cards.html:40
 msgid ""
-"AI tools and platforms presented – with features and areas of application."
+"AI tools and platforms presented - with features and areas of application."
 msgstr ""
 
 #: templates/partials/_entry_cards.html:41
