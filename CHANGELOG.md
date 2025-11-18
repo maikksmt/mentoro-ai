@@ -10,7 +10,9 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- (New changes are placed here as the beta phase progresses.)
+#### (New changes are placed here as the beta phase progresses.)
+
+- add missing reversion usage for editorial workflow in usecases app
 
 ---
 
