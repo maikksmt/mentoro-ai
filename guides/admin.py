@@ -16,8 +16,6 @@ from core.services import get_live_display_instance, build_field_diffs, build_se
 from .models import GuideItem, GuideSection, Guide
 
 
-
-
 class GuideItemInline(TranslatableTinyMCEInlineMixin, TranslatableStackedInline):
     model = GuideItem
     extra = 0
@@ -109,7 +107,6 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
     updated_at_formatted.admin_order_field = "updated_at"
     title_col.short_description = _("Title")
     title_col.admin_order_field = "translations__title"
-
 
     def _must_auto_review(self, original_obj, form, formsets):
         """
@@ -329,7 +326,6 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
         ]
         return custom + base_urls
 
-
     def diff_view(self, request, object_id, *args, **kwargs):
         guide = self.get_object(request, object_id)
         live_keys = set((guide.live_i18n or {}).keys()) if hasattr(guide, "live_i18n") else set()
@@ -383,8 +379,6 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
             "comparisons": comparisons,
         }
         return TemplateResponse(request, "admin/guides/guide_diff.html", context)
-
-
 
     inlines = [GuideSectionInline]
 
