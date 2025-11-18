@@ -2,7 +2,13 @@ from django.contrib import admin
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from parler.admin import TranslatableAdmin
+from reversion.models import Version
 from tinymce.widgets import TinyMCE
+
+def set_last_published_revision(obj):
+    latest = Version.objects.get_for_object(obj).first()
+    if latest:
+        obj.last_published_revision_id = latest.id
 
 
 class TranslatableTinyMCEMixin(TranslatableAdmin):

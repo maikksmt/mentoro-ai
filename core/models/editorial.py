@@ -72,11 +72,7 @@ class EditorialMixin(models.Model):
     keeps audit info consistent.
     """
     author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, related_name="%(class)s_authored",
-        on_delete=models.SET_NULL, null=True, blank=True
-    )
-    reviewer = models.ForeignKey(
-        settings.AUTH_USER_MODEL, related_name="%(class)s_reviewed",
+        settings.AUTH_USER_MODEL, related_name="%(class)s_author",
         on_delete=models.SET_NULL, null=True, blank=True
     )
     created_at = models.DateTimeField(default=timezone.now, editable=False)
@@ -112,16 +108,13 @@ class EditorialWorkflowMixin(models.Model):
         (STATUS_ARCHIVED, "Archived"),
     ]
     LIVE_SNAPSHOT_FIELDS = ("slug", "public_slug", "title")
-
     status = FSMField(default=STATUS_DRAFT, choices=STATUS_CHOICES, protected=True)
-
     submitted_for_review_at = models.DateTimeField(null=True, blank=True)
     reviewed_at = models.DateTimeField(null=True, blank=True)
     reviewed_by = models.ForeignKey(
-        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="+"
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="%(class)s_reviewer"
     )
     review_note = models.TextField(blank=True)
-
     last_published_revision_id = models.IntegerField(null=True, blank=True)
 
     def _update_live_snapshot(self) -> None:

@@ -40,7 +40,7 @@ class UseCaseListView(ListView, SeoMixin):
         return (
             UseCase.published
             .active_translations(lang)
-            .select_related("author", "reviewer")
+            .select_related("author", "reviewed_by")
             .prefetch_related("tools")
             .distinct()
             .order_by("-published_at", "-updated_at")
@@ -74,7 +74,7 @@ class UseCaseDetailView(DetailView, SeoMixin):
     context_object_name = "object"
 
     def get_queryset(self) -> QuerySet[UseCase]:
-        return UseCase.objects.all().select_related("author", "reviewer").prefetch_related("tools")
+        return UseCase.objects.all().select_related("author", "reviewed_by").prefetch_related("tools")
 
     def get_object(self, queryset: Optional[QuerySet[UseCase]] = None) -> UseCase:
         slug = self.kwargs.get("slug")

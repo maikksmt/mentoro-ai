@@ -22,7 +22,7 @@ class GuideListView(ListView, SeoMixin):
             .visible_on_site()
             .active_translations(lang)
             .exclude(translations__slug__startswith="start-guide")
-            .select_related("author", "reviewer")
+            .select_related("author", "reviewed_by")
             .prefetch_related("categories__translations", "tools__translations")
             .distinct()
             .order_by("-published_at", "-updated_at")

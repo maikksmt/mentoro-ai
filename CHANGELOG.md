@@ -14,7 +14,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## [1.0.0-beta_2] – 2025-11-16
+## [1.0.0-beta-2] – 2025-11-18
 
 ### Added
 
@@ -25,10 +25,14 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - minor UI updates
 - bugfixes for wrong url links
+- add editorial fix where last published live version was not shown when article is set back to review.
+- add fix for missing compression and versioning of static files
+- add impress information
+- remove jsdeliver CDN for htmx, instead self hosted.
 
 ---
 
-## [1.0.0-beta_1] – 2025-11-13
+## [1.0.0-beta-1] – 2025-11-13
 
 ### Added
 
