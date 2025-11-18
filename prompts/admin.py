@@ -74,8 +74,6 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         }),
     )
 
-
-
     def _must_auto_review(self, original, form, formsets) -> bool:
         if not original:
             return False
@@ -83,6 +81,18 @@ class PromptAdmin(TranslatableTinyMCEMixin):
             return False
         return form.has_changed()
 
+    def _auto_transition_to_review(self, request, obj):
+        if hasattr(obj, "move_to_review") and can_proceed(obj.move_to_review):
+            try:
+                obj.move_to_review(by=request.user, note=_("Auto: Change in the admin form (prompt)"))
+            except TypeError:
+                obj.move_to_review()
+            obj.save()
+            self.message_user(
+                request,
+                _('Prompt was automatically set to "Review" due to changes.'),
+                level=messages.INFO,
+            )
 
     def get_prepopulated_fields(self, request, obj=None):
         return {"slug": ("title",)}
@@ -100,7 +110,6 @@ class PromptAdmin(TranslatableTinyMCEMixin):
     @admin.display(ordering="translations__title", description=_("Title"))
     def title_col(self, obj):
         return obj.safe_translation_getter("title", any_language=True) or f"Prompt #{obj.pk}"
-
 
     def save_model(self, request, obj: Prompt, form, change):
         if not change and getattr(obj, "author_id", None) is None:
@@ -121,21 +130,6 @@ class PromptAdmin(TranslatableTinyMCEMixin):
                 and not getattr(obj, "last_published_revision_id", None):
             set_last_published_revision(obj)
             obj.save(update_fields=["last_published_revision_id"])
-
-
-
-    def _auto_transition_to_review(self, request, obj):
-        if hasattr(obj, "move_to_review") and can_proceed(obj.move_to_review):
-            try:
-                obj.move_to_review(by=request.user, note=_("Auto: Change in the admin form (prompt)"))
-            except TypeError:
-                obj.move_to_review()
-            obj.save()
-            self.message_user(
-                request,
-                _('Prompt was automatically set to "Review" due to changes.'),
-                level=messages.INFO,
-            )
 
     @admin.action(description=_("Submit for Review"))
     def action_submit_for_review(self, request, queryset):
@@ -245,11 +239,10 @@ class PromptAdmin(TranslatableTinyMCEMixin):
                 else:
                     skipped.append(obj.pk)
         if ok:
-            self.message_user(request, _("%d Article(s) restored (Draft).") % ok, level=messages.SUCCESS)
+            self.message_user(request, _("%d items(s) restored to draft.") % ok, level=messages.SUCCESS)
         if skipped:
             self.message_user(request, "%d Skipped: Transition not possible (%s)." % (
                 len(skipped), ", ".join(map(str, skipped))), level=messages.WARNING)
-
 
     def get_urls(self):
         base_urls = super().get_urls()
@@ -260,9 +253,9 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         return custom + base_urls
 
     def diff_view(self, request, object_id, *args, **kwargs):
-        prompt = self.get_object(request, object_id)
-        live_keys = set((prompt.live_i18n or {}).keys()) if hasattr(prompt, "live_i18n") else set()
-        obj_langs = set(getattr(prompt, "get_available_languages", lambda: [])())  # Parler
+        obj = self.get_object(request, object_id)
+        live_keys = set((obj.live_i18n or {}).keys()) if hasattr(obj, "live_i18n") else set()
+        obj_langs = set(getattr(obj, "get_available_languages", lambda: [])())  # Parler
         project_langs = {code for code, _ in getattr(settings, "LANGUAGES", [])}
         langs = []
         for code in list(project_langs) + list(obj_langs) + list(live_keys):
@@ -273,18 +266,18 @@ class PromptAdmin(TranslatableTinyMCEMixin):
 
         comparisons = []
         for lang in langs:
-            with switch_language(prompt, lang):
+            with switch_language(obj, lang):
                 left = {
-                    "slug": prompt.safe_translation_getter("slug"),
-                    "public_slug": prompt.safe_translation_getter("public_slug"),
-                    "title": prompt.safe_translation_getter("title"),
-                    "intro": prompt.safe_translation_getter("intro"),
-                    "body": prompt.safe_translation_getter("body"),
-                    "outro": prompt.safe_translation_getter("outro"),
+                    "slug": obj.safe_translation_getter("slug"),
+                    "public_slug": obj.safe_translation_getter("public_slug"),
+                    "title": obj.safe_translation_getter("title"),
+                    "intro": obj.safe_translation_getter("intro"),
+                    "body": obj.safe_translation_getter("body"),
+                    "outro": obj.safe_translation_getter("outro"),
                 }
 
-            live = get_live_display_instance(prompt, lang)
-            with switch_language(prompt, lang):
+            live = get_live_display_instance(obj, lang)
+            with switch_language(obj, lang):
                 right = {
                     "slug": getattr(live, "slug", None),
                     "public_slug": getattr(live, "public_slug", None),
@@ -308,7 +301,7 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         context = {
             **self.admin_site.each_context(request),
             "opts": self.model._meta,
-            "object": prompt,
+            "object": obj,
             "comparisons": comparisons,
         }
         return TemplateResponse(request, "admin/prompts/prompt_diff.html", context)
