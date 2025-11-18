@@ -10,17 +10,12 @@ from django_fsm import can_proceed
 from parler.admin import TranslatableStackedInline
 from parler.utils.context import switch_language
 from reversion.admin import VersionAdmin
-from reversion.models import Version
 
-from core.admin import TranslatableTinyMCEMixin, TranslatableTinyMCEInlineMixin
+from core.admin import TranslatableTinyMCEMixin, TranslatableTinyMCEInlineMixin, set_last_published_revision
 from core.services import get_live_display_instance, build_field_diffs, build_section_diffs
 from .models import GuideItem, GuideSection, Guide
 
 
-def _set_last_published_revision(obj):
-    latest = Version.objects.get_for_object(obj).first()  # newest first
-    if latest:
-        obj.last_published_revision_id = latest.id
 
 
 class GuideItemInline(TranslatableTinyMCEInlineMixin, TranslatableStackedInline):
@@ -45,15 +40,15 @@ class GuideSectionInline(TranslatableTinyMCEInlineMixin, TranslatableStackedInli
 class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
     tinymce_fields = ("intro", "body")
     list_display = (
-        "display_title", "pk", "status", "is_published", "author", "reviewer", "published_at_formatted",
+        "display_title", "pk", "status", "is_published", "author", "reviewed_by", "published_at_formatted",
         "updated_at_formatted")
-    list_filter = ("status", "categories", "author", "reviewer")
+    list_filter = ("status", "categories", "author", "reviewed_by")
     search_fields = ("translations__title", "translations__intro", "slug")
     ordering = ("-published_at", "-updated_at")
     date_hierarchy = "published_at"
     readonly_fields = (
         "status", "submitted_for_review_at", "reviewed_at", "reviewed_by", "live_i18n", "is_published",
-        "public_slug", "updated_at",)
+        "public_slug", "updated_at", "last_published_revision_id",)
     actions = [
         "action_submit_for_review",
         "action_request_rework",
@@ -66,7 +61,6 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
         (_("Meta"), {
             "fields": (
                 "author",
-                "reviewer",
                 "status",
                 "is_published",
                 "published_at",
@@ -95,9 +89,27 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
     def get_prepopulated_fields(self, request, obj=None):
         return {"slug": ("title",)}
 
+    def published_at_formatted(self, obj):
+        if not obj.published_at:
+            return "-"
+        return date_format(obj.published_at, format="d.m.Y H:i", use_l10n=True)
+
+    def updated_at_formatted(self, obj):
+        if not obj.updated_at:
+            return "-"
+        return date_format(obj.updated_at, format="d.m.Y H:i", use_l10n=True)
+
     @admin.display(ordering="translations__title", description=_("Title"))
     def title_col(self, obj):
         return obj.safe_translation_getter("title", any_language=True) or f"Guide #{obj.pk}"
+
+    published_at_formatted.short_description = "published_at"
+    published_at_formatted.admin_order_field = "published_at"
+    updated_at_formatted.short_description = "updated_at"
+    updated_at_formatted.admin_order_field = "updated_at"
+    title_col.short_description = _("Title")
+    title_col.admin_order_field = "translations__title"
+
 
     def _must_auto_review(self, original_obj, form, formsets):
         """
@@ -160,16 +172,19 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
             self._auto_transition_to_review(request, obj)
 
         super().save_model(request, obj, form, change)
+        if getattr(obj, "status", None) == getattr(obj, "STATUS_PUBLISHED", "published") \
+                and not getattr(obj, "last_published_revision_id", None):
+            set_last_published_revision(obj)
+            obj.save(update_fields=["last_published_revision_id"])
 
     def save_related(self, request, form, formsets, change):
         """
-        Erkennt Änderungen in den GuideSection-Inlines und setzt einen veröffentlichten
-        Guide automatisch auf REVIEW, bevor die Relationen gespeichert werden.
+        Detects changes in the GuideSection inlines and automatically sets a published
+        Guide to REVIEW before the relations are saved.
         """
         guide = form.instance
         inline_changed = False
         for fs in formsets:
-            # Geänderte Inline-Forms
             changed = any(getattr(f, "has_changed", lambda: False)() for f in fs.forms)
             new_forms = [
                 f for f in fs.forms
@@ -228,7 +243,7 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
             reversion.set_comment("request_rework")
         self.message_user(request, _("%(n)d Article(s) → Rework.") % {"n": ok}, messages.SUCCESS)
 
-    @admin.action(description=_("Publish selected guides"))
+    @admin.action(description=_("Publish selected Guide(s)"))
     def action_publish(self, request, queryset):
         published, skipped = 0, []
         with transaction.atomic():
@@ -246,6 +261,8 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
                             obj.publish(by=request.user, note="Admin-Action publish")
 
                             obj.save()
+                            set_last_published_revision(obj)
+                            obj.save(update_fields=["last_published_revision_id"])
                             published += 1
                         except Exception as e:
                             skipped.append((obj.pk, str(e)))
@@ -253,7 +270,7 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
                         skipped.append((obj.pk, "Transition 'publish' not executable"))
 
         if published:
-            self.message_user(request, f"{published} Article(s) published.", level=messages.SUCCESS)
+            self.message_user(request, _(f"{published} Item(s) published."), level=messages.SUCCESS)
         if skipped:
             detail = ", ".join([f"#{pk}: {reason}" for pk, reason in skipped])
             self.message_user(
@@ -305,14 +322,13 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
         self.message_user(request, _("%(n)d Article(s) restored (draft).") % {"n": ok},
                           level=messages.SUCCESS)
 
-    # ------- Admin-URL für Delta-Ansicht -------
-
     def get_urls(self):
         base_urls = super().get_urls()
         custom = [
             path("<path:object_id>/diff/", self.admin_site.admin_view(self.diff_view), name="guides_guide_diff", ),
         ]
         return custom + base_urls
+
 
     def diff_view(self, request, object_id, *args, **kwargs):
         guide = self.get_object(request, object_id)
@@ -368,22 +384,7 @@ class GuideAdmin(TranslatableTinyMCEMixin, VersionAdmin):
         }
         return TemplateResponse(request, "admin/guides/guide_diff.html", context)
 
-    def published_at_formatted(self, obj):
-        if not obj.published_at:
-            return "-"
-        return date_format(obj.published_at, format="d.m.Y H:i", use_l10n=True)
 
-    def updated_at_formatted(self, obj):
-        if not obj.updated_at:
-            return "-"
-        return date_format(obj.updated_at, format="d.m.Y H:i", use_l10n=True)
-
-    published_at_formatted.short_description = "published_at"
-    published_at_formatted.admin_order_field = "published_at"
-    updated_at_formatted.short_description = "updated_at"
-    updated_at_formatted.admin_order_field = "updated_at"
-    title_col.short_description = _("Title")
-    title_col.admin_order_field = "translations__title"
 
     inlines = [GuideSectionInline]
 

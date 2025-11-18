@@ -10,7 +10,7 @@ from django.utils.translation import gettext_lazy as _, get_language, get_langua
 from django_fsm import can_proceed
 from parler.utils.context import switch_language
 
-from core.admin import TranslatableTinyMCEMixin
+from core.admin import TranslatableTinyMCEMixin, set_last_published_revision
 from core.services import get_live_display_instance, build_field_diffs
 from .models import Prompt
 
@@ -19,10 +19,10 @@ from .models import Prompt
 class PromptAdmin(TranslatableTinyMCEMixin):
     tinymce_fields = ("intro", "body", "outro")
     list_display = (
-        "display_title", "pk", "status", "is_published", "author", "reviewer",
+        "display_title", "pk", "status", "is_published", "author", "reviewed_by",
         "published_at_formatted", "updated_at_formatted",
     )
-    list_filter = ("status", "author", "reviewer")
+    list_filter = ("status", "author", "reviewed_by")
     search_fields = ("translations__title", "translations__intro", "translations__body", "translations__slug")
     ordering = ("-published_at", "-updated_at")
     date_hierarchy = "published_at"
@@ -36,6 +36,7 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         "is_published",
         "public_slug",
         "updated_at",
+        "last_published_revision_id",
     )
 
     actions = [
@@ -50,7 +51,6 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         (_("Meta"), {
             "fields": (
                 "author",
-                "reviewer",
                 "status",
                 "is_published",
                 "published_at",
@@ -58,6 +58,7 @@ class PromptAdmin(TranslatableTinyMCEMixin):
                 "submitted_for_review_at",
                 "reviewed_at",
                 "reviewed_by",
+                "last_published_revision_id",
             ),
         }),
         (_("Routing"), {
@@ -73,67 +74,15 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         }),
     )
 
-    def get_urls(self):
-        base_urls = super().get_urls()
-        custom = [
-            path("<path:object_id>/diff/", self.admin_site.admin_view(self.diff_view),
-                 name="prompts_prompt_diff"),
-        ]
-        return custom + base_urls
 
-    def diff_view(self, request, object_id, *args, **kwargs):
-        prompt = self.get_object(request, object_id)
-        live_keys = set((prompt.live_i18n or {}).keys()) if hasattr(prompt, "live_i18n") else set()
-        obj_langs = set(getattr(prompt, "get_available_languages", lambda: [])())  # Parler
-        project_langs = {code for code, _ in getattr(settings, "LANGUAGES", [])}
-        langs = []
-        for code in list(project_langs) + list(obj_langs) + list(live_keys):
-            if code and code not in langs:
-                langs.append(code)
-        if not langs:
-            langs = [get_language()]
 
-        comparisons = []
-        for lang in langs:
-            with switch_language(prompt, lang):
-                left = {
-                    "slug": prompt.safe_translation_getter("slug"),
-                    "public_slug": prompt.safe_translation_getter("public_slug"),
-                    "title": prompt.safe_translation_getter("title"),
-                    "intro": prompt.safe_translation_getter("intro"),
-                    "body": prompt.safe_translation_getter("body"),
-                    "outro": prompt.safe_translation_getter("outro"),
-                }
+    def _must_auto_review(self, original, form, formsets) -> bool:
+        if not original:
+            return False
+        if getattr(original, "status", "") != getattr(original, "STATUS_PUBLISHED", "published"):
+            return False
+        return form.has_changed()
 
-            live = get_live_display_instance(prompt, lang)
-            with switch_language(prompt, lang):
-                right = {
-                    "slug": getattr(live, "slug", None),
-                    "public_slug": getattr(live, "public_slug", None),
-                    "title": getattr(live, "title", None),
-                    "intro": getattr(live, "intro", None),
-                    "body": getattr(live, "body", None),
-                    "outro": getattr(live, "outro", None),
-                }
-
-            changes = build_field_diffs(left, right)
-            if not changes:
-                continue
-
-            info = get_language_info(lang)
-            comparisons.append({
-                "code": lang,
-                "name": info.get("name_local") or info.get("name") or lang,
-                "changes": changes,
-            })
-
-        context = {
-            **self.admin_site.each_context(request),
-            "opts": self.model._meta,
-            "object": prompt,
-            "comparisons": comparisons,
-        }
-        return TemplateResponse(request, "admin/prompts/prompt_diff.html", context)
 
     def get_prepopulated_fields(self, request, obj=None):
         return {"slug": ("title",)}
@@ -147,6 +96,11 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         if not obj.updated_at:
             return "-"
         return date_format(obj.updated_at, format="d.m.Y H:i", use_l10n=True)
+
+    @admin.display(ordering="translations__title", description=_("Title"))
+    def title_col(self, obj):
+        return obj.safe_translation_getter("title", any_language=True) or f"Prompt #{obj.pk}"
+
 
     def save_model(self, request, obj: Prompt, form, change):
         if not change and getattr(obj, "author_id", None) is None:
@@ -163,13 +117,12 @@ class PromptAdmin(TranslatableTinyMCEMixin):
             self._auto_transition_to_review(request, obj)
 
         super().save_model(request, obj, form, change)
+        if getattr(obj, "status", None) == getattr(obj, "STATUS_PUBLISHED", "published") \
+                and not getattr(obj, "last_published_revision_id", None):
+            set_last_published_revision(obj)
+            obj.save(update_fields=["last_published_revision_id"])
 
-    def _must_auto_review(self, original, form, formsets) -> bool:
-        if not original:
-            return False
-        if getattr(original, "status", "") != getattr(original, "STATUS_PUBLISHED", "published"):
-            return False
-        return form.has_changed()
+
 
     def _auto_transition_to_review(self, request, obj):
         if hasattr(obj, "move_to_review") and can_proceed(obj.move_to_review):
@@ -244,13 +197,15 @@ class PromptAdmin(TranslatableTinyMCEMixin):
                         try:
                             obj.publish(by=request.user, note="Admin-Action publish")
                             obj.save()
+                            set_last_published_revision(obj)
+                            obj.save(update_fields=["last_published_revision_id"])
                             published += 1
                         except Exception as e:
                             skipped.append((obj.pk, str(e)))
                     else:
                         skipped.append((obj.pk, "Transition 'publish' not possible"))
         if published:
-            self.message_user(request, _("%d Article(s) published.") % published, level=messages.SUCCESS)
+            self.message_user(request, _(f"{published} Item(s) published."), level=messages.SUCCESS)
         if skipped:
             info = ", ".join([f"#{pk}: %s" % reason for pk, reason in skipped])
             self.message_user(request, "%d skipped: %s" % (len(skipped), info), level=messages.WARNING)
@@ -294,3 +249,66 @@ class PromptAdmin(TranslatableTinyMCEMixin):
         if skipped:
             self.message_user(request, "%d Skipped: Transition not possible (%s)." % (
                 len(skipped), ", ".join(map(str, skipped))), level=messages.WARNING)
+
+
+    def get_urls(self):
+        base_urls = super().get_urls()
+        custom = [
+            path("<path:object_id>/diff/", self.admin_site.admin_view(self.diff_view),
+                 name="prompts_prompt_diff"),
+        ]
+        return custom + base_urls
+
+    def diff_view(self, request, object_id, *args, **kwargs):
+        prompt = self.get_object(request, object_id)
+        live_keys = set((prompt.live_i18n or {}).keys()) if hasattr(prompt, "live_i18n") else set()
+        obj_langs = set(getattr(prompt, "get_available_languages", lambda: [])())  # Parler
+        project_langs = {code for code, _ in getattr(settings, "LANGUAGES", [])}
+        langs = []
+        for code in list(project_langs) + list(obj_langs) + list(live_keys):
+            if code and code not in langs:
+                langs.append(code)
+        if not langs:
+            langs = [get_language()]
+
+        comparisons = []
+        for lang in langs:
+            with switch_language(prompt, lang):
+                left = {
+                    "slug": prompt.safe_translation_getter("slug"),
+                    "public_slug": prompt.safe_translation_getter("public_slug"),
+                    "title": prompt.safe_translation_getter("title"),
+                    "intro": prompt.safe_translation_getter("intro"),
+                    "body": prompt.safe_translation_getter("body"),
+                    "outro": prompt.safe_translation_getter("outro"),
+                }
+
+            live = get_live_display_instance(prompt, lang)
+            with switch_language(prompt, lang):
+                right = {
+                    "slug": getattr(live, "slug", None),
+                    "public_slug": getattr(live, "public_slug", None),
+                    "title": getattr(live, "title", None),
+                    "intro": getattr(live, "intro", None),
+                    "body": getattr(live, "body", None),
+                    "outro": getattr(live, "outro", None),
+                }
+
+            changes = build_field_diffs(left, right)
+            if not changes:
+                continue
+
+            info = get_language_info(lang)
+            comparisons.append({
+                "code": lang,
+                "name": info.get("name_local") or info.get("name") or lang,
+                "changes": changes,
+            })
+
+        context = {
+            **self.admin_site.each_context(request),
+            "opts": self.model._meta,
+            "object": prompt,
+            "comparisons": comparisons,
+        }
+        return TemplateResponse(request, "admin/prompts/prompt_diff.html", context)

@@ -40,7 +40,7 @@ class PromptListView(ListView, SeoMixin):
         qs = (
             Prompt.objects
             .visible_on_site()
-            .select_related("author", "reviewer")
+            .select_related("author", "reviewed_by")
         )
         if not qs.ordered:
             qs = qs.order_by("-published_at", "-updated_at")
@@ -76,7 +76,7 @@ class PromptDetailView(DetailView, SeoMixin):
     context_object_name = "object"
 
     def get_queryset(self) -> QuerySet[Prompt]:
-        return Prompt.objects.all().select_related("author", "reviewer")
+        return Prompt.objects.all().select_related("author", "reviewed_by")
 
     def get_object(self, queryset: Optional[QuerySet[Prompt]] = None) -> Prompt:
         slug = self.kwargs.get("slug")
