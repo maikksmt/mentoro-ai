@@ -2,7 +2,7 @@ from django.contrib import admin, messages
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-from core.admin import TranslatableTinyMCEMixin
+from core.admin import TranslatableTinyMCEMixin, set_last_published_revision
 from .models import Comparison
 
 
@@ -16,7 +16,7 @@ class ComparisonAdmin(TranslatableTinyMCEMixin):
         "status",
         "published_at",
         "author",
-        "reviewer",
+        "reviewed_by",
         "winner",
         "updated_at",
         "pk",
@@ -25,13 +25,13 @@ class ComparisonAdmin(TranslatableTinyMCEMixin):
     ordering = ("-published_at", "-updated_at")
 
     # Filter & Suche
-    list_filter = ("status", "author", "reviewer")
+    list_filter = ("status", "author", "reviewed_by")
     search_fields = ("translations__title", "translations__intro", "slug")
 
     # Felder im Formular
     fieldsets = (
         (_("Meta"), {
-            "fields": ("status", "published_at", "updated_at", "author", "reviewer")
+            "fields": ("status", "published_at", "updated_at", "author", "reviewed_by")
         }),
         (_("Routing"), {
             "fields": ("slug",)
@@ -56,8 +56,9 @@ class ComparisonAdmin(TranslatableTinyMCEMixin):
     def get_prepopulated_fields(self, request, obj=None):
         return {"slug": ("title",)}
 
+    @admin.display(ordering="translations__title", description=_("Title"))
     def title_col(self, obj):
-        return obj.safe_translation_getter("title", any_language=True) or f"#{obj.pk}"
+        return obj.safe_translation_getter("title", any_language=True) or f"Comparison #{obj.pk}"
 
     title_col.short_description = _("Title")
     title_col.admin_order_field = "translations__title"
@@ -68,13 +69,15 @@ class ComparisonAdmin(TranslatableTinyMCEMixin):
             obj.author = request.user
         super().save_model(request, obj, form, change)
 
-    @admin.action(description=_("Publish now"))
+    @admin.action(description=_("Publish selected Comparison(s)"))
     def publish_now(self, request, queryset):
         n = 0
         now = timezone.now()
         for obj in queryset:
             obj.publish(when=now)
             obj.save(update_fields=["status", "published_at", "updated_at"])
+            set_last_published_revision(obj)
+            obj.save(update_fields=["last_published_revision_id"])
             n += 1
         self.message_user(request, _("%(n)d comparison(s) published.") % {"n": n}, messages.SUCCESS)
 

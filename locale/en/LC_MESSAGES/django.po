@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-17 22:39+0100\n"
+"POT-Creation-Date: 2025-11-18 19:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,27 +90,27 @@ msgstr ""
 msgid "Overview of features, prices and alternatives"
 msgstr ""
 
-#: compare/admin.py:33 guides/admin.py:66 prompts/admin.py:50
-#: usecases/admin.py:49
+#: compare/admin.py:33 guides/admin.py:61 prompts/admin.py:51
+#: usecases/admin.py:50
 msgid "Meta"
 msgstr ""
 
-#: compare/admin.py:36 guides/admin.py:84 prompts/admin.py:63
-#: usecases/admin.py:62
+#: compare/admin.py:36 guides/admin.py:78 prompts/admin.py:64
+#: usecases/admin.py:63
 msgid "Routing"
 msgstr ""
 
-#: compare/admin.py:39 guides/admin.py:87 prompts/admin.py:66
-#: usecases/admin.py:65
+#: compare/admin.py:39 guides/admin.py:81 prompts/admin.py:67
+#: usecases/admin.py:66
 msgid "Content (translated)"
 msgstr ""
 
-#: compare/admin.py:42 guides/admin.py:89 prompts/admin.py:68
-#: usecases/admin.py:68
+#: compare/admin.py:42 guides/admin.py:83 prompts/admin.py:69
+#: usecases/admin.py:69
 msgid "These fields are language-specific. Use the language tabs above."
 msgstr ""
 
-#: compare/admin.py:45 guides/admin.py:81
+#: compare/admin.py:45 guides/admin.py:75
 msgid "Relations"
 msgstr ""
 
@@ -118,28 +118,28 @@ msgstr ""
 msgid "Scoring"
 msgstr ""
 
-#: compare/admin.py:62 compare/models.py:18 guides/admin.py:98
-#: guides/admin.py:385 guides/models.py:18 guides/models.py:124
-#: guides/models.py:198 prompts/models.py:20
-#: templates/content/editorial/review_queue.html:17
-#: templates/ops/seo_check.html:41 usecases/admin.py:143 usecases/models.py:20
+#: compare/admin.py:59 compare/admin.py:63 compare/models.py:18
+#: guides/admin.py:102 guides/admin.py:110 guides/models.py:18
+#: guides/models.py:123 guides/models.py:197 prompts/admin.py:100
+#: prompts/models.py:20 templates/content/editorial/review_queue.html:17
+#: templates/ops/seo_check.html:41 usecases/admin.py:86 usecases/models.py:20
 msgid "Title"
 msgstr ""
 
-#: compare/admin.py:71
-msgid "Publish now"
+#: compare/admin.py:72
+msgid "Publish selected Comparison(s)"
 msgstr ""
 
-#: compare/admin.py:79
+#: compare/admin.py:82
 #, python-format
 msgid "%(n)d comparison(s) published."
 msgstr ""
 
-#: compare/admin.py:81
+#: compare/admin.py:84
 msgid "Unpublish (revert to draft)"
 msgstr ""
 
-#: compare/admin.py:88
+#: compare/admin.py:91
 #, python-format
 msgid "%(n)d comparison(s) reverted to draft."
 msgstr ""
@@ -155,7 +155,7 @@ msgstr ""
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:44 templates/base.html:68
+#: templates/base.html:41 templates/base.html:65
 #: templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:46
 msgid "Comparisons"
@@ -232,11 +232,11 @@ msgstr ""
 msgid "Understand AI tools and use them effectively"
 msgstr ""
 
-#: core/admin.py:96
+#: core/admin.py:102
 msgid "Mark as published"
 msgstr ""
 
-#: core/admin.py:101
+#: core/admin.py:107
 msgid "Mark as Draft"
 msgstr ""
 
@@ -272,55 +272,55 @@ msgstr ""
 msgid "AI Glossary – Terms explained simply"
 msgstr ""
 
-#: guides/admin.py:188
+#: guides/admin.py:203
 msgid "Auto: Change to GuideSection (Inline)"
 msgstr ""
 
-#: guides/admin.py:196
+#: guides/admin.py:211
 msgid "Send to review"
 msgstr ""
 
-#: guides/admin.py:203
+#: guides/admin.py:218
 msgid "You are not authorized to perform this action."
 msgstr ""
 
-#: guides/admin.py:211
+#: guides/admin.py:226
 #, python-format
 msgid "%(n)d Article(s) → Review."
 msgstr ""
 
-#: guides/admin.py:213
+#: guides/admin.py:228
 msgid "Request changes (→ Rework)"
 msgstr ""
 
-#: guides/admin.py:229
+#: guides/admin.py:244
 #, python-format
 msgid "%(n)d Article(s) → Rework."
 msgstr ""
 
-#: guides/admin.py:231
-msgid "Publish selected guides"
+#: guides/admin.py:246
+msgid "Publish selected Guide(s)"
 msgstr ""
 
-#: guides/admin.py:265
+#: guides/admin.py:282
 msgid "Archiving (Soft Delete)"
 msgstr ""
 
-#: guides/admin.py:284
+#: guides/admin.py:301
 #, python-format
 msgid "%(n)d Article(s) archived."
 msgstr ""
 
-#: guides/admin.py:286
+#: guides/admin.py:303
 msgid "Restore (→ Draft)"
 msgstr ""
 
-#: guides/admin.py:305
+#: guides/admin.py:322
 #, python-format
 msgid "%(n)d Article(s) restored (draft)."
 msgstr ""
 
-#: guides/models.py:20 guides/models.py:125 prompts/models.py:22
+#: guides/models.py:20 guides/models.py:124 prompts/models.py:22
 #: usecases/models.py:22
 msgid "Body"
 msgstr ""
@@ -334,33 +334,33 @@ msgid "Guide"
 msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:32 templates/base.html:56
+#: templates/base.html:29 templates/base.html:53
 #: templates/content/home.html:104 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr ""
 
-#: guides/models.py:130
+#: guides/models.py:129
 msgid "Guide Section"
 msgstr ""
 
-#: guides/models.py:131
+#: guides/models.py:130
 msgid "Guide Sections"
 msgstr ""
 
-#: guides/models.py:199
+#: guides/models.py:198
 msgid "Teaser"
 msgstr ""
 
-#: guides/models.py:207
+#: guides/models.py:206
 msgid "Guide Item"
 msgstr ""
 
-#: guides/models.py:208
+#: guides/models.py:207
 msgid "Guide Items"
 msgstr ""
 
-#: guides/models.py:244
+#: guides/models.py:243
 msgid "Either content_object (content_type + object_id) OR a URL."
 msgstr ""
 
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Reason (optional)"
 msgstr ""
 
-#: newsletter/views.py:20 templates/base.html:183
+#: newsletter/views.py:20 templates/base.html:177
 msgid "Newsletter"
 msgstr ""
 
@@ -426,60 +426,55 @@ msgstr ""
 msgid "You have been unsubscribed."
 msgstr ""
 
-#: prompts/admin.py:70 usecases/admin.py:71
+#: prompts/admin.py:71 usecases/admin.py:72
 msgid "Internals"
 msgstr ""
 
-#: prompts/admin.py:177
+#: prompts/admin.py:130
 msgid "Auto: Change in the admin form (prompt)"
 msgstr ""
 
-#: prompts/admin.py:183
+#: prompts/admin.py:136
 msgid "Prompt was automatically set to \"Review\" due to changes."
 msgstr ""
 
-#: prompts/admin.py:187
+#: prompts/admin.py:140
 msgid "Submit for Review"
 msgstr ""
 
-#: prompts/admin.py:205
+#: prompts/admin.py:158
 #, python-format
 msgid "%d Article(s) set for review."
 msgstr ""
 
-#: prompts/admin.py:210 usecases/admin.py:193
+#: prompts/admin.py:163 usecases/admin.py:140
 msgid "Request rework"
 msgstr ""
 
-#: prompts/admin.py:228
+#: prompts/admin.py:181
 #, python-format
 msgid "%d Article(s) set to rework."
 msgstr ""
 
-#: prompts/admin.py:233 templates/content/editorial/review_queue.html:37
-#: usecases/admin.py:214
+#: prompts/admin.py:186 templates/content/editorial/review_queue.html:37
+#: usecases/admin.py:161
 msgid "Publish"
 msgstr ""
 
-#: prompts/admin.py:253
-#, python-format
-msgid "%d Article(s) published."
-msgstr ""
-
-#: prompts/admin.py:258
+#: prompts/admin.py:213
 msgid "Archive (Soft-Delete)"
 msgstr ""
 
-#: prompts/admin.py:273
+#: prompts/admin.py:228
 #, python-format
 msgid "%d Article(s) archived."
 msgstr ""
 
-#: prompts/admin.py:278
+#: prompts/admin.py:233
 msgid "Restore as draft"
 msgstr ""
 
-#: prompts/admin.py:293
+#: prompts/admin.py:248
 #, python-format
 msgid "%d Article(s) restored (Draft)."
 msgstr ""
@@ -494,7 +489,7 @@ msgid "Prompt"
 msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:35 templates/base.html:59
+#: templates/base.html:32 templates/base.html:56
 #: templates/content/home.html:105 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
@@ -639,88 +634,92 @@ msgstr ""
 msgid "No differences in this language."
 msgstr ""
 
-#: templates/base.html:24
+#: templates/base.html:21
 msgid "Mobile menu"
 msgstr ""
 
-#: templates/base.html:29 templates/base.html:53
+#: templates/base.html:26 templates/base.html:50
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr ""
 
-#: templates/base.html:38 templates/base.html:62
+#: templates/base.html:35 templates/base.html:59
 #: templates/partials/_entry_cards.html:32
 msgid "Use cases"
 msgstr ""
 
-#: templates/base.html:41 templates/base.html:65
+#: templates/base.html:38 templates/base.html:62
 #: templates/content/what-to-find.html:35
 #: templates/partials/_entry_cards.html:39
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:74
+#: templates/base.html:71
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:83
+#: templates/base.html:80
 msgid "Toggle theme"
 msgstr ""
 
-#: templates/base.html:99
+#: templates/base.html:96
 msgid "Language select"
 msgstr ""
 
-#: templates/base.html:131 templates/partials/editorial_nav.html:7
+#: templates/base.html:126
+msgid "Admin Panel"
+msgstr ""
+
+#: templates/base.html:127 templates/partials/editorial_nav.html:7
 msgid "Drafts"
 msgstr ""
 
-#: templates/base.html:136 templates/partials/editorial_nav.html:10
+#: templates/base.html:129 templates/partials/editorial_nav.html:10
 msgid "Reviews"
 msgstr ""
 
-#: templates/base.html:151
+#: templates/base.html:142
 msgid "MentoroAI is currently in public beta"
 msgstr ""
 
-#: templates/base.html:153
+#: templates/base.html:144
 msgid "Some features may change or be incomplete."
 msgstr ""
 
-#: templates/base.html:154
-msgid "Please provide feedback on"
+#: templates/base.html:145
+msgid "Please provide feedback on Github Discussions"
 msgstr ""
 
-#: templates/base.html:156
-msgid "Github Discussions"
+#: templates/base.html:152 templates/partials/author_info_card.html:21
+msgid "Go to Github Discussions"
 msgstr ""
 
-#: templates/base.html:162 templates/partials/features_open.html:98
+#: templates/base.html:154 templates/partials/features_open.html:98
 msgid "Close"
 msgstr ""
 
-#: templates/base.html:168 templates/partials/features_open.html:106
+#: templates/base.html:162 templates/partials/features_open.html:106
 msgid "Close modal"
 msgstr ""
 
-#: templates/base.html:185 templates/partials/_entry_cards.html:5
+#: templates/base.html:179 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr ""
 
-#: templates/base.html:186
+#: templates/base.html:180
 msgid "Legal notice"
 msgstr ""
 
-#: templates/base.html:187
+#: templates/base.html:181
 msgid "Privacy policy"
 msgstr ""
 
-#: templates/base.html:189 templates/legal/terms_of_use.html:10
+#: templates/base.html:183 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr ""
 
-#: templates/base.html:190
+#: templates/base.html:184
 msgid "Copyright"
 msgstr ""
 
@@ -1456,27 +1455,28 @@ msgstr ""
 msgid "Information according to § 5 TMG (Germany)"
 msgstr ""
 
-#: templates/legal/legal_notice.html:17
+#: templates/legal/legal_notice.html:18
 msgid "Germany"
 msgstr ""
 
-#: templates/legal/legal_notice.html:20
+#: templates/legal/legal_notice.html:21
 msgid "Contact"
 msgstr ""
 
-#: templates/legal/legal_notice.html:22 templates/legal/privacy_policy.html:15
+#: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
+#: templates/legal/privacy_policy.html:15
 msgid "Email"
 msgstr ""
 
-#: templates/legal/legal_notice.html:25
+#: templates/legal/legal_notice.html:26
 msgid "Responsible for content (§ 18 (2) MStV)"
 msgstr ""
 
-#: templates/legal/legal_notice.html:31
+#: templates/legal/legal_notice.html:33
 msgid "Disclaimer"
 msgstr ""
 
-#: templates/legal/legal_notice.html:33
+#: templates/legal/legal_notice.html:35
 msgid ""
 "\n"
 "                Despite careful content control, we assume no liability for "
@@ -1931,10 +1931,6 @@ msgid ""
 "                        My drafts"
 msgstr ""
 
-#: templates/partials/author_info_card.html:21
-msgid "Go to Github Discussions"
-msgstr ""
-
 #: templates/partials/breadcrumbs.html:2
 msgid "Breadcrumbs"
 msgstr ""
@@ -2162,39 +2158,34 @@ msgstr ""
 msgid "No published use cases found."
 msgstr ""
 
-#: usecases/admin.py:172
+#: usecases/admin.py:119
 msgid "Submit for review"
 msgstr ""
 
-#: usecases/admin.py:187
+#: usecases/admin.py:134
 #, python-format
 msgid "%d item(s) moved to review."
 msgstr ""
 
-#: usecases/admin.py:208
+#: usecases/admin.py:155
 #, python-format
 msgid "%d item(s) moved to rework."
 msgstr ""
 
-#: usecases/admin.py:229
-#, python-format
-msgid "%d item(s) published."
-msgstr ""
-
-#: usecases/admin.py:235
+#: usecases/admin.py:185
 msgid "Archive"
 msgstr ""
 
-#: usecases/admin.py:249
+#: usecases/admin.py:199
 #, python-format
 msgid "%d item(s) archived."
 msgstr ""
 
-#: usecases/admin.py:255
+#: usecases/admin.py:205
 msgid "Restore to draft"
 msgstr ""
 
-#: usecases/admin.py:269
+#: usecases/admin.py:219
 #, python-format
 msgid "%d item(s) restored to draft."
 msgstr ""

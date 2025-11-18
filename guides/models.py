@@ -55,7 +55,6 @@ class Guide(EditorialMixin, TranslatableModel, EditorialWorkflowMixin):
         live = self.get_live_value(field, lang)
         if live:
             return live
-        # Fallback auf aktuelle DB/Draft
         return self._current_values_for(lang).get(field)
 
     def get_absolute_url(self, language: str | None = None):
