@@ -249,7 +249,6 @@ STORAGES = {
     },
 }
 
-
 # TinyMCE Config
 
 TINYMCE_DEFAULT_CONFIG = {
