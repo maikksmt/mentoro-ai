@@ -40,14 +40,49 @@
                 your account and managing your content.
             {% endblocktrans %}
         </p>
-        <h2>{% trans "5. Cookies" %}</h2>
+        <h2>{% trans "5. Cookies and tracking technologies" %}</h2>
         <p>
             {% blocktrans %}
-                This website only uses technically necessary cookies required for operation. Tracking or marketing
-                cookies are not used.
+                This website uses cookies to ensure technical functionality and, after your explicit consent, to analyze
+                usage behaviour.
+                The storage and evaluation of non-essential cookies only takes place with your prior consent in
+                accordance with Art. 6(1)(a) GDPR.
+                Consent is managed through the consent management platform Cookiebot by Usercentrics.
             {% endblocktrans %}
         </p>
-        <h2>{% trans "6. Your rights" %}</h2>
+
+        <h2>{% trans "6. Consent management (Cookiebot)" %}</h2>
+        <p>
+            {% blocktrans %}
+                We use the consent management platform Cookiebot by Usercentrics to obtain and manage legally required
+                cookie consent.
+                Cookiebot stores cookies that document your consent status and block all non-essential cookies until you
+                consent.
+                The processing is based on our legal obligation under Art. 6(1)(c) GDPR.
+            {% endblocktrans %}
+        </p>
+        <h2>{% trans "7. Google Analytics 4" %}</h2>
+        <p>
+            {% blocktrans %}
+                If you give your consent to the “Statistics” category, we use Google Analytics 4 to analyze website
+                usage.
+                Google Analytics 4 works with pseudonymized identifiers and does not store full IP addresses.
+                Google Consent Mode v2 ensures that no Analytics cookies are set before consent is given.
+            {% endblocktrans %}
+        </p>
+
+        <p>
+            <strong>{% trans "Legal basis" %}:</strong> {% trans "Your consent under Art. 6(1)(a) GDPR." %}
+        </p>
+
+        <p>
+            <strong>{% trans "Data transfer" %}:</strong> {% blocktrans %}
+            Data may be transferred to Google LLC (USA). Google complies with the EU–US Data Privacy Framework.
+        {% endblocktrans %}
+        </p>
+
+
+        <h2>{% trans "8. Your rights" %}</h2>
         <ul>
             <li>{% trans "Access to your stored data" %}</li>
             <li>{% trans "Rectification of inaccurate data" %}</li>
@@ -57,7 +92,7 @@
             <li>{% trans "Objection to processing" %}</li>
         </ul>
 
-        <h2>{% trans "7. Data security" %}</h2>
+        <h2>{% trans "9. Data security" %}</h2>
         <p>
             {% blocktrans %}
                 We use technical and organizational measures to protect your data against manipulation, loss, or
@@ -65,7 +100,7 @@
                 These measures are continuously adapted in line with technological developments.
             {% endblocktrans %}
         </p>
-        <h2>{% trans "8. Changes to this Privacy Policy" %}</h2>
+        <h2>{% trans "10. Changes to this Privacy Policy" %}</h2>
         <p>
             {% blocktrans %}
                 We reserve the right to update this Privacy Policy to reflect current legal requirements.

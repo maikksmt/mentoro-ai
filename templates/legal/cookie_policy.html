@@ -17,18 +17,50 @@
             {% endblocktrans %}
         </p>
         <h2>{% trans "Cookies we use" %}</h2>
+
+        <p>{% trans "This website uses the following types of cookies:" %}</p>
+
+        <h3>1. {% trans "Technically necessary cookies" %}</h3>
         <ul>
             <li><strong>csrftoken</strong> — {% trans "security cookie for form submissions" %}</li>
             <li><strong>sessionid</strong> — {% trans "stores the current session ID" %}</li>
             <li><strong>preferred_theme</strong> — {% trans "remembers your selected theme (light/dark)" %}</li>
         </ul>
 
+        <h3>2. {% trans "Consent management (Cookiebot)" %}</h3>
+        <p>
+            {% blocktrans %}
+                This website uses the consent management platform Cookiebot by Usercentrics.
+                Cookiebot stores cookies to document and manage your consent status.
+                These cookies are technically necessary to comply with legal consent requirements.
+            {% endblocktrans %}
+        </p>
+        <ul>
+            <li><strong>CookieConsent</strong> — {% trans "stores your consent state (necessary)" %}</li>
+            <li><strong>CookieConsentBulkSetting-* </strong> — {% trans "remembers category choices" %}</li>
+        </ul>
+
+        <h3>3. {% trans "Statistics cookies (Google Analytics 4)" %}</h3>
+        <p>
+            {% blocktrans %}
+                Google Analytics 4 is only activated after explicit consent (“Statistics” category).
+                Before consent, no Analytics cookies are set due to Google Consent Mode v2.
+            {% endblocktrans %}
+        </p>
+
+        <ul>
+            <li><strong>_ga</strong> — {% trans "used to distinguish users (expires after 2 years)" %}</li>
+            <li><strong>_ga_*</strong> — {% trans "used to maintain session state (expires after 1 year)" %}</li>
+        </ul>
+
         <h2>{% trans "Cookie control" %}</h2>
         <p>
             {% blocktrans %}
-                You can delete or block cookies at any time in your browser. The core functionality of the website
-                remains available.
+                You can change or withdraw your consent at any time by opening the Cookiebot settings via the link
+                “Change your consent” at the bottom of the page.
+                Browser-based blocking or deleting of cookies is also possible.
             {% endblocktrans %}
         </p>
+
     </section>
 {% endblock %}
