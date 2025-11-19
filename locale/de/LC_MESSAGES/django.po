@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 22:06+0100\n"
-"PO-Revision-Date: 2025-11-19 22:05+0100\n"
+"POT-Creation-Date: 2025-11-19 22:45+0100\n"
+"PO-Revision-Date: 2025-11-19 22:45+0100\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -1441,11 +1441,15 @@ msgstr "Speichert die aktuelle Sitzungs-ID"
 msgid "remembers your selected theme (light/dark)"
 msgstr "Merkt sich dein ausgewähltes Theme (hell/dunkel)"
 
-#: templates/legal/cookie_policy.html:30
-msgid "Consent management (Cookiebot)"
-msgstr "Zustimmungsmanagement (Cookiebot)"
+#: templates/legal/cookie_policy.html:28
+msgid "remembers your selected language"
+msgstr "Merkt sich deine ausgewählte Sprache"
 
-#: templates/legal/cookie_policy.html:32
+#: templates/legal/cookie_policy.html:31
+msgid "Consent management (Cookiebot)"
+msgstr "Einwilligungsmanagement (Cookiebot)"
+
+#: templates/legal/cookie_policy.html:33
 msgid ""
 "\n"
 "                This website uses the consent management platform Cookiebot "
@@ -1464,19 +1468,19 @@ msgstr ""
 "Diese Cookies sind technisch notwendig, um die gesetzlichen "
 "Einwilligungsvorschriften einzuhalten."
 
-#: templates/legal/cookie_policy.html:39
+#: templates/legal/cookie_policy.html:40
 msgid "stores your consent state (necessary)"
 msgstr "Speichert Ihren Einwilligungsstatus (notwendig)"
 
-#: templates/legal/cookie_policy.html:40
+#: templates/legal/cookie_policy.html:41
 msgid "remembers category choices"
 msgstr "Merkt sich Kategorieauswahl"
 
-#: templates/legal/cookie_policy.html:43
+#: templates/legal/cookie_policy.html:44
 msgid "Statistics cookies (Google Analytics 4)"
 msgstr "Statistik-Cookies (Google Analytics 4)"
 
-#: templates/legal/cookie_policy.html:45
+#: templates/legal/cookie_policy.html:46
 msgid ""
 "\n"
 "                Google Analytics 4 is only activated after explicit consent "
@@ -1490,21 +1494,21 @@ msgstr ""
 "(Kategorie „Statistiken“). Vor der Einwilligung werden aufgrund des Google "
 "Consent Mode v2 keine Analytics-Cookies gesetzt."
 
-#: templates/legal/cookie_policy.html:52
+#: templates/legal/cookie_policy.html:53
 msgid "used to distinguish users (expires after 2 years)"
 msgstr "Wird verwendet, um Benutzer zu unterscheiden (läuft nach 2 Jahren ab)"
 
-#: templates/legal/cookie_policy.html:53
+#: templates/legal/cookie_policy.html:54
 msgid "used to maintain session state (expires after 1 year)"
 msgstr ""
 "Wird verwendet, um den Sitzungsstatus aufrechtzuerhalten (läuft nach 1 Jahr "
 "ab)"
 
-#: templates/legal/cookie_policy.html:56
+#: templates/legal/cookie_policy.html:57
 msgid "Cookie control"
 msgstr "Cookie-Steuerung"
 
-#: templates/legal/cookie_policy.html:58
+#: templates/legal/cookie_policy.html:59
 msgid ""
 "\n"
 "                You can change or withdraw your consent at any time by "
@@ -1759,8 +1763,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Wir verwenden die Consent-Management-Plattform Cookiebot by Usercentrics, um "
-"gesetzlich erforderliche Cookie-Einwilligungen einzuholen und zu "
+"Wir nutzen die Einwilligungsverwaltungsplattform Cookiebot by Usercentrics, "
+"um gesetzlich erforderliche Cookie-Einwilligungen einzuholen und zu "
 "dokumentieren.\n"
 "Cookiebot blockiert alle nicht-essenziellen Cookies, bis Sie eine "
 "entsprechende Einwilligung erteilen.\n"
@@ -1910,7 +1914,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-" Die Inhalte dieser Website dienen ausschließlich Informationszwecken. Eine "
+"Die Inhalte dieser Website dienen ausschließlich Informationszwecken. Eine "
 "kommerzielle Nutzung ohne Zustimmung des Betreibers ist nicht gestattet."
 
 #: templates/legal/terms_of_use.html:25
