@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 21:48+0100\n"
+"POT-Creation-Date: 2025-11-19 22:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1376,11 +1376,15 @@ msgstr ""
 msgid "remembers your selected theme (light/dark)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:30
+#: templates/legal/cookie_policy.html:28
+msgid "remembers your selected language"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:31
 msgid "Consent management (Cookiebot)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:32
+#: templates/legal/cookie_policy.html:33
 msgid ""
 "\n"
 "                This website uses the consent management platform Cookiebot "
@@ -1392,19 +1396,19 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:39
+#: templates/legal/cookie_policy.html:40
 msgid "stores your consent state (necessary)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:40
+#: templates/legal/cookie_policy.html:41
 msgid "remembers category choices"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:43
+#: templates/legal/cookie_policy.html:44
 msgid "Statistics cookies (Google Analytics 4)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:45
+#: templates/legal/cookie_policy.html:46
 msgid ""
 "\n"
 "                Google Analytics 4 is only activated after explicit consent "
@@ -1414,19 +1418,19 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:52
+#: templates/legal/cookie_policy.html:53
 msgid "used to distinguish users (expires after 2 years)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:53
+#: templates/legal/cookie_policy.html:54
 msgid "used to maintain session state (expires after 1 year)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:56
+#: templates/legal/cookie_policy.html:57
 msgid "Cookie control"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:58
+#: templates/legal/cookie_policy.html:59
 msgid ""
 "\n"
 "                You can change or withdraw your consent at any time by "

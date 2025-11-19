@@ -260,7 +260,7 @@
 
     // --- Theme handling via Swap (cookie-aware, system default) ---
     (function () {
-        const THEME_COOKIE = 'theme'; // stores 'mentoroai-light' or 'mentoroai-dark'
+        const THEME_COOKIE = 'preferred_theme'; // stores 'mentoroai-light' or 'mentoroai-dark'
         const COOKIE_MAX_DAYS = 365;
 
         const mq = window.matchMedia('(prefers-color-scheme: dark)');
