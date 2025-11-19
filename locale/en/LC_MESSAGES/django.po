@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 19:33+0100\n"
+"POT-Creation-Date: 2025-11-19 21:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,27 +90,27 @@ msgstr ""
 msgid "Overview of features, prices and alternatives"
 msgstr ""
 
-#: compare/admin.py:33 guides/admin.py:61 prompts/admin.py:51
-#: usecases/admin.py:50
+#: compare/admin.py:33 guides/admin.py:59 prompts/admin.py:51
+#: usecases/admin.py:51
 msgid "Meta"
 msgstr ""
 
-#: compare/admin.py:36 guides/admin.py:78 prompts/admin.py:64
-#: usecases/admin.py:63
+#: compare/admin.py:36 guides/admin.py:76 prompts/admin.py:64
+#: usecases/admin.py:64
 msgid "Routing"
 msgstr ""
 
-#: compare/admin.py:39 guides/admin.py:81 prompts/admin.py:67
-#: usecases/admin.py:66
+#: compare/admin.py:39 guides/admin.py:79 prompts/admin.py:67
+#: usecases/admin.py:67
 msgid "Content (translated)"
 msgstr ""
 
-#: compare/admin.py:42 guides/admin.py:83 prompts/admin.py:69
-#: usecases/admin.py:69
+#: compare/admin.py:42 guides/admin.py:81 prompts/admin.py:69
+#: usecases/admin.py:70
 msgid "These fields are language-specific. Use the language tabs above."
 msgstr ""
 
-#: compare/admin.py:45 guides/admin.py:75
+#: compare/admin.py:45 guides/admin.py:73
 msgid "Relations"
 msgstr ""
 
@@ -119,10 +119,10 @@ msgid "Scoring"
 msgstr ""
 
 #: compare/admin.py:59 compare/admin.py:63 compare/models.py:18
-#: guides/admin.py:102 guides/admin.py:110 guides/models.py:18
-#: guides/models.py:123 guides/models.py:197 prompts/admin.py:100
+#: guides/admin.py:100 guides/admin.py:108 guides/models.py:18
+#: guides/models.py:123 guides/models.py:197 prompts/admin.py:110
 #: prompts/models.py:20 templates/content/editorial/review_queue.html:17
-#: templates/ops/seo_check.html:41 usecases/admin.py:86 usecases/models.py:20
+#: templates/ops/seo_check.html:41 usecases/admin.py:105 usecases/models.py:20
 msgid "Title"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:41 templates/base.html:65
+#: templates/base.html:75 templates/base.html:99
 #: templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:46
 msgid "Comparisons"
@@ -272,50 +272,50 @@ msgstr ""
 msgid "AI Glossary – Terms explained simply"
 msgstr ""
 
-#: guides/admin.py:203
+#: guides/admin.py:200
 msgid "Auto: Change to GuideSection (Inline)"
 msgstr ""
 
-#: guides/admin.py:211
+#: guides/admin.py:208
 msgid "Send to review"
 msgstr ""
 
-#: guides/admin.py:218
+#: guides/admin.py:215
 msgid "You are not authorized to perform this action."
 msgstr ""
 
-#: guides/admin.py:226
+#: guides/admin.py:223
 #, python-format
 msgid "%(n)d Article(s) → Review."
 msgstr ""
 
-#: guides/admin.py:228
+#: guides/admin.py:225
 msgid "Request changes (→ Rework)"
 msgstr ""
 
-#: guides/admin.py:244
+#: guides/admin.py:241
 #, python-format
 msgid "%(n)d Article(s) → Rework."
 msgstr ""
 
-#: guides/admin.py:246
+#: guides/admin.py:243
 msgid "Publish selected Guide(s)"
 msgstr ""
 
-#: guides/admin.py:282
+#: guides/admin.py:279
 msgid "Archiving (Soft Delete)"
 msgstr ""
 
-#: guides/admin.py:301
+#: guides/admin.py:298
 #, python-format
 msgid "%(n)d Article(s) archived."
 msgstr ""
 
-#: guides/admin.py:303
+#: guides/admin.py:300
 msgid "Restore (→ Draft)"
 msgstr ""
 
-#: guides/admin.py:322
+#: guides/admin.py:319
 #, python-format
 msgid "%(n)d Article(s) restored (draft)."
 msgstr ""
@@ -334,7 +334,7 @@ msgid "Guide"
 msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:29 templates/base.html:53
+#: templates/base.html:63 templates/base.html:87
 #: templates/content/home.html:104 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
@@ -388,7 +388,7 @@ msgstr ""
 msgid "Reason (optional)"
 msgstr ""
 
-#: newsletter/views.py:20 templates/base.html:177
+#: newsletter/views.py:20 templates/base.html:213
 msgid "Newsletter"
 msgstr ""
 
@@ -426,57 +426,57 @@ msgstr ""
 msgid "You have been unsubscribed."
 msgstr ""
 
-#: prompts/admin.py:71 usecases/admin.py:72
+#: prompts/admin.py:71 usecases/admin.py:73
 msgid "Internals"
 msgstr ""
 
-#: prompts/admin.py:130
+#: prompts/admin.py:87
 msgid "Auto: Change in the admin form (prompt)"
 msgstr ""
 
-#: prompts/admin.py:136
+#: prompts/admin.py:93
 msgid "Prompt was automatically set to \"Review\" due to changes."
 msgstr ""
 
-#: prompts/admin.py:140
+#: prompts/admin.py:134
 msgid "Submit for Review"
 msgstr ""
 
-#: prompts/admin.py:158
+#: prompts/admin.py:152
 #, python-format
 msgid "%d Article(s) set for review."
 msgstr ""
 
-#: prompts/admin.py:163 usecases/admin.py:140
+#: prompts/admin.py:157 usecases/admin.py:156
 msgid "Request rework"
 msgstr ""
 
-#: prompts/admin.py:181
+#: prompts/admin.py:175
 #, python-format
 msgid "%d Article(s) set to rework."
 msgstr ""
 
-#: prompts/admin.py:186 templates/content/editorial/review_queue.html:37
-#: usecases/admin.py:161
+#: prompts/admin.py:180 templates/content/editorial/review_queue.html:37
+#: usecases/admin.py:179
 msgid "Publish"
 msgstr ""
 
-#: prompts/admin.py:213
+#: prompts/admin.py:207
 msgid "Archive (Soft-Delete)"
 msgstr ""
 
-#: prompts/admin.py:228
+#: prompts/admin.py:222
 #, python-format
 msgid "%d Article(s) archived."
 msgstr ""
 
-#: prompts/admin.py:233
+#: prompts/admin.py:227
 msgid "Restore as draft"
 msgstr ""
 
-#: prompts/admin.py:248
+#: prompts/admin.py:242
 #, python-format
-msgid "%d Article(s) restored (Draft)."
+msgid "%d items(s) restored to draft."
 msgstr ""
 
 #: prompts/models.py:23 usecases/models.py:23
@@ -489,7 +489,7 @@ msgid "Prompt"
 msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:32 templates/base.html:56
+#: templates/base.html:66 templates/base.html:90
 #: templates/content/home.html:105 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
 msgid "Prompts"
@@ -634,92 +634,92 @@ msgstr ""
 msgid "No differences in this language."
 msgstr ""
 
-#: templates/base.html:21
+#: templates/base.html:55
 msgid "Mobile menu"
 msgstr ""
 
-#: templates/base.html:26 templates/base.html:50
+#: templates/base.html:60 templates/base.html:84
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr ""
 
-#: templates/base.html:35 templates/base.html:59
+#: templates/base.html:69 templates/base.html:93
 #: templates/partials/_entry_cards.html:32
 msgid "Use cases"
 msgstr ""
 
-#: templates/base.html:38 templates/base.html:62
+#: templates/base.html:72 templates/base.html:96
 #: templates/content/what-to-find.html:35
 #: templates/partials/_entry_cards.html:39
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:71
+#: templates/base.html:105
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:80
+#: templates/base.html:114
 msgid "Toggle theme"
 msgstr ""
 
-#: templates/base.html:96
+#: templates/base.html:130
 msgid "Language select"
 msgstr ""
 
-#: templates/base.html:126
+#: templates/base.html:161
 msgid "Admin Panel"
 msgstr ""
 
-#: templates/base.html:127 templates/partials/editorial_nav.html:7
+#: templates/base.html:163 templates/partials/editorial_nav.html:7
 msgid "Drafts"
 msgstr ""
 
-#: templates/base.html:129 templates/partials/editorial_nav.html:10
+#: templates/base.html:166 templates/partials/editorial_nav.html:10
 msgid "Reviews"
 msgstr ""
 
-#: templates/base.html:142
+#: templates/base.html:178
 msgid "MentoroAI is currently in public beta"
 msgstr ""
 
-#: templates/base.html:144
+#: templates/base.html:180
 msgid "Some features may change or be incomplete."
 msgstr ""
 
-#: templates/base.html:145
+#: templates/base.html:181
 msgid "Please provide feedback on Github Discussions"
 msgstr ""
 
-#: templates/base.html:152 templates/partials/author_info_card.html:21
+#: templates/base.html:188 templates/partials/author_info_card.html:21
 msgid "Go to Github Discussions"
 msgstr ""
 
-#: templates/base.html:154 templates/partials/features_open.html:98
+#: templates/base.html:190 templates/partials/features_open.html:98
 msgid "Close"
 msgstr ""
 
-#: templates/base.html:162 templates/partials/features_open.html:106
+#: templates/base.html:198 templates/partials/features_open.html:106
 msgid "Close modal"
 msgstr ""
 
-#: templates/base.html:179 templates/partials/_entry_cards.html:5
+#: templates/base.html:215 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr ""
 
-#: templates/base.html:180
+#: templates/base.html:216
 msgid "Legal notice"
 msgstr ""
 
-#: templates/base.html:181
+#: templates/base.html:217
 msgid "Privacy policy"
 msgstr ""
 
-#: templates/base.html:183 templates/legal/terms_of_use.html:10
+#: templates/base.html:219 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr ""
 
-#: templates/base.html:184
+#: templates/base.html:220
 msgid "Copyright"
 msgstr ""
 
@@ -1357,27 +1357,83 @@ msgid "Cookies we use"
 msgstr ""
 
 #: templates/legal/cookie_policy.html:21
-msgid "security cookie for form submissions"
-msgstr ""
-
-#: templates/legal/cookie_policy.html:22
-msgid "stores the current session ID"
+msgid "This website uses the following types of cookies:"
 msgstr ""
 
 #: templates/legal/cookie_policy.html:23
-msgid "remembers your selected theme (light/dark)"
+msgid "Technically necessary cookies"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:25
+msgid "security cookie for form submissions"
 msgstr ""
 
 #: templates/legal/cookie_policy.html:26
+msgid "stores the current session ID"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:27
+msgid "remembers your selected theme (light/dark)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:30
+msgid "Consent management (Cookiebot)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:32
+msgid ""
+"\n"
+"                This website uses the consent management platform Cookiebot "
+"by Usercentrics.\n"
+"                Cookiebot stores cookies to document and manage your consent "
+"status.\n"
+"                These cookies are technically necessary to comply with legal "
+"consent requirements.\n"
+"            "
+msgstr ""
+
+#: templates/legal/cookie_policy.html:39
+msgid "stores your consent state (necessary)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:40
+msgid "remembers category choices"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:43
+msgid "Statistics cookies (Google Analytics 4)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:45
+msgid ""
+"\n"
+"                Google Analytics 4 is only activated after explicit consent "
+"(“Statistics” category).\n"
+"                Before consent, no Analytics cookies are set due to Google "
+"Consent Mode v2.\n"
+"            "
+msgstr ""
+
+#: templates/legal/cookie_policy.html:52
+msgid "used to distinguish users (expires after 2 years)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:53
+msgid "used to maintain session state (expires after 1 year)"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:56
 msgid "Cookie control"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:28
+#: templates/legal/cookie_policy.html:58
 msgid ""
 "\n"
-"                You can delete or block cookies at any time in your browser. "
-"The core functionality of the website\n"
-"                remains available.\n"
+"                You can change or withdraw your consent at any time by "
+"opening the Cookiebot settings via the link\n"
+"                “Change your consent” at the bottom of the page.\n"
+"                Browser-based blocking or deleting of cookies is also "
+"possible.\n"
 "            "
 msgstr ""
 
@@ -1547,51 +1603,111 @@ msgid ""
 msgstr ""
 
 #: templates/legal/privacy_policy.html:43
-msgid "5. Cookies"
+msgid "5. Cookies and tracking technologies"
 msgstr ""
 
 #: templates/legal/privacy_policy.html:45
 msgid ""
 "\n"
-"                This website only uses technically necessary cookies "
-"required for operation. Tracking or marketing\n"
-"                cookies are not used.\n"
+"                This website uses cookies to ensure technical functionality "
+"and, after your explicit consent, to analyze\n"
+"                usage behaviour.\n"
+"                The storage and evaluation of non-essential cookies only "
+"takes place with your prior consent in\n"
+"                accordance with Art. 6(1)(a) GDPR.\n"
+"                Consent is managed through the consent management platform "
+"Cookiebot by Usercentrics.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:50
-msgid "6. Your rights"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:52
-msgid "Access to your stored data"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:53
-msgid "Rectification of inaccurate data"
-msgstr ""
-
 #: templates/legal/privacy_policy.html:54
-msgid "Erasure (\\"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:55
-msgid "Restriction of processing"
+msgid "6. Consent management (Cookiebot)"
 msgstr ""
 
 #: templates/legal/privacy_policy.html:56
+msgid ""
+"\n"
+"                We use the consent management platform Cookiebot by "
+"Usercentrics to obtain and manage legally required\n"
+"                cookie consent.\n"
+"                Cookiebot stores cookies that document your consent status "
+"and block all non-essential cookies until you\n"
+"                consent.\n"
+"                The processing is based on our legal obligation under Art. "
+"6(1)(c) GDPR.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:64
+msgid "7. Google Analytics 4"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:66
+msgid ""
+"\n"
+"                If you give your consent to the “Statistics” category, we "
+"use Google Analytics 4 to analyze website\n"
+"                usage.\n"
+"                Google Analytics 4 works with pseudonymized identifiers and "
+"does not store full IP addresses.\n"
+"                Google Consent Mode v2 ensures that no Analytics cookies are "
+"set before consent is given.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:75
+msgid "Legal basis"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:75
+msgid "Your consent under Art. 6(1)(a) GDPR."
+msgstr ""
+
+#: templates/legal/privacy_policy.html:79
+msgid "Data transfer"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:79
+msgid ""
+"\n"
+"            Data may be transferred to Google LLC (USA). Google complies "
+"with the EU–US Data Privacy Framework.\n"
+"        "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:85
+msgid "8. Your rights"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:87
+msgid "Access to your stored data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:88
+msgid "Rectification of inaccurate data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:89
+msgid "Erasure (\\"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:90
+msgid "Restriction of processing"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:91
 msgid "Data portability"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:57
+#: templates/legal/privacy_policy.html:92
 msgid "Objection to processing"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:60
-msgid "7. Data security"
+#: templates/legal/privacy_policy.html:95
+msgid "9. Data security"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:62
+#: templates/legal/privacy_policy.html:97
 msgid ""
 "\n"
 "                We use technical and organizational measures to protect your "
@@ -1602,11 +1718,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:68
-msgid "8. Changes to this Privacy Policy"
+#: templates/legal/privacy_policy.html:103
+msgid "10. Changes to this Privacy Policy"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:70
+#: templates/legal/privacy_policy.html:105
 msgid ""
 "\n"
 "                We reserve the right to update this Privacy Policy to "
@@ -2158,34 +2274,42 @@ msgstr ""
 msgid "No published use cases found."
 msgstr ""
 
-#: usecases/admin.py:119
+#: usecases/admin.py:89
+msgid "Auto: Change in the admin form (usecase)"
+msgstr ""
+
+#: usecases/admin.py:95
+msgid "Usecase was automatically set to \"Review\" due to changes."
+msgstr ""
+
+#: usecases/admin.py:133
 msgid "Submit for review"
 msgstr ""
 
-#: usecases/admin.py:134
+#: usecases/admin.py:151
 #, python-format
 msgid "%d item(s) moved to review."
 msgstr ""
 
-#: usecases/admin.py:155
+#: usecases/admin.py:174
 #, python-format
 msgid "%d item(s) moved to rework."
 msgstr ""
 
-#: usecases/admin.py:185
+#: usecases/admin.py:206
 msgid "Archive"
 msgstr ""
 
-#: usecases/admin.py:199
+#: usecases/admin.py:221
 #, python-format
 msgid "%d item(s) archived."
 msgstr ""
 
-#: usecases/admin.py:205
+#: usecases/admin.py:226
 msgid "Restore to draft"
 msgstr ""
 
-#: usecases/admin.py:219
+#: usecases/admin.py:241
 #, python-format
 msgid "%d item(s) restored to draft."
 msgstr ""
