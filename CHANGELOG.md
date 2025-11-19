@@ -12,7 +12,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### (New changes are placed here as the beta phase progresses.)
 
-- add missing reversion usage for editorial workflow in usecases app
+- Add missing reversion usage for editorial workflow in usecases app
+- Add Google Analytics to project
+- Add Cookie Banner
+- Preparing for later Google AdSense
 
 ---
 
@@ -20,17 +23,22 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- minor UI updates
+- add impress information
+
+### Changed
+
+- remove jsdeliver CDN for htmx, instead self hosted.
+
+### Fixed
+
 - bugfixes for Comparison Category select dropdown
     - every category were shown twice due to translation query issue
     - the category value causing a server error due to wrong query handling.
     - limit selectable categories to only available categories in available comparisons.
-
-- minor UI updates
 - bugfixes for wrong url links
-- add editorial fix where last published live version was not shown when article is set back to review.
-- add fix for missing compression and versioning of static files
-- add impress information
-- remove jsdeliver CDN for htmx, instead self hosted.
+- editorial fix where last published live version was not shown when article is set back to review.
+- fix for missing compression and versioning of static files
 
 ---
 

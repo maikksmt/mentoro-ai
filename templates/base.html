@@ -11,6 +11,40 @@
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css">
     {% include "partials/_seo_meta.html" %}
     {% block extra_head %}{% endblock %}
+    {% if not debug %}
+        <!-- Cookiebot cookie banner -->
+        <script id="Cookiebot"
+                src="https://consent.cookiebot.com/uc.js"
+                data-cbid="9c77a67f-5158-4c03-bad5-725d6ae4ab7e"
+                data-blockingmode="auto"
+                type="text/javascript"
+                async>
+        </script>
+        <!-- Google tag (gtag.js) Consent Mode defaults (before loading any Google scripts) -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+            });
+            gtag('set', 'ads_data_redaction', true);
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECWRCZVFD1"></script>
+        <script>
+            gtag('js', new Date());
+            gtag('config', 'G-ECWRCZVFD1', {
+                'anonymize_ip': true
+            });
+        </script>
+    {% endif %}
 </head>
 <body class="flex flex-col min-h-screen justify-between bg-base-100 text-base-content">
 
@@ -123,10 +157,13 @@
             <a class="btn btn-ghost text-xl"></a>
         </div>
         <div class="flex-none  my-0 py-0">
-        <a href="/admin" target="_blank" rel="noopener" class="btn btn-sm btn-outline my-0 py-0">{% trans "Admin Panel" %}</a>
-            <a href="{% url 'content:editorial:my_drafts' %}" class="btn btn-sm btn-outline my-0 py-0">{% trans "Drafts" %}</a>
+            <a href="/admin" target="_blank" rel="noopener"
+               class="btn btn-sm btn-outline my-0 py-0">{% trans "Admin Panel" %}</a>
+            <a href="{% url 'content:editorial:my_drafts' %}"
+               class="btn btn-sm btn-outline my-0 py-0">{% trans "Drafts" %}</a>
             {% if request.user|has_group:"editor" or request.user|has_group:"admin" %}
-                <a href="{% url 'content:editorial:review_queue' %}" class="btn btn-sm btn-outline my-0 py-0">{% trans "Reviews" %}</a>
+                <a href="{% url 'content:editorial:review_queue' %}"
+                   class="btn btn-sm btn-outline my-0 py-0">{% trans "Reviews" %}</a>
             {% endif %}
         </div>
     </div>
@@ -149,10 +186,10 @@
         <div class="modal-action">
             <div class="flex gap-3 justify-center items-center">
                 <a class="btn btn-sm btn-info" target="_blank" rel="noopener"
-               href="https://github.com/maikksmt/mentoro-ai/discussions/categories/beta-feedback"> {% trans "Go to Github Discussions" %}</a>
-            <form method="dialog">
-                <button class="btn">{% trans "Close" %}</button>
-            </form>
+                   href="https://github.com/maikksmt/mentoro-ai/discussions/categories/beta-feedback"> {% trans "Go to Github Discussions" %}</a>
+                <form method="dialog">
+                    <button class="btn">{% trans "Close" %}</button>
+                </form>
             </div>
 
         </div>
@@ -188,11 +225,11 @@
                     src="{% static 'img/github-mark-white.png' %}" srcset="{% static 'img/github-mark-white.svg' %}"/>
             </a>
         </nav>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4">
-            <p class="text-xs opacity-70">
-                © {{ now|default:"2025" }} MentoroAI – Made with love for coding
-            </p>
-        </div>
+        <p class="text-xs opacity-80 inline-flex items-center gap-1">
+            © {% now "Y" %} MentoroAI – Made with
+            {% heroicon_solid "heart" size=16 class="text-red-500 inline" %}
+            for coding
+        </p>
     </div>
 </footer>
 
