@@ -55,6 +55,7 @@ urlpatterns += i18n_patterns(
     path("compare/", include("compare.urls")),
     path("what-to-find/", TemplateView.as_view(template_name="content/what-to-find.html"), name="what-to-find"),
     path("newsletter/", include("newsletter.urls")),
+    path("account/", include("accounts.urls")),
     path("accounts/", include("allauth.urls")),
     # path("api/", include("api.urls")),
     path("legal/", include("content.urls_legal")),
