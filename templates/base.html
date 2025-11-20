@@ -6,6 +6,14 @@
     {% load static auth_extras i18n i18n_next %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/img/apple-touch-icon-180.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static '/img/apple-touch-icon-152.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static '/img/apple-touch-icon-120.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static '/img/apple-touch-icon-76.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static '/img/apple-touch-icon-precomposed-180.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
+
     <script src="{% url 'javascript-catalog' %}"></script>
     <script src="{% static 'js/htmx.min.js' %}"></script>
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css">
@@ -151,19 +159,23 @@
     </div>
 </div>
 <!-- Admin NAV -->
-{% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
+{% if request.user.is_authenticated %}
     <div class="navbar my-0 py-0">
         <div class="flex-1  my-0 py-0">
             <a class="btn btn-ghost text-xl"></a>
         </div>
         <div class="flex-none  my-0 py-0">
-            <a href="/admin" target="_blank" rel="noopener"
-               class="btn btn-sm btn-outline my-0 py-0">{% trans "Admin Panel" %}</a>
-            <a href="{% url 'content:editorial:my_drafts' %}"
-               class="btn btn-sm btn-outline my-0 py-0">{% trans "Drafts" %}</a>
-            {% if request.user|has_group:"editor" or request.user|has_group:"admin" %}
-                <a href="{% url 'content:editorial:review_queue' %}"
-                   class="btn btn-sm btn-outline my-0 py-0">{% trans "Reviews" %}</a>
+            <a href="{% url 'account_dashboard' %}"
+               class="btn btn-sm btn-outline my-0 py-0">{% trans "Dashboard" %}</a>
+            {% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
+                <a href="/admin" target="_blank" rel="noopener"
+                   class="btn btn-sm btn-outline my-0 py-0">{% trans "Admin Panel" %}</a>
+                <a href="{% url 'content:editorial:my_drafts' %}"
+                   class="btn btn-sm btn-outline my-0 py-0">{% trans "Drafts" %}</a>
+                {% if request.user|has_group:"editor" or request.user|has_group:"admin" %}
+                    <a href="{% url 'content:editorial:review_queue' %}"
+                       class="btn btn-sm btn-outline my-0 py-0">{% trans "Reviews" %}</a>
+                {% endif %}
             {% endif %}
         </div>
     </div>

@@ -92,9 +92,9 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    "allauth.socialaccount.providers.apple",
     "allauth.socialaccount.providers.google",
     "allauth.socialaccount.providers.github",
+    "allauth.socialaccount.providers.apple",
     "easy_thumbnails",
     "filer",
     "tinymce",
@@ -140,11 +140,12 @@ TEMPLATES = [
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
-                "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.request",
                 "django.contrib.messages.context_processors.messages",
                 "core.seo.context_processor.context_processor",
                 "django.template.context_processors.i18n",
+                
             ],
             "builtins": [
                 "heroicons.templatetags.heroicons",
@@ -362,42 +363,19 @@ AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",  # allauth
 ]
 
-# --- allauth Basiskonfiguration ---
-ACCOUNT_SIGNUP_FIELDS = ["email*", "username*", "password1*", "password2*"]
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # Optionen: "none" | "optional" | "mandatory"
+# --- allauth config ---
+ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # Options: "none" | "optional" | "mandatory"
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_LOGIN_METHODS = {"email", "username"}
+ACCOUNT_LOGIN_METHODS = {"email"}
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
 SOCIALACCOUNT_PROVIDERS = {
-    "google": {
-        "APP": {
-            "client_id": os.getenv("GOOGLE_CLIENT_ID", ""),
-            "secret": os.getenv("GOOGLE_CLIENT_SECRET", ""),
-            "key": "",
-        },
-        "SCOPE": ["profile", "email"],
-        "AUTH_PARAMS": {"access_type": "online"},
-    },
-    "github": {
-        "APP": {
-            "client_id": os.getenv("GITHUB_CLIENT_ID", ""),
-            "secret": os.getenv("GITHUB_CLIENT_SECRET", ""),
-            "key": "",
-        },
-        "SCOPE": ["user:email"],
-    },
-    "apple": {
-        "APP": {
-            "client_id": os.getenv("APPLE_CLIENT_ID", ""),
-            # Das Secret erzeugen wir on-the-fly mit dem Management-Command und
-            # tragen es anschließend im Admin in der SocialApp oder in env ein.
-            "secret": os.getenv("APPLE_CLIENT_SECRET", ""),
-            "key": "",
-        },
-    },
+    "google": {"VERIFIED_EMAIL": True},
+    "github": {"VERIFIED_EMAIL": True},
+    "apple": {"VERIFIED_EMAIL": True},
 }
 
 # E-Mail
