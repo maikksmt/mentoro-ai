@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 23:16+0100\n"
-"PO-Revision-Date: 2025-11-19 23:17+0100\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2025-11-20 23:38+0100\n"
+"PO-Revision-Date: 2025-11-20 23:41+0100\n"
+"Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -157,7 +157,7 @@ msgstr "Vergleich"
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:75 templates/base.html:99
+#: templates/base.html:83 templates/base.html:107
 #: templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:46
 msgid "Comparisons"
@@ -342,7 +342,7 @@ msgid "Guide"
 msgstr "Leitfaden"
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:63 templates/base.html:87
+#: templates/base.html:71 templates/base.html:95
 #: templates/content/home.html:104 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
@@ -397,7 +397,7 @@ msgstr "E-Mail"
 msgid "Reason (optional)"
 msgstr "Grund (optional)"
 
-#: newsletter/views.py:20 templates/base.html:213
+#: newsletter/views.py:20 templates/base.html:225
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -501,7 +501,7 @@ msgid "Prompt"
 msgstr "Prompt"
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:66 templates/base.html:90
+#: templates/base.html:74 templates/base.html:98
 #: templates/content/home.html:105 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25
 #: templates/prompts/prompt_list.html:6
@@ -516,53 +516,318 @@ msgstr "Prompts · MentoroAI"
 msgid "Curated AI prompts with review/publish workflow."
 msgstr "Kuratierte KI-Prompts mit Überprüfungs-/Veröffentlichungs-Workflow."
 
-#: templates/account/login.html:2 templates/account/login.html:15
-#: templates/account/login.html:35 templates/partials/author_info_card.html:22
+#: templates/account/email.html:4
+msgid "Email Addresses"
+msgstr "E-Mail-Adressen"
+
+#: templates/account/email.html:17
+msgid "Email addresses"
+msgstr "E-Mail-Adressen"
+
+#: templates/account/email.html:19
+msgid "Manage the email addresses linked to your account."
+msgstr "Verwalten Sie die mit Ihrem Konto verknüpften E-Mail-Adressen."
+
+#: templates/account/email.html:32
+msgid "Primary"
+msgstr "Primär"
+
+#: templates/account/email.html:35
+msgid "Verified"
+msgstr "Verifiziert"
+
+#: templates/account/email.html:37
+msgid "Unverified"
+msgstr "Nicht verifiziert"
+
+#: templates/account/email.html:45
+msgid "You have no email addresses associated with your account yet."
+msgstr ""
+"Du hast noch keine E-Mail-Adressen, die mit Ihrem Konto verknüpft sind."
+
+#: templates/account/email.html:53
+msgid "Add new email address"
+msgstr "Neue E-Mail-Adresse hinzufügen"
+
+#: templates/account/email_confirm.html:4
+#: templates/account/email_confirm.html:45
+#, fuzzy
+#| msgid "Confirmation failed"
+msgid "Confirm email"
+msgstr "Bestätigung fehlgeschlagen"
+
+#: templates/account/email_confirm.html:13
+msgid "Confirm your email address to activate your MentoroAI account."
+msgstr ""
+
+#: templates/account/email_confirm.html:27
+#, fuzzy
+#| msgid "Confirm your subscription"
+msgid "Confirm your email"
+msgstr "Bestätige dein Abonnement"
+
+#: templates/account/email_confirm.html:36
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                        No posts in review process\n"
+#| "                                    "
+msgid ""
+"\n"
+"                            Please confirm that <strong>%(email)s</strong> is your email address.\n"
+"                        "
+msgstr ""
+"\n"
+" Keine Beiträge im Review-Prozess"
+
+#: templates/account/email_confirm.html:51
+#, fuzzy
+#| msgid "This confirmation link is invalid or has already been used."
+msgid ""
+"This email confirmation link is invalid or has expired. Please request a new"
+" confirmation email."
+msgstr "Der Bestätigungslink ist ungültig oder wurde bereits verwendet."
+
+#: templates/account/email_confirm.html:57
+#: templates/account/verification_sent.html:52
+msgid "Manage email addresses"
+msgstr ""
+
+#: templates/account/email_confirm.html:61
+#: templates/account/verification_sent.html:48
+#, fuzzy
+#| msgid "Back to top"
+msgid "Back to login"
+msgstr "Zurück nach oben"
+
+#: templates/account/login.html:4 templates/account/login.html:100
+#: templates/account/password_reset_from_key_done.html:23
+#: templates/partials/author_info_card.html:22
 msgid "Login"
 msgstr "Login"
 
-#: templates/account/login.html:8
+#: templates/account/login.html:10
 msgid "Login for MentoroAI."
 msgstr "Login für MentoroAI."
 
-#: templates/account/login.html:23
+#: templates/account/login.html:19
+msgid "Welcome back"
+msgstr "Willkommen zurück"
+
+#: templates/account/login.html:21
+msgid "Log in to access your guides, prompts and saved content."
+msgstr ""
+
+#: templates/account/login.html:40
+#, fuzzy
+#| msgid "Login with Google"
+msgid "Continue with Google"
+msgstr "Mit Google anmelden"
+
+#: templates/account/login.html:52
+#, fuzzy
+#| msgid "Signup with GitHub"
+msgid "Continue with GitHub"
+msgstr "Mit GitHub registrieren"
+
+#: templates/account/login.html:64
+#, fuzzy
+#| msgid "Login with Apple"
+msgid "Continue with Apple"
+msgstr "Mit Apple anmelden"
+
+#: templates/account/login.html:72
+msgid "or continue with e-mail"
+msgstr ""
+
+#: templates/account/login.html:81
 msgid "eMail or username"
 msgstr "E-Mail oder Benutzername"
 
-#: templates/account/login.html:27
+#: templates/account/login.html:88
 msgid "Password"
 msgstr "Passwort"
 
-#: templates/account/login.html:32
+#: templates/account/login.html:91
 msgid "Forgot your password?"
 msgstr "Passwort vergessen?"
 
-#: templates/account/login.html:36
-msgid "Sign up for free"
-msgstr "Kostenlos registrieren"
+#: templates/account/login.html:104
+#, fuzzy
+#| msgid "Guides · MentoroAI"
+msgid "New to MentoroAI?"
+msgstr "Leitfäden · MentoroAI"
 
-#: templates/account/logout.html:2 templates/account/logout.html:15
-#: templates/account/logout.html:19
+#: templates/account/login.html:109
+#, fuzzy
+#| msgid "Create Account"
+msgid "Create a free account"
+msgstr "Benutzerkonto erstellen"
+
+#: templates/account/logout.html:4 templates/account/logout.html:20
+#: templates/account/logout.html:32
 msgid "Logout"
 msgstr "Logout"
 
-#: templates/account/logout.html:8
+#: templates/account/logout.html:10
 msgid "Logout for MentoroAI."
 msgstr "Logout für MentoroAI."
 
-#: templates/account/logout.html:18
-msgid "Do you really want to logout?"
+#: templates/account/logout.html:22
+#, fuzzy
+#| msgid "Do you really want to logout?"
+msgid "Do you really want to logout from MentoroAI?"
 msgstr "Möchtest du dich wirklich abmelden?"
 
-#: templates/account/signup.html:2 templates/account/signup.html:34
+#: templates/account/logout.html:36
+#, fuzzy
+#| msgid "Back to top"
+msgid "Back to homepage"
+msgstr "Zurück nach oben"
+
+#: templates/account/password_change.html:4
+#, fuzzy
+#| msgid "Password"
+msgid "Change Password"
+msgstr "Passwort"
+
+#: templates/account/password_change.html:17
+#, fuzzy
+#| msgid "Change status"
+msgid "Change password"
+msgstr "Status ändern"
+
+#: templates/account/password_change.html:37
+#: templates/account/password_reset_from_key.html:44
+msgid "Save new password"
+msgstr ""
+
+#: templates/account/password_reset.html:4
+#, fuzzy
+#| msgid "Password"
+msgid "Reset Password"
+msgstr "Passwort"
+
+#: templates/account/password_reset.html:10
+#, fuzzy
+#| msgid "Forgot your password?"
+msgid "Reset your password."
+msgstr "Passwort vergessen?"
+
+#: templates/account/password_reset.html:19
+#, fuzzy
+#| msgid "Forgot your password?"
+msgid "Reset your password"
+msgstr "Passwort vergessen?"
+
+#: templates/account/password_reset.html:21
+#, fuzzy
+#| msgid "Enter your email address to unsubscribe from future emails."
+msgid "Enter your email address and we will send you a reset link."
+msgstr ""
+"Gib deine E-Mail-Adresse ein, um dich von zukünftigen E-Mails abzumelden."
+
+#: templates/account/password_reset.html:33
+#: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
+#: templates/legal/privacy_policy.html:15
+msgid "Email"
+msgstr "E-Mail"
+
+#: templates/account/password_reset.html:40
+msgid "Send reset link"
+msgstr ""
+
+#: templates/account/password_reset_done.html:4
+msgid "Password Reset Sent"
+msgstr ""
+
+#: templates/account/password_reset_done.html:17
+#: templates/account/verification_sent.html:28
+msgid "Check your inbox"
+msgstr ""
+
+#: templates/account/password_reset_done.html:19
+msgid ""
+"If an account exists with the email you entered, you will receive a password"
+" reset link shortly."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:4
+#, fuzzy
+#| msgid "Password"
+msgid "Set New Password"
+msgstr "Passwort"
+
+#: templates/account/password_reset_from_key.html:17
+msgid "Set a new password"
+msgstr "Ein neues Passwort festlegen"
+
+#: templates/account/password_reset_from_key.html:24
+#, fuzzy
+#| msgid "This confirmation link is invalid or has already been used."
+msgid "This password reset link is invalid or has expired."
+msgstr "Der Bestätigungslink ist ungültig oder wurde bereits verwendet."
+
+#: templates/account/password_reset_from_key.html:28
+#, fuzzy
+#| msgid "Request rework"
+msgid "Request a new reset link"
+msgstr "Nacharbeit anfordern"
+
+#: templates/account/password_reset_from_key_done.html:4
+msgid "Password Reset Complete"
+msgstr "Passwort zurücksetzen abgeschlossen"
+
+#: templates/account/password_reset_from_key_done.html:17
+#, fuzzy
+#| msgid "Password"
+msgid "Password changed"
+msgstr "Passwort"
+
+#: templates/account/password_reset_from_key_done.html:19
+msgid ""
+"Your password has been updated. You can now log in with your new password."
+msgstr ""
+
+#: templates/account/signup.html:4 templates/account/signup.html:101
 msgid "Signup"
 msgstr "Registrieren"
 
-#: templates/account/signup.html:15
-msgid "Create Account"
+#: templates/account/signup.html:19
+#, fuzzy
+#| msgid "Create Account"
+msgid "Create your MentoroAI account"
 msgstr "Benutzerkonto erstellen"
 
-#: templates/account/signup.html:30
+#: templates/account/signup.html:21
+msgid "Create an account to save your favorite guides, prompts and tools."
+msgstr ""
+
+#: templates/account/signup.html:40
+#, fuzzy
+#| msgid "Signup with Google"
+msgid "Sign up with Google"
+msgstr "Mit Google registrieren"
+
+#: templates/account/signup.html:52
+#, fuzzy
+#| msgid "Signup with GitHub"
+msgid "Sign up with GitHub"
+msgstr "Mit GitHub registrieren"
+
+#: templates/account/signup.html:64
+#, fuzzy
+#| msgid "Signup with Apple"
+msgid "Sign up with Apple"
+msgstr "Mit Apple registrieren"
+
+#: templates/account/signup.html:72
+#, fuzzy
+#| msgid "Signup with Apple"
+msgid "or sign up with e-mail"
+msgstr "Mit Apple registrieren"
+
+#: templates/account/signup.html:95
 msgid ""
 "Please confirm your email address. Your account will then be activated by an\n"
 "                            administrator."
@@ -570,9 +835,33 @@ msgstr ""
 "Bitte bestätige deine E-Mail-Adresse. Dein Konto wird anschließend von einem"
 " Administrator aktiviert."
 
-#: templates/account/signup.html:36
-msgid "I have an account already"
+#: templates/account/signup.html:107
+#, fuzzy
+#| msgid "I have an account already"
+msgid "I already have an account"
 msgstr "Ich habe bereits ein Benutzerkonto"
+
+#: templates/account/verification_sent.html:5
+msgid "Email verification sent"
+msgstr ""
+
+#: templates/account/verification_sent.html:14
+msgid "We have sent you an email with a confirmation link."
+msgstr ""
+
+#: templates/account/verification_sent.html:31
+msgid "We have sent a verification link to your email address."
+msgstr ""
+
+#: templates/account/verification_sent.html:38
+msgid ""
+"Please click the link in the email to confirm your address and\n"
+"                        activate your MentoroAI account."
+msgstr ""
+
+#: templates/account/verification_sent.html:42
+msgid "If you do not see the email, please check your spam folder."
+msgstr ""
 
 #: templates/admin/guides/guide/change_form.html:9
 #: templates/admin/prompts/prompt/change_form.html:10
@@ -648,92 +937,106 @@ msgstr "Entwurf vs. Live"
 msgid "No differences in this language."
 msgstr "Keine Unterschiede in dieser Sprache."
 
-#: templates/base.html:55
+#: templates/allauth/layouts/manage.html:10
+#, fuzzy
+#| msgid "Create Account"
+msgid "My Account"
+msgstr "Benutzerkonto erstellen"
+
+#: templates/allauth/layouts/manage.html:15
+msgid "Manage your MentoroAI account settings."
+msgstr ""
+
+#: templates/base.html:63
 msgid "Mobile menu"
 msgstr "Mobiles Menü"
 
-#: templates/base.html:60 templates/base.html:84
+#: templates/base.html:68 templates/base.html:92
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr "Glossar"
 
-#: templates/base.html:69 templates/base.html:93
+#: templates/base.html:77 templates/base.html:101
 #: templates/partials/_entry_cards.html:32
 msgid "Use cases"
 msgstr "Anwendungsfälle"
 
-#: templates/base.html:72 templates/base.html:96
+#: templates/base.html:80 templates/base.html:104
 #: templates/content/what-to-find.html:35
 #: templates/partials/_entry_cards.html:39
 msgid "Tools"
 msgstr "Tools"
 
-#: templates/base.html:105
+#: templates/base.html:113
 msgid "Search"
 msgstr "Suche"
 
-#: templates/base.html:114
+#: templates/base.html:122
 msgid "Toggle theme"
 msgstr "Theme wechseln"
 
-#: templates/base.html:130
+#: templates/base.html:138
 msgid "Language select"
 msgstr "Sprachauswahl"
 
-#: templates/base.html:161
+#: templates/base.html:169
+msgid "Dashboard"
+msgstr ""
+
+#: templates/base.html:172
 msgid "Admin Panel"
 msgstr "Admin-Panel"
 
-#: templates/base.html:163 templates/partials/editorial_nav.html:7
+#: templates/base.html:174 templates/partials/editorial_nav.html:7
 msgid "Drafts"
 msgstr "Entwürfe"
 
-#: templates/base.html:166 templates/partials/editorial_nav.html:10
+#: templates/base.html:177 templates/partials/editorial_nav.html:10
 msgid "Reviews"
 msgstr "Überprüfungen"
 
-#: templates/base.html:178
+#: templates/base.html:190
 msgid "MentoroAI is currently in public beta"
 msgstr "MentoroAI befindet sich derzeit in der öffentlichen Beta"
 
-#: templates/base.html:180
+#: templates/base.html:192
 msgid "Some features may change or be incomplete."
 msgstr "Einige Funktionen können sich ändern oder unvollständig sein."
 
-#: templates/base.html:181
+#: templates/base.html:193
 msgid "Please provide feedback on Github Discussions"
 msgstr "Bitte sende Feedback auf Github Diskussions"
 
-#: templates/base.html:188 templates/partials/author_info_card.html:21
+#: templates/base.html:200 templates/partials/author_info_card.html:21
 msgid "Go to Github Discussions"
 msgstr "Gehe zu Github-Diskussionen"
 
-#: templates/base.html:190 templates/partials/features_open.html:98
+#: templates/base.html:202 templates/partials/features_open.html:98
 msgid "Close"
 msgstr "Schließen"
 
-#: templates/base.html:198 templates/partials/features_open.html:106
+#: templates/base.html:210 templates/partials/features_open.html:106
 msgid "Close modal"
 msgstr "Modal schließen"
 
-#: templates/base.html:215 templates/partials/_entry_cards.html:5
+#: templates/base.html:227 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr "Was kann ich auf MentoroAI finden?"
 
-#: templates/base.html:216
+#: templates/base.html:228
 msgid "Legal notice"
 msgstr "Impressum"
 
-#: templates/base.html:217
+#: templates/base.html:229
 msgid "Privacy policy"
 msgstr "Datenschutzerklärung"
 
-#: templates/base.html:219 templates/legal/terms_of_use.html:10
+#: templates/base.html:231 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
-#: templates/base.html:220
+#: templates/base.html:232
 msgid "Copyright"
 msgstr "Urheberrecht"
 
@@ -1577,11 +1880,6 @@ msgstr "Deutschland"
 #: templates/legal/legal_notice.html:21
 msgid "Contact"
 msgstr "Kontakt"
-
-#: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
-#: templates/legal/privacy_policy.html:15
-msgid "Email"
-msgstr "E-Mail"
 
 #: templates/legal/legal_notice.html:26
 msgid "Responsible for content (§ 18 (2) MStV)"
@@ -2456,6 +2754,9 @@ msgstr "Anwendungsfälle · MentoroAI"
 msgid "Discover how people used ai in real usecases"
 msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
+#~ msgid "Sign up for free"
+#~ msgstr "Kostenlos registrieren"
+
 #~ msgid "Erasure (\\"
 #~ msgstr "Löschung (\\"
 
@@ -2764,14 +3065,8 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ msgid "Direct comparison – strengths, weaknesses and conclusion."
 #~ msgstr "Direktvergleich – Stärken, Schwächen und Fazit."
 
-#~ msgid "Login with Google"
-#~ msgstr "Mit Google anmelden"
-
 #~ msgid "Login with Github"
 #~ msgstr "Mit GitHub anmelden"
-
-#~ msgid "Login with Apple"
-#~ msgstr "Mit Apple anmelden"
 
 #~ msgid ""
 #~ "Bitte bestätige deine E-Mail. Dein Konto wird danach durch einen Admin\n"
@@ -2782,15 +3077,6 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid "or"
 #~ msgstr "oder"
-
-#~ msgid "Signup with Google"
-#~ msgstr "Mit Google registrieren"
-
-#~ msgid "Signup with GitHub"
-#~ msgstr "Mit GitHub registrieren"
-
-#~ msgid "Signup with Apple"
-#~ msgstr "Mit Apple registrieren"
 
 #~ msgid ""
 #~ "Sign up as an\n"
