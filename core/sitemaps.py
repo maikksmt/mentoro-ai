@@ -97,10 +97,7 @@ class GlossaryDetailSitemap(Sitemap):
         return GlossaryTerm.objects.all().only("slug", "language", "updated_at")
 
     def location(self, obj: GlossaryTerm):
-        base = reverse("glossary:detail", kwargs={"slug": obj.slug})
-        if obj.language and obj.language.lower() != DEFAULT_LANG:
-            return f"{base}?lang={obj.language.lower()}"
-        return base
+        return obj.get_absolute_url()
 
     def lastmod(self, obj: GlossaryTerm):
         return obj.updated_at
