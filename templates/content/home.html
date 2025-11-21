@@ -5,42 +5,43 @@
 {% block content %}
     <!-- Hero / Intro -->
     <section class="container mx-auto">
-    <div class="hero min-h-[40vh]">
-        <div class="hero-content text-center">
-            <div class="max-w-2xl mx-auto">
-                <h1 class="text-3xl md:text-4xl font-bold pb-4">
-                    MentoroAI - {% trans "Understand AI tools and use them effectively" %}
-                </h1>
-                <p class="text-base md:text-lg opacity-80">
-                   {% blocktrans %} Find the right tools, compare real alternatives, and follow practical guides and prompts to apply AI confidently in everyday life.{% endblocktrans %}
-                </p>
-                <div class="flex flex-wrap gap-3 mt-6 justify-center items-center">
-                    <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg">
-                        {% blocktrans %}Start with the Starter Guide{% endblocktrans %}
-                    </a>
-                    <a href="{% url 'catalog:list' %}" class="btn btn-outline">
-                        {% blocktrans %}Discover AI Tools{% endblocktrans %}
-                    </a>
+        <div class="hero min-h-[40vh]">
+            <div class="hero-content text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h1 class="text-3xl md:text-4xl font-bold pb-4">
+                        MentoroAI - {% trans "Understand AI tools and use them effectively" %}
+                    </h1>
+                    <p class="text-base md:text-lg opacity-80">
+                        {% blocktrans %} Find the right tools, compare real alternatives, and follow practical guides
+                            and prompts to apply AI confidently in everyday life.{% endblocktrans %}
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-6 justify-center items-center">
+                        <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg">
+                            {% blocktrans %}Begin with the Starter Guide{% endblocktrans %}
+                        </a>
+                        <a href="{% url 'catalog:list' %}" class="btn btn-outline">
+                            {% blocktrans %}Discover AI Tools{% endblocktrans %}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Info Cards -->
-{#    <section class="container mx-auto mt-4">#}
-{#        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">#}
-{#            {% include "partials/starter_guide_card.html" %}#}
-{#            {% include "partials/author_info_card.html" %}#}
-{#        </div>#}
-{#    </section>#}
+    {#    <section class="container mx-auto mt-4">#}
+    {#        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">#}
+    {#            {% include "partials/starter_guide_card.html" %}#}
+    {#            {% include "partials/author_info_card.html" %}#}
+    {#        </div>#}
+    {#    </section>#}
 
     <!-- Entry Cards -->
     {% include "partials/_entry_cards.html" with card=c %}
-<section class="container mx-auto mt-4">
+    <section class="container mx-auto mt-4">
 
-{#            {% include "partials/starter_guide_card.html" %}#}
-            {% include "partials/author_info_card.html" %}
+        {#            {% include "partials/starter_guide_card.html" %}#}
+        {% include "partials/author_info_card.html" %}
 
     </section>
     <!-- Featured Tools -->
@@ -122,7 +123,7 @@
     <!-- Open the modal using ID.showModal() method -->
     <div class="fab">
         <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()">
-            ?
+            {% heroicon_outline "information-circle" size=46 %}
         </button>
     </div>
     {% include "partials/features_open.html" %}

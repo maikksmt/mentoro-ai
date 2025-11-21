@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Signups closed" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-md p-4">
+        <div class="card bg-base-100 shadow">
+            <div class="card-body items-center text-center gap-3">
+                <div class="rounded-full bg-warning/10 p-3">
+                    {% heroicon_outline "exclamation-triangle" class="w-6 h-6 text-warning" %}
+                </div>
+                <h1 class="text-2xl font-bold">
+                    {% trans "New registrations are currently closed" %}
+                </h1>
+                <p class="text-sm opacity-70">
+                    {% trans "We are not accepting new signups without invitation at the moment. Please try again later." %}
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,6 @@
+# core/sitemaps.py (Pfad an dein Projekt anpassen)
+
 from django.contrib.sitemaps import Sitemap
-from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import get_language
 
@@ -13,65 +14,58 @@ from usecases.models import UseCase
 DEFAULT_LANG = "de"
 
 
-class _BasePublishableSitemap(Sitemap):
+class BasePublishableSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.8
 
     def lastmod(self, obj):
-        return getattr(obj, "updated_at", None) or getattr(obj, "published_at", None) or timezone.now()
-
-
-class GuideSitemap(_BasePublishableSitemap):
-    def items(self):
-        return Guide.published.all()
-
-    def location(self, obj):
-        return obj.get_absolute_url()
-
-
-class PromptSitemap(_BasePublishableSitemap):
-    def items(self):
-        return Prompt.published.all().order_by("pk")
+        for field in (
+                "last_published_at",
+                "updated_at",
+                "modified",
+                "created",
+                "created_at",
+        ):
+            value = getattr(obj, field, None)
+            if value:
+                return value
+        return timezone.now()
 
     def location(self, obj):
         return obj.get_absolute_url()
 
 
-class UseCaseSitemap(_BasePublishableSitemap):
+class GuideSitemap(BasePublishableSitemap):
     def items(self):
-        return UseCase.published.all().order_by("pk")
-
-    def location(self, obj):
-        return obj.get_absolute_url()
+        manager = getattr(Guide, "published", None)
+        return (manager or Guide.objects).all()
 
 
-class ComparisonSitemap(_BasePublishableSitemap):
-    changefreq = "weekly"
-    priority = 0.5
-
+class PromptSitemap(BasePublishableSitemap):
     def items(self):
-        return Comparison.published.all().order_by("pk")
-
-    def location(self, obj):
-        return f"/compare/{obj.slug}/"
+        manager = getattr(Prompt, "published", None)
+        return (manager or Prompt.objects).all()
 
 
-class ToolSitemap(Sitemap):
+class UseCaseSitemap(BasePublishableSitemap):
+    def items(self):
+        manager = getattr(UseCase, "published", None)
+        return (manager or UseCase.objects).all()
+
+
+class ComparisonSitemap(BasePublishableSitemap):
+    def items(self):
+        manager = getattr(Comparison, "published", None)
+        return (manager or Comparison.objects).all()
+
+
+class ToolSitemap(BasePublishableSitemap):
     changefreq = "weekly"
     priority = 0.6
 
     def items(self):
-        lang = get_language()
-        return (Tool.objects.language(lang)
-                .filter(published_at__isnull=False, published_at__lte=timezone.now(), )
-                .translated(lang)
-                )
-
-    def lastmod(self, obj):
-        return getattr(obj, "updated_at", None)
-
-    def location(self, obj):
-        return obj.get_absolute_url()
+        manager = getattr(Tool, "published", None)
+        return (manager or Tool.objects).all()
 
 
 class GlossaryIndexSitemap(Sitemap):
@@ -79,42 +73,33 @@ class GlossaryIndexSitemap(Sitemap):
     priority = 0.6
 
     def items(self):
-        return ["glossary:list"]
+        # Dummy-Item, URL wird nur aus Sprache gebaut
+        return ["index"]
 
     def location(self, item):
-        return reverse(item)
-
-    def lastmod(self, item):
-        latest = GlossaryTerm.objects.order_by("-updated_at").first()
-        return latest.updated_at if latest else None
+        lang = get_language() or DEFAULT_LANG
+        return f"/{lang}/glossary/"
 
 
-class GlossaryDetailSitemap(Sitemap):
-    changefreq = "weekly"
+class GlossaryTermSitemap(BasePublishableSitemap):
     priority = 0.7
 
     def items(self):
-        return GlossaryTerm.objects.all().only("slug", "language", "updated_at")
-
-    def location(self, obj: GlossaryTerm):
-        return obj.get_absolute_url()
-
-    def lastmod(self, obj: GlossaryTerm):
-        return obj.updated_at
+        lang = get_language() or DEFAULT_LANG
+        manager = getattr(GlossaryTerm, "published", None)
+        qs = (manager or GlossaryTerm.objects).filter(language=lang)
+        return qs
 
 
-class LegalStaticSitemap(Sitemap):
+class LegalSitemap(Sitemap):
     changefreq = "monthly"
     priority = 0.3
 
     def items(self):
-        return [
-            "/en/legal/legal/",
-            "/en/legal/privacy/",
-            "/en/legal/cookies/",
-            "/en/legal/terms/",
-            "/en/legal/copyright/",
-        ]
+        # Suffixe relativ zu /<lang>/legal/
+        return ["legal", "privacy", "cookies", "terms", "copyright"]
 
     def location(self, item):
-        return item
+        lang = get_language() or DEFAULT_LANG
+        # -> /en/legal/privacy/, /de/legal/privacy/ etc.
+        return f"/{lang}/legal/{item}/"

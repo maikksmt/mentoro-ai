@@ -8,17 +8,18 @@ from django.urls import include, path, re_path
 from django.views.generic import TemplateView
 from django.views.i18n import JavaScriptCatalog
 
+from accounts.views import AccountDashboardView
 from content.views.seo_check import seo_check_view
 from content.views.uploads import tinymce_image_list, tinymce_upload
 from core.sitemaps import (
-    GlossaryDetailSitemap,
-    GlossaryIndexSitemap,
     GuideSitemap,
     PromptSitemap,
     UseCaseSitemap,
-    ToolSitemap,
     ComparisonSitemap,
-    LegalStaticSitemap,
+    ToolSitemap,
+    GlossaryIndexSitemap,
+    GlossaryTermSitemap,
+    LegalSitemap,
 )
 from core.views_i18n import set_language_smart
 
@@ -26,11 +27,11 @@ sitemaps = {
     "guides": GuideSitemap,
     "prompts": PromptSitemap,
     "usecases": UseCaseSitemap,
-    "tools": ToolSitemap,
     "comparisons": ComparisonSitemap,
+    "tools": ToolSitemap,
     "glossary-index": GlossaryIndexSitemap,
-    "glossary-terms": GlossaryDetailSitemap,
-    "legal-static": LegalStaticSitemap,
+    "glossary-terms": GlossaryTermSitemap,
+    "legal": LegalSitemap,
 }
 
 urlpatterns = [
@@ -43,6 +44,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("ops/seo-check/", seo_check_view, name="ops_seo_check"),
     path("health/", lambda request: HttpResponse("OK"), name="healthcheck"),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain", ),
+         name="robots", ),
 ]
 
 urlpatterns += i18n_patterns(
@@ -55,17 +58,12 @@ urlpatterns += i18n_patterns(
     path("compare/", include("compare.urls")),
     path("what-to-find/", TemplateView.as_view(template_name="content/what-to-find.html"), name="what-to-find"),
     path("newsletter/", include("newsletter.urls")),
-    path("account/", include("accounts.urls")),
+    path("account/dashboard/", AccountDashboardView.as_view(), name="account_dashboard"),
     path("accounts/", include("allauth.urls")),
     # path("api/", include("api.urls")),
     path("legal/", include("content.urls_legal")),
-)
-
-urlpatterns += [
     path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap", ),
-    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain", ),
-         name="robots", ),
-]
+)
 
 if "rosetta" in settings.INSTALLED_APPS:
     urlpatterns += [re_path(r"^rosetta/", include("rosetta.urls"))]

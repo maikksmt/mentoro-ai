@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n widget_tweaks %}
+
+{% block title %}
+    <title>{% trans "Change e-mail address" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-md p-4">
+        <div class="flex flex-col items-center mb-6 gap-2">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "envelope" class="w-6 h-6 text-primary" %}
+            </div>
+            <h1 class="text-2xl font-bold text-center">
+                {% trans "Change your e-mail address" %}
+            </h1>
+            <p class="text-sm opacity-70 text-center">
+                {% trans "Update the e-mail address used for your MentoroAI account." %}
+            </p>
+        </div>
+
+        <div class="card bg-base-100 shadow">
+            <div class="card-body">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+
+                    {% for field in form %}
+                        <div class="form-control mb-3">
+                            <label class="label">
+                                <span class="label-text">{{ field.label }}</span>
+                            </label>
+                            {{ field|add_class:"input input-bordered w-full" }}
+                            {{ field.errors }}
+
+                            {% if field.help_text %}
+                                <label class="label">
+                                <span class="label-text-alt opacity-70 whitespace-normal break-words">
+                                    {{ field.help_text }}
+                                </span>
+                                </label>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-primary w-full">
+                        {% heroicon_outline "check" class="w-5 h-5 mr-2" %}
+                        <span>{% trans "Save e-mail" %}</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

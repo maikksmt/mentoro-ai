@@ -2,31 +2,56 @@
 {% load i18n static %}
 <div class="card border rounded-md shadow-lg items-center max-w-2xl mx-auto">
     <div class="card-body">
-        <h2 class="card-title">{% blocktrans %}Participate as an author{% endblocktrans %} ✍️</h2>
+        <h2 class="card-title">{% blocktrans %}Become an author on MentoroAI{% endblocktrans %} ✍️</h2>
         <p>
-            {% blocktrans %}Want to publish guides, use cases, or prompts?{% endblocktrans %}<br>
-                {% blocktrans %}Author accounts are in private beta. If you’re interested, please contact us on GitHub.{% endblocktrans %}
-
+            {% blocktrans %}Share your knowledge and help others understand AI{% endblocktrans %}
+            <br>
+            {% if ACCOUNT_SIGNUP_ENABLED %}
+                {% blocktrans %}
+                    Want to publish guides, use cases or prompts?
+                    Create a free account and start contributing your own content.
+                    Your ideas can help thousands of users learn AI faster.
+                {% endblocktrans %}
+            {% else %}
+                {% blocktrans %}
+                    Author accounts are currently limited.
+                    We’re onboarding new authors step by step.
+                    If you’re interested in joining early, feel free to reach out on GitHub.
+                {% endblocktrans %}
+            {% endif %}
         </p>
         <div class="card-actions justify-center mt-4">
             {% if request.user.is_authenticated %}
                 {% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
+                    <h3 class="text-lg font-semibold mb-4">
+                        {% blocktrans %}Access your drafts and continue creating new content.{% endblocktrans %}
+                    </h3>
                     <a href="{% url 'content:editorial:my_drafts' %}" class="btn btn-primary btn-wide">{% blocktrans %}
                         My drafts{% endblocktrans %}</a>
                 {% else %}
-                    <p>You already have a user account, but an administrator still needs to activate you as an author.
-                        Please be patient.</p>
+                    <p>{% blocktrans %}
+                        You're registered! an administrator will activate your author account shortly.
+                        Thanks for your patience!
+                    {% endblocktrans %}</p>
                 {% endif %}
             {% else %}
-                <a href="https://github.com/maikksmt/mentoro-ai/discussions/" target="_blank" rel="noopener" class="btn btn-primary">{% blocktrans %}Go to Github Discussions{% endblocktrans %}</a>
+                {% if ACCOUNT_SIGNUP_ENABLED %}
+                    <a href="{% url 'account_signup' %}" class="btn btn-outline w-full">
+                        {% blocktrans %}Join for free{% endblocktrans %}
+                    </a>
+                    <p>
+                        {% blocktrans %}After creating your account, an administrator will review and activate your
+                            author access.{% endblocktrans %}
+                    </p>
+                {% else %}
+                    <a href="https://github.com/maikksmt/mentoro-ai/discussions/" target="_blank" rel="noopener"
+                       class="btn btn-primary">{% blocktrans %}Go to Github{% endblocktrans %}</a>
+
+                {% endif %}
+
                 <a href="{% url 'account_login' %}" class="btn btn-primary">{% trans 'Login' %}</a>
 
-{#                <p class="opacity-80 mt-2">#}
-{#                    {% blocktrans %}#}
-{#                        Note: You need a user account. After Signup in, an administrator needs to activate you as an#}
-{#                        author.#}
-{#                    {% endblocktrans %}#}
-{#                </p>#}
+
             {% endif %}
         </div>
     </div>

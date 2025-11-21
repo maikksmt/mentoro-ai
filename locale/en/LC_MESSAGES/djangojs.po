@@ -133,3 +133,23 @@ msgstr ""
 #: templates/content/home.html:22
 msgid "Start with the Starter Guide"
 msgstr ""
+#: templates/partials/author_info_card.html:19
+msgid ""
+"You're already registered, but an administrator still needs to activate your account. Please be\n"
+"                        patient."
+msgstr ""
+#: templates/partials/author_info_card.html:25
+msgid "Join for free"
+msgstr ""
+#: templates/partials/author_info_card.html:9
+msgid "Create a free account to start publishing as an author. We are happy."
+msgstr ""
+#: templates/partials/author_info_card.html:27
+msgid "Access your drafts and continue creating new content."
+msgstr ""
+#: templates/partials/author_info_card.html:43
+msgid "After creating your account, an administrator will review and activate your author access."
+msgstr ""
+#: templates/partials/author_info_card.html:50
+msgid "We’re currently onboarding new authors manually. Get in touch if you’d like early access."
+msgstr ""

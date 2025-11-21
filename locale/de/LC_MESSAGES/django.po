@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-20 23:38+0100\n"
-"PO-Revision-Date: 2025-11-20 23:41+0100\n"
+"POT-Creation-Date: 2025-11-21 22:03+0100\n"
+"PO-Revision-Date: 2025-11-21 22:04+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
+
+#: accounts/views.py:23
+msgid "Your profile has been updated."
+msgstr "Ihr Profil wurde aktualisiert."
 
 #: catalog/models.py:16 catalog/models.py:49 compare/models.py:20
 #: glossary/models.py:11 guides/models.py:21 prompts/models.py:24
@@ -343,7 +347,7 @@ msgstr "Leitfaden"
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
 #: templates/base.html:71 templates/base.html:95
-#: templates/content/home.html:104 templates/content/what-to-find.html:32
+#: templates/content/home.html:105 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
 msgid "Guides"
 msgstr "Leitfäden"
@@ -397,7 +401,7 @@ msgstr "E-Mail"
 msgid "Reason (optional)"
 msgstr "Grund (optional)"
 
-#: newsletter/views.py:20 templates/base.html:225
+#: newsletter/views.py:20 templates/base.html:191
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -502,7 +506,7 @@ msgstr "Prompt"
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
 #: templates/base.html:74 templates/base.html:98
-#: templates/content/home.html:105 templates/content/what-to-find.html:33
+#: templates/content/home.html:106 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:25
 #: templates/prompts/prompt_list.html:6
 msgid "Prompts"
@@ -515,6 +519,158 @@ msgstr "Prompts · MentoroAI"
 #: prompts/views.py:56
 msgid "Curated AI prompts with review/publish workflow."
 msgstr "Kuratierte KI-Prompts mit Überprüfungs-/Veröffentlichungs-Workflow."
+
+#: templates/account/3rdparty.html:5
+msgid "Third-party authentication"
+msgstr "Authentifizierung durch Drittanbieter"
+
+#: templates/account/3rdparty.html:22
+msgid "Continue with third-party login"
+msgstr "Mit Drittanbieter-Login fortfahren"
+
+#: templates/account/3rdparty.html:26
+msgid ""
+"\n"
+"                    This action requires you to authenticate again with your connected\n"
+"                    third-party account (such as Google or GitHub).\n"
+"                "
+msgstr ""
+"\n"
+"Für diesen Vorgang müssen Sie sich erneut bei Ihrem verbundenen\n"
+"Drittanbieter-Konto (z. B. Google oder GitHub) authentifizieren."
+
+#: templates/account/3rdparty.html:38
+#, python-format
+msgid ""
+"\n"
+"                            Continue by confirming your %(provider_name)s login.\n"
+"                        "
+msgstr ""
+"\n"
+"Fahren Sie fort, indem Sie Ihre %(provider_name)s -Anmeldung bestätigen"
+
+#: templates/account/3rdparty.html:44
+msgid "Continue by confirming your external login."
+msgstr "Fahren Sie fort, indem Sie Ihr externes Login bestätigen."
+
+#: templates/account/3rdparty.html:53 templates/account/reauthenticate.html:43
+msgid "Continue"
+msgstr "Weiter"
+
+#: templates/account/3rdparty.html:59 templates/account/email_confirm.html:61
+#: templates/account/verification_sent.html:48
+#: templates/account/verified_email_required.html:44
+msgid "Back to login"
+msgstr "Zurück zum Login"
+
+#: templates/account/dashboard.html:5
+msgid "Account dashboard"
+msgstr "Konto-Dashboard"
+
+#: templates/account/dashboard.html:18
+msgid "Your MentoroAI account"
+msgstr "Ihr MentoroAI-Konto"
+
+#: templates/account/dashboard.html:21
+msgid "Manage your e-mail, password and connected services in one place."
+msgstr ""
+"Verwalten Sie Ihre E-Mail, Ihr Passwort und Ihre verbundenen Dienste an "
+"einem Ort."
+
+#: templates/account/dashboard.html:62
+msgid "Account overview"
+msgstr "Kontoübersicht"
+
+#: templates/account/dashboard.html:67
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: templates/account/dashboard.html:73
+msgid "Username"
+msgstr "Benutzername"
+
+#: templates/account/dashboard.html:79
+msgid "Member since"
+msgstr "Mitglied seit"
+
+#: templates/account/dashboard.html:93
+msgid "This name can be shown as the author name on your published content."
+msgstr ""
+"Dieser Name kann als Autorenname auf Ihren veröffentlichten Inhalten "
+"angezeigt werden."
+
+#: templates/account/dashboard.html:98
+msgid "First name"
+msgstr "Vorname"
+
+#: templates/account/dashboard.html:112
+msgid "Last name"
+msgstr "Nachname"
+
+#: templates/account/dashboard.html:127
+msgid "Save author name"
+msgstr "Namen des Autors speichern"
+
+#: templates/account/dashboard.html:139
+msgid "Security"
+msgstr "Sicherheit"
+
+#: templates/account/dashboard.html:143
+msgid "Update your password and keep your account secure."
+msgstr "Aktualisieren Sie Ihr Passwort und schützen Sie Ihr Konto."
+
+#: templates/account/dashboard.html:150
+msgid "Change your current password."
+msgstr "Ändern Sie Ihr aktuelles Passwort."
+
+#: templates/account/dashboard.html:153
+#: templates/account/password_change.html:17
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: templates/account/dashboard.html:159
+msgid "Set a password in addition to social login."
+msgstr "Legen Sie zusätzlich zum sozialen Login ein Passwort fest."
+
+#: templates/account/dashboard.html:162 templates/account/password_set.html:5
+#: templates/account/password_set.html:53
+msgid "Set password"
+msgstr "Passwort festlegen"
+
+#: templates/account/dashboard.html:174
+#: templates/socialaccount/connections.html:5
+#: templates/socialaccount/connections.html:17
+msgid "Connected services"
+msgstr "Verbundene Dienste"
+
+#: templates/account/dashboard.html:178
+#: templates/socialaccount/connections.html:20
+msgid ""
+"Manage which external services (e.g. Google, GitHub) are linked to your "
+"MentoroAI account."
+msgstr ""
+"Verwalten Sie, welche externen Dienste (z. B. Google, GitHub) mit Ihrem "
+"MentoroAI-Konto verknüpft sind."
+
+#: templates/account/dashboard.html:183
+msgid "Manage connections"
+msgstr "Verbindungen verwalten"
+
+#: templates/account/dashboard.html:194
+msgid "Danger zone"
+msgstr "Gefahrenzone"
+
+#: templates/account/dashboard.html:197
+msgid ""
+"If you no longer want to use MentoroAI, you can log out or contact us to "
+"remove your account data."
+msgstr ""
+"Wenn Sie MentoroAI nicht mehr nutzen möchten, können Sie sich abmelden oder "
+"uns kontaktieren, um Ihre Kontodaten zu entfernen."
+
+#: templates/account/dashboard.html:201
+msgid "Log out"
+msgstr "Abmelden"
 
 #: templates/account/email.html:4
 msgid "Email Addresses"
@@ -549,60 +705,64 @@ msgstr ""
 msgid "Add new email address"
 msgstr "Neue E-Mail-Adresse hinzufügen"
 
+#: templates/account/email_change.html:5
+msgid "Change e-mail address"
+msgstr "E-Mail-Adresse ändern"
+
+#: templates/account/email_change.html:20
+msgid "Change your e-mail address"
+msgstr "E-Mail-Adressen ändern"
+
+#: templates/account/email_change.html:23
+msgid "Update the e-mail address used for your MentoroAI account."
+msgstr ""
+"Aktualisieren Sie die E-Mail-Adresse, die Sie für Ihr MentoroAI-Konto "
+"verwenden."
+
+#: templates/account/email_change.html:53
+msgid "Save e-mail"
+msgstr "E-Mail speichern"
+
 #: templates/account/email_confirm.html:4
 #: templates/account/email_confirm.html:45
-#, fuzzy
-#| msgid "Confirmation failed"
 msgid "Confirm email"
-msgstr "Bestätigung fehlgeschlagen"
+msgstr "E-Mail bestätigen"
 
 #: templates/account/email_confirm.html:13
 msgid "Confirm your email address to activate your MentoroAI account."
 msgstr ""
+"Bestätigen Sie Ihre E-Mail-Adresse, um Ihr MentoroAI-Konto zu aktivieren."
 
 #: templates/account/email_confirm.html:27
-#, fuzzy
-#| msgid "Confirm your subscription"
 msgid "Confirm your email"
-msgstr "Bestätige dein Abonnement"
+msgstr "Bestätigen Sie Ihre E-Mail"
 
 #: templates/account/email_confirm.html:36
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                                        No posts in review process\n"
-#| "                                    "
+#, python-format
 msgid ""
 "\n"
 "                            Please confirm that <strong>%(email)s</strong> is your email address.\n"
 "                        "
 msgstr ""
 "\n"
-" Keine Beiträge im Review-Prozess"
+"Bitte bestätigen Sie, dass <strong>%(email)s</strong> Ihre E-Mail-Adresse ist."
 
 #: templates/account/email_confirm.html:51
-#, fuzzy
-#| msgid "This confirmation link is invalid or has already been used."
 msgid ""
 "This email confirmation link is invalid or has expired. Please request a new"
 " confirmation email."
-msgstr "Der Bestätigungslink ist ungültig oder wurde bereits verwendet."
+msgstr ""
+"Dieser Bestätigungslink in der E-Mail ist ungültig oder abgelaufen. Bitte "
+"fordern Sie eine neue Bestätigungs-E-Mail an."
 
 #: templates/account/email_confirm.html:57
 #: templates/account/verification_sent.html:52
 msgid "Manage email addresses"
-msgstr ""
+msgstr "E-Mail-Adressen verwalten"
 
-#: templates/account/email_confirm.html:61
-#: templates/account/verification_sent.html:48
-#, fuzzy
-#| msgid "Back to top"
-msgid "Back to login"
-msgstr "Zurück nach oben"
-
-#: templates/account/login.html:4 templates/account/login.html:100
+#: templates/account/login.html:4 templates/account/login.html:94
 #: templates/account/password_reset_from_key_done.html:23
-#: templates/partials/author_info_card.html:22
+#: templates/partials/author_info_card.html:52
 msgid "Login"
 msgstr "Login"
 
@@ -617,52 +777,37 @@ msgstr "Willkommen zurück"
 #: templates/account/login.html:21
 msgid "Log in to access your guides, prompts and saved content."
 msgstr ""
+"Melden Sie sich an, um auf Ihre Leitfäden, Prompts und gespeicherten Inhalte"
+" zuzugreifen."
 
-#: templates/account/login.html:40
-#, fuzzy
-#| msgid "Login with Google"
-msgid "Continue with Google"
-msgstr "Mit Google anmelden"
-
-#: templates/account/login.html:52
-#, fuzzy
-#| msgid "Signup with GitHub"
+#: templates/account/login.html:57
+#: templates/socialaccount/snippets/provider_list.html:48
 msgid "Continue with GitHub"
-msgstr "Mit GitHub registrieren"
+msgstr "Continue with GitHub"
 
-#: templates/account/login.html:64
-#, fuzzy
-#| msgid "Login with Apple"
-msgid "Continue with Apple"
-msgstr "Mit Apple anmelden"
-
-#: templates/account/login.html:72
+#: templates/account/login.html:65
 msgid "or continue with e-mail"
-msgstr ""
+msgstr "oder mit E-Mail fortfahren"
 
-#: templates/account/login.html:81
+#: templates/account/login.html:75
 msgid "eMail or username"
 msgstr "E-Mail oder Benutzername"
 
-#: templates/account/login.html:88
+#: templates/account/login.html:82
 msgid "Password"
 msgstr "Passwort"
 
-#: templates/account/login.html:91
+#: templates/account/login.html:85
 msgid "Forgot your password?"
 msgstr "Passwort vergessen?"
 
-#: templates/account/login.html:104
-#, fuzzy
-#| msgid "Guides · MentoroAI"
+#: templates/account/login.html:98
 msgid "New to MentoroAI?"
-msgstr "Leitfäden · MentoroAI"
+msgstr "Neu bei MentoroAI?"
 
-#: templates/account/login.html:109
-#, fuzzy
-#| msgid "Create Account"
+#: templates/account/login.html:103
 msgid "Create a free account"
-msgstr "Benutzerkonto erstellen"
+msgstr "Erstellen Sie ein kostenloses Konto"
 
 #: templates/account/logout.html:4 templates/account/logout.html:20
 #: templates/account/logout.html:32
@@ -674,58 +819,39 @@ msgid "Logout for MentoroAI."
 msgstr "Logout für MentoroAI."
 
 #: templates/account/logout.html:22
-#, fuzzy
-#| msgid "Do you really want to logout?"
 msgid "Do you really want to logout from MentoroAI?"
-msgstr "Möchtest du dich wirklich abmelden?"
+msgstr "Möchten Sie sich wirklich von MentoroAI abmelden?"
 
 #: templates/account/logout.html:36
-#, fuzzy
-#| msgid "Back to top"
 msgid "Back to homepage"
-msgstr "Zurück nach oben"
+msgstr "Zurück zur Startseite"
 
 #: templates/account/password_change.html:4
-#, fuzzy
-#| msgid "Password"
 msgid "Change Password"
-msgstr "Passwort"
-
-#: templates/account/password_change.html:17
-#, fuzzy
-#| msgid "Change status"
-msgid "Change password"
-msgstr "Status ändern"
+msgstr "Passwort ändern"
 
 #: templates/account/password_change.html:37
 #: templates/account/password_reset_from_key.html:44
 msgid "Save new password"
-msgstr ""
+msgstr "Neues Passwort speichern"
 
 #: templates/account/password_reset.html:4
-#, fuzzy
-#| msgid "Password"
 msgid "Reset Password"
-msgstr "Passwort"
+msgstr "Passwort zurücksetzen"
 
 #: templates/account/password_reset.html:10
-#, fuzzy
-#| msgid "Forgot your password?"
 msgid "Reset your password."
-msgstr "Passwort vergessen?"
+msgstr "Setzen Sie Ihr Passwort zurück."
 
 #: templates/account/password_reset.html:19
-#, fuzzy
-#| msgid "Forgot your password?"
 msgid "Reset your password"
-msgstr "Passwort vergessen?"
+msgstr "Setzen Sie Ihr Passwort zurück"
 
 #: templates/account/password_reset.html:21
-#, fuzzy
-#| msgid "Enter your email address to unsubscribe from future emails."
 msgid "Enter your email address and we will send you a reset link."
 msgstr ""
-"Gib deine E-Mail-Adresse ein, um dich von zukünftigen E-Mails abzumelden."
+"Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum "
+"Zurücksetzen."
 
 #: templates/account/password_reset.html:33
 #: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
@@ -735,99 +861,101 @@ msgstr "E-Mail"
 
 #: templates/account/password_reset.html:40
 msgid "Send reset link"
-msgstr ""
+msgstr "Reset-Link senden"
 
 #: templates/account/password_reset_done.html:4
 msgid "Password Reset Sent"
-msgstr ""
+msgstr "Passwort zurücksetzen gesendet"
 
 #: templates/account/password_reset_done.html:17
 #: templates/account/verification_sent.html:28
 msgid "Check your inbox"
-msgstr ""
+msgstr "Überprüfen Sie Ihren Posteingang"
 
 #: templates/account/password_reset_done.html:19
 msgid ""
 "If an account exists with the email you entered, you will receive a password"
 " reset link shortly."
 msgstr ""
+"Wenn ein Konto mit der von Ihnen eingegebenen E-Mail-Adresse existiert, "
+"erhalten Sie in Kürze einen Link zum Zurücksetzen Ihres Passworts."
 
 #: templates/account/password_reset_from_key.html:4
-#, fuzzy
-#| msgid "Password"
 msgid "Set New Password"
-msgstr "Passwort"
+msgstr "Neues Passwort festlegen"
 
 #: templates/account/password_reset_from_key.html:17
 msgid "Set a new password"
 msgstr "Ein neues Passwort festlegen"
 
 #: templates/account/password_reset_from_key.html:24
-#, fuzzy
-#| msgid "This confirmation link is invalid or has already been used."
 msgid "This password reset link is invalid or has expired."
-msgstr "Der Bestätigungslink ist ungültig oder wurde bereits verwendet."
+msgstr ""
+"Dieser Link zum Zurücksetzen des Passworts ist ungültig oder abgelaufen."
 
 #: templates/account/password_reset_from_key.html:28
-#, fuzzy
-#| msgid "Request rework"
 msgid "Request a new reset link"
-msgstr "Nacharbeit anfordern"
+msgstr "Neuen Reset-Link anfordern"
 
 #: templates/account/password_reset_from_key_done.html:4
 msgid "Password Reset Complete"
 msgstr "Passwort zurücksetzen abgeschlossen"
 
 #: templates/account/password_reset_from_key_done.html:17
-#, fuzzy
-#| msgid "Password"
 msgid "Password changed"
-msgstr "Passwort"
+msgstr "Passwort geändert"
 
 #: templates/account/password_reset_from_key_done.html:19
 msgid ""
 "Your password has been updated. You can now log in with your new password."
 msgstr ""
+"Ihr Passwort wurde aktualisiert. Sie können sich nun mit Ihrem neuen "
+"Passwort anmelden."
 
-#: templates/account/signup.html:4 templates/account/signup.html:101
+#: templates/account/password_set.html:20
+msgid "Set a password for your account"
+msgstr "Legen Sie ein Passwort für Ihr Konto fest"
+
+#: templates/account/password_set.html:23
+msgid "You signed up using a social login. You can set a local password here."
+msgstr ""
+"Sie haben sich mit einem sozialen Login angemeldet. Sie können hier ein "
+"lokales Passwort festlegen."
+
+#: templates/account/reauthenticate.html:5
+msgid "Confirm your password"
+msgstr "Bestätigen Sie Ihr Passwort"
+
+#: templates/account/reauthenticate.html:20
+msgid "Please confirm your identity"
+msgstr "Bitte bestätigen Sie Ihre Identität"
+
+#: templates/account/reauthenticate.html:23
+msgid "For security reasons we need you to re-enter your password."
+msgstr "Aus Sicherheitsgründen müssen Sie Ihr Passwort erneut eingeben."
+
+#: templates/account/signup.html:4 templates/account/signup.html:95
 msgid "Signup"
 msgstr "Registrieren"
 
 #: templates/account/signup.html:19
-#, fuzzy
-#| msgid "Create Account"
 msgid "Create your MentoroAI account"
-msgstr "Benutzerkonto erstellen"
+msgstr "Erstellen Sie Ihr MentoroAI-Konto"
 
 #: templates/account/signup.html:21
 msgid "Create an account to save your favorite guides, prompts and tools."
 msgstr ""
+"Erstellen Sie ein Konto, um Ihre Leitfäden, Prompts und Tools zu speichern."
 
-#: templates/account/signup.html:40
-#, fuzzy
-#| msgid "Signup with Google"
-msgid "Sign up with Google"
-msgstr "Mit Google registrieren"
-
-#: templates/account/signup.html:52
-#, fuzzy
-#| msgid "Signup with GitHub"
+#: templates/account/signup.html:57
 msgid "Sign up with GitHub"
-msgstr "Mit GitHub registrieren"
+msgstr "Sign up with GitHub"
 
-#: templates/account/signup.html:64
-#, fuzzy
-#| msgid "Signup with Apple"
-msgid "Sign up with Apple"
-msgstr "Mit Apple registrieren"
-
-#: templates/account/signup.html:72
-#, fuzzy
-#| msgid "Signup with Apple"
+#: templates/account/signup.html:65
 msgid "or sign up with e-mail"
-msgstr "Mit Apple registrieren"
+msgstr "Oder mit E-Mail anmelden"
 
-#: templates/account/signup.html:95
+#: templates/account/signup.html:89
 msgid ""
 "Please confirm your email address. Your account will then be activated by an\n"
 "                            administrator."
@@ -835,33 +963,111 @@ msgstr ""
 "Bitte bestätige deine E-Mail-Adresse. Dein Konto wird anschließend von einem"
 " Administrator aktiviert."
 
-#: templates/account/signup.html:107
-#, fuzzy
-#| msgid "I have an account already"
+#: templates/account/signup.html:101
 msgid "I already have an account"
 msgstr "Ich habe bereits ein Benutzerkonto"
 
+#: templates/account/signup_closed.html:5
+msgid "Signups closed"
+msgstr "Anmeldungen geschlossen"
+
+#: templates/account/signup_closed.html:21
+msgid "New registrations are currently closed"
+msgstr "Neue Registrierungen sind derzeit geschlossen"
+
+#: templates/account/signup_closed.html:24
+#| msgid ""
+#| "We are not accepting new signups without invitation code at the moment. "
+#| "Please try again later."
+msgid ""
+"We are not accepting new signups without invitation at the moment. Please "
+"try again later."
+msgstr ""
+"Wir akzeptieren derzeit keine neuen Anmeldungen ohne Einladung. Bitte "
+"versuchen Sie es später noch einmal."
+
+#: templates/account/snippets/already_logged_in.html:7
+#, python-format
+msgid ""
+"\n"
+"                You are already logged in as %(user_display)s.\n"
+"            "
+msgstr ""
+"\n"
+"Sie sind bereits als %(user_display)s angemeldet."
+
+#: templates/account/snippets/already_logged_in.html:14
+msgid "Log out and use a different account"
+msgstr "Melden Sie sich ab und verwenden Sie ein anderes Konto"
+
+#: templates/account/snippets/warn_no_email.html:7
+msgid "You have no e-mail address associated with your account."
+msgstr "Sie haben keine E-Mail-Adresse, die mit Ihrem Konto verknüpft ist."
+
+#: templates/account/snippets/warn_no_email.html:12
+msgid ""
+"Without an e-mail address you cannot reset your password or receive "
+"important notifications."
+msgstr ""
+"Ohne E-Mail-Adresse können Sie Ihr Passwort nicht zurücksetzen oder wichtige"
+" Benachrichtigungen erhalten."
+
+#: templates/account/snippets/warn_no_email.html:15
+msgid "Add an e-mail address now."
+msgstr "Fügen Sie jetzt eine E-Mail-Adresse hinzu."
+
 #: templates/account/verification_sent.html:5
 msgid "Email verification sent"
-msgstr ""
+msgstr "E-Mail-Bestätigung gesendet"
 
 #: templates/account/verification_sent.html:14
 msgid "We have sent you an email with a confirmation link."
-msgstr ""
+msgstr "Wir haben Ihnen eine E-Mail mit einem Bestätigungslink gesendet."
 
 #: templates/account/verification_sent.html:31
 msgid "We have sent a verification link to your email address."
-msgstr ""
+msgstr "Wir haben einen Bestätigungslink an Ihre E-Mail-Adresse gesendet."
 
 #: templates/account/verification_sent.html:38
 msgid ""
 "Please click the link in the email to confirm your address and\n"
 "                        activate your MentoroAI account."
 msgstr ""
+"Bitte klicken Sie auf den Link in der E-Mail, um Ihre Adresse zu bestätigen und\n"
+"Ihr MentoroAI-Konto zu aktivieren."
 
 #: templates/account/verification_sent.html:42
 msgid "If you do not see the email, please check your spam folder."
 msgstr ""
+"Wenn Sie die E-Mail nicht sehen, überprüfen Sie bitte Ihren Spam-Ordner."
+
+#: templates/account/verified_email_required.html:5
+msgid "E-mail verification required"
+msgstr "E-Mail-Bestätigung erforderlich"
+
+#: templates/account/verified_email_required.html:22
+msgid "Please verify your e-mail address"
+msgstr "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+
+#: templates/account/verified_email_required.html:27
+msgid ""
+"To continue, you need to verify your e-mail address. We have sent you an e-mail with\n"
+"                        a confirmation link."
+msgstr ""
+"Um fortzufahren, müssen Sie Ihre E-Mail-Adresse bestätigen. Wir haben Ihnen "
+"eine E-Mail mit einem Bestätigungslink geschickt."
+
+#: templates/account/verified_email_required.html:32
+msgid ""
+"If you did not receive the e-mail, check your spam folder or request a new\n"
+"                        confirmation link in your account settings."
+msgstr ""
+"Wenn Sie die E-Mail nicht erhalten haben, überprüfen Sie Ihren Spam-Ordner oder fordern Sie einen neuen\n"
+"Bestätigungslink in Ihren Kontoeinstellungen an."
+
+#: templates/account/verified_email_required.html:39
+msgid "Manage e-mail addresses"
+msgstr "E-Mail-Adressen verwalten"
 
 #: templates/admin/guides/guide/change_form.html:9
 #: templates/admin/prompts/prompt/change_form.html:10
@@ -937,16 +1143,6 @@ msgstr "Entwurf vs. Live"
 msgid "No differences in this language."
 msgstr "Keine Unterschiede in dieser Sprache."
 
-#: templates/allauth/layouts/manage.html:10
-#, fuzzy
-#| msgid "Create Account"
-msgid "My Account"
-msgstr "Benutzerkonto erstellen"
-
-#: templates/allauth/layouts/manage.html:15
-msgid "Manage your MentoroAI account settings."
-msgstr ""
-
 #: templates/base.html:63
 msgid "Mobile menu"
 msgstr "Mobiles Menü"
@@ -980,63 +1176,39 @@ msgstr "Theme wechseln"
 msgid "Language select"
 msgstr "Sprachauswahl"
 
-#: templates/base.html:169
+#: templates/base.html:166
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
-#: templates/base.html:172
+#: templates/base.html:169
 msgid "Admin Panel"
 msgstr "Admin-Panel"
 
-#: templates/base.html:174 templates/partials/editorial_nav.html:7
+#: templates/base.html:171 templates/partials/editorial_nav.html:7
 msgid "Drafts"
 msgstr "Entwürfe"
 
-#: templates/base.html:177 templates/partials/editorial_nav.html:10
+#: templates/base.html:174 templates/partials/editorial_nav.html:10
 msgid "Reviews"
 msgstr "Überprüfungen"
 
-#: templates/base.html:190
-msgid "MentoroAI is currently in public beta"
-msgstr "MentoroAI befindet sich derzeit in der öffentlichen Beta"
-
-#: templates/base.html:192
-msgid "Some features may change or be incomplete."
-msgstr "Einige Funktionen können sich ändern oder unvollständig sein."
-
-#: templates/base.html:193
-msgid "Please provide feedback on Github Discussions"
-msgstr "Bitte sende Feedback auf Github Diskussions"
-
-#: templates/base.html:200 templates/partials/author_info_card.html:21
-msgid "Go to Github Discussions"
-msgstr "Gehe zu Github-Diskussionen"
-
-#: templates/base.html:202 templates/partials/features_open.html:98
-msgid "Close"
-msgstr "Schließen"
-
-#: templates/base.html:210 templates/partials/features_open.html:106
-msgid "Close modal"
-msgstr "Modal schließen"
-
-#: templates/base.html:227 templates/partials/_entry_cards.html:5
+#: templates/base.html:193 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr "Was kann ich auf MentoroAI finden?"
 
-#: templates/base.html:228
+#: templates/base.html:194
 msgid "Legal notice"
 msgstr "Impressum"
 
-#: templates/base.html:229
+#: templates/base.html:195
 msgid "Privacy policy"
 msgstr "Datenschutzerklärung"
 
-#: templates/base.html:231 templates/legal/terms_of_use.html:10
+#: templates/base.html:197 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
-#: templates/base.html:232
+#: templates/base.html:198
 msgid "Copyright"
 msgstr "Urheberrecht"
 
@@ -1085,7 +1257,7 @@ msgid "Reset"
 msgstr "Zurücksetzen"
 
 #: templates/catalog/tool_list.html:55 templates/compare/index.html:47
-#: templates/content/home.html:80 templates/prompts/prompt_list.html:28
+#: templates/content/home.html:81 templates/prompts/prompt_list.html:28
 #: templates/usecases/list.html:37
 msgid "Details"
 msgstr "Details"
@@ -1219,39 +1391,39 @@ msgstr "Einreichen"
 
 #: templates/content/home.html:15
 msgid ""
-" Find the right tools, compare real alternatives, and follow practical "
-"guides and prompts to apply AI confidently in everyday life."
+" Find the right tools, compare real alternatives, and follow practical guides\n"
+"                            and prompts to apply AI confidently in everyday life."
 msgstr ""
-"Finde die richtigen Tools, vergleiche echte Alternativen und folge "
-"praktischen Anleitungen und Prompts, um KI selbstbewusst im Alltag "
+"Finden Sie die richtigen Tools, vergleichen Sie echte Alternativen und "
+"folgen Sie praktischen Anleitungen und Hinweisen, um KI sicher im Alltag "
 "anzuwenden."
 
-#: templates/content/home.html:19
-msgid "Start with the Starter Guide"
+#: templates/content/home.html:20
+msgid "Begin with the Starter Guide"
 msgstr "Beginne mit dem Start-Leitfaden"
 
-#: templates/content/home.html:22
+#: templates/content/home.html:23
 msgid "Discover AI Tools"
 msgstr "KI-Tools entdecken"
 
-#: templates/content/home.html:49
+#: templates/content/home.html:50
 msgid "Featured Tools"
 msgstr "Empfohlene Tools"
 
-#: templates/content/home.html:91
+#: templates/content/home.html:92
 msgid "Recommended for you"
 msgstr "Empfohlen für dich"
 
-#: templates/content/home.html:103
+#: templates/content/home.html:104
 msgid "Current content"
 msgstr "Aktuelle Inhalte"
 
-#: templates/content/home.html:107 templates/usecases/list.html:9
+#: templates/content/home.html:108 templates/usecases/list.html:9
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr "Anwendungsfälle"
 
-#: templates/content/home.html:116
+#: templates/content/home.html:117
 msgid "No published content yet."
 msgstr "Noch keine veröffentlichten Inhalte."
 
@@ -2422,28 +2594,79 @@ msgid "Published on"
 msgstr "Veröffentlicht am"
 
 #: templates/partials/author_info_card.html:5
-msgid "Participate as an author"
-msgstr "Als Autor mitmachen"
+msgid "Become an author on MentoroAI"
+msgstr "Werden Sie Autor auf MentoroAI"
 
 #: templates/partials/author_info_card.html:7
-msgid "Want to publish guides, use cases, or prompts?"
-msgstr "Möchtest du Leitfäden, Anwendungsfälle oder Prompts veröffentlichen?"
+msgid "Share your knowledge and help others understand AI"
+msgstr "Teilen Sie Ihr Wissen und helfen Sie anderen, KI zu verstehen"
 
-#: templates/partials/author_info_card.html:8
+#: templates/partials/author_info_card.html:10
 msgid ""
-"Author accounts are in private beta. If you’re interested, please contact us"
-" on GitHub."
+"\n"
+"                    Want to publish guides, use cases or prompts?\n"
+"                    Create a free account and start contributing your own content.\n"
+"                    Your ideas can help thousands of users learn AI faster.\n"
+"                "
 msgstr ""
-"Autorenkonten befinden sich in der privaten Beta. Wenn du interessiert bist,"
-" kontaktiere uns bitte auf GitHub."
+"\n"
+"Möchten Sie Anleitungen, Anwendungsfälle oder Prompts veröffentlichen?\n"
+"Erstellen Sie ein kostenloses Konto und beginnen Sie, Ihre eigenen Inhalte beizusteuern.\n"
+"Ihre Ideen können Tausenden von Nutzern helfen, KI schneller zu erlernen."
 
-#: templates/partials/author_info_card.html:14
+#: templates/partials/author_info_card.html:16
+msgid ""
+"\n"
+"                    Author accounts are currently limited.\n"
+"                    We’re onboarding new authors step by step.\n"
+"                    If you’re interested in joining early, feel free to reach out on GitHub.\n"
+"                "
+msgstr ""
+"\n"
+"Die Anzahl der Autorenkonten ist derzeit begrenzt.\n"
+"Wir nehmen nach und nach neue Autoren auf.\n"
+"Wenn Sie daran interessiert sind, frühzeitig beizutreten, kontaktieren  Sie uns bitte über GitHub."
+
+#: templates/partials/author_info_card.html:27
+msgid "Access your drafts and continue creating new content."
+msgstr ""
+"Greifen Sie auf Ihre Entwürfe zu und erstellen Sie weiterhin neue Inhalte."
+
+#: templates/partials/author_info_card.html:29
 msgid ""
 "\n"
 "                        My drafts"
 msgstr ""
 "\n"
 " Meine Entwürfe"
+
+#: templates/partials/author_info_card.html:32
+msgid ""
+"\n"
+"                        You're registered! an administrator will activate your author account shortly.\n"
+"                        Thanks for your patience!\n"
+"                    "
+msgstr ""
+"\n"
+"Sie sind registriert! Ein Administrator wird Ihr Autorenkonto in Kürze aktivieren.\n"
+"Vielen Dank für Ihre Geduld!"
+
+#: templates/partials/author_info_card.html:40
+msgid "Join for free"
+msgstr "Kostenlos beitreten"
+
+#: templates/partials/author_info_card.html:43
+msgid ""
+"After creating your account, an administrator will review and activate your\n"
+"                            author access."
+msgstr ""
+"Nach der Erstellung Ihres Kontos wird ein Administrator Ihren\n"
+"Autorenzugang überprüfen und aktivieren."
+
+#: templates/partials/author_info_card.html:48
+#: templates/partials/features_open.html:12
+msgid "Go to Github"
+msgstr "Gehe zu Github"
 
 #: templates/partials/breadcrumbs.html:2
 msgid "Breadcrumbs"
@@ -2453,20 +2676,32 @@ msgstr "Breadcrumbs"
 msgid "Start"
 msgstr "Start"
 
-#: templates/partials/features_open.html:6
+#: templates/partials/features_open.html:5
+msgid "MentoroAI is a continuously process"
+msgstr "MentoroAI ist ein kontinuierlicher Prozess"
+
+#: templates/partials/features_open.html:7
+msgid "Some features may change or be incomplete."
+msgstr "Einige Funktionen können sich ändern oder unvollständig sein."
+
+#: templates/partials/features_open.html:8
+msgid "Please provide feedback on Github Discussions"
+msgstr "Bitte sende Feedback auf Github Diskussions"
+
+#: templates/partials/features_open.html:18
 msgid "What’s coming to MentoroAI"
 msgstr "Was als nächstes auf MentoroAI kommt"
 
-#: templates/partials/features_open.html:9
+#: templates/partials/features_open.html:21
 msgid "A quick preview of features we’re building next."
 msgstr ""
 "Eine kurze Vorschau auf die Funktionen, die wir als nächstes entwickeln."
 
-#: templates/partials/features_open.html:16
+#: templates/partials/features_open.html:28
 msgid "Editorial system"
 msgstr "Redaktionssystem"
 
-#: templates/partials/features_open.html:18
+#: templates/partials/features_open.html:30
 msgid ""
 "Draft → review → publish workflow with roles (Author, Editor, Admin) and "
 "status history."
@@ -2474,30 +2709,30 @@ msgstr ""
 "Entwurf → Überprüfung → Workflow mit Rollen (Autor, Redakteur, "
 "Administrator) und Statusverlauf veröffentlichen."
 
-#: templates/partials/features_open.html:19
+#: templates/partials/features_open.html:31
 msgid "Per-object review checklist and required approvals before publishing."
 msgstr ""
 "Checkliste für die Überprüfung pro Objekt und erforderliche Genehmigungen "
 "vor der Veröffentlichung."
 
-#: templates/partials/features_open.html:20
+#: templates/partials/features_open.html:32
 msgid "Versioning & change log for all content (diffs, rollbacks)."
 msgstr ""
 "Versionierung und Änderungsprotokoll für alle Inhalte (Diffs, Rollbacks)."
 
-#: templates/partials/features_open.html:21
+#: templates/partials/features_open.html:33
 msgid "Scheduled publishing and unpublishing."
 msgstr "Geplante Veröffentlichung und De-Veröffentlichung."
 
-#: templates/partials/features_open.html:27
+#: templates/partials/features_open.html:39
 msgid "Prompt Studio"
 msgstr "Prompt-Studio"
 
-#: templates/partials/features_open.html:28
+#: templates/partials/features_open.html:40
 msgid "planned"
 msgstr "geplant"
 
-#: templates/partials/features_open.html:30
+#: templates/partials/features_open.html:42
 msgid ""
 "Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
 "model tips."
@@ -2505,7 +2740,7 @@ msgstr ""
 "Modellauswahl für jede Eingabeaufforderung (z. B. GPT-4-Klasse, Claude, "
 "Llama) und Tipps pro Modell."
 
-#: templates/partials/features_open.html:31
+#: templates/partials/features_open.html:43
 msgid ""
 "Structured prompt templates with variables, examples, and tone/style "
 "presets."
@@ -2513,25 +2748,25 @@ msgstr ""
 "Strukturierte Eingabeaufforderungsvorlagen mit Variablen, Beispielen und "
 "Ton-/Stilvoreinstellungen."
 
-#: templates/partials/features_open.html:32
+#: templates/partials/features_open.html:44
 msgid "Guardrails: context hints, do/don’t lists, and input validation."
 msgstr "Leitplanken: Kontexthinweise, Do/Don't-Listen und Eingabevalidierung."
 
-#: templates/partials/features_open.html:33
+#: templates/partials/features_open.html:45
 msgid "One-click copy, shareable links, and export (Markdown/JSON)."
 msgstr "Ein-Klick-Kopieren, teilbare Links und Export (Markdown/JSON)."
 
-#: templates/partials/features_open.html:34
+#: templates/partials/features_open.html:46
 msgid "Execution notes: record outputs to compare iterations."
 msgstr ""
 "Hinweise zur Ausführung: Ergebnisse aufzeichnen, um Iterationen zu "
 "vergleichen."
 
-#: templates/partials/features_open.html:40
+#: templates/partials/features_open.html:52
 msgid "Discovery & navigation"
 msgstr "Entdecken & Navigieren"
 
-#: templates/partials/features_open.html:42
+#: templates/partials/features_open.html:54
 msgid ""
 "Unified search across Tools, Guides, Prompts, Use-Cases with filters and "
 "tags."
@@ -2539,100 +2774,108 @@ msgstr ""
 "Einheitliche Suche zwischen Tools, Leitfäden, Prompts, Anwendungsfall mit "
 "Filtern und Tags."
 
-#: templates/partials/features_open.html:43
+#: templates/partials/features_open.html:55
 msgid "Collections & bookmarks (save for later, custom lists)."
 msgstr ""
 "Sammlungen & Lesezeichen (für später speichern, benutzerdefinierte Listen)."
 
-#: templates/partials/features_open.html:44
+#: templates/partials/features_open.html:56
 msgid "Compare view: side-by-side feature comparison for tools and prompts."
 msgstr ""
 "Vergleichsansicht: Side-by-Side-Feature-Vergleich für Tools und "
 "Eingabeaufforderungen."
 
-#: templates/partials/features_open.html:45
+#: templates/partials/features_open.html:57
 msgid "RSS/Atom feeds for new and updated content."
 msgstr "RSS/Atom-Feeds für neue und aktualisierte Inhalte."
 
-#: templates/partials/features_open.html:51
+#: templates/partials/features_open.html:63
 msgid "Quality & accessibility"
 msgstr "Qualität & Zugänglichkeit"
 
-#: templates/partials/features_open.html:53
+#: templates/partials/features_open.html:65
 msgid ""
 "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX."
 msgstr ""
 "A11y-Pässe (Fokuszustände, Orientierungspunkte, Farbkontrast) und Tastatur-"
 "First-UX."
 
-#: templates/partials/features_open.html:54
+#: templates/partials/features_open.html:66
 msgid "Reading modes: compact vs. comfortable layout."
 msgstr "Lesemodi: kompaktes vs. komfortables Layout."
 
-#: templates/partials/features_open.html:55
+#: templates/partials/features_open.html:67
 msgid "Glossary hover cards for terms used in content."
 msgstr "Glossar-Hover-Karten für Begriffe, die in Inhalten verwendet werden."
 
-#: templates/partials/features_open.html:56
+#: templates/partials/features_open.html:68
 msgid "Feedback widget on every page (quick rating + free text)."
 msgstr "Feedback-Widget auf jeder Seite (Schnellbewertung + freier Text)."
 
-#: templates/partials/features_open.html:62
+#: templates/partials/features_open.html:74
 msgid "Multilingual & localization"
 msgstr "Mehrsprachig & Lokalisierung"
 
-#: templates/partials/features_open.html:64
+#: templates/partials/features_open.html:76
 msgid "Side-by-side DE/EN editing and translation status indicators."
 msgstr "Side-by-side DE/EN-Bearbeitungs- und Übersetzungsstatusanzeigen."
 
-#: templates/partials/features_open.html:65
+#: templates/partials/features_open.html:77
 msgid "Per-language slugs and canonical links."
 msgstr "Slugs pro Sprache und kanonische Links."
 
-#: templates/partials/features_open.html:66
+#: templates/partials/features_open.html:78
 msgid "Language-aware search and filters."
 msgstr "Sprachbewusste Suche und Filter."
 
-#: templates/partials/features_open.html:72
+#: templates/partials/features_open.html:84
 msgid "Integrations & API"
 msgstr "Integrationen & API"
 
-#: templates/partials/features_open.html:74
+#: templates/partials/features_open.html:86
 msgid "Optional API keys to try prompts live (bring-your-own-key)."
 msgstr ""
 "Optionale API-Schlüssel, um Prompts live zu testen (bring-your-own-key)."
 
-#: templates/partials/features_open.html:75
+#: templates/partials/features_open.html:87
 msgid "Plugin endpoints for external tooling (read-only API first)."
 msgstr "Plugin-Endpunkte für externe Tools (first read-only-API)."
 
-#: templates/partials/features_open.html:76
+#: templates/partials/features_open.html:88
 msgid "Privacy-friendly analytics and opt-in telemetry."
 msgstr "Datenschutzfreundliche Analysen und Opt-in-Telemetrie."
 
-#: templates/partials/features_open.html:82
+#: templates/partials/features_open.html:94
 msgid "Performance & reliability"
 msgstr "Leistung & Zuverlässigkeit"
 
-#: templates/partials/features_open.html:84
+#: templates/partials/features_open.html:96
 msgid "Image optimization and smart caching."
 msgstr "Bildoptimierung und intelligentes Caching."
 
-#: templates/partials/features_open.html:85
+#: templates/partials/features_open.html:97
 msgid "Offline-friendly error pages and graceful fallbacks."
 msgstr "Offline-freundliche Fehlerseiten und anmutige Fallbacks."
 
-#: templates/partials/features_open.html:86
+#: templates/partials/features_open.html:98
 msgid "CI coverage gates for editorial and schema changes."
 msgstr "CI-Abdeckungsgates für redaktionelle und Schemaänderungen."
 
-#: templates/partials/features_open.html:92
+#: templates/partials/features_open.html:104
 msgid ""
 "Heads-up: Priorities may shift based on user feedback. If a feature is "
 "critical for you, please tell us!"
 msgstr ""
 "Heads-up: Die Prioritäten können sich je nach Benutzerfeedback ändern. Wenn "
 "eine Funktion für dich entscheidend ist, sage es uns bitte!"
+
+#: templates/partials/features_open.html:110
+msgid "Close"
+msgstr "Schließen"
+
+#: templates/partials/features_open.html:118
+msgid "Close modal"
+msgstr "Modal schließen"
 
 #: templates/partials/pagination.html:6
 msgid "Previous Page"
@@ -2679,6 +2922,47 @@ msgstr "Weitere Prompts"
 #: templates/prompts/prompt_list.html:34
 msgid "No published prompts found."
 msgstr "Keine veröffentlichten Prompts gefunden."
+
+#: templates/socialaccount/connections.html:28
+msgid "Your connected accounts"
+msgstr "Ihre verbundenen Konten"
+
+#: templates/socialaccount/connections.html:33
+msgid ""
+"You can remove a connected account. You will no longer be able to sign in "
+"with it."
+msgstr ""
+"Sie können ein verbundenes Konto entfernen. Sie können sich dann nicht mehr "
+"damit anmelden."
+
+#: templates/socialaccount/connections.html:62
+msgid "Remove selected connection"
+msgstr "Ausgewählte Verknüpfung entfernen"
+
+#: templates/socialaccount/connections.html:67
+msgid "You currently have no external accounts connected."
+msgstr "Sie haben derzeit keine externen Konten verbunden."
+
+#: templates/socialaccount/connections.html:77
+msgid "Add a new connection"
+msgstr "Eine neue Verknüpfung hinzufügen"
+
+#: templates/socialaccount/connections.html:80
+msgid "Connect another service to sign in with it in the future."
+msgstr ""
+"Verbinden Sie einen anderen Dienst, um sich in Zukunft damit anzumelden."
+
+#: templates/socialaccount/snippets/provider_list.html:23
+msgid "Connect Google"
+msgstr "Google verbinden"
+
+#: templates/socialaccount/snippets/provider_list.html:25
+msgid "Continue with Google"
+msgstr "Continue with Google"
+
+#: templates/socialaccount/snippets/provider_list.html:46
+msgid "Connect GitHub"
+msgstr "GitHub verbinden"
 
 #: templates/usecases/detail.html:13 templates/usecases/list.html:21
 msgid "Persona:"
@@ -2754,6 +3038,34 @@ msgstr "Anwendungsfälle · MentoroAI"
 msgid "Discover how people used ai in real usecases"
 msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
+#, fuzzy
+#~ msgid "Sign up with Google"
+#~ msgstr "Mit Google registrieren"
+
+#, fuzzy
+#~ msgid "Sign up with Apple"
+#~ msgstr "Mit Apple registrieren"
+
+#, fuzzy
+#~ msgid "My Account"
+#~ msgstr "Benutzerkonto erstellen"
+
+#~ msgid "Go to Github Discussions"
+#~ msgstr "Gehe zu Github-Diskussionen"
+
+#~ msgid "Participate as an author"
+#~ msgstr "Als Autor mitmachen"
+
+#~ msgid "Want to publish guides, use cases, or prompts?"
+#~ msgstr "Möchtest du Leitfäden, Anwendungsfälle oder Prompts veröffentlichen?"
+
+#~ msgid ""
+#~ "Author accounts are in private beta. If you’re interested, please contact us"
+#~ " on GitHub."
+#~ msgstr ""
+#~ "Autorenkonten befinden sich in der privaten Beta. Wenn du interessiert bist,"
+#~ " kontaktiere uns bitte auf GitHub."
+
 #~ msgid "Sign up for free"
 #~ msgstr "Kostenlos registrieren"
 
@@ -2802,9 +3114,6 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ msgid "Quick introduction to AI tools & practice"
 #~ msgstr "Schnelle Einführung in KI-Tools und Praxis."
 
-#~ msgid "Project Github"
-#~ msgstr "Projekt Github"
-
 #~ msgid "Quick introduction to AI tools & practice."
 #~ msgstr "Schnelle Einführung in KI-Tools und Praxis."
 
@@ -2819,15 +3128,6 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ "Signup coming soon\n"
 #~ "                    ..."
 #~ msgstr "Registrierung bald möglich ..."
-
-#~ msgid ""
-#~ "\n"
-#~ "                        Note: You need a user account. After Signup in, an administrator needs to activate you as an\n"
-#~ "                        author.\n"
-#~ "                    "
-#~ msgstr ""
-#~ "\n"
-#~ "Hinweis: Du benötigst ein Benutzerkonto. Nach dem Login wird dich ein Administrator als Autor freischalten."
 
 #~ msgid ""
 #~ "\n"
@@ -2903,9 +3203,6 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #, python-format
 #~ msgid "%(n)d prompt(s) reverted to draft."
 #~ msgstr "%(n)d Prompt(s) auf Entwurf zurückgesetzt."
-
-#~ msgid "Prompts Overview"
-#~ msgstr "Prompt Übersicht"
 
 #~ msgid "Browse high-quality prompts by topic and tool."
 #~ msgstr "Durchstöbern Sie hochwertige Prompts nach Thema und Werkzeug."

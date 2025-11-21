@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-17 20:30+0100\n"
-"Last-Translator:   <>\n"
+"PO-Revision-Date: 2025-11-21 21:32+0100\n"
+"Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -162,3 +162,42 @@ msgstr "KI-Tools entdecken"
 #: templates/content/home.html:22
 msgid "Start with the Starter Guide"
 msgstr "Beginnen Sie mit dem Start-Leitfaden"
+
+#: templates/partials/author_info_card.html:19
+msgid ""
+"You're already registered, but an administrator still needs to activate your account. Please be\n"
+"                        patient."
+msgstr ""
+"Sie sind bereits registriert, aber ein Administrator muss Ihr Konto noch "
+"aktivieren. Bitte haben Sie etwas Geduld."
+
+#: templates/partials/author_info_card.html:25
+msgid "Join for free"
+msgstr "Kostenlos beitreten"
+
+#: templates/partials/author_info_card.html:9
+msgid "Create a free account to start publishing as an author. We are happy."
+msgstr ""
+"Erstellen Sie ein kostenloses Konto, um als Autor zu veröffentlichen. Wir "
+"freuen uns."
+
+#: templates/partials/author_info_card.html:27
+msgid "Access your drafts and continue creating new content."
+msgstr ""
+"Greifen Sie auf Ihre Entwürfe zu und erstellen Sie weiterhin neue Inhalte."
+
+#: templates/partials/author_info_card.html:43
+msgid ""
+"After creating your account, an administrator will review and activate your "
+"author access."
+msgstr ""
+"Nachdem Sie Ihr Konto erstellt haben, wird ein Administrator Ihren "
+"Autorenzugang überprüfen und aktivieren."
+
+#: templates/partials/author_info_card.html:50
+msgid ""
+"We’re currently onboarding new authors manually. Get in touch if you’d like "
+"early access."
+msgstr ""
+"Wir integrieren derzeit neue Autoren manuell. Kontaktieren Sie uns, wenn Sie"
+" einen frühen Zugang möchten."

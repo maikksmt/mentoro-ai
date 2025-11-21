@@ -94,7 +94,6 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "allauth.socialaccount.providers.github",
-    "allauth.socialaccount.providers.apple",
     "easy_thumbnails",
     "filer",
     "tinymce",
@@ -145,7 +144,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "core.seo.context_processor.context_processor",
                 "django.template.context_processors.i18n",
-                
+                "core.context_processors.account_signup_settings",
             ],
             "builtins": [
                 "heroicons.templatetags.heroicons",
@@ -374,9 +373,10 @@ LOGOUT_REDIRECT_URL = "/"
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {"VERIFIED_EMAIL": True},
-    "github": {"VERIFIED_EMAIL": True},
-    "apple": {"VERIFIED_EMAIL": True},
+    "github": {"VERIFIED_EMAIL": True, "EMAIL_REQUIRED": True},
 }
+ACCOUNT_SIGNUP_ENABLED = False
+ACCOUNT_ADAPTER = "accounts.adapters.ToggleSignupAccountAdapter"
 
 # E-Mail
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
