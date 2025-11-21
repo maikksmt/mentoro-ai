@@ -16,6 +16,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Add Google Analytics to project
 - Add Cookie Banner
 - Preparing for later Google AdSense
+- Final step for user account management and user registration.
 
 ---
 
