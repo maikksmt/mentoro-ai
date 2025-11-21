@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<div class="alert alert-info mt-4">
+    <div>
+        {% heroicon_outline "information-circle" class="w-5 h-5" %}
+        <span>
+            {% blocktrans with user_display=user.get_username %}
+                You are already logged in as {{ user_display }}.
+            {% endblocktrans %}
+        </span>
+    </div>
+    <div class="mt-2">
+        <a href="{% url 'account_logout' %}" class="link link-hover text-sm">
+            {% trans "Log out and use a different account" %}
+        </a>
+    </div>
+</div>

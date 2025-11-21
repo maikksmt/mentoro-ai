@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Account dashboard" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-4xl p-4 space-y-6">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+                <h1 class="text-2xl font-bold">
+                    {% trans "Your MentoroAI account" %}
+                </h1>
+                <p class="text-sm opacity-70">
+                    {% trans "Manage your e-mail, password and connected services in one place." %}
+                </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="avatar placeholder">
+                    <div class="bg-primary/10 text-primary rounded-full w-12 h-12 grid place-items-center">
+                        <span class="font-semibold text-base">
+                            {% with first=user.first_name|slice:":1" last=user.last_name|slice:":1" %}
+                                {% if first and last %}
+                                    {{ first|upper }}{{ last|upper }}
+                                {% elif first %}
+                                    {{ first|upper }}
+                                {% elif user.get_username %}
+                                    {{ user.get_username|first|upper }}
+                                {% else %}
+                                    {{ user.email|first|upper }}
+                                {% endif %}
+                            {% endwith %}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-sm">
+                    <div class="font-medium">
+                        {{ user.get_full_name|default:user.get_username }}
+                    </div>
+                    <div class="opacity-70 text-xs">
+                        {{ user.email }}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+
+            {# Account overview #}
+            <div class="card bg-base-100 shadow-sm">
+                <div class="card-body space-y-3">
+                    <h2 class="card-title text-base">
+                        {% trans "Account overview" %}
+                    </h2>
+
+                    <dl class="text-sm space-y-1">
+                        <div class="flex justify-between gap-4">
+                            <dt class="opacity-70">{% trans "E-mail" %}</dt>
+                            <dd class="font-medium text-right break-all">
+                                {{ user.email|default:"–" }}
+                            </dd>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <dt class="opacity-70">{% trans "Username" %}</dt>
+                            <dd class="font-medium text-right break-all">
+                                {{ user.get_username }}
+                            </dd>
+                        </div>
+                        <div class="flex justify-between gap-4">
+                            <dt class="opacity-70">{% trans "Member since" %}</dt>
+                            <dd class="font-medium text-right">
+                                {{ user.date_joined|date:"DATE_FORMAT" }}
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <div class="divider my-1"></div>
+
+                    {# Name für Autor:innen-Profil bearbeiten #}
+                    <form method="post" action="{% url 'account_dashboard' %}" class="space-y-2">
+                        {% csrf_token %}
+
+                        <p class="text-xs opacity-70">
+                            {% trans "This name can be shown as the author name on your published content." %}
+                        </p>
+
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">{% trans "First name" %}</span>
+                            </label>
+                            {{ user_account_form.first_name }}
+                            {% if user_account_form.first_name.errors %}
+                                <label class="label">
+                        <span class="label-text-alt text-error text-xs">
+                            {{ user_account_form.first_name.errors|join:", " }}
+                        </span>
+                                </label>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">{% trans "Last name" %}</span>
+                            </label>
+                            {{ user_account_form.last_name }}
+                            {% if user_account_form.last_name.errors %}
+                                <label class="label">
+                        <span class="label-text-alt text-error text-xs">
+                            {{ user_account_form.last_name.errors|join:", " }}
+                        </span>
+                                </label>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-actions justify-end pt-2">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                {% heroicon_outline "user" class="w-4 h-4 mr-1" %}
+                                <span>{% trans "Save author name" %}</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            {# Security: password / reauth #}
+            <div class="card bg-base-100 shadow-sm">
+                <div class="card-body space-y-3">
+                    <h2 class="card-title text-base">
+                        {% trans "Security" %}
+                    </h2>
+
+                    <p class="text-sm opacity-70">
+                        {% trans "Update your password and keep your account secure." %}
+                    </p>
+
+                    <div class="space-y-2 text-sm">
+                        {% if user.has_usable_password %}
+                            <div class="flex justify-between items-center gap-4">
+                            <span class="opacity-80">
+                                {% trans "Change your current password." %}
+                            </span>
+                                <a href="{% url 'account_change_password' %}" class="btn btn-outline btn-sm">
+                                    {% trans "Change password" %}
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="flex justify-between items-center gap-4">
+                            <span class="opacity-80">
+                                {% trans "Set a password in addition to social login." %}
+                            </span>
+                                <a href="{% url 'account_set_password' %}" class="btn btn-outline btn-sm">
+                                    {% trans "Set password" %}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            {# Social accounts #}
+            <div class="card bg-base-100 shadow-sm md:col-span-2">
+                <div class="card-body space-y-3">
+                    <h2 class="card-title text-base">
+                        {% trans "Connected services" %}
+                    </h2>
+
+                    <p class="text-sm opacity-70">
+                        {% trans "Manage which external services (e.g. Google, GitHub) are linked to your MentoroAI account." %}
+                    </p>
+
+                    <div class="card-actions justify-start pt-2">
+                        <a href="{% url 'socialaccount_connections' %}" class="btn btn-outline btn-sm">
+                            {% trans "Manage connections" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Danger zone #}
+        <div class="card bg-base-100 border border-error/30">
+            <div class="card-body space-y-3">
+                <h2 class="card-title text-base text-error">
+                    {% trans "Danger zone" %}
+                </h2>
+                <p class="text-sm opacity-80">
+                    {% trans "If you no longer want to use MentoroAI, you can log out or contact us to remove your account data." %}
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="{% url 'account_logout' %}" class="btn btn-sm">
+                        {% trans "Log out" %}
+                    </a>
+                    {#                    <a href="{% url 'legal:contact' %}" class="btn btn-ghost btn-sm">#}
+                    {#                        {% trans "Contact support" %}#}
+                    {#                    </a>#}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

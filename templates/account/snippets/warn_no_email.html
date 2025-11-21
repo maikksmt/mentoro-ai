@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<div class="alert alert-warning mt-4">
+    <div>
+        {% heroicon_outline "exclamation-triangle" class="w-5 h-5" %}
+        <span>
+            {% trans "You have no e-mail address associated with your account." %}
+        </span>
+    </div>
+    <div class="mt-2 text-sm">
+        <p class="opacity-80">
+            {% trans "Without an e-mail address you cannot reset your password or receive important notifications." %}
+        </p>
+        <a href="{% url 'account_email' %}" class="link link-hover">
+            {% trans "Add an e-mail address now." %}
+        </a>
+    </div>
+</div>

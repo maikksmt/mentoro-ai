@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Connected services" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-2xl p-4 space-y-6">
+        <div>
+            <h1 class="text-2xl font-bold">
+                {% trans "Connected services" %}
+            </h1>
+            <p class="text-sm opacity-70">
+                {% trans "Manage which external services (e.g. Google, GitHub) are linked to your MentoroAI account." %}
+            </p>
+        </div>
+
+        {# Bestehende Verbindungen #}
+        <div class="card bg-base-100 shadow-sm">
+            <div class="card-body space-y-4">
+                <h2 class="card-title text-base">
+                    {% trans "Your connected accounts" %}
+                </h2>
+
+                {% if form.accounts %}
+                    <p class="text-sm opacity-70">
+                        {% trans "You can remove a connected account. You will no longer be able to sign in with it." %}
+                    </p>
+
+                    <form method="post" action="{% url 'socialaccount_connections' %}" class="space-y-3">
+                        {% csrf_token %}
+
+                        <div class="space-y-2">
+                            {% for base_account in form.accounts %}
+                                <label class="flex items-center justify-between gap-4 border border-base-300/60 rounded-md px-3 py-2">
+                                    <div class="flex items-center gap-3">
+                                        <input id="id_account_{{ base_account.id }}"
+                                               type="radio"
+                                               name="account"
+                                               value="{{ base_account.id }}"
+                                               class="radio radio-sm"/>
+                                        <div class="text-sm">
+                                            <div class="font-medium">
+                                                {{ base_account.get_provider.name }}
+                                            </div>
+                                            <div class="opacity-70 text-xs break-all">
+                                                {{ base_account }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            {% endfor %}
+                        </div>
+
+                        <button type="submit" class="btn btn-error btn-sm">
+                            {% trans "Remove selected connection" %}
+                        </button>
+                    </form>
+                {% else %}
+                    <p class="text-sm opacity-70">
+                        {% trans "You currently have no external accounts connected." %}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        {# Neue Verbindungen hinzufügen #}
+        <div class="card bg-base-100 shadow-sm">
+            <div class="card-body space-y-3">
+                <h2 class="card-title text-base">
+                    {% trans "Add a new connection" %}
+                </h2>
+                <p class="text-sm opacity-70">
+                    {% trans "Connect another service to sign in with it in the future." %}
+                </p>
+
+                {# nutzt dein bestehendes Provider-Button-Snippet, aber mit process='connect' #}
+                {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
