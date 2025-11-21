@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n widget_tweaks %}
+
+{% block title %}
+    <title>{% trans "Confirm your password" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-md p-4">
+        <div class="flex flex-col items-center mb-6 gap-2">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "lock-closed" class="w-6 h-6 text-primary" %}
+            </div>
+            <h1 class="text-2xl font-bold text-center">
+                {% trans "Please confirm your identity" %}
+            </h1>
+            <p class="text-sm opacity-70 text-center">
+                {% trans "For security reasons we need you to re-enter your password." %}
+            </p>
+        </div>
+
+        <div class="card bg-base-100 shadow">
+            <div class="card-body">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text">{{ form.password.label }}</span>
+                        </label>
+                        {{ form.password|add_class:"input input-bordered w-full" }}
+                        {{ form.password.errors }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-full">
+                        {% heroicon_outline "check" class="w-5 h-5 mr-2" %}
+                        <span>{% trans "Continue" %}</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

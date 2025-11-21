@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>{% trans "Confirm email" %} – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+    {% with canonical=request.build_absolute_uri %}
+        {% with seo_canonical=canonical %}{% endwith %}
+    {% endwith %}
+    <meta name="description"
+          content="{% trans 'Confirm your email address to activate your MentoroAI account.' %}">
+{% endblock %}
+
+{% block meta_og %}{{ block.super }}{% endblock %}
+{% block jsonld %}{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto p-4 max-w-lg">
+
+        <div class="flex flex-col items-center mb-6 gap-3">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "envelope-open" class="w-8 h-8 text-primary" %}
+            </div>
+            <h1 class="text-2xl font-bold text-center">
+                {% trans "Confirm your email" %}
+            </h1>
+        </div>
+
+        <div class="card bg-base-100 shadow">
+            <div class="card-body space-y-4">
+
+                {% if confirmation %}
+                    <p class="text-sm opacity-80 text-center">
+                        {% blocktrans with email=confirmation.email_address.email %}
+                            Please confirm that <strong>{{ email }}</strong> is your email address.
+                        {% endblocktrans %}
+                    </p>
+
+                    <form method="post" class="mt-4">
+                        {% csrf_token %}
+                        <button class="btn btn-primary w-full">
+                            {% heroicon_outline "check-circle" class="w-5 h-5 mr-2" %}
+                            <span>{% trans "Confirm email" %}</span>
+                        </button>
+                    </form>
+
+                {% else %}
+                    <p class="text-sm opacity-80 text-center">
+                        {% trans "This email confirmation link is invalid or has expired. Please request a new confirmation email." %}
+                    </p>
+
+                    <div class="flex flex-col gap-2 mt-4">
+                        <a href="{% url 'account_email' %}" class="btn btn-primary w-full">
+                            {% heroicon_outline "envelope" class="w-5 h-5 mr-2" %}
+                            <span>{% trans "Manage email addresses" %}</span>
+                        </a>
+                        <a href="{% url 'account_login' %}" class="btn btn-ghost w-full">
+                            {% heroicon_outline "arrow-right-on-rectangle" class="w-5 h-5 mr-2" %}
+                            <span>{% trans "Back to login" %}</span>
+                        </a>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

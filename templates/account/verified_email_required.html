@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "E-mail verification required" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-md p-4">
+        <div class="card bg-base-100 shadow">
+            <div class="card-body gap-3">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="rounded-full bg-primary/10 p-3">
+                        {% heroicon_outline "envelope-open" class="w-6 h-6 text-primary" %}
+                    </div>
+                    <h1 class="text-2xl font-bold text-center">
+                        {% trans "Please verify your e-mail address" %}
+                    </h1>
+                </div>
+
+                <p class="text-sm opacity-70 text-center">
+                    {% blocktrans %}To continue, you need to verify your e-mail address. We have sent you an e-mail with
+                        a confirmation link.{% endblocktrans %}
+                </p>
+
+                <p class="text-xs opacity-70 text-center">
+                    {% blocktrans %}If you did not receive the e-mail, check your spam folder or request a new
+                        confirmation link in your account settings.{% endblocktrans %}
+                </p>
+
+                <div class="flex flex-col gap-2 mt-4">
+                    <a href="{% url 'account_email' %}" class="btn btn-primary btn-sm w-full">
+                        {% heroicon_outline "envelope" class="w-4 h-4 mr-2" %}
+                        <span>{% trans "Manage e-mail addresses" %}</span>
+                    </a>
+
+                    <a href="{% url 'account_logout' %}" class="btn btn-ghost btn-sm w-full">
+                        {% heroicon_outline "arrow-right-on-rectangle" class="w-4 h-4 mr-2" %}
+                        <span>{% trans "Back to login" %}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

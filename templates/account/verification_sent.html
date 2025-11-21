@@ -1,0 +1,58 @@
+{# templates/account/verification_sent.html #}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>{% trans "Email verification sent" %} – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+    {% with canonical=request.build_absolute_uri %}
+        {% with seo_canonical=canonical %}{% endwith %}
+    {% endwith %}
+    <meta name="description"
+          content="{% trans 'We have sent you an email with a confirmation link.' %}">
+{% endblock %}
+
+{% block meta_og %}{{ block.super }}{% endblock %}
+{% block jsonld %}{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto p-4 max-w-lg">
+
+        <div class="flex flex-col items-center mb-6 gap-3">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "envelope" class="w-8 h-8 text-primary" %}
+            </div>
+            <h1 class="text-2xl font-bold text-center">
+                {% trans "Check your inbox" %}
+            </h1>
+            <p class="text-sm opacity-70 text-center">
+                {% trans "We have sent a verification link to your email address." %}
+            </p>
+        </div>
+
+        <div class="card bg-base-100 shadow">
+            <div class="card-body space-y-4 text-sm text-center opacity-80">
+                <p>
+                    {% blocktrans %}Please click the link in the email to confirm your address and
+                        activate your MentoroAI account.{% endblocktrans %}
+                </p>
+                <p>
+                    {% blocktrans %}If you do not see the email, please check your spam folder.{% endblocktrans %}
+                </p>
+
+                <div class="pt-2 flex flex-col gap-2">
+                    <a href="{% url 'account_login' %}" class="btn btn-primary w-full">
+                        {% heroicon_outline "arrow-right-on-rectangle" class="w-5 h-5 mr-2" %}
+                        <span>{% trans "Back to login" %}</span>
+                    </a>
+                    <a href="{% url 'account_email' %}" class="btn btn-ghost w-full">
+                        {% heroicon_outline "envelope-open" class="w-5 h-5 mr-2" %}
+                        <span>{% trans "Manage email addresses" %}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

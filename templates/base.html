@@ -161,10 +161,7 @@
 <!-- Admin NAV -->
 {% if request.user.is_authenticated %}
     <div class="navbar my-0 py-0">
-        <div class="flex-1  my-0 py-0">
-            <a class="btn btn-ghost text-xl"></a>
-        </div>
-        <div class="flex-none  my-0 py-0">
+        <div class="flex-none my-0 py-0">
             <a href="{% url 'account_dashboard' %}"
                class="btn btn-sm btn-outline my-0 py-0">{% trans "Dashboard" %}</a>
             {% if request.user|has_group:"author" or request.user|has_group:"editor" or request.user|has_group:"admin" %}
@@ -180,37 +177,6 @@
         </div>
     </div>
 {% endif %}
-
-<!-- Beta Badge -->
-<div class="fixed bottom-16 left-4 z-50 btn btn-warning btn-sm rounded-full" title="This is a beta version of MentoroAI"
-     onclick="beta_modal.showModal()">BETA{% heroicon_solid "chevron-up" size=16 %}
-</div>
-<dialog id="beta_modal" class="modal">
-    <div class="modal-box">
-        <h3 class="text-lg font-bold">{% blocktrans %}MentoroAI is currently in public beta{% endblocktrans %}</h3>
-        <p>
-            {% trans "Some features may change or be incomplete." %} <br>
-            {% trans "Please provide feedback on Github Discussions" %}
-
-        </p>
-
-        <div class="modal-action">
-            <div class="flex gap-3 justify-center items-center">
-                <a class="btn btn-sm btn-info" target="_blank" rel="noopener"
-                   href="https://github.com/maikksmt/mentoro-ai/discussions/categories/beta-feedback"> {% trans "Go to Github Discussions" %}</a>
-                <form method="dialog">
-                    <button class="btn">{% trans "Close" %}</button>
-                </form>
-            </div>
-
-        </div>
-
-    </div>
-    <form method="dialog" class="modal-backdrop">
-        <button aria-label="{% trans 'Close modal' %}">close</button>
-    </form>
-</dialog>
-
 
 <!-- Page container -->
 <main class="p-4 w-full max-w-7xl mx-auto mb-auto">
@@ -243,6 +209,39 @@
         </p>
     </div>
 </footer>
+
+{% if messages %}
+    <div id="toast-container" class="toast toast-end fixed top-4 right-4 z-[9999] pointer-events-auto">
+        {% for message in messages %}
+            <div class="alert shadow-lg animate-fade-in z-900
+                 {% if message.tags == 'success' %}alert-success
+                 {% elif message.tags == 'error' %}alert-error
+                 {% elif message.tags == 'warning' %}alert-warning
+                 {% else %}alert-info{% endif %}"
+                 data-toast-duration="5000">
+
+                {% heroicon_outline "information-circle" class="w-5 h-5" %}
+                <span>{{ message }}</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toasts = document.querySelectorAll("#toast-container .alert");
+
+        toasts.forEach((toast) => {
+            const duration = parseInt(toast.dataset.toastDuration || "5000", 10);
+
+            setTimeout(() => {
+                toast.classList.add("animate-fade-out");
+                setTimeout(() => toast.remove(), 500); // nach Fade-Out entfernen
+            }, duration);
+        });
+    });
+</script>
+
 
 <script>
     // --- Drawer open/close + ESC + Backdrop ---

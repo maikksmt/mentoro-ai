@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    <title>{% trans "Third-party authentication" %} – MentoroAI</title>
+{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto max-w-md p-4">
+
+        <div class="flex flex-col items-center mb-6 gap-2">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "finger-print" class="w-6 h-6 text-primary" %}
+            </div>
+
+            <h1 class="text-2xl font-bold text-center">
+                {% trans "Continue with third-party login" %}
+            </h1>
+
+            <p class="text-sm opacity-70 text-center">
+                {% blocktrans %}
+                    This action requires you to authenticate again with your connected
+                    third-party account (such as Google or GitHub).
+                {% endblocktrans %}
+            </p>
+        </div>
+
+        <div class="card bg-base-100 shadow">
+            <div class="card-body space-y-4">
+
+                {% if provider %}
+                    <p class="text-sm opacity-70 text-center">
+                        {% blocktrans with provider_name=provider.name %}
+                            Continue by confirming your {{ provider_name }} login.
+                        {% endblocktrans %}
+                    </p>
+                {% else %}
+                    <p class="text-sm opacity-70 text-center">
+                        {% trans "Continue by confirming your external login." %}
+                    </p>
+                {% endif %}
+
+                <form method="post" action="">
+                    {% csrf_token %}
+
+                    <button type="submit" class="btn btn-primary w-full">
+                        {% heroicon_outline "arrow-right-on-rectangle" class="w-5 h-5 mr-2" %}
+                        <span>{% trans "Continue" %}</span>
+                    </button>
+                </form>
+
+                <div class="text-center mt-2">
+                    <a href="{% url 'account_login' %}" class="link link-hover text-sm opacity-70">
+                        {% trans "Back to login" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

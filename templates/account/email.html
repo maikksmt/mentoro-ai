@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>{% trans "Email Addresses" %} – MentoroAI</title>{% endblock %}
+
+{% block meta_core %}
+    {{ block.super }}
+    <meta name="robots" content="noindex,follow">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto p-4 max-w-xl">
+        <div class="flex flex-col items-center mb-6 gap-2">
+            <div class="rounded-full bg-primary/10 p-3">
+                {% heroicon_outline "envelope" class="w-6 h-6 text-primary" %}
+            </div>
+            <h1 class="text-2xl font-bold text-center">{% trans "Email addresses" %}</h1>
+            <p class="text-sm opacity-70 text-center">
+                {% trans "Manage the email addresses linked to your account." %}
+            </p>
+        </div>
+
+        <div class="card bg-base-100 shadow mb-4">
+            <div class="card-body">
+                {% if user.emailaddress_set.all %}
+                    <ul class="space-y-2">
+                        {% for email in user.emailaddress_set.all %}
+                            <li class="flex items-center justify-between">
+                                <span class="font-medium">{{ email.email }}</span>
+                                <div class="flex items-center gap-2">
+                                    {% if email.primary %}
+                                        <span class="badge badge-primary">{% trans "Primary" %}</span>
+                                    {% endif %}
+                                    {% if email.verified %}
+                                        <span class="badge badge-success">{% trans "Verified" %}</span>
+                                    {% else %}
+                                        <span class="badge badge-warning">{% trans "Unverified" %}</span>
+                                    {% endif %}
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-sm opacity-70">
+                        {% trans "You have no email addresses associated with your account yet." %}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        <a class="btn btn-primary w-full" href="{% url 'account_email' %}?action=add">
+            {% heroicon_outline "plus-circle" class="w-5 h-5 mr-2" %}
+            <span>{% trans "Add new email address" %}</span>
+        </a>
+    </div>
+{% endblock %}
