@@ -39,6 +39,7 @@ urlpatterns = [
     path("jsi18n/", JavaScriptCatalog.as_view(packages=["content", ]), name="javascript-catalog", ),
     path("tinymce/", include("tinymce.urls")),
     path("filer/", include("filer.urls")),
+    path("accounts/", include("allauth.urls")),
     path("admin/tinymce/upload/", tinymce_upload, name="tinymce_upload"),
     path("admin/tinymce/image-list/", tinymce_image_list, name="tinymce_image_list"),
     path("admin/", admin.site.urls),
@@ -59,7 +60,7 @@ urlpatterns += i18n_patterns(
     path("what-to-find/", TemplateView.as_view(template_name="content/what-to-find.html"), name="what-to-find"),
     path("newsletter/", include("newsletter.urls")),
     path("account/dashboard/", AccountDashboardView.as_view(), name="account_dashboard"),
-    path("accounts/", include("allauth.urls")),
+
     # path("api/", include("api.urls")),
     path("legal/", include("content.urls_legal")),
     path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap", ),
