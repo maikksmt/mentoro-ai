@@ -14,7 +14,8 @@
             <article class="card bg-base-100 shadow hover:shadow-lg transition">
                 <div class="card-body">
                     <h2 class="card-title">
-                        <a href="{{ obj.get_absolute_url }}" class="link link-hover">{{ obj.display_title }}</a>
+                        <a href="{{ obj.get_absolute_url }}" class="link link-hover" aria-label="
+                                {% trans "Read details about " %}{{ obj.display_title }}">{{ obj.display_title }}</a>
                     </h2>
 
                     {% if obj.persona %}
@@ -34,7 +35,10 @@
                                     📅 {{ obj.published_at|date:"d.m.Y" }}</time>
                             {% endif %}
                         </div>
-                        <a href="{{ obj.get_absolute_url }}" class="btn btn-sm btn-primary">{% trans "Details" %}</a>
+                        <a href="{{ obj.get_absolute_url }}" class="btn btn-sm btn-primary" role="button"
+                           aria-pressed="false"
+                           aria-label="{% trans "Read details about " %}{{ obj.display_title }}">{% trans "Details" %}
+                        </a>
                     </div>
                 </div>
             </article>

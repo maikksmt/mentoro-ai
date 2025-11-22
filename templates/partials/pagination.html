@@ -2,7 +2,8 @@
 {% if page_obj.paginator.num_pages > 1 %}
     <div class="join my-6 justify-center flex">
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}" class="join-item btn btn-sm"
+            <a href="?page={{ page_obj.previous_page_number }}" class="join-item btn btn-sm" role="button"
+               aria-pressed="false"
                aria-label="{% trans 'Previous Page' %}">«</a>
         {% else %}
             <button class="join-item btn btn-sm btn-disabled">«</button>
@@ -11,7 +12,8 @@
     {% trans "Site" %} {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
   </span>
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}" class="join-item btn btn-sm"
+            <a href="?page={{ page_obj.next_page_number }}" class="join-item btn btn-sm" role="button"
+               aria-pressed="false"
                aria-label="{% trans 'Next Page' %}">»</a>
         {% else %}
             <button class="join-item btn btn-sm btn-disabled">»</button>

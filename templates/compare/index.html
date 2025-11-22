@@ -9,7 +9,8 @@
     <form method="get" class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl">
         <label class="input col-span-2">
             {% heroicon_solid "magnifying-glass" class="opacity-70" %}
-            <input type="search" name="q" value="{{ q|default_if_none:'' }}" class="grow" placeholder="{% trans 'Search…' %}">
+            <input type="search" name="q" value="{{ q|default_if_none:'' }}" class="grow"
+                   placeholder="{% trans 'Search…' %}">
         </label>
         <label class="col-span-2">
             <select name="category" class="select appearance-none">
@@ -30,7 +31,8 @@
             <article class="card bg-base-100 shadow hover:shadow-lg transition">
                 <div class="card-body">
                     <h2 class="card-title">
-                        <a class="link link-hover" href="{% url 'compare:detail' slug=cmp.slug %}">{{ cmp.title }}</a>
+                        <a href="{% url 'compare:detail' slug=cmp.slug %}" class="link link-hover"
+                           aria-label="{% trans "Read details about " %}{{ cmp.title }}">{{ cmp.title }}</a>
                     </h2>
                     {% if cmp.intro %}<p class="line-clamp-3">{{ cmp.intro }}</p>{% endif %}
                     <div class="mt-3 flex flex-wrap gap-2 text-sm">
@@ -43,8 +45,9 @@
                         {% endif %}
                     </div>
                     <div class="card-actions justify-end mt-4">
-                        <a class="btn btn-sm btn-primary"
-                           href="{% url 'compare:detail' slug=cmp.slug %}">{% trans "Details" %}</a>
+                        <a href="{% url 'compare:detail' slug=cmp.slug %}" class="btn btn-sm btn-primary" role="button"
+                           aria-pressed="false"
+                           aria-label="{% trans "Read details about " %}{{ cmp.title }}">{% trans "Details" %}</a>
                     </div>
                 </div>
             </article>

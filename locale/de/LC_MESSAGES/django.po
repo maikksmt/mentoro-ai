@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-21 22:03+0100\n"
-"PO-Revision-Date: 2025-11-21 22:04+0100\n"
+"POT-Creation-Date: 2025-11-22 09:34+0100\n"
+"PO-Revision-Date: 2025-11-22 09:34+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -161,9 +161,9 @@ msgstr "Vergleich"
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:83 templates/base.html:107
+#: templates/base.html:85 templates/base.html:109
 #: templates/content/what-to-find.html:36
-#: templates/partials/_entry_cards.html:46
+#: templates/partials/_entry_cards.html:51
 msgid "Comparisons"
 msgstr "Vergleiche"
 
@@ -235,8 +235,7 @@ msgid "You are now registered as an author. Good luck with your writing!"
 msgstr "Du bist jetzt als Autor registriert. Viel Spaß beim Schreiben!"
 
 #: content/views/home.py:47
-msgid ""
-"AI tools, guides & usecases for beginners and professionals · MentoroAI"
+msgid "AI tools, guides & usecases for beginners and professionals · MentoroAI"
 msgstr ""
 "KI-Tools, Leitfäden und Anwendungsfälle für Anfänger und Profis · MentoroAI"
 
@@ -346,9 +345,9 @@ msgid "Guide"
 msgstr "Leitfaden"
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:71 templates/base.html:95
-#: templates/content/home.html:105 templates/content/what-to-find.html:32
-#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
+#: templates/base.html:73 templates/base.html:97
+#: templates/content/home.html:107 templates/content/what-to-find.html:32
+#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:19
 msgid "Guides"
 msgstr "Leitfäden"
 
@@ -401,7 +400,7 @@ msgstr "E-Mail"
 msgid "Reason (optional)"
 msgstr "Grund (optional)"
 
-#: newsletter/views.py:20 templates/base.html:191
+#: newsletter/views.py:20 templates/base.html:193
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -505,10 +504,9 @@ msgid "Prompt"
 msgstr "Prompt"
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:74 templates/base.html:98
-#: templates/content/home.html:106 templates/content/what-to-find.html:33
-#: templates/partials/_entry_cards.html:25
-#: templates/prompts/prompt_list.html:6
+#: templates/base.html:76 templates/base.html:100
+#: templates/content/home.html:108 templates/content/what-to-find.html:33
+#: templates/partials/_entry_cards.html:27 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr "Prompts"
 
@@ -531,7 +529,8 @@ msgstr "Mit Drittanbieter-Login fortfahren"
 #: templates/account/3rdparty.html:26
 msgid ""
 "\n"
-"                    This action requires you to authenticate again with your connected\n"
+"                    This action requires you to authenticate again with your "
+"connected\n"
 "                    third-party account (such as Google or GitHub).\n"
 "                "
 msgstr ""
@@ -543,7 +542,8 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"                            Continue by confirming your %(provider_name)s login.\n"
+"                            Continue by confirming your %(provider_name)s "
+"login.\n"
 "                        "
 msgstr ""
 "\n"
@@ -741,16 +741,18 @@ msgstr "Bestätigen Sie Ihre E-Mail"
 #, python-format
 msgid ""
 "\n"
-"                            Please confirm that <strong>%(email)s</strong> is your email address.\n"
+"                            Please confirm that <strong>%(email)s</strong> "
+"is your email address.\n"
 "                        "
 msgstr ""
 "\n"
-"Bitte bestätigen Sie, dass <strong>%(email)s</strong> Ihre E-Mail-Adresse ist."
+"Bitte bestätigen Sie, dass <strong>%(email)s</strong> Ihre E-Mail-Adresse "
+"ist."
 
 #: templates/account/email_confirm.html:51
 msgid ""
-"This email confirmation link is invalid or has expired. Please request a new"
-" confirmation email."
+"This email confirmation link is invalid or has expired. Please request a new "
+"confirmation email."
 msgstr ""
 "Dieser Bestätigungslink in der E-Mail ist ungültig oder abgelaufen. Bitte "
 "fordern Sie eine neue Bestätigungs-E-Mail an."
@@ -762,7 +764,7 @@ msgstr "E-Mail-Adressen verwalten"
 
 #: templates/account/login.html:4 templates/account/login.html:94
 #: templates/account/password_reset_from_key_done.html:23
-#: templates/partials/author_info_card.html:52
+#: templates/partials/author_info_card.html:56
 msgid "Login"
 msgstr "Login"
 
@@ -777,8 +779,8 @@ msgstr "Willkommen zurück"
 #: templates/account/login.html:21
 msgid "Log in to access your guides, prompts and saved content."
 msgstr ""
-"Melden Sie sich an, um auf Ihre Leitfäden, Prompts und gespeicherten Inhalte"
-" zuzugreifen."
+"Melden Sie sich an, um auf Ihre Leitfäden, Prompts und gespeicherten Inhalte "
+"zuzugreifen."
 
 #: templates/account/login.html:57
 #: templates/socialaccount/snippets/provider_list.html:48
@@ -855,7 +857,7 @@ msgstr ""
 
 #: templates/account/password_reset.html:33
 #: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
-#: templates/legal/privacy_policy.html:15
+#: templates/legal/privacy_policy.html:17
 msgid "Email"
 msgstr "E-Mail"
 
@@ -874,8 +876,8 @@ msgstr "Überprüfen Sie Ihren Posteingang"
 
 #: templates/account/password_reset_done.html:19
 msgid ""
-"If an account exists with the email you entered, you will receive a password"
-" reset link shortly."
+"If an account exists with the email you entered, you will receive a password "
+"reset link shortly."
 msgstr ""
 "Wenn ein Konto mit der von Ihnen eingegebenen E-Mail-Adresse existiert, "
 "erhalten Sie in Kürze einen Link zum Zurücksetzen Ihres Passworts."
@@ -957,11 +959,12 @@ msgstr "Oder mit E-Mail anmelden"
 
 #: templates/account/signup.html:89
 msgid ""
-"Please confirm your email address. Your account will then be activated by an\n"
+"Please confirm your email address. Your account will then be activated by "
+"an\n"
 "                            administrator."
 msgstr ""
-"Bitte bestätige deine E-Mail-Adresse. Dein Konto wird anschließend von einem"
-" Administrator aktiviert."
+"Bitte bestätige deine E-Mail-Adresse. Dein Konto wird anschließend von einem "
+"Administrator aktiviert."
 
 #: templates/account/signup.html:101
 msgid "I already have an account"
@@ -976,9 +979,6 @@ msgid "New registrations are currently closed"
 msgstr "Neue Registrierungen sind derzeit geschlossen"
 
 #: templates/account/signup_closed.html:24
-#| msgid ""
-#| "We are not accepting new signups without invitation code at the moment. "
-#| "Please try again later."
 msgid ""
 "We are not accepting new signups without invitation at the moment. Please "
 "try again later."
@@ -1009,8 +1009,8 @@ msgid ""
 "Without an e-mail address you cannot reset your password or receive "
 "important notifications."
 msgstr ""
-"Ohne E-Mail-Adresse können Sie Ihr Passwort nicht zurücksetzen oder wichtige"
-" Benachrichtigungen erhalten."
+"Ohne E-Mail-Adresse können Sie Ihr Passwort nicht zurücksetzen oder wichtige "
+"Benachrichtigungen erhalten."
 
 #: templates/account/snippets/warn_no_email.html:15
 msgid "Add an e-mail address now."
@@ -1033,7 +1033,8 @@ msgid ""
 "Please click the link in the email to confirm your address and\n"
 "                        activate your MentoroAI account."
 msgstr ""
-"Bitte klicken Sie auf den Link in der E-Mail, um Ihre Adresse zu bestätigen und\n"
+"Bitte klicken Sie auf den Link in der E-Mail, um Ihre Adresse zu bestätigen "
+"und\n"
 "Ihr MentoroAI-Konto zu aktivieren."
 
 #: templates/account/verification_sent.html:42
@@ -1051,7 +1052,8 @@ msgstr "Bitte bestätigen Sie Ihre E-Mail-Adresse"
 
 #: templates/account/verified_email_required.html:27
 msgid ""
-"To continue, you need to verify your e-mail address. We have sent you an e-mail with\n"
+"To continue, you need to verify your e-mail address. We have sent you an e-"
+"mail with\n"
 "                        a confirmation link."
 msgstr ""
 "Um fortzufahren, müssen Sie Ihre E-Mail-Adresse bestätigen. Wir haben Ihnen "
@@ -1062,7 +1064,8 @@ msgid ""
 "If you did not receive the e-mail, check your spam folder or request a new\n"
 "                        confirmation link in your account settings."
 msgstr ""
-"Wenn Sie die E-Mail nicht erhalten haben, überprüfen Sie Ihren Spam-Ordner oder fordern Sie einen neuen\n"
+"Wenn Sie die E-Mail nicht erhalten haben, überprüfen Sie Ihren Spam-Ordner "
+"oder fordern Sie einen neuen\n"
 "Bestätigungslink in Ihren Kontoeinstellungen an."
 
 #: templates/account/verified_email_required.html:39
@@ -1143,72 +1146,72 @@ msgstr "Entwurf vs. Live"
 msgid "No differences in this language."
 msgstr "Keine Unterschiede in dieser Sprache."
 
-#: templates/base.html:63
+#: templates/base.html:65
 msgid "Mobile menu"
 msgstr "Mobiles Menü"
 
-#: templates/base.html:68 templates/base.html:92
+#: templates/base.html:70 templates/base.html:94
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr "Glossar"
 
-#: templates/base.html:77 templates/base.html:101
-#: templates/partials/_entry_cards.html:32
+#: templates/base.html:79 templates/base.html:103
+#: templates/partials/_entry_cards.html:35
 msgid "Use cases"
 msgstr "Anwendungsfälle"
 
-#: templates/base.html:80 templates/base.html:104
+#: templates/base.html:82 templates/base.html:106
 #: templates/content/what-to-find.html:35
-#: templates/partials/_entry_cards.html:39
+#: templates/partials/_entry_cards.html:43
 msgid "Tools"
 msgstr "Tools"
 
-#: templates/base.html:113
+#: templates/base.html:115
 msgid "Search"
 msgstr "Suche"
 
-#: templates/base.html:122
+#: templates/base.html:124
 msgid "Toggle theme"
 msgstr "Theme wechseln"
 
-#: templates/base.html:138
+#: templates/base.html:140
 msgid "Language select"
 msgstr "Sprachauswahl"
 
-#: templates/base.html:166
+#: templates/base.html:168
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/base.html:169
+#: templates/base.html:171
 msgid "Admin Panel"
 msgstr "Admin-Panel"
 
-#: templates/base.html:171 templates/partials/editorial_nav.html:7
+#: templates/base.html:173 templates/partials/editorial_nav.html:9
 msgid "Drafts"
 msgstr "Entwürfe"
 
-#: templates/base.html:174 templates/partials/editorial_nav.html:10
+#: templates/base.html:176 templates/partials/editorial_nav.html:13
 msgid "Reviews"
 msgstr "Überprüfungen"
 
-#: templates/base.html:193 templates/partials/_entry_cards.html:5
+#: templates/base.html:195 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr "Was kann ich auf MentoroAI finden?"
 
-#: templates/base.html:194
+#: templates/base.html:196
 msgid "Legal notice"
 msgstr "Impressum"
 
-#: templates/base.html:195
+#: templates/base.html:197
 msgid "Privacy policy"
 msgstr "Datenschutzerklärung"
 
-#: templates/base.html:197 templates/legal/terms_of_use.html:10
+#: templates/base.html:199 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
-#: templates/base.html:198
+#: templates/base.html:200
 msgid "Copyright"
 msgstr "Urheberrecht"
 
@@ -1244,25 +1247,43 @@ msgstr "Ähnliche Tools"
 msgid "Search tools …"
 msgstr "Suche Tools …"
 
-#: templates/catalog/tool_list.html:17
+#: templates/catalog/tool_list.html:18
 msgid "Only with Free-Tier"
 msgstr "Nur mit kostenlosem Tarif"
 
-#: templates/catalog/tool_list.html:20 templates/compare/index.html:23
+#: templates/catalog/tool_list.html:21 templates/catalog/tool_list.html:24
+#: templates/compare/index.html:24
 msgid "Filter"
 msgstr "Filter"
 
-#: templates/catalog/tool_list.html:22 templates/compare/index.html:24
+#: templates/catalog/tool_list.html:24 templates/compare/index.html:25
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: templates/catalog/tool_list.html:55 templates/compare/index.html:47
-#: templates/content/home.html:81 templates/prompts/prompt_list.html:28
-#: templates/usecases/list.html:37
+#: templates/catalog/tool_list.html:34 templates/catalog/tool_list.html:58
+#: templates/compare/index.html:35 templates/compare/index.html:50
+#: templates/glossary/glossary_results.html:7
+#: templates/guides/guide_list.html:19 templates/guides/guide_list.html:34
+#: templates/partials/_guideitem_card.html:22
+#: templates/partials/_guideitem_card.html:29
+#: templates/partials/_teaser_card.html:21
+#: templates/partials/_teaser_card.html:28
+#: templates/prompts/prompt_list.html:14 templates/prompts/prompt_list.html:30
+#: templates/usecases/list.html:18 templates/usecases/list.html:40
+msgid "Read details about "
+msgstr "Lesen Sie Details über"
+
+#: templates/catalog/tool_list.html:52
+msgid "Open website for "
+msgstr "Website öffnen für"
+
+#: templates/catalog/tool_list.html:58 templates/compare/index.html:50
+#: templates/content/home.html:83 templates/prompts/prompt_list.html:30
+#: templates/usecases/list.html:40
 msgid "Details"
 msgstr "Details"
 
-#: templates/catalog/tool_list.html:61
+#: templates/catalog/tool_list.html:64
 msgid "No tools found."
 msgstr "Keine Tools gefunden."
 
@@ -1291,20 +1312,19 @@ msgid "Tool comparison"
 msgstr "Tool-Vergleich"
 
 #: templates/compare/index.html:7
-msgid ""
-"Comparisons based on criteria such as price, functionality and quality."
+msgid "Comparisons based on criteria such as price, functionality and quality."
 msgstr ""
 "Vergleiche auf Basis von Kriterien wie Preis, Funktionalität und Qualität."
 
-#: templates/compare/index.html:12
+#: templates/compare/index.html:13
 msgid "Search…"
 msgstr "Suche…"
 
-#: templates/compare/index.html:16
+#: templates/compare/index.html:17
 msgid "All categories"
 msgstr "Alle Kategorien"
 
-#: templates/compare/index.html:53
+#: templates/compare/index.html:56
 msgid "No comparisons found."
 msgstr "Keine Vergleiche gefunden."
 
@@ -1391,39 +1411,45 @@ msgstr "Einreichen"
 
 #: templates/content/home.html:15
 msgid ""
-" Find the right tools, compare real alternatives, and follow practical guides\n"
-"                            and prompts to apply AI confidently in everyday life."
+" Find the right tools, compare real alternatives, and follow practical "
+"guides\n"
+"                            and prompts to apply AI confidently in everyday "
+"life."
 msgstr ""
 "Finden Sie die richtigen Tools, vergleichen Sie echte Alternativen und "
 "folgen Sie praktischen Anleitungen und Hinweisen, um KI sicher im Alltag "
 "anzuwenden."
 
-#: templates/content/home.html:20
+#: templates/content/home.html:20 templates/content/home.html:21
 msgid "Begin with the Starter Guide"
 msgstr "Beginne mit dem Start-Leitfaden"
 
-#: templates/content/home.html:23
+#: templates/content/home.html:24 templates/content/home.html:25
 msgid "Discover AI Tools"
 msgstr "KI-Tools entdecken"
 
-#: templates/content/home.html:50
+#: templates/content/home.html:52
 msgid "Featured Tools"
 msgstr "Empfohlene Tools"
 
-#: templates/content/home.html:92
+#: templates/content/home.html:81
+msgid "Rating"
+msgstr "Bewertung"
+
+#: templates/content/home.html:94
 msgid "Recommended for you"
 msgstr "Empfohlen für dich"
 
-#: templates/content/home.html:104
+#: templates/content/home.html:106
 msgid "Current content"
 msgstr "Aktuelle Inhalte"
 
-#: templates/content/home.html:108 templates/usecases/list.html:9
+#: templates/content/home.html:110 templates/usecases/list.html:9
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr "Anwendungsfälle"
 
-#: templates/content/home.html:117
+#: templates/content/home.html:119
 msgid "No published content yet."
 msgstr "Noch keine veröffentlichten Inhalte."
 
@@ -1434,14 +1460,19 @@ msgstr "Überblick und Abgrenzung der Inhaltsbereiche auf MentoroAI"
 #: templates/content/what-to-find.html:14
 msgid ""
 "\n"
-"                            MentoroAI offers different types of content – each format has a clear purpose, its own\n"
+"                            MentoroAI offers different types of content – "
+"each format has a clear purpose, its own\n"
 "                            depth,\n"
-"                            and addresses specific user needs. The following overview explains the structure, goal,\n"
+"                            and addresses specific user needs. The following "
+"overview explains the structure, goal,\n"
 "                            and focus of the six key content categories.\n"
 "                        "
 msgstr ""
 "\n"
-"MentoroAI bietet verschiedene Inhaltsformate an – jedes Format hat einen klaren Zweck, seine eigene Tiefe und geht auf spezifische Nutzerbedürfnisse ein. Die folgende Übersicht erläutert Struktur, Ziel und Schwerpunkt der sechs wichtigsten Inhaltskategorien."
+"MentoroAI bietet verschiedene Inhaltsformate an – jedes Format hat einen "
+"klaren Zweck, seine eigene Tiefe und geht auf spezifische Nutzerbedürfnisse "
+"ein. Die folgende Übersicht erläutert Struktur, Ziel und Schwerpunkt der "
+"sechs wichtigsten Inhaltskategorien."
 
 #: templates/content/what-to-find.html:34
 msgid "Use Cases"
@@ -1535,12 +1566,15 @@ msgstr "Leitfäden - Lernen und Schritt für Schritt anwenden"
 #: templates/content/what-to-find.html:84
 msgid ""
 "\n"
-"                        Instructional texts that explain a topic from the ground up – practical and easy to follow.\n"
-"                        They combine knowledge, motivation, and actionable steps.\n"
+"                        Instructional texts that explain a topic from the "
+"ground up – practical and easy to follow.\n"
+"                        They combine knowledge, motivation, and actionable "
+"steps.\n"
 "                    "
 msgstr ""
 "\n"
-"Lehrtexte, die ein Thema von Grund auf erklären - praktisch und leicht zu befolgen.\n"
+"Lehrtexte, die ein Thema von Grund auf erklären - praktisch und leicht zu "
+"befolgen.\n"
 "Sie kombinieren Wissen, Motivation und umsetzbare Schritte."
 
 #: templates/content/what-to-find.html:92
@@ -1580,20 +1614,22 @@ msgstr "Unterscheidung:"
 #: templates/content/what-to-find.html:106
 msgid ""
 "\n"
-"                        Guides explain and accompany – they are not direct examples but structured learning or\n"
+"                        Guides explain and accompany – they are not direct "
+"examples but structured learning or\n"
 "                        application tutorials.\n"
 "                    "
 msgstr ""
 "\n"
-"Leitfäden erklären und begleiten - sie sind keine direkten Beispiele, sondern strukturiertes Lernen oder Anwendungs-Tutorials."
+"Leitfäden erklären und begleiten - sie sind keine direkten Beispiele, "
+"sondern strukturiertes Lernen oder Anwendungs-Tutorials."
 
 #: templates/content/what-to-find.html:114
 msgid ""
 "Guide: “Save time with AI in everyday office tasks – reports, emails & "
 "meetings.”"
 msgstr ""
-"Leitfaden: \"Spare Zeit mit KI bei alltäglichen Büroaufgaben - Berichte, "
-"E-Mails und Meetings.\""
+"Leitfaden: \"Spare Zeit mit KI bei alltäglichen Büroaufgaben - Berichte, E-"
+"Mails und Meetings.\""
 
 #: templates/content/what-to-find.html:118
 msgid "Explore Guides"
@@ -1606,12 +1642,14 @@ msgstr "Prompts – Sofort einsatzbereite Eingabebeispiele"
 #: templates/content/what-to-find.html:131
 msgid ""
 "\n"
-"                        Immediately usable input templates (“prompts”) for different goals, tailored to task and\n"
+"                        Immediately usable input templates (“prompts”) for "
+"different goals, tailored to task and\n"
 "                        audience.\n"
 "                    "
 msgstr ""
 "\n"
-"Sofort verwendbare Eingabevorlagen (\"Prompts\") für verschiedene Ziele, zugeschnitten auf die Aufgabe und Publikum."
+"Sofort verwendbare Eingabevorlagen (\"Prompts\") für verschiedene Ziele, "
+"zugeschnitten auf die Aufgabe und Publikum."
 
 #: templates/content/what-to-find.html:139
 msgid "Title (e.g. “Create a structured email summary”)"
@@ -1636,7 +1674,8 @@ msgstr "Lege gleich los - mit einer gut formulierten Eingabe."
 #: templates/content/what-to-find.html:150
 msgid ""
 "\n"
-"                        Prompts are tools (text building blocks), guides are explanations,\n"
+"                        Prompts are tools (text building blocks), guides are "
+"explanations,\n"
 "                        and use cases are real-life examples.\n"
 "                    "
 msgstr ""
@@ -1735,12 +1774,14 @@ msgstr "Was kann dieses Tool leisten und wann lohnt sich sein Einsatz?"
 #: templates/content/what-to-find.html:224
 msgid ""
 "\n"
-"                        ChatGPT – a language model by OpenAI for text generation, ideal for idea creation, drafts,\n"
+"                        ChatGPT – a language model by OpenAI for text "
+"generation, ideal for idea creation, drafts,\n"
 "                        and analysis.\n"
 "                    "
 msgstr ""
 "\n"
-"ChatGPT - ein Sprachmodell von OpenAI für die Textgenerierung, ideal für die Erstellung von Ideen, Entwürfen und Analysen."
+"ChatGPT - ein Sprachmodell von OpenAI für die Textgenerierung, ideal für die "
+"Erstellung von Ideen, Entwürfen und Analysen."
 
 #: templates/content/what-to-find.html:231
 msgid "Explore Tools"
@@ -1753,11 +1794,13 @@ msgstr "Vergleiche – Orientierung & Entscheidungshilfe"
 #: templates/content/what-to-find.html:243
 msgid ""
 "\n"
-"                        Compare similar tools, models, or approaches to highlight differences and ideal use cases.\n"
+"                        Compare similar tools, models, or approaches to "
+"highlight differences and ideal use cases.\n"
 "                    "
 msgstr ""
 "\n"
-"Vergleiche ähnliche Tools, Modelle oder Ansätze, um Unterschiede und ideale Anwendungsfälle hervorzuheben."
+"Vergleiche ähnliche Tools, Modelle oder Ansätze, um Unterschiede und ideale "
+"Anwendungsfälle hervorzuheben."
 
 #: templates/content/what-to-find.html:250
 msgid "Comparison tables (e.g. “ChatGPT vs Claude vs Gemini”)"
@@ -1808,25 +1851,45 @@ msgid "Search term..."
 msgstr "Suchbegriff..."
 
 #: templates/glossary/glossary_list.html:24
+msgid "Show all terms"
+msgstr "Alle Begriffe anzeigen"
+
+#: templates/glossary/glossary_list.html:25
 msgid "All"
 msgstr "Alle"
 
-#: templates/glossary/glossary_list.html:40
-#: templates/glossary/glossary_list.html:44
-#: templates/glossary/glossary_list.html:73
-#: templates/glossary/glossary_list.html:77
+#: templates/glossary/glossary_list.html:30
+msgid "Show terms with letter "
+msgstr "Begriffe anzeigen mit Buchstabe "
+
+#: templates/glossary/glossary_list.html:41
+#: templates/glossary/glossary_list.html:74
+#: templates/partials/pagination.html:7
+msgid "Previous Page"
+msgstr "Vorherige Seite"
+
+#: templates/glossary/glossary_list.html:42
+#: templates/glossary/glossary_list.html:46
+#: templates/glossary/glossary_list.html:75
+#: templates/glossary/glossary_list.html:79
 msgid "Previous"
 msgstr "Zurück"
 
-#: templates/glossary/glossary_list.html:47
-#: templates/partials/pagination.html:11
+#: templates/glossary/glossary_list.html:49
+#: templates/partials/pagination.html:12
 msgid "Site"
 msgstr "Seite"
 
-#: templates/glossary/glossary_list.html:52
-#: templates/glossary/glossary_list.html:56
-#: templates/glossary/glossary_list.html:84
-#: templates/glossary/glossary_list.html:88
+#: templates/glossary/glossary_list.html:53
+#: templates/glossary/glossary_list.html:85
+#: templates/partials/pagination.html:17
+msgid "Next Page"
+msgstr "Nächste Seite"
+
+#: templates/glossary/glossary_list.html:54
+#: templates/glossary/glossary_list.html:58
+#: templates/glossary/glossary_list.html:86
+#: templates/glossary/glossary_list.html:90
 msgid "Next"
 msgstr "Weiter"
 
@@ -1843,11 +1906,11 @@ msgid "Step-by-step instructions on AI topics – understandable and practical."
 msgstr ""
 "Schritt-für-Schritt-Anleitungen zu KI Themen – verständlich und praxisnah."
 
-#: templates/guides/guide_list.html:30
+#: templates/guides/guide_list.html:34
 msgid "Read more"
 msgstr "Weiterlesen"
 
-#: templates/guides/guide_list.html:36
+#: templates/guides/guide_list.html:40
 msgid "No published guides available."
 msgstr "Keine veröffentlichten Leitfäden verfügbar."
 
@@ -1866,12 +1929,16 @@ msgstr "Was sind Cookies?"
 #: templates/legal/cookie_policy.html:14
 msgid ""
 "\n"
-"                Cookies are small text files stored on your device when you visit a website.\n"
-"                They provide technical functionality or convenience features (e.g., language selection).\n"
+"                Cookies are small text files stored on your device when you "
+"visit a website.\n"
+"                They provide technical functionality or convenience features "
+"(e.g., language selection).\n"
 "            "
 msgstr ""
 "\n"
-"Cookies sind kleine Textdateien, die auf deinem Gerät gespeichert werden, wenn du eine Website besuchst. Sie ermöglichen technische Funktionen oder Komfortoptionen (z. B. Sprachauswahl)."
+"Cookies sind kleine Textdateien, die auf deinem Gerät gespeichert werden, "
+"wenn du eine Website besuchst. Sie ermöglichen technische Funktionen oder "
+"Komfortoptionen (z. B. Sprachauswahl)."
 
 #: templates/legal/cookie_policy.html:19
 msgid "Cookies we use"
@@ -1908,15 +1975,21 @@ msgstr "Einwilligungsmanagement (Cookiebot)"
 #: templates/legal/cookie_policy.html:33
 msgid ""
 "\n"
-"                This website uses the consent management platform Cookiebot by Usercentrics.\n"
-"                Cookiebot stores cookies to document and manage your consent status.\n"
-"                These cookies are technically necessary to comply with legal consent requirements.\n"
+"                This website uses the consent management platform Cookiebot "
+"by Usercentrics.\n"
+"                Cookiebot stores cookies to document and manage your consent "
+"status.\n"
+"                These cookies are technically necessary to comply with legal "
+"consent requirements.\n"
 "            "
 msgstr ""
 "\n"
-"Diese Website nutzt die Einwilligungsmanagement-Plattform Cookiebot von Usercentrics.\n"
-"Cookiebot speichert Cookies, um Ihren Einwilligungsstatus zu dokumentieren und zu verwalten.\n"
-"Diese Cookies sind technisch notwendig, um die gesetzlichen Einwilligungsvorschriften einzuhalten."
+"Diese Website nutzt die Einwilligungsmanagement-Plattform Cookiebot von "
+"Usercentrics.\n"
+"Cookiebot speichert Cookies, um Ihren Einwilligungsstatus zu dokumentieren "
+"und zu verwalten.\n"
+"Diese Cookies sind technisch notwendig, um die gesetzlichen "
+"Einwilligungsvorschriften einzuhalten."
 
 #: templates/legal/cookie_policy.html:40
 msgid "stores your consent state (necessary)"
@@ -1933,12 +2006,16 @@ msgstr "Statistik-Cookies (Google Analytics 4)"
 #: templates/legal/cookie_policy.html:46
 msgid ""
 "\n"
-"                Google Analytics 4 is only activated after explicit consent (“Statistics” category).\n"
-"                Before consent, no Analytics cookies are set due to Google Consent Mode v2.\n"
+"                Google Analytics 4 is only activated after explicit consent "
+"(“Statistics” category).\n"
+"                Before consent, no Analytics cookies are set due to Google "
+"Consent Mode v2.\n"
 "            "
 msgstr ""
 "\n"
-"Google Analytics 4 wird erst nach ausdrücklicher Einwilligung aktiviert (Kategorie „Statistiken“). Vor der Einwilligung werden aufgrund des Google Consent Mode v2 keine Analytics-Cookies gesetzt."
+"Google Analytics 4 wird erst nach ausdrücklicher Einwilligung aktiviert "
+"(Kategorie „Statistiken“). Vor der Einwilligung werden aufgrund des Google "
+"Consent Mode v2 keine Analytics-Cookies gesetzt."
 
 #: templates/legal/cookie_policy.html:53
 msgid "used to distinguish users (expires after 2 years)"
@@ -1957,15 +2034,19 @@ msgstr "Cookie-Steuerung"
 #: templates/legal/cookie_policy.html:59
 msgid ""
 "\n"
-"                You can change or withdraw your consent at any time by opening the Cookiebot settings via the link\n"
+"                You can change or withdraw your consent at any time by "
+"opening the Cookiebot settings via the link\n"
 "                “Change your consent” at the bottom of the page.\n"
-"                Browser-based blocking or deleting of cookies is also possible.\n"
+"                Browser-based blocking or deleting of cookies is also "
+"possible.\n"
 "            "
 msgstr ""
 "\n"
-"Sie können Ihre Einwilligung jederzeit ändern oder widerrufen, indem Sie die Cookiebot-Einstellungen über den Link\n"
+"Sie können Ihre Einwilligung jederzeit ändern oder widerrufen, indem Sie die "
+"Cookiebot-Einstellungen über den Link\n"
 "„Einwilligung ändern“ am Seitenende öffnen.\n"
-"Das Blockieren oder Löschen von Cookies über den Browser ist ebenfalls möglich."
+"Das Blockieren oder Löschen von Cookies über den Browser ist ebenfalls "
+"möglich."
 
 #: templates/legal/copyright.html:5
 msgid "Copyright & Licenses – MentoroAI"
@@ -1982,12 +2063,15 @@ msgstr "1. Urheberrecht"
 #: templates/legal/copyright.html:14
 msgid ""
 "\n"
-"                All content published on this website (texts, images, code, layouts) is protected by copyright.\n"
+"                All content published on this website (texts, images, code, "
+"layouts) is protected by copyright.\n"
 "                Third-party contributions are marked accordingly.\n"
 "            "
 msgstr ""
 "\n"
-"Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Code, Layouts) sind urheberrechtlich geschützt. Beiträge Dritter sind entsprechend gekennzeichnet."
+"Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Code, "
+"Layouts) sind urheberrechtlich geschützt. Beiträge Dritter sind entsprechend "
+"gekennzeichnet."
 
 #: templates/legal/copyright.html:19
 msgid "2. Open-source license"
@@ -1996,12 +2080,14 @@ msgstr "2. Open-Source-Lizenz"
 #: templates/legal/copyright.html:21
 msgid ""
 "\n"
-"                The MentoroAI project is licensed under the GNU General Public License v3.0 (GPLv3). A copy of the\n"
+"                The MentoroAI project is licensed under the GNU General "
+"Public License v3.0 (GPLv3). A copy of the\n"
 "                license can be found on Github in the file\n"
 "            "
 msgstr ""
 "\n"
-"Das MentoroAI-Projekt steht unter der GNU General Public License v3.0 (GPLv3). Eine Kopie der Lizenz befindet sich auf Github in der Datei"
+"Das MentoroAI-Projekt steht unter der GNU General Public License v3.0 "
+"(GPLv3). Eine Kopie der Lizenz befindet sich auf Github in der Datei"
 
 #: templates/legal/copyright.html:26
 msgid "in the source repository."
@@ -2014,11 +2100,13 @@ msgstr "3. Nutzung von Inhalten"
 #: templates/legal/copyright.html:30
 msgid ""
 "\n"
-"            Reuse or reproduction of the content is only permitted within the scope of the license terms.\n"
+"            Reuse or reproduction of the content is only permitted within "
+"the scope of the license terms.\n"
 "        "
 msgstr ""
 "\n"
-" Die Wiederverwendung oder Vervielfältigung der Inhalte ist nur im Rahmen der Lizenzbedingungen erlaubt."
+" Die Wiederverwendung oder Vervielfältigung der Inhalte ist nur im Rahmen "
+"der Lizenzbedingungen erlaubt."
 
 #: templates/legal/copyright.html:34
 msgid "4. Trademarks and logos"
@@ -2027,7 +2115,8 @@ msgstr "4. Marken und Logos"
 #: templates/legal/copyright.html:35
 msgid ""
 "\n"
-"            Third-party trademarks and logos are the property of their respective owners.\n"
+"            Third-party trademarks and logos are the property of their "
+"respective owners.\n"
 "        "
 msgstr ""
 "\n"
@@ -2064,12 +2153,16 @@ msgstr "Haftungsausschluss"
 #: templates/legal/legal_notice.html:35
 msgid ""
 "\n"
-"                Despite careful content control, we assume no liability for external links.\n"
-"                The operators of the linked pages are solely responsible for their content.\n"
+"                Despite careful content control, we assume no liability for "
+"external links.\n"
+"                The operators of the linked pages are solely responsible for "
+"their content.\n"
 "            "
 msgstr ""
 "\n"
-"Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für externe Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+"Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für "
+"externe Links. Für den Inhalt der verlinkten Seiten sind ausschließlich "
+"deren Betreiber verantwortlich."
 
 #: templates/legal/privacy_policy.html:5
 msgid "Privacy Policy – MentoroAI"
@@ -2079,193 +2172,396 @@ msgstr "Datenschutzerklärung – MentoroAI"
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
-#: templates/legal/privacy_policy.html:11
+#: templates/legal/privacy_policy.html:13
 msgid "1. Controller"
 msgstr "1. Verantwortlicher"
 
-#: templates/legal/privacy_policy.html:13
+#: templates/legal/privacy_policy.html:15
 msgid "Controller under data protection law, in particular the EU GDPR, is:"
 msgstr ""
 "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der DSGVO, "
 "ist:"
 
-#: templates/legal/privacy_policy.html:18
+#: templates/legal/privacy_policy.html:21
 msgid "2. Collection and storage of personal data"
 msgstr "2. Erhebung und Speicherung personenbezogener Daten"
 
-#: templates/legal/privacy_policy.html:20
+#: templates/legal/privacy_policy.html:23
 msgid ""
 "\n"
-"                When you visit this website, information sent by your browser is automatically collected (e.g., IP\n"
+"                When you visit this website, information sent by your "
+"browser is automatically collected (e.g., IP\n"
 "                address,\n"
-"                date and time, pages viewed, browser used). These data are technically required to display the website\n"
-"                correctly\n"
-"                and serve the security of the system.\n"
+"                date and time, pages viewed, browser used). These data are "
+"technically required to display the website\n"
+"                correctly and serve the security of the system.\n"
 "            "
 msgstr ""
 "\n"
-"Beim Besuch dieser Website werden automatisch Informationen erfasst, die dein Browser übermittelt (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seiten, verwendeter Browser). Diese Daten sind technisch erforderlich, um die Website korrekt anzuzeigen, und dienen der Systemsicherheit."
+"Beim Besuch dieser Website werden automatisch Informationen erfasst, die Ihr "
+"Browser sendet (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seiten, "
+"verwendeter Browser). Diese Daten sind technisch erforderlich, um die "
+"Website korrekt anzuzeigen und die Systemsicherheit zu gewährleisten."
 
-#: templates/legal/privacy_policy.html:28
+#: templates/legal/privacy_policy.html:32
 msgid "3. Contact"
 msgstr "3. Kontakt"
 
-#: templates/legal/privacy_policy.html:30
+#: templates/legal/privacy_policy.html:34
 msgid ""
 "\n"
-"                If you contact us by email, we store your details to process the request and for possible follow-up\n"
+"                If you contact us by email, we store your details to process "
+"the request and for possible follow-up\n"
 "                questions.\n"
 "            "
 msgstr ""
 "\n"
-"Wenn du uns per E-Mail kontaktierst, speichern wir deine Angaben zur Bearbeitung der Anfrage und für mögliche Anschlussfragen."
+"Wenn du uns per E-Mail kontaktierst, speichern wir deine Angaben zur "
+"Bearbeitung der Anfrage und für mögliche Anschlussfragen."
 
-#: templates/legal/privacy_policy.html:35
+#: templates/legal/privacy_policy.html:41
 msgid "4. Registration / User accounts"
 msgstr "4. Registrierung / Benutzerkonten"
 
-#: templates/legal/privacy_policy.html:37
+#: templates/legal/privacy_policy.html:43
 msgid ""
 "\n"
-"                If you create a user account, we process your entered data (name, email address, password) solely for\n"
-"                providing\n"
-"                your account and managing your content.\n"
+"                If you create a user account, we process your entered data "
+"(name, email address, password) solely for\n"
+"                providing your account and managing your content.\n"
 "            "
 msgstr ""
 "\n"
-"Wenn du ein Benutzerkonto erstellst, verarbeiten wir deine eingegebenen Daten (Name, E-Mail-Adresse, Passwort) ausschließlich zur Bereitstellung deines Kontos und zur Verwaltung deiner Inhalte."
+"Wenn Sie ein Benutzerkonto erstellen, verarbeiten wir Ihre eingegebenen "
+"Daten (Name, E-Mail-Adresse, Passwort) ausschließlich zum Zweck der\n"
+"Bereitstellung Ihres Kontos und der Verwaltung Ihrer Inhalte."
 
-#: templates/legal/privacy_policy.html:43
+#: templates/legal/privacy_policy.html:50
 msgid "5. Cookies and tracking technologies"
 msgstr "5. Cookies und Tracking-Technologien"
 
-#: templates/legal/privacy_policy.html:45
+#: templates/legal/privacy_policy.html:52
 msgid ""
 "\n"
-"                This website uses cookies to ensure technical functionality and, after your explicit consent, to analyze\n"
-"                usage behaviour.\n"
-"                The storage and evaluation of non-essential cookies only takes place with your prior consent in\n"
-"                accordance with Art. 6(1)(a) GDPR.\n"
-"                Consent is managed through the consent management platform Cookiebot by Usercentrics.\n"
+"                This website uses cookies to ensure technical functionality "
+"and, after your explicit consent, to analyze\n"
+"                usage behaviour. The storage and evaluation of non-essential "
+"cookies only takes place with your prior\n"
+"                consent in accordance with Art. 6(1)(a) GDPR. Consent is "
+"managed through the consent management platform\n"
+"                Cookiebot by Usercentrics.\n"
 "            "
 msgstr ""
 "\n"
-"Diese Website verwendet Cookies, um die technische Funktionsfähigkeit sicherzustellen und – nach Ihrer ausdrücklichen Einwilligung – das Nutzungsverhalten zu analysieren. Die Speicherung und Auswertung nicht unbedingt erforderlicher Cookies erfolgt ausschließlich nach vorheriger Zustimmung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung wird über die Consent-Management-Plattform Cookiebot (Usercentrics) verwaltet."
+"Diese Website verwendet Cookies, um die technische Funktionalität zu "
+"gewährleisten und, nach Ihrer ausdrücklichen Einwilligung, das "
+"Nutzungsverhalten zu analysieren. Die Speicherung und Auswertung nicht "
+"notwendiger Cookies erfolgt nur mit Ihrer vorherigen Einwilligung gemäß Art. "
+"6 Abs. 1 lit. a DSGVO. Die Einwilligung wird über die Consent-Management-"
+"Plattform Cookiebot von Usercentrics verwaltet."
 
-#: templates/legal/privacy_policy.html:54
+#: templates/legal/privacy_policy.html:61
 msgid "6. Consent management (Cookiebot)"
 msgstr "6. Einwilligungsverwaltung (Cookiebot)"
 
-#: templates/legal/privacy_policy.html:56
+#: templates/legal/privacy_policy.html:63
 msgid ""
 "\n"
-"                We use the consent management platform Cookiebot by Usercentrics to obtain and manage legally required\n"
-"                cookie consent.\n"
-"                Cookiebot stores cookies that document your consent status and block all non-essential cookies until you\n"
-"                consent.\n"
-"                The processing is based on our legal obligation under Art. 6(1)(c) GDPR.\n"
+"                We use the consent management platform Cookiebot by "
+"Usercentrics to obtain and manage legally required\n"
+"                cookie consent. Cookiebot stores cookies that document your "
+"consent status and block all non-essential\n"
+"                cookies until you consent. The processing is based on our "
+"legal obligation under Art. 6(1)(c) GDPR.\n"
 "            "
 msgstr ""
 "\n"
-"Wir nutzen die Einwilligungsverwaltungsplattform Cookiebot by Usercentrics, um gesetzlich erforderliche Cookie-Einwilligungen einzuholen und zu dokumentieren.\n"
-"Cookiebot blockiert alle nicht-essenziellen Cookies, bis Sie eine entsprechende Einwilligung erteilen.\n"
-"Die Verarbeitung erfolgt auf Grundlage unserer gesetzlichen Verpflichtung gemäß Art. 6 Abs. 1 lit. c DSGVO."
+"Wir nutzen die Consent-Management-Plattform Cookiebot von Usercentrics, um "
+"die rechtlich erforderliche Cookie-Einwilligung einzuholen und zu verwalten. "
+"Cookiebot speichert Cookies, die Ihren Einwilligungsstatus dokumentieren und "
+"alle nicht notwendigen Cookies blockieren, bis Sie Ihre Einwilligung "
+"erteilen. Die Verarbeitung erfolgt auf Grundlage unserer rechtlichen "
+"Verpflichtung gemäß Art. 6 Abs. 1 lit. c DSGVO."
 
-#: templates/legal/privacy_policy.html:64
+#: templates/legal/privacy_policy.html:71
 msgid "7. Google Analytics 4"
 msgstr "7. Google Analytics 4"
 
-#: templates/legal/privacy_policy.html:66
+#: templates/legal/privacy_policy.html:73
 msgid ""
 "\n"
-"                If you give your consent to the “Statistics” category, we use Google Analytics 4 to analyze website\n"
+"                If you give your consent to the “Statistics” category, we "
+"use Google Analytics 4 to analyze website\n"
 "                usage.\n"
-"                Google Analytics 4 works with pseudonymized identifiers and does not store full IP addresses.\n"
-"                Google Consent Mode v2 ensures that no Analytics cookies are set before consent is given.\n"
+"                Google Analytics 4 works with pseudonymized identifiers and "
+"does not store full IP addresses.\n"
+"                Google Consent Mode v2 ensures that no Analytics cookies are "
+"set before consent is given.\n"
 "            "
 msgstr ""
 "\n"
-"Wenn Sie der Kategorie „Statistik“ zugestimmt haben, verwenden wir Google Analytics 4 zur Analyse der Website-Nutzung.\n"
-"Google Analytics 4 nutzt pseudonymisierte Kennungen und speichert keine vollständigen IP-Adressen.\n"
-"Der Google Consent Mode v2 stellt sicher, dass ohne Ihre Einwilligung keine Analyse-Cookies gesetzt werden."
+"Wenn Sie der Kategorie „Statistik“ zugestimmt haben, verwenden wir Google "
+"Analytics 4 zur Analyse der Website-Nutzung.\n"
+"Google Analytics 4 nutzt pseudonymisierte Kennungen und speichert keine "
+"vollständigen IP-Adressen.\n"
+"Der Google Consent Mode v2 stellt sicher, dass ohne Ihre Einwilligung keine "
+"Analyse-Cookies gesetzt werden."
 
-#: templates/legal/privacy_policy.html:75
+#: templates/legal/privacy_policy.html:81
+#: templates/legal/privacy_policy.html:114
+#: templates/legal/privacy_policy.html:162
 msgid "Legal basis"
 msgstr "Rechtsgrundlage"
 
-#: templates/legal/privacy_policy.html:75
+#: templates/legal/privacy_policy.html:81
 msgid "Your consent under Art. 6(1)(a) GDPR."
 msgstr "Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO."
 
-#: templates/legal/privacy_policy.html:79
+#: templates/legal/privacy_policy.html:84
+#: templates/legal/privacy_policy.html:128
+#: templates/legal/privacy_policy.html:176
 msgid "Data transfer"
 msgstr "Datenübermittlung"
 
-#: templates/legal/privacy_policy.html:79
+#: templates/legal/privacy_policy.html:85
 msgid ""
 "\n"
-"            Data may be transferred to Google LLC (USA). Google complies with the EU–US Data Privacy Framework.\n"
-"        "
+"                Data may be transferred to Google LLC in the United States. "
+"Google participates in the EU–US Data\n"
+"                Privacy\n"
+"                Framework.\n"
+"            "
 msgstr ""
 "\n"
-"Daten können an Google LLC (USA) übermittelt werden.\n"
-"Google ist nach dem EU–US Data Privacy Framework zertifiziert und gewährleistet ein angemessenes Datenschutzniveau."
+"Daten können an Google LLC in den USA übermittelt werden. Google nimmt am EU-"
+"US-Datenschutzrahmen teil."
 
-#: templates/legal/privacy_policy.html:85
-msgid "8. Your rights"
-msgstr "8. Deine Rechte"
+#: templates/legal/privacy_policy.html:93
+msgid "8. Google Sign-In (Social Login)"
+msgstr "8. Google-Anmeldung (Social Login)"
 
-#: templates/legal/privacy_policy.html:87
+#: templates/legal/privacy_policy.html:95
+msgid ""
+"\n"
+"                On this website you can log in or create an account using "
+"your Google account (\"Google Sign-In\").\n"
+"                The provider of this service is Google Ireland Limited, "
+"Gordon House, Barrow Street, Dublin 4, Ireland.\n"
+"            "
+msgstr ""
+"\n"
+"Auf dieser Website können Sie sich mit Ihrem Google-Konto anmelden oder ein "
+"Konto erstellen („Google-Anmeldung“).\n"
+"Anbieter dieses Dienstes ist Google Ireland Limited, Gordon House, Barrow "
+"Street, Dublin 4, Irland."
+
+#: templates/legal/privacy_policy.html:101
+#: templates/legal/privacy_policy.html:148
+msgid "Data processed"
+msgstr "Verarbeitete Daten"
+
+#: templates/legal/privacy_policy.html:102
+msgid ""
+"\n"
+"                We receive from Google your name, email address and a unique "
+"Google user ID. This data is used solely to\n"
+"                create and manage your user account on MentoroAI and to "
+"authenticate you when you log in.\n"
+"            "
+msgstr ""
+"\n"
+"Wir erhalten von Google Ihren Namen, Ihre E-Mail-Adresse und eine eindeutige "
+"Google-Nutzer-ID. Diese Daten werden ausschließlich dazu verwendet, Ihr "
+"Benutzerkonto bei MentoroAI zu erstellen und zu verwalten sowie Sie beim "
+"Anmelden zu authentifizieren."
+
+#: templates/legal/privacy_policy.html:108
+#: templates/legal/privacy_policy.html:156
+msgid "Purpose"
+msgstr "Zweck"
+
+#: templates/legal/privacy_policy.html:109
+#: templates/legal/privacy_policy.html:157
+msgid ""
+"\n"
+"                Providing a convenient and secure login option and managing "
+"your user account.\n"
+"            "
+msgstr ""
+"\n"
+"Wir bieten Ihnen eine komfortable und sichere Anmeldemöglichkeit und "
+"ermöglichen die Verwaltung Ihres Benutzerkontos."
+
+#: templates/legal/privacy_policy.html:115
+#: templates/legal/privacy_policy.html:163
+msgid ""
+"\n"
+"                Your consent according to Art. 6(1)(a) GDPR.\n"
+"            "
+msgstr ""
+"\n"
+"Ihre Zustimmung gemäß Art. 6(1)(a) DSGVO."
+
+#: templates/legal/privacy_policy.html:120
+#: templates/legal/privacy_policy.html:168
+msgid "Data storage and deletion"
+msgstr "Datenspeicherung und -löschung"
+
+#: templates/legal/privacy_policy.html:121
+msgid ""
+"\n"
+"                We store the data received from Google as long as your user "
+"account exists. If you delete your account,\n"
+"                this\n"
+"                data will be deleted unless statutory retention periods "
+"require longer storage.\n"
+"            "
+msgstr ""
+"\n"
+"Wir speichern die von Google erhaltenen Daten, solange Ihr Nutzerkonto "
+"besteht. Wenn Sie Ihr Konto löschen,\n"
+"werden diese Daten gelöscht, es sei denn, gesetzliche Aufbewahrungsfristen "
+"erfordern eine längere Speicherung."
+
+#: templates/legal/privacy_policy.html:129
+msgid ""
+"\n"
+"                Data may be transferred to Google LLC (USA).\n"
+"            "
+msgstr ""
+"\n"
+"Daten können an Google LLC (USA) übertragen werden."
+
+#: templates/legal/privacy_policy.html:134
+#: templates/legal/privacy_policy.html:183
+msgid "Further information"
+msgstr "Weitere Informationen"
+
+#: templates/legal/privacy_policy.html:139
+msgid "9. GitHub Sign-In (Social Login)"
+msgstr "9. GitHub-Anmeldung (Social Login)"
+
+#: templates/legal/privacy_policy.html:141
+msgid ""
+"\n"
+"                You can also log in or create an account using your GitHub "
+"account (\"GitHub Sign-In\").\n"
+"                The provider of this service is GitHub, Inc., 88 Colin P. "
+"Kelly Jr. Street, San Francisco, CA 94107,\n"
+"                USA.\n"
+"            "
+msgstr ""
+"\n"
+"Sie können sich auch mit Ihrem GitHub-Konto anmelden oder ein Konto "
+"erstellen („GitHub-Anmeldung“).\n"
+"\n"
+"Anbieter dieses Dienstes ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San "
+"Francisco, CA 94107, USA."
+
+#: templates/legal/privacy_policy.html:149
+msgid ""
+"\n"
+"                We receive from GitHub your username, email address and a "
+"unique GitHub user ID. This data is used\n"
+"                solely to\n"
+"                create and manage your user account on MentoroAI and to "
+"authenticate you when you log in.\n"
+"            "
+msgstr ""
+"\n"
+"Wir erhalten von GitHub Ihren Benutzernamen, Ihre E-Mail-Adresse und eine "
+"eindeutige GitHub-Benutzer-ID. Diese Daten werden ausschließlich dazu "
+"verwendet, Ihr Benutzerkonto bei MentoroAI zu erstellen und zu verwalten "
+"sowie Sie beim Anmelden zu authentifizieren."
+
+#: templates/legal/privacy_policy.html:169
+msgid ""
+"\n"
+"                We store the data received from GitHub as long as your "
+"account exists. If you delete your account, this\n"
+"                data\n"
+"                will be deleted unless statutory retention periods require "
+"longer storage.\n"
+"            "
+msgstr ""
+"\n"
+"Wir speichern die von GitHub erhaltenen Daten, solange Ihr Konto besteht. "
+"Wenn Sie Ihr Konto löschen, werden diese Daten gelöscht, es sei denn, "
+"gesetzliche Aufbewahrungsfristen erfordern eine längere Speicherung."
+
+#: templates/legal/privacy_policy.html:177
+msgid ""
+"\n"
+"                GitHub Inc. is located in the United States. Data may "
+"therefore be transferred to servers outside the\n"
+"                EU.\n"
+"            "
+msgstr ""
+"\n"
+"GitHub Inc. hat seinen Sitz in den Vereinigten Staaten. Daten können daher "
+"auf Server außerhalb der EU übertragen werden."
+
+#: templates/legal/privacy_policy.html:188
+msgid "10. Your rights"
+msgstr "10. Ihre Rechte"
+
+#: templates/legal/privacy_policy.html:190
 msgid "Access to your stored data"
 msgstr "Auskunft über deine gespeicherten Daten"
 
-#: templates/legal/privacy_policy.html:88
+#: templates/legal/privacy_policy.html:191
 msgid "Rectification of inaccurate data"
 msgstr "Berichtigung unrichtiger Daten"
 
-#: templates/legal/privacy_policy.html:89
+#: templates/legal/privacy_policy.html:192
 msgid "Erasure ('right to be forgotten')"
 msgstr "Löschung ('Recht, vergessen zu werden')"
 
-#: templates/legal/privacy_policy.html:90
+#: templates/legal/privacy_policy.html:193
 msgid "Restriction of processing"
 msgstr "Einschränkung der Verarbeitung"
 
-#: templates/legal/privacy_policy.html:91
+#: templates/legal/privacy_policy.html:194
 msgid "Data portability"
 msgstr "Datenübertragbarkeit"
 
-#: templates/legal/privacy_policy.html:92
+#: templates/legal/privacy_policy.html:195
 msgid "Objection to processing"
 msgstr "Widerspruch gegen die Verarbeitung"
 
-#: templates/legal/privacy_policy.html:95
-msgid "9. Data security"
-msgstr "9. Datensicherheit"
+#: templates/legal/privacy_policy.html:199
+msgid "11. Data security"
+msgstr "11. Datensicherheit"
 
-#: templates/legal/privacy_policy.html:97
+#: templates/legal/privacy_policy.html:201
 msgid ""
 "\n"
-"                We use technical and organizational measures to protect your data against manipulation, loss, or\n"
-"                unauthorized access.\n"
-"                These measures are continuously adapted in line with technological developments.\n"
+"                We use technical and organizational measures to protect your "
+"data against manipulation, loss, or\n"
+"                unauthorized access. These measures are continuously adapted "
+"in line with technological developments.\n"
 "            "
 msgstr ""
 "\n"
-"Wir verwenden technische und organisatorische Maßnahmen, um deine Daten vor Manipulation, Verlust oder unbefugtem Zugriff zu schützen. Diese Maßnahmen werden laufend an den Stand der Technik angepasst."
+"Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten vor "
+"Manipulation, Verlust oder unberechtigtem Zugriff zu schützen.\n"
+"Diese Maßnahmen werden fortlaufend an die technologischen Entwicklungen "
+"angepasst."
 
-#: templates/legal/privacy_policy.html:103
-msgid "10. Changes to this Privacy Policy"
-msgstr "10. Änderungen dieser Datenschutzerklärung"
+#: templates/legal/privacy_policy.html:208
+msgid "12. Changes to this Privacy Policy"
+msgstr "12. Änderungen an dieser Datenschutzrichtlinie"
 
-#: templates/legal/privacy_policy.html:105
+#: templates/legal/privacy_policy.html:210
 msgid ""
 "\n"
-"                We reserve the right to update this Privacy Policy to reflect current legal requirements.\n"
+"                We reserve the right to update this Privacy Policy to "
+"reflect current legal requirements.\n"
 "            "
 msgstr ""
 "\n"
-"Wir behalten uns vor, diese Datenschutzerklärung bei Änderungen rechtlicher Vorgaben zu aktualisieren."
+"Wir behalten uns vor, diese Datenschutzerklärung bei Änderungen rechtlicher "
+"Vorgaben zu aktualisieren."
 
 #: templates/legal/terms_of_use.html:5
 msgid "Terms of Use – MentoroAI"
@@ -2278,11 +2574,13 @@ msgstr "1. Geltungsbereich"
 #: templates/legal/terms_of_use.html:14
 msgid ""
 "\n"
-"                These Terms of Use apply to all visitors and registered users of MentoroAI.\n"
+"                These Terms of Use apply to all visitors and registered "
+"users of MentoroAI.\n"
 "            "
 msgstr ""
 "\n"
-"Diese Nutzungsbedingungen gelten für alle Besucher und registrierten Benutzer von MentoroAI."
+"Diese Nutzungsbedingungen gelten für alle Besucher und registrierten "
+"Benutzer von MentoroAI."
 
 #: templates/legal/terms_of_use.html:18
 msgid "2. Use of content"
@@ -2291,13 +2589,15 @@ msgstr "2. Nutzung von Inhalten"
 #: templates/legal/terms_of_use.html:19
 msgid ""
 "\n"
-"            The content on this website is provided for informational purposes only. Commercial use without the\n"
+"            The content on this website is provided for informational "
+"purposes only. Commercial use without the\n"
 "            operator’s consent\n"
 "            is not permitted.\n"
 "        "
 msgstr ""
 "\n"
-"Die Inhalte dieser Website dienen ausschließlich Informationszwecken. Eine kommerzielle Nutzung ohne Zustimmung des Betreibers ist nicht gestattet."
+"Die Inhalte dieser Website dienen ausschließlich Informationszwecken. Eine "
+"kommerzielle Nutzung ohne Zustimmung des Betreibers ist nicht gestattet."
 
 #: templates/legal/terms_of_use.html:25
 msgid "3. User accounts"
@@ -2306,12 +2606,14 @@ msgstr "3. Benutzerkonten"
 #: templates/legal/terms_of_use.html:26
 msgid ""
 "\n"
-"            Users must keep their login credentials confidential. The operator reserves the right to suspend or delete\n"
+"            Users must keep their login credentials confidential. The "
+"operator reserves the right to suspend or delete\n"
 "            accounts in case of misuse.\n"
 "        "
 msgstr ""
 "\n"
-" Benutzer müssen ihre Zugangsdaten vertraulich behandeln. Der Betreiber behält sich das Recht vor, Konten bei Missbrauch zu sperren oder zu löschen."
+" Benutzer müssen ihre Zugangsdaten vertraulich behandeln. Der Betreiber "
+"behält sich das Recht vor, Konten bei Missbrauch zu sperren oder zu löschen."
 
 #: templates/legal/terms_of_use.html:31
 msgid "4. Liability"
@@ -2320,13 +2622,18 @@ msgstr "4. Haftung"
 #: templates/legal/terms_of_use.html:32
 msgid ""
 "\n"
-"            The operator assumes no warranty for the correctness, completeness, or timeliness of the information\n"
+"            The operator assumes no warranty for the correctness, "
+"completeness, or timeliness of the information\n"
 "            provided.\n"
-"            Any liability for damages arising directly or indirectly from the use is excluded.\n"
+"            Any liability for damages arising directly or indirectly from "
+"the use is excluded.\n"
 "        "
 msgstr ""
 "\n"
-" Der Betreiber übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der bereitgestellten Informationen. Jegliche Haftung für Schäden, die direkt oder indirekt aus der Nutzung entstehen, ist ausgeschlossen."
+" Der Betreiber übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit "
+"oder Aktualität der bereitgestellten Informationen. Jegliche Haftung für "
+"Schäden, die direkt oder indirekt aus der Nutzung entstehen, ist "
+"ausgeschlossen."
 
 #: templates/legal/terms_of_use.html:38
 msgid "5. Changes"
@@ -2335,11 +2642,13 @@ msgstr "5. Änderungen"
 #: templates/legal/terms_of_use.html:39
 msgid ""
 "\n"
-"            The operator may amend these Terms of Use at any time. The current version applies.\n"
+"            The operator may amend these Terms of Use at any time. The "
+"current version applies.\n"
 "        "
 msgstr ""
 "\n"
-" Der Betreiber kann diese Nutzungsbedingungen jederzeit ändern. Es gilt die jeweils aktuelle Version."
+" Der Betreiber kann diese Nutzungsbedingungen jederzeit ändern. Es gilt die "
+"jeweils aktuelle Version."
 
 #: templates/newsletter/confirm_error.html:7
 msgid "Confirmation failed"
@@ -2382,8 +2691,8 @@ msgstr "Hallo %(email)s,"
 
 #: templates/newsletter/emails/confirm_body.html:10
 msgid ""
-"Please confirm your subscription to the MentoroAI newsletter by clicking the"
-" button below:"
+"Please confirm your subscription to the MentoroAI newsletter by clicking the "
+"button below:"
 msgstr ""
 "Bitte bestätige dein Abonnement des MentoroAI-Newsletters, indem du auf die "
 "Schaltfläche unten klickst:"
@@ -2405,8 +2714,8 @@ msgstr "Um sich jederzeit abzumelden, klicke bitte hier:"
 
 #: templates/newsletter/emails/confirm_body.txt:4
 msgid ""
-"Please confirm your subscription to the MentoroAI newsletter by clicking the"
-" link below:"
+"Please confirm your subscription to the MentoroAI newsletter by clicking the "
+"link below:"
 msgstr ""
 "Bitte bestätige dein Abonnement des MentoroAI-Newsletters, indem du auf den "
 "folgenden Link klickst:"
@@ -2521,6 +2830,10 @@ msgstr ""
 "Unsere Kompetenzbereiche im Überblick - von Definitionen bis zu praktischen "
 "Beispielen."
 
+#: templates/partials/_entry_cards.html:9
+msgid "Go to Glossary list"
+msgstr "Zur Glossar liste"
+
 #: templates/partials/_entry_cards.html:12
 msgid "AI terms explained simply - understandable, concise and with examples."
 msgstr ""
@@ -2530,62 +2843,82 @@ msgstr ""
 msgid "To glossary"
 msgstr "Zum Glossar"
 
-#: templates/partials/_entry_cards.html:19
+#: templates/partials/_entry_cards.html:17
+msgid "Go to Guides list"
+msgstr "Zu den Leitfäden"
+
+#: templates/partials/_entry_cards.html:20
 msgid ""
 "Step-by-step instructions for using AI safely in everyday life or at work."
 msgstr ""
-"Schritt-für-Schritt-Anleitung für den sicheren Einsatz von KI im Alltag oder"
-" bei der Arbeit."
+"Schritt-für-Schritt-Anleitung für den sicheren Einsatz von KI im Alltag oder "
+"bei der Arbeit."
 
-#: templates/partials/_entry_cards.html:20
+#: templates/partials/_entry_cards.html:21
 msgid "To the guides"
 msgstr "Zu den Leitfäden"
 
-#: templates/partials/_entry_cards.html:26
+#: templates/partials/_entry_cards.html:25
+msgid "Go to Prompts list"
+msgstr "Zu den Prompts"
+
+#: templates/partials/_entry_cards.html:28
 msgid ""
 "Ready-made input templates for ChatGPT & Co. - simply copy and get started."
 msgstr ""
 "Fertig vorgefertigte Eingabevorlagen für ChatGPT & Co. - einfach kopieren "
 "und loslegen."
 
-#: templates/partials/_entry_cards.html:27
+#: templates/partials/_entry_cards.html:29
 msgid "To the prompts"
 msgstr "Zu den Prompts"
 
 #: templates/partials/_entry_cards.html:33
+msgid "Go to Usecases list"
+msgstr "Zu den Anwendungsfällen"
+
+#: templates/partials/_entry_cards.html:36
 msgid ""
 "Others are already using AI - real-world examples from everyday life and "
 "work."
 msgstr ""
 "Andere nutzen KI bereits - Beispiele aus dem Alltag und der Berufswelt."
 
-#: templates/partials/_entry_cards.html:34
+#: templates/partials/_entry_cards.html:37
 msgid "To the use cases"
 msgstr "Zu den Anwendungsfällen"
 
-#: templates/partials/_entry_cards.html:40
+#: templates/partials/_entry_cards.html:41
+msgid "Go to Tools list"
+msgstr "Zu den Tools"
+
+#: templates/partials/_entry_cards.html:44
 msgid ""
 "AI tools and platforms presented - with features and areas of application."
 msgstr ""
 "KI-Tools und -Plattformen vorgestellt - mit Funktionen und "
 "Anwendungsbereichen."
 
-#: templates/partials/_entry_cards.html:41
+#: templates/partials/_entry_cards.html:45
 msgid "To the tools"
 msgstr "Zu den Tools"
 
-#: templates/partials/_entry_cards.html:47
+#: templates/partials/_entry_cards.html:49
+msgid "Go to Comparisons list"
+msgstr "Zu den Vergleichen"
+
+#: templates/partials/_entry_cards.html:52
 msgid "Find out which AI tool or model best suits your needs."
 msgstr ""
 "Finde heraus, welches KI-Tool oder -Modell am besten zu deinen Bedürfnissen "
 "passt."
 
-#: templates/partials/_entry_cards.html:48
+#: templates/partials/_entry_cards.html:53
 msgid "To the comparisons"
 msgstr "Zu den Vergleichen"
 
-#: templates/partials/_guideitem_card.html:28
-#: templates/partials/_teaser_card.html:26
+#: templates/partials/_guideitem_card.html:29
+#: templates/partials/_teaser_card.html:28
 msgid "Read"
 msgstr "Lesen"
 
@@ -2605,13 +2938,15 @@ msgstr "Teilen Sie Ihr Wissen und helfen Sie anderen, KI zu verstehen"
 msgid ""
 "\n"
 "                    Want to publish guides, use cases or prompts?\n"
-"                    Create a free account and start contributing your own content.\n"
+"                    Create a free account and start contributing your own "
+"content.\n"
 "                    Your ideas can help thousands of users learn AI faster.\n"
 "                "
 msgstr ""
 "\n"
 "Möchten Sie Anleitungen, Anwendungsfälle oder Prompts veröffentlichen?\n"
-"Erstellen Sie ein kostenloses Konto und beginnen Sie, Ihre eigenen Inhalte beizusteuern.\n"
+"Erstellen Sie ein kostenloses Konto und beginnen Sie, Ihre eigenen Inhalte "
+"beizusteuern.\n"
 "Ihre Ideen können Tausenden von Nutzern helfen, KI schneller zu erlernen."
 
 #: templates/partials/author_info_card.html:16
@@ -2619,20 +2954,26 @@ msgid ""
 "\n"
 "                    Author accounts are currently limited.\n"
 "                    We’re onboarding new authors step by step.\n"
-"                    If you’re interested in joining early, feel free to reach out on GitHub.\n"
+"                    If you’re interested in joining early, feel free to "
+"reach out on GitHub.\n"
 "                "
 msgstr ""
 "\n"
 "Die Anzahl der Autorenkonten ist derzeit begrenzt.\n"
 "Wir nehmen nach und nach neue Autoren auf.\n"
-"Wenn Sie daran interessiert sind, frühzeitig beizutreten, kontaktieren  Sie uns bitte über GitHub."
+"Wenn Sie daran interessiert sind, frühzeitig beizutreten, kontaktieren  Sie "
+"uns bitte über GitHub."
 
 #: templates/partials/author_info_card.html:27
 msgid "Access your drafts and continue creating new content."
 msgstr ""
 "Greifen Sie auf Ihre Entwürfe zu und erstellen Sie weiterhin neue Inhalte."
 
-#: templates/partials/author_info_card.html:29
+#: templates/partials/author_info_card.html:30
+msgid "Go to my editorial drafts "
+msgstr "Gehe zu meinen redaktionellen Entwürfen"
+
+#: templates/partials/author_info_card.html:30
 msgid ""
 "\n"
 "                        My drafts"
@@ -2640,22 +2981,28 @@ msgstr ""
 "\n"
 " Meine Entwürfe"
 
-#: templates/partials/author_info_card.html:32
+#: templates/partials/author_info_card.html:33
 msgid ""
 "\n"
-"                        You're registered! an administrator will activate your author account shortly.\n"
+"                        You're registered! an administrator will activate "
+"your author account shortly.\n"
 "                        Thanks for your patience!\n"
 "                    "
 msgstr ""
 "\n"
-"Sie sind registriert! Ein Administrator wird Ihr Autorenkonto in Kürze aktivieren.\n"
+"Sie sind registriert! Ein Administrator wird Ihr Autorenkonto in Kürze "
+"aktivieren.\n"
 "Vielen Dank für Ihre Geduld!"
 
-#: templates/partials/author_info_card.html:40
+#: templates/partials/author_info_card.html:42
+msgid "Join as an author for free"
+msgstr "Kostenlos als Autor beitreten"
+
+#: templates/partials/author_info_card.html:43
 msgid "Join for free"
 msgstr "Kostenlos beitreten"
 
-#: templates/partials/author_info_card.html:43
+#: templates/partials/author_info_card.html:46
 msgid ""
 "After creating your account, an administrator will review and activate your\n"
 "                            author access."
@@ -2663,9 +3010,15 @@ msgstr ""
 "Nach der Erstellung Ihres Kontos wird ein Administrator Ihren\n"
 "Autorenzugang überprüfen und aktivieren."
 
-#: templates/partials/author_info_card.html:48
-#: templates/partials/features_open.html:12
-msgid "Go to Github"
+#: templates/partials/author_info_card.html:52
+#: templates/partials/features_open.html:13
+msgid "Go to external project github discussions page"
+msgstr "Gehen Sie zur externen Projekt-Github-Diskussionsseite"
+
+#: templates/partials/author_info_card.html:52
+msgid ""
+"Go to\n"
+"                        Github"
 msgstr "Gehe zu Github"
 
 #: templates/partials/breadcrumbs.html:2
@@ -2675,6 +3028,18 @@ msgstr "Breadcrumbs"
 #: templates/partials/breadcrumbs.html:4
 msgid "Start"
 msgstr "Start"
+
+#: templates/partials/copy_block.html:18
+msgid "Copy text block"
+msgstr "Textblock kopieren"
+
+#: templates/partials/editorial_nav.html:9
+msgid "Go to my editorial drafts"
+msgstr "Gehe zu meinen redaktionellen Entwürfen"
+
+#: templates/partials/editorial_nav.html:13
+msgid "Go to editorial review queue"
+msgstr "Zur Warteschlange für redaktionelle Reviews"
 
 #: templates/partials/features_open.html:5
 msgid "MentoroAI is a continuously process"
@@ -2688,20 +3053,24 @@ msgstr "Einige Funktionen können sich ändern oder unvollständig sein."
 msgid "Please provide feedback on Github Discussions"
 msgstr "Bitte sende Feedback auf Github Diskussions"
 
-#: templates/partials/features_open.html:18
+#: templates/partials/features_open.html:14
+msgid "Go to Github"
+msgstr "Gehe zu Github"
+
+#: templates/partials/features_open.html:21
 msgid "What’s coming to MentoroAI"
 msgstr "Was als nächstes auf MentoroAI kommt"
 
-#: templates/partials/features_open.html:21
+#: templates/partials/features_open.html:24
 msgid "A quick preview of features we’re building next."
 msgstr ""
 "Eine kurze Vorschau auf die Funktionen, die wir als nächstes entwickeln."
 
-#: templates/partials/features_open.html:28
+#: templates/partials/features_open.html:31
 msgid "Editorial system"
 msgstr "Redaktionssystem"
 
-#: templates/partials/features_open.html:30
+#: templates/partials/features_open.html:33
 msgid ""
 "Draft → review → publish workflow with roles (Author, Editor, Admin) and "
 "status history."
@@ -2709,30 +3078,30 @@ msgstr ""
 "Entwurf → Überprüfung → Workflow mit Rollen (Autor, Redakteur, "
 "Administrator) und Statusverlauf veröffentlichen."
 
-#: templates/partials/features_open.html:31
+#: templates/partials/features_open.html:34
 msgid "Per-object review checklist and required approvals before publishing."
 msgstr ""
 "Checkliste für die Überprüfung pro Objekt und erforderliche Genehmigungen "
 "vor der Veröffentlichung."
 
-#: templates/partials/features_open.html:32
+#: templates/partials/features_open.html:35
 msgid "Versioning & change log for all content (diffs, rollbacks)."
 msgstr ""
 "Versionierung und Änderungsprotokoll für alle Inhalte (Diffs, Rollbacks)."
 
-#: templates/partials/features_open.html:33
+#: templates/partials/features_open.html:36
 msgid "Scheduled publishing and unpublishing."
 msgstr "Geplante Veröffentlichung und De-Veröffentlichung."
 
-#: templates/partials/features_open.html:39
+#: templates/partials/features_open.html:42
 msgid "Prompt Studio"
 msgstr "Prompt-Studio"
 
-#: templates/partials/features_open.html:40
+#: templates/partials/features_open.html:43
 msgid "planned"
 msgstr "geplant"
 
-#: templates/partials/features_open.html:42
+#: templates/partials/features_open.html:45
 msgid ""
 "Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
 "model tips."
@@ -2740,33 +3109,32 @@ msgstr ""
 "Modellauswahl für jede Eingabeaufforderung (z. B. GPT-4-Klasse, Claude, "
 "Llama) und Tipps pro Modell."
 
-#: templates/partials/features_open.html:43
+#: templates/partials/features_open.html:46
 msgid ""
-"Structured prompt templates with variables, examples, and tone/style "
-"presets."
+"Structured prompt templates with variables, examples, and tone/style presets."
 msgstr ""
 "Strukturierte Eingabeaufforderungsvorlagen mit Variablen, Beispielen und "
 "Ton-/Stilvoreinstellungen."
 
-#: templates/partials/features_open.html:44
+#: templates/partials/features_open.html:47
 msgid "Guardrails: context hints, do/don’t lists, and input validation."
 msgstr "Leitplanken: Kontexthinweise, Do/Don't-Listen und Eingabevalidierung."
 
-#: templates/partials/features_open.html:45
+#: templates/partials/features_open.html:48
 msgid "One-click copy, shareable links, and export (Markdown/JSON)."
 msgstr "Ein-Klick-Kopieren, teilbare Links und Export (Markdown/JSON)."
 
-#: templates/partials/features_open.html:46
+#: templates/partials/features_open.html:49
 msgid "Execution notes: record outputs to compare iterations."
 msgstr ""
 "Hinweise zur Ausführung: Ergebnisse aufzeichnen, um Iterationen zu "
 "vergleichen."
 
-#: templates/partials/features_open.html:52
+#: templates/partials/features_open.html:55
 msgid "Discovery & navigation"
 msgstr "Entdecken & Navigieren"
 
-#: templates/partials/features_open.html:54
+#: templates/partials/features_open.html:57
 msgid ""
 "Unified search across Tools, Guides, Prompts, Use-Cases with filters and "
 "tags."
@@ -2774,94 +3142,94 @@ msgstr ""
 "Einheitliche Suche zwischen Tools, Leitfäden, Prompts, Anwendungsfall mit "
 "Filtern und Tags."
 
-#: templates/partials/features_open.html:55
+#: templates/partials/features_open.html:58
 msgid "Collections & bookmarks (save for later, custom lists)."
 msgstr ""
 "Sammlungen & Lesezeichen (für später speichern, benutzerdefinierte Listen)."
 
-#: templates/partials/features_open.html:56
+#: templates/partials/features_open.html:59
 msgid "Compare view: side-by-side feature comparison for tools and prompts."
 msgstr ""
 "Vergleichsansicht: Side-by-Side-Feature-Vergleich für Tools und "
 "Eingabeaufforderungen."
 
-#: templates/partials/features_open.html:57
+#: templates/partials/features_open.html:60
 msgid "RSS/Atom feeds for new and updated content."
 msgstr "RSS/Atom-Feeds für neue und aktualisierte Inhalte."
 
-#: templates/partials/features_open.html:63
+#: templates/partials/features_open.html:66
 msgid "Quality & accessibility"
 msgstr "Qualität & Zugänglichkeit"
 
-#: templates/partials/features_open.html:65
+#: templates/partials/features_open.html:68
 msgid ""
 "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX."
 msgstr ""
 "A11y-Pässe (Fokuszustände, Orientierungspunkte, Farbkontrast) und Tastatur-"
 "First-UX."
 
-#: templates/partials/features_open.html:66
+#: templates/partials/features_open.html:69
 msgid "Reading modes: compact vs. comfortable layout."
 msgstr "Lesemodi: kompaktes vs. komfortables Layout."
 
-#: templates/partials/features_open.html:67
+#: templates/partials/features_open.html:70
 msgid "Glossary hover cards for terms used in content."
 msgstr "Glossar-Hover-Karten für Begriffe, die in Inhalten verwendet werden."
 
-#: templates/partials/features_open.html:68
+#: templates/partials/features_open.html:71
 msgid "Feedback widget on every page (quick rating + free text)."
 msgstr "Feedback-Widget auf jeder Seite (Schnellbewertung + freier Text)."
 
-#: templates/partials/features_open.html:74
+#: templates/partials/features_open.html:77
 msgid "Multilingual & localization"
 msgstr "Mehrsprachig & Lokalisierung"
 
-#: templates/partials/features_open.html:76
+#: templates/partials/features_open.html:79
 msgid "Side-by-side DE/EN editing and translation status indicators."
 msgstr "Side-by-side DE/EN-Bearbeitungs- und Übersetzungsstatusanzeigen."
 
-#: templates/partials/features_open.html:77
+#: templates/partials/features_open.html:80
 msgid "Per-language slugs and canonical links."
 msgstr "Slugs pro Sprache und kanonische Links."
 
-#: templates/partials/features_open.html:78
+#: templates/partials/features_open.html:81
 msgid "Language-aware search and filters."
 msgstr "Sprachbewusste Suche und Filter."
 
-#: templates/partials/features_open.html:84
+#: templates/partials/features_open.html:87
 msgid "Integrations & API"
 msgstr "Integrationen & API"
 
-#: templates/partials/features_open.html:86
+#: templates/partials/features_open.html:89
 msgid "Optional API keys to try prompts live (bring-your-own-key)."
 msgstr ""
 "Optionale API-Schlüssel, um Prompts live zu testen (bring-your-own-key)."
 
-#: templates/partials/features_open.html:87
+#: templates/partials/features_open.html:90
 msgid "Plugin endpoints for external tooling (read-only API first)."
 msgstr "Plugin-Endpunkte für externe Tools (first read-only-API)."
 
-#: templates/partials/features_open.html:88
+#: templates/partials/features_open.html:91
 msgid "Privacy-friendly analytics and opt-in telemetry."
 msgstr "Datenschutzfreundliche Analysen und Opt-in-Telemetrie."
 
-#: templates/partials/features_open.html:94
+#: templates/partials/features_open.html:97
 msgid "Performance & reliability"
 msgstr "Leistung & Zuverlässigkeit"
 
-#: templates/partials/features_open.html:96
+#: templates/partials/features_open.html:99
 msgid "Image optimization and smart caching."
 msgstr "Bildoptimierung und intelligentes Caching."
 
-#: templates/partials/features_open.html:97
+#: templates/partials/features_open.html:100
 msgid "Offline-friendly error pages and graceful fallbacks."
 msgstr "Offline-freundliche Fehlerseiten und anmutige Fallbacks."
 
-#: templates/partials/features_open.html:98
+#: templates/partials/features_open.html:101
 msgid "CI coverage gates for editorial and schema changes."
 msgstr "CI-Abdeckungsgates für redaktionelle und Schemaänderungen."
 
-#: templates/partials/features_open.html:104
+#: templates/partials/features_open.html:107
 msgid ""
 "Heads-up: Priorities may shift based on user feedback. If a feature is "
 "critical for you, please tell us!"
@@ -2869,21 +3237,13 @@ msgstr ""
 "Heads-up: Die Prioritäten können sich je nach Benutzerfeedback ändern. Wenn "
 "eine Funktion für dich entscheidend ist, sage es uns bitte!"
 
-#: templates/partials/features_open.html:110
+#: templates/partials/features_open.html:113
 msgid "Close"
 msgstr "Schließen"
 
-#: templates/partials/features_open.html:118
+#: templates/partials/features_open.html:121
 msgid "Close modal"
 msgstr "Modal schließen"
-
-#: templates/partials/pagination.html:6
-msgid "Previous Page"
-msgstr "Vorherige Seite"
-
-#: templates/partials/pagination.html:15
-msgid "Next Page"
-msgstr "Nächste Seite"
 
 #: templates/partials/starter_guide_card.html:7
 msgid "New to AI? Start here"
@@ -2892,18 +3252,21 @@ msgstr "KI ist Neu für dich? Starte hier"
 #: templates/partials/starter_guide_card.html:9
 msgid ""
 "\n"
-"              Perfect if you’ve never used AI before. No jargon, just practical steps.\n"
+"                Perfect if you’ve never used AI before. No jargon, just "
+"practical steps.\n"
 "            "
 msgstr ""
 "\n"
-"Perfekt, wenn du noch nie KI verwendet hast. Kein Fachjargon, nur praktische Schritte."
+"Perfekt, wenn Sie noch nie KI verwendet haben. Kein Jargon, nur praktische "
+"Schritte."
 
-#: templates/partials/starter_guide_card.html:15
-#: templates/partials/starter_guide_card.html:17
+#: templates/partials/starter_guide_card.html:16
+#: templates/partials/starter_guide_card.html:18
 msgid "Open the Starter Guide"
 msgstr "Öffne den Start-Leitfaden"
 
-#: templates/partials/starter_guide_card.html:20
+#: templates/partials/starter_guide_card.html:21
+#: templates/partials/starter_guide_card.html:22
 msgid "Browse beginner-friendly tools"
 msgstr "Anfängerfreundliche Tools durchsuchen"
 
@@ -2919,7 +3282,7 @@ msgstr "Keine Tools verknüpft."
 msgid "More Prompts"
 msgstr "Weitere Prompts"
 
-#: templates/prompts/prompt_list.html:34
+#: templates/prompts/prompt_list.html:37
 msgid "No published prompts found."
 msgstr "Keine veröffentlichten Prompts gefunden."
 
@@ -2964,7 +3327,7 @@ msgstr "Continue with Google"
 msgid "Connect GitHub"
 msgstr "GitHub verbinden"
 
-#: templates/usecases/detail.html:13 templates/usecases/list.html:21
+#: templates/usecases/detail.html:13 templates/usecases/list.html:22
 msgid "Persona:"
 msgstr "Persona:"
 
@@ -2976,7 +3339,7 @@ msgstr "Verwendete Tools"
 msgid "Similar use cases"
 msgstr "Ähnliche Anwendungsfälle"
 
-#: templates/usecases/list.html:43
+#: templates/usecases/list.html:47
 msgid "No published use cases found."
 msgstr "Keine veröffentlichten Anwendungsfälle gefunden."
 
@@ -2987,8 +3350,7 @@ msgstr "Auto: Änderung im Admin-Formular (usecase)"
 #: usecases/admin.py:95
 msgid "Usecase was automatically set to \"Review\" due to changes."
 msgstr ""
-"Usecase wurde aufgrund von Änderungen automatisch auf \"Überprüfen\" "
-"gesetzt."
+"Usecase wurde aufgrund von Änderungen automatisch auf \"Überprüfen\" gesetzt."
 
 #: usecases/admin.py:133
 msgid "Submit for review"
@@ -3050,21 +3412,19 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ msgid "My Account"
 #~ msgstr "Benutzerkonto erstellen"
 
-#~ msgid "Go to Github Discussions"
-#~ msgstr "Gehe zu Github-Diskussionen"
-
 #~ msgid "Participate as an author"
 #~ msgstr "Als Autor mitmachen"
 
 #~ msgid "Want to publish guides, use cases, or prompts?"
-#~ msgstr "Möchtest du Leitfäden, Anwendungsfälle oder Prompts veröffentlichen?"
+#~ msgstr ""
+#~ "Möchtest du Leitfäden, Anwendungsfälle oder Prompts veröffentlichen?"
 
 #~ msgid ""
-#~ "Author accounts are in private beta. If you’re interested, please contact us"
-#~ " on GitHub."
+#~ "Author accounts are in private beta. If you’re interested, please contact "
+#~ "us on GitHub."
 #~ msgstr ""
-#~ "Autorenkonten befinden sich in der privaten Beta. Wenn du interessiert bist,"
-#~ " kontaktiere uns bitte auf GitHub."
+#~ "Autorenkonten befinden sich in der privaten Beta. Wenn du interessiert "
+#~ "bist, kontaktiere uns bitte auf GitHub."
 
 #~ msgid "Sign up for free"
 #~ msgstr "Kostenlos registrieren"
@@ -3078,24 +3438,29 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid ""
 #~ "\n"
-#~ "                You can delete or block cookies at any time in your browser. The core functionality of the website\n"
+#~ "                You can delete or block cookies at any time in your "
+#~ "browser. The core functionality of the website\n"
 #~ "                remains available.\n"
 #~ "            "
 #~ msgstr ""
 #~ "\n"
-#~ "Du kannst Cookies jederzeit in deinem Browser löschen oder blockieren. Die Kernfunktionen der Website bleiben weiterhin verfügbar."
+#~ "Du kannst Cookies jederzeit in deinem Browser löschen oder blockieren. "
+#~ "Die Kernfunktionen der Website bleiben weiterhin verfügbar."
 
 #~ msgid "5. Cookies"
 #~ msgstr "5. Cookies"
 
 #~ msgid ""
 #~ "\n"
-#~ "                This website only uses technically necessary cookies required for operation. Tracking or marketing\n"
+#~ "                This website only uses technically necessary cookies "
+#~ "required for operation. Tracking or marketing\n"
 #~ "                cookies are not used.\n"
 #~ "            "
 #~ msgstr ""
 #~ "\n"
-#~ "Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb erforderlich sind. Tracking- oder Marketing-Cookies werden nicht eingesetzt."
+#~ "Diese Website verwendet nur technisch notwendige Cookies, die für den "
+#~ "Betrieb erforderlich sind. Tracking- oder Marketing-Cookies werden nicht "
+#~ "eingesetzt."
 
 #~ msgid "Github Discussions"
 #~ msgstr "Github Discussions"
@@ -3119,10 +3484,13 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid ""
 #~ "Want to publish guides, use cases, or prompts?\n"
-#~ "                Submit drafts and collaborate with our editorial team during the review process."
+#~ "                Submit drafts and collaborate with our editorial team "
+#~ "during the review process."
 #~ msgstr ""
-#~ "Möchtest du Leitfäden, Anwendungsfälle oder Prompt Beispiele veröffentlichen?\n"
-#~ "Sende Entwürfe und arbeite bei der Überprüfung mit unserem Redaktionsteam zusammen."
+#~ "Möchtest du Leitfäden, Anwendungsfälle oder Prompt Beispiele "
+#~ "veröffentlichen?\n"
+#~ "Sende Entwürfe und arbeite bei der Überprüfung mit unserem Redaktionsteam "
+#~ "zusammen."
 
 #~ msgid ""
 #~ "Signup coming soon\n"
@@ -3131,12 +3499,15 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid ""
 #~ "\n"
-#~ "                The Starter Guide introduces you to artificial intelligence step by step – easy to understand and\n"
+#~ "                The Starter Guide introduces you to artificial "
+#~ "intelligence step by step – easy to understand and\n"
 #~ "                practical. Ideal for beginners with no prior knowledge.\n"
 #~ "            "
 #~ msgstr ""
 #~ "\n"
-#~ "Der Start-Leitfaden führt dich Schritt für Schritt in die Welt der Künstlichen Intelligenz ein – leicht verständlich und praxisnah. Ideal für Einsteiger ohne Vorkenntnisse."
+#~ "Der Start-Leitfaden führt dich Schritt für Schritt in die Welt der "
+#~ "Künstlichen Intelligenz ein – leicht verständlich und praxisnah. Ideal "
+#~ "für Einsteiger ohne Vorkenntnisse."
 
 #~ msgid "Discover tools"
 #~ msgstr "Tools entdecken"
@@ -3158,12 +3529,12 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid ""
 #~ "MentoroAI explains the difference between Tools, Glossary, Guides, Use "
-#~ "Cases, Prompts and Comparisons – with examples, focus, and clear orientation"
-#~ " for visitors."
+#~ "Cases, Prompts and Comparisons – with examples, focus, and clear "
+#~ "orientation for visitors."
 #~ msgstr ""
 #~ "MentoroAI erklärt den Unterschied zwischen Tools, Glossar, Leitfäden, "
-#~ "Anwendungsfällen, Prompts und Vergleiche – mit Beispielen, Fokus und klarer "
-#~ "Orientierung für Besucher."
+#~ "Anwendungsfällen, Prompts und Vergleiche – mit Beispielen, Fokus und "
+#~ "klarer Orientierung für Besucher."
 
 #~ msgid "AI tools, comparisons, and easy-to-understand guides."
 #~ msgstr "KI Tools, Vergleiche und leicht verständliche Leitfäden."
@@ -3237,11 +3608,11 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ msgstr "Schneller Fragen-Check"
 
 #~ msgid ""
-#~ "Answer three questions to get suggestions for getting started. Your answers "
-#~ "will only be saved locally in your browser."
+#~ "Answer three questions to get suggestions for getting started. Your "
+#~ "answers will only be saved locally in your browser."
 #~ msgstr ""
-#~ "Beantworte drei Fragen, um Vorschläge für deinen Einstieg zu erhalten. Deine"
-#~ " Antworten werden nur lokal in deinem Browser gespeichert."
+#~ "Beantworte drei Fragen, um Vorschläge für deinen Einstieg zu erhalten. "
+#~ "Deine Antworten werden nur lokal in deinem Browser gespeichert."
 
 #~ msgid "Starter"
 #~ msgstr "Starter"
@@ -3290,9 +3661,6 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 
 #~ msgid "Work more productively"
 #~ msgstr "Produktiver arbeiten"
-
-#~ msgid "Automation"
-#~ msgstr "Automatisierung"
 
 #~ msgid "Improve my own project/product"
 #~ msgstr "Mein eigenes Projekt/Produkt verbessern"
@@ -3369,8 +3737,8 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ "Bitte bestätige deine E-Mail. Dein Konto wird danach durch einen Admin\n"
 #~ "                            freigeschaltet."
 #~ msgstr ""
-#~ "Bitte bestätige deine E-Mail. Dein Konto wird anschließend durch einen Admin"
-#~ " freigeschaltet."
+#~ "Bitte bestätige deine E-Mail. Dein Konto wird anschließend durch einen "
+#~ "Admin freigeschaltet."
 
 #~ msgid "or"
 #~ msgstr "oder"
@@ -3402,11 +3770,11 @@ msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
 #~ msgstr "KI-Tool-Katalog"
 
 #~ msgid ""
-#~ "AI Tool Catalog: Find suitable AI tools based on your application, language,"
-#~ " and budget."
+#~ "AI Tool Catalog: Find suitable AI tools based on your application, "
+#~ "language, and budget."
 #~ msgstr ""
-#~ "KI-Tool-Katalog: Finden Sie passende KI-Tools basierend auf Ihrer Anwendung,"
-#~ " Sprache und Ihrem Budget."
+#~ "KI-Tool-Katalog: Finden Sie passende KI-Tools basierend auf Ihrer "
+#~ "Anwendung, Sprache und Ihrem Budget."
 
 #~ msgid "Katalog"
 #~ msgstr "Katalog"

@@ -153,3 +153,18 @@ msgstr ""
 #: templates/partials/author_info_card.html:50
 msgid "We’re currently onboarding new authors manually. Get in touch if you’d like early access."
 msgstr ""
+#: templates/catalog/tool_list.html:56
+msgid "Read details about "
+msgstr ""
+#: templates/catalog/tool_list.html:23
+msgid "Filter"
+msgstr ""
+#: templates/glossary/glossary_list.html:24
+msgid "Show all terms"
+msgstr ""
+#: templates/glossary/glossary_list.html:30
+msgid "Show terms with letter "
+msgstr ""
+#: templates/content/home.html:79
+msgid "Bewertung"
+msgstr ""
