@@ -26,22 +26,34 @@ class Category(TranslatableModel):
         return self.safe_translation_getter("name", any_language=True) or f"Category #{self.pk}"
 
 
+PRICING_MODEL_CHOICES = [
+    ("free", _("Completely free")),
+    ("freemium", _("Freemium (free basic, paid pro)")),
+    ("subscription", _("Subscription (monthly/yearly)")),
+    ("payg", _("Pay-as-you-go / usage-based")),
+    ("license", _("One-time license / lifetime deal")),
+    ("opensource", _("Open-source / self-hosted")),
+    ("custom", _("Contact sales / custom pricing")),
+    ("other", _("Other / mixed model")),
+]
+
+
 class Tool(TranslatableModel):
     vendor = models.CharField(max_length=150, blank=True)
     website = models.URLField(blank=True)
     logo = models.ImageField(upload_to="logos/", blank=True, null=True)
     language_support = models.JSONField(default=list)
     pricing_model = models.CharField(
-        max_length=80, blank=True
+        max_length=32,
+        choices=PRICING_MODEL_CHOICES,
+        blank=True,
     )
     free_tier = models.BooleanField(default=False)
-    monthly_price_min = models.DecimalField(
-        max_digits=8, decimal_places=2, null=True, blank=True
-    )
     rating = models.DecimalField(max_digits=3, decimal_places=1, null=True, blank=True)
     is_featured = models.BooleanField(default=False)
     published_at = models.DateTimeField(default=timezone.now)
-
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField(Category, related_name="tools", blank=True)
     tags = TaggableManager(blank=True)
     translations = TranslatedFields(
@@ -56,6 +68,7 @@ class Tool(TranslatableModel):
     class Meta:
         verbose_name = "Tool"
         verbose_name_plural = "Tools"
+        ordering = ("-updated_at", "-pk")
 
     def __str__(self):
         return self.safe_translation_getter("name", any_language=True) or f"Tool #{self.pk}"
@@ -67,23 +80,22 @@ class Tool(TranslatableModel):
         return reverse("catalog:detail", kwargs={"slug": slug})
 
 
-class PricingTier(models.Model):
-    tool = models.ForeignKey(Tool, on_delete=models.CASCADE, related_name="pricing")
-    name = models.CharField(max_length=250)
-    price_month = models.DecimalField(
-        max_digits=8, decimal_places=2, null=True, blank=True
+class PricingTier(TranslatableModel):
+    tool = models.ForeignKey(Tool, on_delete=models.CASCADE, related_name="pricing", )
+    translations = TranslatedFields(
+        name=models.CharField(max_length=250),
+        price_month=models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True, ),
+        price_year=models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True, ),
+        features=models.JSONField(default=list, blank=True),
     )
-    price_year = models.DecimalField(
-        max_digits=8, decimal_places=2, null=True, blank=True
-    )
-    features = models.JSONField(default=list, blank=True)
-
-    def __str__(self):
-        return f"{self.tool} – {self.name}"
+    objects = TranslatableManager()
 
     class Meta:
         verbose_name = _("Pricing tier")
         verbose_name_plural = _("Pricing tiers")
+
+    def __str__(self):
+        return f"{self.tool} – {self.safe_translation_getter('name', any_language=True)}"
 
 
 class AffiliateProgram(models.Model):

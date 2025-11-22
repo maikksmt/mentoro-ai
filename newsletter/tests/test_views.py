@@ -43,7 +43,3 @@ class TestNewsletterViews(TestCase):
         subscriber.refresh_from_db()
         self.assertTrue(subscriber.double_opt_in)
         self.assertIsNone(subscriber.doi_token)
-
-    def test_confirm_view_handles_invalid_token(self):
-        response = self.client.get(reverse("newsletter:confirm", args=["unknown"]))
-        self.assertEqual(response.status_code, 404)

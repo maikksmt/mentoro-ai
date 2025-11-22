@@ -8,7 +8,18 @@
             {% trans "Quickly find the right AI tools for your tasks." %}
         </p>
     </header>
-
+    {% if tag %}
+        <div class="mb-3 flex items-center gap-3">
+            {% trans "Filtered by tag" %}:
+            <span class="badge badge-primary badge-lg">
+             #{{ tag }}
+        </span>
+            <a href="{% url 'catalog:list' %}"
+               class="btn btn-xs text-base-content/80">
+                {% trans "Clear filter" %}
+            </a>
+        </div>
+    {% endif %}
     <form method="get" class="py-2 md:py-4 grid gap-3 grid-cols-3 md:grid-cols-4 justify-items">
         <label class="input">
             {% heroicon_solid "magnifying-glass" class="opacity-70" %}
@@ -20,46 +31,128 @@
             <input type="checkbox" class="checkbox" name="free" value="1" {% if free %}checked{% endif %}/>
             <span class="label-text">{% trans "Only with Free-Tier" %}</span>
         </label>
-        <div class="col-span-1 md:col-span-4 flex gap-2 justify-start">
+        <div class="col-span-1 md:col-span-4 flex gap-2 justify-start items-center">
             <button class="btn btn-primary " aria-label="Filter">{% trans "Filter" %}</button>
-            {% if q or language or free %}
-                <a href="." class="btn" role="button" aria-pressed="false"
-                   aria-label="{% trans "Filter" %}">{% trans "Reset" %}</a>
+            {% if q or free or tag %}
+                <a href="." class="btn btn-sm" role="button" aria-pressed="false"
+                   aria-label="{% trans "Reset filters" %}">{% trans "Reset" %}</a>
             {% endif %}
         </div>
     </form>
+
     <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {% for t in object_list %}
-            <article class="card bg-base-100 shadow hover:shadow-lg transition">
-                <div class="card-body">
-                    <h2 class="card-title">
-                        <a class="link link-hover" href="{% url 'catalog:detail' slug=t.slug %}"
-                           aria-label="{% trans "Read details about " %}{{ t.name }}">{{ t.name }}</a>
-                    </h2>
-                    {% if t.short_description %}
-                        <p class="line-clamp-3">{{ t.short_description|richtext|safe }}</p>{% endif %}
-                    <div class="flex flex-wrap items-center gap-2 text-sm">
-                        {% if t.free_tier %}<span class="badge badge-success">Free Tier</span>{% endif %}
-                        {% if t.pricing_model %}
-                            <span class="badge badge-outline">{{ t.pricing_model }}</span>{% endif %}
+            <article class="card bg-base-100 shadow-sm hover:shadow-lg transition border border-base-200 flex flex-col">
+                <div class="card-body gap-4">
+                    <header class="flex items-start justify-between gap-3">
+                        <div>
+                            <h2 class="card-title text-base">
+                                <a href="{% url 'catalog:detail' slug=t.slug %}" class="link link-hover">
+                                    {{ t.name }}
+                                </a>
+                            </h2>
+                            {% if t.short_description %}
+                                <p class="mt-1 text-sm text-base-content/80 line-clamp-2">
+                                    {{ t.short_description|richtext|safe }}
+                                </p>
+                            {% endif %}
+                        </div>
+
+                        {% if t.logo %}
+                            <div class="avatar">
+                                <div class="w-10 h-10 rounded-lg ring ring-base-200 ring-offset-base-100 ring-offset-1">
+                                    <img src="{{ t.logo.url }}" alt="{{ t.name }}">
+                                </div>
+                            </div>
+                        {% endif %}
+                    </header>
+                    <dl class="space-y-2 text-xs">
+                        {% if t.tags.all %}
+                            <div class="flex flex-wrap items-center gap-2">
+                                <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/70">
+                                    {% trans "Tags" %}
+                                </dt>
+                                <dd class="flex flex-wrap gap-1">
+                                    {% for tag in t.tags.all %}
+                                        <a href="?tag={{ tag.name }}"
+                                           class="badge badge-ghost badge-sm hover:bg-base-300 transition"
+                                           aria-label="{% trans 'Filter by tag' %} #{{ tag.name }}">
+                                            #{{ tag.name }}
+                                        </a>
+                                    {% endfor %}
+                                </dd>
+                            </div>
+                        {% endif %}
+                        {% if t.free_tier or t.pricing_model %}
+                            <div class="flex flex-wrap items-center gap-2">
+                                <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/70">
+                                    {% trans "Pricing" %}
+                                </dt>
+                                <dd class="flex flex-wrap gap-1 items-center">
+                                    {% if t.free_tier %}
+                                        <span class="badge badge-success badge-sm">{% trans "Free Tier" %}</span>
+                                    {% endif %}
+                                    {% if t.pricing_model %}
+                                        <span class="badge badge-outline badge-sm">
+                                            {{ t.get_pricing_model_display }}
+                                        </span>
+                                    {% endif %}
+                                </dd>
+                            </div>
+                        {% endif %}
                         {% if t.language_support %}
-                            {% for lang in t.language_support|slice:":3" %}
-                                <span class="badge badge-outline">{{ lang }}</span>
-                            {% endfor %}
+                            <div class="flex flex-wrap items-center gap-2">
+                                <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/70">
+                                    {% trans "Languages" %}
+                                </dt>
+                                <dd class="flex flex-wrap gap-1">
+                                    {% for lang in t.language_support|slice:":3" %}
+                                        <span class="badge badge-outline badge-sm">
+                                            {% if lang == "de" %}
+                                                {% trans "German" %}
+                                            {% elif lang == "en" %}
+                                                {% trans "English" %}
+                                            {% else %}
+                                                {{ lang }}
+                                            {% endif %}
+                                        </span>
+                                    {% endfor %}
+                                    {% if t.language_support|length > 3 %}
+                                        <span class="badge badge-ghost badge-sm">
+                                            +{{ t.language_support|length|add:"-3" }}
+                                        </span>
+                                    {% endif %}
+                                </dd>
+                            </div>
                         {% endif %}
-                    </div>
-                    <div class="card-actions justify-end">
-                        {% if t.website %}
-                            <a href="{{ t.website }}" class="btn btn-sm" target="_blank" rel="noopener nofollow ugc"
-                               role="button" aria-pressed="false"
-                               aria-label="{% trans "Open website for " %}{{ t.name }}">
-                                Website
+                    </dl>
+
+                    <footer class="mt-2 flex items-center justify-between gap-2">
+                        {% if t.rating %}
+                            <div class="flex items-center gap-1 text-xs text-base-content/70">
+                                <span>⭐</span>
+                                <span>{{ t.rating|floatformat:1 }}/5</span>
+                            </div>
+                        {% elif t.is_featured %}
+                            <span class="badge badge-primary badge-outline badge-sm">
+                    {% trans "Featured" %}
+                </span>
+                        {% else %}
+                            <span></span>
+                        {% endif %}
+
+                        <div class="flex gap-2 items-center">
+                            {% if t.website %}
+                                <a href="{{ t.website }}" target="_blank" rel="nofollow noopener"
+                                   class="btn btn-sm btn-ghost">{% trans "Website" %}
+                                </a>
+                            {% endif %}
+                            <a href="{% url 'catalog:detail' slug=t.slug %}"
+                               class="btn btn-sm btn-primary">
+                                {% trans "Details" %}
                             </a>
-                        {% endif %}
-                        <a href="{% url 'catalog:detail' slug=t.slug %}" class="btn btn-sm btn-primary"
-                           role="button" aria-pressed="false"
-                           aria-label="{% trans "Read details about " %}{{ t.name }}">{% trans "Details" %}</a>
-                    </div>
+                        </div>
+                    </footer>
                 </div>
             </article>
         {% empty %}
