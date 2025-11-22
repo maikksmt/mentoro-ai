@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-22 12:55+0100\n"
+"PO-Revision-Date: 2025-11-22 22:47+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -241,3 +241,7 @@ msgstr "Mit GitHub anmelden"
 #: templates/guides/guide_list.html:33
 msgid "Published:"
 msgstr "Veröffentlicht:"
+
+#: templates/catalog/tool_list.html:64
+msgid "Free Tier"
+msgstr "Kostenlos"

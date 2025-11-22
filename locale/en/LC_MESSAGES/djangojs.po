@@ -183,3 +183,6 @@ msgstr ""
 #: templates/guides/guide_list.html:33
 msgid "Published:"
 msgstr ""
+#: templates/catalog/tool_list.html:64
+msgid "Free Tier"
+msgstr ""

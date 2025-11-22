@@ -17,6 +17,8 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Add Cookie Banner
 - Preparing for later Google AdSense
 - Final step for user account management and user registration.
+- rebuild Tools pages (list and detail)
+- Update Tool Data model
 
 ---
 

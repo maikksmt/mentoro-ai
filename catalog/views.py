@@ -21,6 +21,7 @@ class ToolListView(ListView, SeoMixin):
         q = self.request.GET.get("q") or ""
         lang = get_language()
         free = self.request.GET.get("free") or ""
+        tag = self.request.GET.get("tag") or ""
 
         qs = (
             Tool.objects.all().language(lang)
@@ -35,10 +36,14 @@ class ToolListView(ListView, SeoMixin):
                 | Q(translations__long_description__icontains=q)
             )
 
-        if free == "1":
-            if hasattr(Tool, "free_tier"):
-                qs = qs.filter(free_tier=True)
+        if free == "1" and hasattr(Tool, "free_tier"):
+            qs = qs.filter(free_tier=True)
+
+        if tag:
+            qs = qs.filter(tags__name__iexact=tag)
+
         qs = qs.distinct()
+
         if hasattr(Tool, "updated_at"):
             qs = qs.order_by("-updated_at")
         elif hasattr(Tool, "created_at"):
@@ -52,6 +57,8 @@ class ToolListView(ListView, SeoMixin):
         ctx = super().get_context_data(**kwargs)
         q = self.request.GET.get("q") or ""
         free = self.request.GET.get("free") == "1"
+        tag = self.request.GET.get("tag") or ""
+
         canonical = absolute_url(self.request.path)
         alts = localized_alternates(self.request, "catalog:list")
         ctx["seo"] = self.build_seo(
@@ -73,6 +80,7 @@ class ToolListView(ListView, SeoMixin):
             {
                 "q": q,
                 "free": free,
+                "tag": tag,
                 "crumbs": [
                     (_("Catalog"), reverse("catalog:list")),
                     (_("All tools"), self.request.path),

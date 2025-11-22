@@ -17,16 +17,16 @@ class EditorialQuerySet(TranslatableQuerySet):
     """
 
     def drafts(self):
-        return self.filter(status=EditorialWorkflowMixin.STATUS_DRAFT)
+        return self.filter(status=EditorialWorkflowMixin.STATUS_DRAFT).order_by("pk")
 
     def in_review(self):
-        return self.filter(status=EditorialWorkflowMixin.STATUS_REVIEW)
+        return self.filter(status=EditorialWorkflowMixin.STATUS_REVIEW).order_by("pk")
 
     def rework(self):
-        return self.filter(status=EditorialWorkflowMixin.STATUS_REWORK)
+        return self.filter(status=EditorialWorkflowMixin.STATUS_REWORK).order_by("pk")
 
     def published(self):
-        return self.filter(status=EditorialWorkflowMixin.STATUS_PUBLISHED)
+        return self.filter(status=EditorialWorkflowMixin.STATUS_PUBLISHED).order_by("published_at")
 
     def visible_on_site(self):
         """
@@ -34,12 +34,14 @@ class EditorialQuerySet(TranslatableQuerySet):
         includes published items and review items that already have a last_published_at/live revision,
         preventing premature exposure.
         """
-        return self.filter(
-            Q(status=EditorialWorkflowMixin.STATUS_PUBLISHED)
-            | Q(
-                status=EditorialWorkflowMixin.STATUS_REVIEW,
-                last_published_revision_id__isnull=False,
-            )
+        return (
+            self.filter(
+                Q(status=EditorialWorkflowMixin.STATUS_PUBLISHED)
+                | Q(
+                    status=EditorialWorkflowMixin.STATUS_REVIEW,
+                    last_published_revision_id__isnull=False,
+                )
+            ).order_by("updated_at")
         )
 
 

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 12:57+0100\n"
-"PO-Revision-Date: 2025-11-22 12:57+0100\n"
+"POT-Creation-Date: 2025-11-22 22:54+0100\n"
+"PO-Revision-Date: 2025-11-22 22:54+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,7 +23,44 @@ msgstr ""
 msgid "Your profile has been updated."
 msgstr "Ihr Profil wurde aktualisiert."
 
-#: catalog/models.py:16 catalog/models.py:49 compare/models.py:20
+#: catalog/admin.py:16
+msgid "Language support"
+msgstr "Sprachunterstützung"
+
+#: catalog/admin.py:18
+msgid "Comma-separated language codes, e.g. de,en,fr"
+msgstr "Komma-getrennte Sprachcodes, z.B. de,en,fr"
+
+#: catalog/admin.py:52
+msgid "Features"
+msgstr "Merkmale"
+
+#: catalog/admin.py:55
+msgid "One feature per line (stored as a list per language)."
+msgstr "Ein Feature pro Zeile (gespeichert als Liste pro Sprache)."
+
+#: catalog/admin.py:146
+msgid "Existing tags"
+msgstr "Vorhandene Schlagwörter"
+
+#: catalog/admin.py:162
+msgid "Content"
+msgstr "Inhalt"
+
+#: catalog/admin.py:171
+msgid "Classification"
+msgstr "Klassifizierung"
+
+#: catalog/admin.py:182
+msgid "Pricing & Highlight"
+msgstr "Preisgestaltung & Highlight"
+
+#: catalog/admin.py:193 compare/admin.py:33 guides/admin.py:59
+#: prompts/admin.py:51 usecases/admin.py:51
+msgid "Meta"
+msgstr "Meta"
+
+#: catalog/models.py:16 catalog/models.py:61 compare/models.py:20
 #: glossary/models.py:11 guides/models.py:21 prompts/models.py:24
 #: usecases/models.py:24
 msgid "Slug"
@@ -33,72 +70,99 @@ msgstr "Slug"
 msgid "Category"
 msgstr "Kategorie"
 
-#: catalog/models.py:23
+#: catalog/models.py:23 templates/catalog/tool_detail.html:113
 msgid "Categories"
 msgstr "Kategorien"
 
-#: catalog/models.py:85
+#: catalog/models.py:30
+msgid "Completely free"
+msgstr "Komplett kostenlos"
+
+#: catalog/models.py:31
+msgid "Freemium (free basic, paid pro)"
+msgstr "Freemium (kostenlose Basis, bezahlte Pro)"
+
+#: catalog/models.py:32
+msgid "Subscription (monthly/yearly)"
+msgstr "Abonnement (monatlich/jährlich)"
+
+#: catalog/models.py:33
+msgid "Pay-as-you-go / usage-based"
+msgstr "Pay-as-you-go / nutzungsbasiert"
+
+#: catalog/models.py:34
+msgid "One-time license / lifetime deal"
+msgstr "Einmalige Lizenz / lebenslanger Vertrag"
+
+#: catalog/models.py:35
+msgid "Open-source / self-hosted"
+msgstr "Open-Source / selbst gehostet"
+
+#: catalog/models.py:36
+msgid "Contact sales / custom pricing"
+msgstr "Vertrieb kontaktieren / individuelle Preisgestaltung"
+
+#: catalog/models.py:37
+msgid "Other / mixed model"
+msgstr "Anderes / gemischtes Modell"
+
+#: catalog/models.py:94
 msgid "Pricing tier"
 msgstr "Preismodell"
 
-#: catalog/models.py:86
+#: catalog/models.py:95
 msgid "Pricing tiers"
 msgstr "Preismodell"
 
-#: catalog/models.py:91
+#: catalog/models.py:103
 msgid "Flat"
 msgstr "Pauschal"
 
-#: catalog/models.py:92
+#: catalog/models.py:104
 msgid "% of sales"
 msgstr "% vom Umsatz"
 
-#: catalog/models.py:93
+#: catalog/models.py:105
 msgid "Recurring"
 msgstr "Wiederkehrend"
 
-#: catalog/models.py:108
+#: catalog/models.py:120
 msgid "Affiliate-Program"
 msgstr "Affiliate-Programm"
 
-#: catalog/models.py:109
+#: catalog/models.py:121
 msgid "Affiliate-Programs"
 msgstr "Affiliate-Programme"
 
-#: catalog/views.py:59
+#: catalog/views.py:66
 msgid "Tools · MentoroAI"
 msgstr "Tools · MentoroAI"
 
-#: catalog/views.py:60
+#: catalog/views.py:67
 msgid "Filter, compare and discover AI tools."
 msgstr "KI-Tools filtern, vergleichen und entdecken."
 
-#: catalog/views.py:77 catalog/views.py:150 catalog/views.py:193
-#: catalog/views.py:229
+#: catalog/views.py:85 catalog/views.py:158 catalog/views.py:201
+#: catalog/views.py:237
 msgid "Catalog"
 msgstr "Katalog"
 
-#: catalog/views.py:78 catalog/views.py:151 catalog/views.py:195
-#: catalog/views.py:230 templates/catalog/tool_list.html:6
+#: catalog/views.py:86 catalog/views.py:159 catalog/views.py:203
+#: catalog/views.py:238 templates/catalog/tool_list.html:6
 msgid "All tools"
 msgstr "Alle Tools"
 
-#: catalog/views.py:190
+#: catalog/views.py:198
 msgid "AI tools at a glance"
 msgstr "KI-Tools auf einen Blick"
 
-#: catalog/views.py:191
+#: catalog/views.py:199
 msgid "All AI tools at a glance – filterable and sortable."
 msgstr "Alle KI-Tools auf einen Blick – filter- und sortierbar."
 
-#: catalog/views.py:221
+#: catalog/views.py:229
 msgid "Overview of features, prices and alternatives"
 msgstr "Übersicht über Funktionen, Preise und Alternativen"
-
-#: compare/admin.py:33 guides/admin.py:59 prompts/admin.py:51
-#: usecases/admin.py:51
-msgid "Meta"
-msgstr "Meta"
 
 #: compare/admin.py:36 guides/admin.py:76 prompts/admin.py:64
 #: usecases/admin.py:64
@@ -400,7 +464,7 @@ msgstr "E-Mail"
 msgid "Reason (optional)"
 msgstr "Grund (optional)"
 
-#: newsletter/views.py:20 templates/base.html:193
+#: newsletter/views.py:20 templates/base.html:192
 msgid "Newsletter"
 msgstr "Newsletter"
 
@@ -1186,114 +1250,154 @@ msgstr "Farbschema wechseln"
 msgid "Language select"
 msgstr "Sprachauswahl"
 
-#: templates/base.html:168
+#: templates/base.html:167
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: templates/base.html:171
+#: templates/base.html:170
 msgid "Admin Panel"
 msgstr "Admin-Panel"
 
-#: templates/base.html:173 templates/partials/editorial_nav.html:9
+#: templates/base.html:172 templates/partials/editorial_nav.html:9
 msgid "Drafts"
 msgstr "Entwürfe"
 
-#: templates/base.html:176 templates/partials/editorial_nav.html:13
+#: templates/base.html:175 templates/partials/editorial_nav.html:13
 msgid "Reviews"
 msgstr "Überprüfungen"
 
-#: templates/base.html:195 templates/partials/_entry_cards.html:5
+#: templates/base.html:194 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr "Was kann ich auf MentoroAI finden?"
 
-#: templates/base.html:196
+#: templates/base.html:195
 msgid "Legal notice"
 msgstr "Impressum"
 
-#: templates/base.html:197
+#: templates/base.html:196
 msgid "Privacy policy"
 msgstr "Datenschutzerklärung"
 
-#: templates/base.html:199 templates/legal/terms_of_use.html:10
+#: templates/base.html:198 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
-#: templates/base.html:200
+#: templates/base.html:199
 msgid "Copyright"
 msgstr "Urheberrecht"
 
-#: templates/catalog/tool_detail.html:13
-msgid "To the website"
-msgstr "Zur Website"
+#: templates/catalog/tool_detail.html:28
+msgid "Vendor"
+msgstr "Anbieter"
 
-#: templates/catalog/tool_detail.html:18
-msgid "Free Tier"
-msgstr "Kostenloser Tarif"
+#: templates/catalog/tool_detail.html:34
+msgid "Visit website"
+msgstr "Website besuchen"
 
-#: templates/catalog/tool_detail.html:39 templates/ops/seo_check.html:42
-msgid "Description"
-msgstr "Beschreibung"
+#: templates/catalog/tool_detail.html:44
+msgid "Featured tool"
+msgstr "Empfohlenes Tool"
 
-#: templates/catalog/tool_detail.html:47
-msgid "Functions"
-msgstr "Funktionen"
+#: templates/catalog/tool_detail.html:76 templates/catalog/tool_list.html:73
+msgid "Tags"
+msgstr "Schlagwörter"
 
-#: templates/catalog/tool_detail.html:57
+#: templates/catalog/tool_detail.html:82 templates/catalog/tool_list.html:79
+msgid "Filter by tag"
+msgstr "Nach Schlagwort filtern"
+
+#: templates/catalog/tool_detail.html:93 templates/catalog/tool_detail.html:158
+#: templates/catalog/tool_list.html:89
 msgid "Pricing"
 msgstr "Preise"
 
-#: templates/catalog/tool_detail.html:74
-msgid "Integrations"
-msgstr "Integrationen"
+#: templates/catalog/tool_detail.html:98 templates/catalog/tool_list.html:93
+msgid "Free Tier"
+msgstr "Kostenloser Tarif"
 
-#: templates/catalog/tool_detail.html:87
-msgid "Similar Tools"
+#: templates/catalog/tool_detail.html:127 templates/catalog/tool_list.html:106
+msgid "Languages"
+msgstr "Sprachen"
+
+#: templates/catalog/tool_detail.html:133 templates/catalog/tool_list.html:112
+msgid "German"
+msgstr "Deutsch"
+
+#: templates/catalog/tool_detail.html:135 templates/catalog/tool_list.html:114
+msgid "English"
+msgstr "Englisch"
+
+#: templates/catalog/tool_detail.html:148
+msgid "What this tool can do"
+msgstr "Was dieses Tool kann"
+
+#: templates/catalog/tool_detail.html:161
+#: templates/catalog/tool_detail.html:165
+msgid "Pricing last checked on"
+msgstr "Preise zuletzt geprüft am"
+
+#: templates/catalog/tool_detail.html:182
+msgid "month"
+msgstr "Monat"
+
+#: templates/catalog/tool_detail.html:193
+msgid "year"
+msgstr "Jahr"
+
+#: templates/catalog/tool_detail.html:198
+msgid "On request"
+msgstr "Auf Anfrage"
+
+#: templates/catalog/tool_detail.html:246
+msgid "Similar tools"
 msgstr "Ähnliche Tools"
 
 #: templates/catalog/tool_list.html:8
 msgid "Quickly find the right AI tools for your tasks."
 msgstr "Finden Sie schnell die richtigen KI-Tools für Ihre Aufgaben."
 
-#: templates/catalog/tool_list.html:15
+#: templates/catalog/tool_list.html:13
+msgid "Filtered by tag"
+msgstr "Gefiltert nach Schlagwort"
+
+#: templates/catalog/tool_list.html:19
+msgid "Clear filter"
+msgstr "Filter löschen"
+
+#: templates/catalog/tool_list.html:26
 msgid "Search tools …"
 msgstr "Suche Tools …"
 
-#: templates/catalog/tool_list.html:21
+#: templates/catalog/tool_list.html:32
 msgid "Only with Free-Tier"
 msgstr "Nur mit kostenlosem Tarif"
 
-#: templates/catalog/tool_list.html:24 templates/catalog/tool_list.html:27
-#: templates/compare/index.html:24
+#: templates/catalog/tool_list.html:35 templates/compare/index.html:24
 msgid "Filter"
 msgstr "Filter"
 
-#: templates/catalog/tool_list.html:27 templates/compare/index.html:25
+#: templates/catalog/tool_list.html:38
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+#: templates/catalog/tool_list.html:38 templates/compare/index.html:25
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: templates/catalog/tool_list.html:37 templates/catalog/tool_list.html:61
-#: templates/compare/index.html:35 templates/compare/index.html:50
-#: templates/glossary/glossary_results.html:7
-#: templates/guides/guide_list.html:18 templates/guides/guide_list.html:41
-#: templates/partials/_guideitem_card.html:22
-#: templates/partials/_guideitem_card.html:29
-#: templates/partials/_teaser_card.html:21
-#: templates/partials/_teaser_card.html:28
-#: templates/prompts/prompt_list.html:17 templates/prompts/prompt_list.html:35
-#: templates/usecases/list.html:19 templates/usecases/list.html:40
-msgid "Read details about "
-msgstr "Lesen Sie Details über"
+#: templates/catalog/tool_list.html:138
+msgid "Featured"
+msgstr "Empfohlen"
 
-#: templates/catalog/tool_list.html:55
-msgid "Open website for "
-msgstr "Website öffnen für"
+#: templates/catalog/tool_list.html:147
+msgid "Website"
+msgstr "Webseite"
 
-#: templates/catalog/tool_list.html:61 templates/compare/index.html:50
+#: templates/catalog/tool_list.html:152 templates/compare/index.html:50
 #: templates/content/home.html:83
 msgid "Details"
 msgstr "Details"
 
-#: templates/catalog/tool_list.html:67
+#: templates/catalog/tool_list.html:160
 msgid "No tools found."
 msgstr "Keine Tools gefunden."
 
@@ -1333,6 +1437,18 @@ msgstr "Suche…"
 #: templates/compare/index.html:17
 msgid "All categories"
 msgstr "Alle Kategorien"
+
+#: templates/compare/index.html:35 templates/compare/index.html:50
+#: templates/glossary/glossary_results.html:7
+#: templates/guides/guide_list.html:18 templates/guides/guide_list.html:41
+#: templates/partials/_guideitem_card.html:22
+#: templates/partials/_guideitem_card.html:29
+#: templates/partials/_teaser_card.html:21
+#: templates/partials/_teaser_card.html:28
+#: templates/prompts/prompt_list.html:17 templates/prompts/prompt_list.html:35
+#: templates/usecases/list.html:19 templates/usecases/list.html:40
+msgid "Read details about "
+msgstr "Lesen Sie Details über"
 
 #: templates/compare/index.html:56
 msgid "No comparisons found."
@@ -2818,6 +2934,10 @@ msgstr "Prüfen"
 msgid "Path"
 msgstr "Pfad"
 
+#: templates/ops/seo_check.html:42
+msgid "Description"
+msgstr "Beschreibung"
+
 #: templates/ops/seo_check.html:43
 msgid "Canonical"
 msgstr "Canonical"
@@ -3422,6 +3542,23 @@ msgstr "Anwendungsfälle · MentoroAI"
 #: usecases/views.py:56
 msgid "Discover how people used ai in real usecases"
 msgstr "Entdecke, wie Menschen KI in realen Fällen verwendet haben."
+
+#, fuzzy
+#~ msgid "No user ratings yet."
+#~ msgstr "Noch keine veröffentlichten Inhalte."
+
+#, fuzzy
+#~ msgid "Rate this tool"
+#~ msgstr "Zu den Tools"
+
+#~ msgid "Open website for "
+#~ msgstr "Website öffnen für"
+
+#~ msgid "Functions"
+#~ msgstr "Funktionen"
+
+#~ msgid "Integrations"
+#~ msgstr "Integrationen"
 
 #, fuzzy
 #~ msgid "My Account"

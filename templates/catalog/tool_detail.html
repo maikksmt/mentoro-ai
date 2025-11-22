@@ -1,107 +1,267 @@
-{% extends "base.html" %} {% load i18n richtext %}
+{# templates/catalog/tool_detail.html #}
+{% extends "base.html" %}
+{% load i18n richtext %}
 
 {% block content %}
     <div class="max-w-5xl mx-auto">
         {% include "partials/breadcrumbs.html" %}
+        <article class="mt-4">
+            <header class="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div class="flex items-start gap-4">
+                    <div class="avatar">
+                        <div class="w-16 h-16 rounded-xl ring ring-base-300 ring-offset-base-100 ring-offset-2">
+                            {% if object.logo %}
+                                <img src="{{ object.logo.url }}" alt="{{ object.name }}">
+                            {% else %}
+                                <div class="flex h-full w-full items-center justify-center bg-base-200 text-xl font-semibold">
+                                    {{ object.name|first|upper }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold leading-tight">
+                            {{ object.name }}
+                        </h1>
+                        {% if object.vendor %}
+                            <p class="mt-1 text-sm text-base-content/70">
+                                {% trans "Vendor" %}: <span class="font-medium">{{ object.vendor }}</span>
+                            </p>
+                        {% endif %}
+                        {% if object.website %}
+                            <p class="mt-2">
+                                <a class="link" href="{{ object.website }}" target="_blank" rel="nofollow noopener">
+                                    {% trans "Visit website" %} ↗
+                                </a>
+                            </p>
+                        {% endif %}
+                    </div>
+                </div>
 
-        <article class="prose max-w-none">
-            <header class="mb-6">
-                <h1 class="text-3xl font-bold">{{ object.name }}</h1>
-                {% if object.website %}
-                    <p class="mt-2">
-                        <a class="link" href="{{ object.website }}" target="_blank"
-                           rel="nofollow noopener">{% trans "To the website" %} ↗</a>
-                    </p>
-                {% endif %}
-                <div class="mt-3 flex flex-wrap gap-2">
-                    {% if object.free_tier %}
-                        <span class="badge badge-success">{% trans "Free Tier" %}</span>
+                <div class="flex flex-col items-start gap-2 text-sm md:items-end">
+                    {% if object.is_featured %}
+                        <span class="badge badge-primary badge-outline uppercase tracking-wide">
+                            {% trans "Featured tool" %}
+                        </span>
                     {% endif %}
-                    {% if object.pricing_model %}
-                        <span class="badge badge-outline">
-                        {{ object.pricing_model }}
-                    </span>
-                    {% endif %}
-                    {% if object.categories.all %}
-                        {% for c in object.categories.all %}
-                            <span class="badge badge-tool">{{ c.name }}</span>
-                        {% endfor %}
-                    {% endif %}
-                    {% if object.language_support %}
-                        {% for lang in object.language_support %}
-                            <span class="badge badge-outline">{{ lang }}</span>
-                        {% endfor %}
-                    {% endif %}
+                    {#                    {% if object.rating %}#}
+                    {#                        <div class="flex items-center gap-1">#}
+                    {#                            <span class="text-lg">⭐</span>#}
+                    {#                            <span class="font-semibold">#}
+                    {#                            {{ object.rating|floatformat:1 }}/5#}
+                    {#                        </span>#}
+                    {#                            <span class="text-xs text-base-content/70">#}
+                    {#                            {% trans "User rating (average)" %}#}
+                    {#                        </span>#}
+                    {#                        </div>#}
+                    {#                    {% else %}#}
+                    {#                        <p class="text-xs text-base-content/60">#}
+                    {#                            {% trans "No user ratings yet." %}#}
+                    {#                        </p>#}
+                    {#                    {% endif %}#}
                 </div>
             </header>
+            {% if object.short_description %}
+                <section class="mb-6">
+                    <p class="text-base text-base-content/80">
+                        {{ object.short_description|richtext|safe }}
+                    </p>
+                </section>
+            {% endif %}
+            <section class="mb-6 mt-3">
+                <dl class="space-y-2 text-xs">
+                    {% if object.tags.all %}
+                        <div class="flex flex-wrap items-center gap-2">
+                            <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/60">
+                                {% trans "Tags" %}
+                            </dt>
+                            <dd class="flex flex-wrap gap-1">
+                                {% for tag in object.tags.all %}
+                                    <a href="{% url 'catalog:list' %}?tag={{ tag.name }}"
+                                       class="badge badge-ghost badge-sm hover:bg-base-200 transition"
+                                       aria-label="{% trans 'Filter by tag' %} #{{ tag.name }}">
+                                        #{{ tag.name }}
+                                    </a>
+                                {% endfor %}
+                            </dd>
+                        </div>
+                    {% endif %}
+
+                    {% if object.free_tier or object.pricing_model %}
+                        <div class="flex flex-wrap items-center gap-2">
+                            <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/60">
+                                {% trans "Pricing" %}
+                            </dt>
+                            <dd class="flex flex-wrap gap-1 items-center">
+                                {% if object.free_tier %}
+                                    <span class="badge badge-success badge-sm">
+                                        {% trans "Free Tier" %}
+                                    </span>
+                                {% endif %}
+                                {% if object.pricing_model %}
+                                    <span class="badge badge-outline badge-sm">
+                                        {{ object.get_pricing_model_display }}
+                                    </span>
+                                {% endif %}
+                            </dd>
+                        </div>
+                    {% endif %}
+
+                    {% if object.categories.all %}
+                        <div class="flex flex-wrap items-center gap-2">
+                            <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/60">
+                                {% trans "Categories" %}
+                            </dt>
+                            <dd class="flex flex-wrap gap-1">
+                                {% for c in object.categories.all %}
+                                    <span class="badge badge-tool badge-sm">
+                                        {{ c.name }}
+                                    </span>
+                                {% endfor %}
+                            </dd>
+                        </div>
+                    {% endif %}
+                    {% if object.language_support %}
+                        <div class="flex flex-wrap items-center gap-2">
+                            <dt class="font-semibold uppercase tracking-wide text-[0.65rem] text-base-content/60">
+                                {% trans "Languages" %}
+                            </dt>
+                            <dd class="flex flex-wrap gap-1">
+                                {% for lang in object.language_support %}
+                                    <span class="badge badge-outline badge-sm">
+                                        {% if lang == "de" %}
+                                            {% trans "German" %}
+                                        {% elif lang == "en" %}
+                                            {% trans "English" %}
+                                        {% else %}
+                                            {{ lang }}
+                                        {% endif %}
+                                    </span>
+                                {% endfor %}
+                            </dd>
+                        </div>
+                    {% endif %}
+                </dl>
+            </section>
             {% if object.long_description %}
-                <section class="mb-6">
-                    <h2 class="text-2xl font-semibold">{% trans "Description" %}</h2>
-                    <p>{{ object.long_description|richtext|safe }}</p>
-                </section>
-            {% elif object.short_description %}
-                <p class="text-base-content/80">{{ object.short_description|richtext|safe }}</p>
-            {% endif %}
-            {% if object.features %}
-                <section class="mb-6">
-                    <h2 class="text-2xl font-semibold">{% trans "Functions" %}</h2>
-                    <ul class="list-disc pl-6 space-y-1">
-                        {% for f in object.features %}
-                            <li>{{ f }}</li>
-                        {% endfor %}
-                    </ul>
+                <section class="mb-8 prose max-w-none">
+                    <h2 class="text-2xl font-semibold">{% trans "What this tool can do" %}</h2>
+                    {{ object.long_description|richtext|safe }}
                 </section>
             {% endif %}
-            {% if object.pricing %}
-                <section class="mb-6">
-                    <h2 class="text-2xl font-semibold">{% trans "Pricing" %}</h2>
-                    <div class="overflow-x-auto">
-                        <table class="table">
-                            <tbody>
-                            {% for plan, price in object.pricing.items %}
-                                <tr>
-                                    <th class="whitespace-nowrap">{{ plan }}</th>
-                                    <td>{{ price }}</td>
-                                </tr>
+
+            {% get_current_language as CURRENT_LANG %}
+            {% with tiers=object.pricing.all %}
+                {% if tiers %}
+                    <section class="mb-6">
+                        <div class="flex items-baseline justify-between gap-2 mb-3">
+                            <h2 class="text-2xl font-semibold">{% trans "Pricing" %}</h2>
+                            {% if object.updated_at %}
+                                <p class="text-xs text-base-content/60">
+                                    {% trans "Pricing last checked on" %} {{ object.updated_at|date:"d.m.Y" }}
+                                </p>
+                            {% elif object.published_at %}
+                                <p class="text-xs text-base-content/60">
+                                    {% trans "Pricing last checked on" %} {{ object.published_at|date:"d.m.Y" }}
+                                </p>
+                            {% endif %}
+                        </div>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            {% for tier in tiers %}
+                                <article class="card bg-base-100 shadow-sm border border-base-200">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-base">
+                                            {{ tier.name }}
+                                        </h3>
+                                        <p class="mt-1 text-sm">
+                                            {% if tier.price_month %}
+                                                <span class="font-semibold">
+                                                    {% if CURRENT_LANG == 'de' %}
+                                                        {{ tier.price_month }}&nbsp;€
+                                                    {% else %}$
+                                                        {{ tier.price_month }}{% endif %}/{% trans "month" %}
+                                                </span>
+                                            {% endif %}
+                                            {% if tier.price_year %}
+                                                {% if tier.price_month %} · {% endif %}
+                                                <span class="font-semibold">
+                                                    {% if CURRENT_LANG == 'de' %}
+                                                        {{ tier.price_year }}&nbsp;€
+                                                    {% else %}
+                                                        ${{ tier.price_year }}
+                                                    {% endif %}
+                                                    /{% trans "year" %}
+                                                </span>
+                                            {% endif %}
+                                            {% if not tier.price_month and not tier.price_year %}
+                                                <span class="text-base-content/60">
+                                                    {% trans "On request" %}
+                                                </span>
+                                            {% endif %}
+                                        </p>
+
+                                        {% if tier.features %}
+                                            <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+                                                {% for feat in tier.features %}
+                                                    <li>{{ feat }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </div>
+                                </article>
                             {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            {% endif %}
-            {% if object.integrations %}
-                <section class="mb-6">
-                    <h2 class="text-2xl font-semibold">{% trans "Integrations" %}</h2>
-                    <div class="flex flex-wrap gap-2">
-                        {% for integ in object.integrations %}
-                            <span class="badge badge-outline">{{ integ }}</span>
+                        </div>
+                    </section>
+                {% endif %}
+            {% endwith %}
+
+            {#            <section class="mb-10">#}
+            {#                <div class="card bg-base-200/60 border border-base-300">#}
+            {#                    <div class="card-body gap-3">#}
+            {#                        <h2 class="card-title text-base">#}
+            {#                            {% trans "Rate this tool" %}#}
+            {#                        </h2>#}
+            {#                        <p class="text-sm text-base-content/80">#}
+            {#                            {% trans "Share your experience to help others decide whether this tool is a good fit." %}#}
+            {#                        </p>#}
+            {#                        <div class="flex flex-wrap gap-2 items-center">#}
+            {#                            <div class="rating">#}
+            {# Dummy Rating-UI, später mit Form/JS verknüpfen #}
+            {#                                <input type="radio" name="rating" class="mask mask-star-2"/>#}
+            {#                                <input type="radio" name="rating" class="mask mask-star-2"/>#}
+            {#                                <input type="radio" name="rating" class="mask mask-star-2"/>#}
+            {#                                <input type="radio" name="rating" class="mask mask-star-2"/>#}
+            {#                                <input type="radio" name="rating" class="mask mask-star-2"/>#}
+            {#                            </div>#}
+            {#                            <button class="btn btn-sm btn-primary" type="button">#}
+            {#                                {% trans "Submit rating (coming soon)" %}#}
+            {#                            </button>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </section>#}
+
+            {% if related_tools %}
+                <section class="mt-8">
+                    <h2 class="text-2xl font-semibold mb-4">{% trans "Similar tools" %}</h2>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {% for t in related_tools %}
+                            <article class="card bg-base-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title text-base">
+                                        <a href="{% url 'catalog:detail' slug=t.slug %}" class="link link-hover">
+                                            {{ t.name }}
+                                        </a>
+                                    </h3>
+                                    {% if t.short_description %}
+                                        <p class="text-sm text-base-content/70 line-clamp-3">{{ t.short_description|richtext|safe }}</p>
+                                    {% endif %}
+                                </div>
+                            </article>
                         {% endfor %}
                     </div>
                 </section>
             {% endif %}
         </article>
     </div>
-
-    {% if related_tools %}
-        <section class="mt-10">
-            <h2 class="text-2xl font-semibold mb-4">{% trans "Similar Tools" %}</h2>
-            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {% for t in related_tools %}
-                    <article class="card bg-base-100 shadow">
-                        <div class="card-body">
-                            <h3 class="card-title text-base">
-                                <a href="{% url 'catalog:detail' slug=t.slug %}"
-                                   class="link link-hover">{{ t.name }}</a>
-                            </h3>
-                            {% if t.short_description %}
-                                <p class="text-sm text-base-content/70 line-clamp-3">
-                                    {{ t.short_description|richtext|safe }}
-                                </p>
-                            {% endif %}
-                        </div>
-                    </article>
-                {% endfor %}
-            </div>
-        </section>
-    {% endif %}
 {% endblock %}

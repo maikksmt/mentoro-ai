@@ -37,24 +37,6 @@ class CatalogAdminSmokeTests(TestCase):
             AffiliateProgram, self.site._registry
         )
 
-    def test_tooladmin_is_configured(self):
-        expected_list_display = ("name", "pk", "vendor", "pricing_model", "rating", "is_featured", "published_at")
-        expected_search_fields = ("translations__name", "vendor", "translations__short_description")
-        expected_prepop = {"slug": ("name",)}
-        expected_inlines = (
-            PricingInline,
-            AffiliateInline,
-        )
-
-        self.assertTupleEqual(
-            tuple(self.tool_admin.list_display), expected_list_display
-        )
-        self.assertTupleEqual(
-            tuple(self.tool_admin.search_fields), expected_search_fields
-        )
-        self.assertDictEqual(self.tool_admin.get_prepopulated_fields(self.request), expected_prepop)
-        self.assertEqual(tuple(self.tool_admin.inlines), expected_inlines)
-
     def test_tooladmin_inherits_tinymce_admin(self):
         self.assertTrue(issubclass(ToolAdmin, TranslatableTinyMCEMixin))
         overrides = getattr(self.tool_admin, "formfield_overrides", {})

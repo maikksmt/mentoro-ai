@@ -282,7 +282,12 @@ html[data-theme='mentoroai-dark'] #github-logo[srcset] {
     [data-theme="mentoroai-dark"] {
         /* Header/Badge/Alert – kräftigerer Kontrast in Dark */
 
-        .badge[class*="badge-"],
+        .badge.badge-glossary,
+        .badge.badge-tool,
+        .badge.badge-guide,
+        .badge.badge-usecase,
+        .badge.badge-prompt,
+        .badge.badge-compare,
         .card-header-glossary,
         .card-header-tool,
         .card-header-guide,
