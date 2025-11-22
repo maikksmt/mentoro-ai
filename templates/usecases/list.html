@@ -4,11 +4,12 @@
 
 {% block content %}
     {% include "partials/breadcrumbs.html" %}
-
     <header class="mb-6 card-header-usecase">
         <h1 class="text-3xl font-bold">{% trans "Usecases" %}</h1>
+        <p class="text-base-content/70 mt-2">
+            {% trans "Practical AI application examples for your everyday life and job." %}
+        </p>
     </header>
-
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {% for obj in object_list %}
             <article class="card bg-base-100 shadow hover:shadow-lg transition">
@@ -17,27 +18,26 @@
                         <a href="{{ obj.get_absolute_url }}" class="link link-hover" aria-label="
                                 {% trans "Read details about " %}{{ obj.display_title }}">{{ obj.display_title }}</a>
                     </h2>
-
                     {% if obj.persona %}
                         <p class="text-sm text-base-content/70">{% trans "Persona:" %} {{ obj.persona }}</p>
                     {% endif %}
-
                     {% if obj.display_intro %}
-                        <div>{{ obj.display_intro|richtext|safe|truncatewords_html:30 }}</div>
+                        <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords_html:30 }}</p>
                     {% else %}
-                        <div>{{ obj.display_body|richtext|safe|truncatewords_html:30 }}</div>
+                        <p class="line-clamp-3">{{ obj.display_body|richtext|safe|truncatewords_html:30 }}</p>
                     {% endif %}
-
                     <div class="card-actions justify-between items-center mt-4">
-                        <div class="text-sm text-base-content/70">
+                        <div class="text-sm text-base-content/80">
                             {% if obj.published_at %}
-                                <time datetime="{{ obj.published_at|date:'c' }}">
-                                    📅 {{ obj.published_at|date:"d.m.Y" }}</time>
+                                <time datetime="{{ obj.published_at|date:'c' }}"
+                                      class="inline-flex items-center gap-1 whitespace-nowrap">
+                                    {% heroicon_outline "calendar-days" size=16 %}{{ obj.published_at|date:"d.m.Y" }}
+                                </time>
                             {% endif %}
                         </div>
                         <a href="{{ obj.get_absolute_url }}" class="btn btn-sm btn-primary" role="button"
                            aria-pressed="false"
-                           aria-label="{% trans "Read details about " %}{{ obj.display_title }}">{% trans "Details" %}
+                           aria-label="{% trans "Read details about " %}{{ obj.display_title }}">{% trans "Read more" %}
                         </a>
                     </div>
                 </div>
