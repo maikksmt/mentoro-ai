@@ -14,7 +14,9 @@
             <article class="card bg-base-100 shadow-md hover:shadow-lg transition">
                 <div class="card-body">
                     <h2 class="card-title">
-                        <a href="{{ obj.get_absolute_url }}" class="link link-hover">{{ obj.display_title }}</a>
+                        <a href="{{ obj.get_absolute_url }}" class="link link-hover"
+                           aria-label="
+                                   {% trans "Read details about " %}{{ obj.display_title }}">{{ obj.display_title }}</a>
                     </h2>
                     {% if obj.display_intro %}
                         <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords:30 }}</p>
@@ -26,8 +28,10 @@
                             📅 {{ obj.published_at|date:"d.m.Y" }}</time>{% endif %}
                     </div>
                     <div class="card-actions justify-end mt-4">
-                        <a href="{{ obj.get_absolute_url }}"
-                           class="btn btn-primary btn-sm">{% trans "Read more" %}</a>
+                        <a href="{{ obj.get_absolute_url }}" class="btn btn-primary btn-sm" role="button"
+                           aria-pressed="false"
+                           aria-label="
+                                   {% trans "Read details about " %}{{ obj.display_title }}">{% trans "Read more" %}</a>
                     </div>
                 </div>
             </article>

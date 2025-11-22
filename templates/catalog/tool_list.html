@@ -9,7 +9,8 @@
     <form method="get" class="py-2 md:py-4 grid gap-3 grid-cols-3 md:grid-cols-4 justify-items">
         <label class="input">
             {% heroicon_solid "magnifying-glass" class="opacity-70" %}
-            <input type="search" name="q" value="{{ q|default_if_none:'' }}" placeholder="{% trans 'Search tools …' %}" class="grow"/>
+            <input type="search" name="q" value="{{ q|default_if_none:'' }}" placeholder="{% trans 'Search tools …' %}"
+                   class="grow"/>
         </label>
 
         <label class="col-span-2 md:col-span-1 label cursor-pointer justify-start gap-3">
@@ -17,9 +18,10 @@
             <span class="label-text">{% trans "Only with Free-Tier" %}</span>
         </label>
         <div class="col-span-1 md:col-span-4 flex gap-2 justify-start">
-            <button class="btn btn-primary ">{% trans "Filter" %}</button>
+            <button class="btn btn-primary " aria-label="Filter">{% trans "Filter" %}</button>
             {% if q or language or free %}
-                <a href="." class="btn">{% trans "Reset" %}</a>
+                <a href="." class="btn" role="button" aria-pressed="false"
+                   aria-label="{% trans "Filter" %}">{% trans "Reset" %}</a>
             {% endif %}
         </div>
     </form>
@@ -28,7 +30,8 @@
             <article class="card bg-base-100 shadow hover:shadow-lg transition">
                 <div class="card-body">
                     <h2 class="card-title">
-                        <a class="link link-hover" href="{% url 'catalog:detail' slug=t.slug %}">{{ t.name }}</a>
+                        <a class="link link-hover" href="{% url 'catalog:detail' slug=t.slug %}"
+                           aria-label="{% trans "Read details about " %}{{ t.name }}">{{ t.name }}</a>
                     </h2>
                     {% if t.short_description %}
                         <p class="line-clamp-3">{{ t.short_description|richtext|safe }}</p>{% endif %}
@@ -44,15 +47,15 @@
                     </div>
                     <div class="card-actions justify-end">
                         {% if t.website %}
-                            <a href="{{ t.website }}"
-                               class="btn btn-sm"
-                               target="_blank"
-                               rel="noopener nofollow ugc">
+                            <a href="{{ t.website }}" class="btn btn-sm" target="_blank" rel="noopener nofollow ugc"
+                               role="button" aria-pressed="false"
+                               aria-label="{% trans "Open website for " %}{{ t.name }}">
                                 Website
                             </a>
                         {% endif %}
-                        <a href="{% url 'catalog:detail' slug=t.slug %}"
-                           class="btn btn-sm btn-primary">{% trans "Details" %}</a>
+                        <a href="{% url 'catalog:detail' slug=t.slug %}" class="btn btn-sm btn-primary"
+                           role="button" aria-pressed="false"
+                           aria-label="{% trans "Read details about " %}{{ t.name }}">{% trans "Details" %}</a>
                     </div>
                 </div>
             </article>

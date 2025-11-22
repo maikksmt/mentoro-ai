@@ -26,7 +26,8 @@
                     <h3 class="text-lg font-semibold mb-4">
                         {% blocktrans %}Access your drafts and continue creating new content.{% endblocktrans %}
                     </h3>
-                    <a href="{% url 'content:editorial:my_drafts' %}" class="btn btn-primary btn-wide">{% blocktrans %}
+                    <a href="{% url 'content:editorial:my_drafts' %}" class="btn btn-primary btn-wide"
+                       aria-label="{% trans "Go to my editorial drafts " %}">{% blocktrans %}
                         My drafts{% endblocktrans %}</a>
                 {% else %}
                     <p>{% blocktrans %}
@@ -36,7 +37,9 @@
                 {% endif %}
             {% else %}
                 {% if ACCOUNT_SIGNUP_ENABLED %}
-                    <a href="{% url 'account_signup' %}" class="btn btn-outline w-full">
+                    <a href="{% url 'account_signup' %}" class="btn btn-outline w-full" role="button"
+                       aria-pressed="false"
+                       aria-label="{% trans "Join as an author for free" %}">
                         {% blocktrans %}Join for free{% endblocktrans %}
                     </a>
                     <p>
@@ -45,13 +48,12 @@
                     </p>
                 {% else %}
                     <a href="https://github.com/maikksmt/mentoro-ai/discussions/" target="_blank" rel="noopener"
-                       class="btn btn-primary">{% blocktrans %}Go to Github{% endblocktrans %}</a>
-
+                       class="btn btn-primary" role="button" aria-pressed="false"
+                       aria-label="{% trans "Go to external project github discussions page" %}">{% blocktrans %}Go to
+                        Github{% endblocktrans %}</a>
                 {% endif %}
-
-                <a href="{% url 'account_login' %}" class="btn btn-primary">{% trans 'Login' %}</a>
-
-
+                <a href="{% url 'account_login' %}" class="btn btn-primary" role="button" aria-pressed="false"
+                   aria-label="{% trans "Login" %}">{% trans 'Login' %}</a>
             {% endif %}
         </div>
     </div>

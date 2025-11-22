@@ -15,12 +15,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 
     <script src="{% url 'javascript-catalog' %}"></script>
-    <script src="{% static 'js/htmx.min.js' %}"></script>
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css">
     {% include "partials/_seo_meta.html" %}
+    {#    <script src="{% static 'js/htmx.min.js' %}"></script>#}
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
+            integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
+            crossorigin="anonymous"></script>
     {% block extra_head %}{% endblock %}
     {% if not debug %}
-        <!-- Cookiebot cookie banner -->
         <script id="Cookiebot"
                 src="https://consent.cookiebot.com/uc.js"
                 data-cbid="9c77a67f-5158-4c03-bad5-725d6ae4ab7e"
