@@ -14,20 +14,27 @@
             <article class="card bg-base-100 shadow-md hover:shadow-lg transition">
                 <div class="card-body">
                     <h2 class="card-title">
-                        <a href="{{ obj.get_absolute_url }}" class="link link-hover"
-                           aria-label="
-                                   {% trans "Read details about " %}{{ obj.display_title }}">{{ obj.display_title }}</a>
+                        <a href="{{ obj.get_absolute_url }}" class="link link-hover" aria-label="
+                                {% trans "Read details about " %}{{ obj.display_title }}">{{ obj.display_title }}</a>
                     </h2>
                     {% if obj.display_intro %}
-                        <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords:30 }}</p>
+                        <p class="line-clamp-3">{{ obj.display_intro|richtext|safe|truncatewords_html:30 }}</p>
+                    {% else %}
+                        <p class="line-clamp-3">{{ obj.display_body|richtext|safe|truncatewords_html:30 }}</p>
                     {% endif %}
-                    <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-base-content/70">
-                        {% if obj.reading_time %}<span>⏱ {{ obj.reading_time }}&nbsp;min</span
-                        >{% endif %} {% if obj.published_at %}
-                        <time datetime="{{ obj.published_at|date:'c' }}">
-                            📅 {{ obj.published_at|date:"d.m.Y" }}</time>{% endif %}
-                    </div>
-                    <div class="card-actions justify-end mt-4">
+
+                    <div class="card-actions justify-between mt-4">
+                        <div class="gap-2 text-sm text-base-content/80">
+                            {% if obj.reading_time %}
+                                <span>{% heroicon_outline "clock" size=16 %} {{ obj.reading_time }}&nbsp;min</span>
+                            {% endif %}
+                            {% if obj.published_at %}
+                                <time datetime="{{ obj.published_at|date:'c' }}"
+                                      class="inline-flex items-center gap-1 whitespace-nowrap">
+                                    {% heroicon_outline "calendar-days" size=16 %}{{ obj.published_at|date:"d.m.Y" }}
+                                </time>
+                            {% endif %}
+                        </div>
                         <a href="{{ obj.get_absolute_url }}" class="btn btn-primary btn-sm" role="button"
                            aria-pressed="false"
                            aria-label="

@@ -4,6 +4,9 @@
     {% include "partials/breadcrumbs.html" %}
     <header class="mb-6 card-header-prompt">
         <h1 class="text-3xl font-bold">{% trans "Prompts" %}</h1>
+        <p class="text-base-content/70 mt-2">
+            {% trans "Templates that significantly improve your AI responses." %}
+        </p>
     </header>
     <div class="grid gap-2 lg:gap-6  md:grid-cols-2 lg:grid-cols-3">
         {% for obj in object_list %}
@@ -21,13 +24,15 @@
                     <div class="card-actions justify-between items-center mt-4">
                         <div class="text-sm text-base-content/70">
                             {% if obj.published_at %}
-                                <time datetime="{{ obj.published_at|date:'c' }}">
-                                    📅 {{ obj.published_at|date:"d.m.Y" }}
+                                <time datetime="{{ obj.published_at|date:'c' }}"
+                                      class="inline-flex items-center gap-1 whitespace-nowrap">
+                                    {% heroicon_outline "calendar-days" size=16 %}{{ obj.published_at|date:"d.m.Y" }}
                                 </time>
                             {% endif %}
                         </div>
-                        <a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button" aria-pressed="false"
-                           aria-label="{% trans "Read details about " %}{{ obj.display_title }}">{% trans "Details" %}
+                        <a href="{{ obj.get_absolute_url }}" class="btn btn-primary btn-sm" role="button"
+                           aria-pressed="false"
+                           aria-label="{% trans "Read details about " %}{{ obj.display_title }}">{% trans "Read more" %}
                         </a>
                     </div>
                 </div>
