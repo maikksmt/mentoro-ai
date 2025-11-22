@@ -7,16 +7,18 @@
         <h2 class="card-title text-xl">{% blocktrans %}New to AI? Start here{% endblocktrans %}</h2>
         <p>
             {% blocktrans %}
-              Perfect if you’ve never used AI before. No jargon, just practical steps.
+                Perfect if you’ve never used AI before. No jargon, just practical steps.
             {% endblocktrans %}
         </p>
         <div class="card-actions justify-between mt-4">
             {% if start_guide_url %}
-                <a href="{{ start_guide_url }}" class="btn btn-primary">{% trans "Open the Starter Guide" %}</a>
+                <a href="{{ start_guide_url }}" class="btn btn-primary" role="button" aria-pressed="false"
+                   aria-label="{% trans "Open the Starter Guide" %}">{% trans "Open the Starter Guide" %}</a>
             {% else %}
                 <span class="btn btn-disabled">{% trans "Open the Starter Guide" %}</span>
             {% endif %}
-            <a href="{% url 'catalog:list' %}" class="btn btn-outline">
+            <a href="{% url 'catalog:list' %}" class="btn btn-outline" role="button" aria-pressed="false"
+               aria-label="{% trans "Browse beginner-friendly tools" %}">
                 {% blocktrans %}Browse beginner-friendly tools{% endblocktrans %}
             </a>
         </div>

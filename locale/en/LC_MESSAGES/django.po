@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-21 22:04+0100\n"
+"POT-Creation-Date: 2025-11-22 09:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,9 +159,9 @@ msgstr ""
 
 #: compare/models.py:32 compare/views.py:73 compare/views.py:188
 #: compare/views.py:226 compare/views.py:257 compare/views.py:260
-#: templates/base.html:83 templates/base.html:107
+#: templates/base.html:85 templates/base.html:109
 #: templates/content/what-to-find.html:36
-#: templates/partials/_entry_cards.html:46
+#: templates/partials/_entry_cards.html:51
 msgid "Comparisons"
 msgstr ""
 
@@ -338,9 +338,9 @@ msgid "Guide"
 msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:71 templates/base.html:95
-#: templates/content/home.html:105 templates/content/what-to-find.html:32
-#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:18
+#: templates/base.html:73 templates/base.html:97
+#: templates/content/home.html:107 templates/content/what-to-find.html:32
+#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:19
 msgid "Guides"
 msgstr ""
 
@@ -392,7 +392,7 @@ msgstr ""
 msgid "Reason (optional)"
 msgstr ""
 
-#: newsletter/views.py:20 templates/base.html:191
+#: newsletter/views.py:20 templates/base.html:193
 msgid "Newsletter"
 msgstr ""
 
@@ -493,9 +493,9 @@ msgid "Prompt"
 msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
-#: templates/base.html:74 templates/base.html:98
-#: templates/content/home.html:106 templates/content/what-to-find.html:33
-#: templates/partials/_entry_cards.html:25 templates/prompts/prompt_list.html:6
+#: templates/base.html:76 templates/base.html:100
+#: templates/content/home.html:108 templates/content/what-to-find.html:33
+#: templates/partials/_entry_cards.html:27 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
 
@@ -731,7 +731,7 @@ msgstr ""
 
 #: templates/account/login.html:4 templates/account/login.html:94
 #: templates/account/password_reset_from_key_done.html:23
-#: templates/partials/author_info_card.html:52
+#: templates/partials/author_info_card.html:56
 msgid "Login"
 msgstr ""
 
@@ -820,7 +820,7 @@ msgstr ""
 
 #: templates/account/password_reset.html:33
 #: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
-#: templates/legal/privacy_policy.html:15
+#: templates/legal/privacy_policy.html:17
 msgid "Email"
 msgstr ""
 
@@ -1084,72 +1084,72 @@ msgstr ""
 msgid "No differences in this language."
 msgstr ""
 
-#: templates/base.html:63
+#: templates/base.html:65
 msgid "Mobile menu"
 msgstr ""
 
-#: templates/base.html:68 templates/base.html:92
+#: templates/base.html:70 templates/base.html:94
 #: templates/content/what-to-find.html:31
 #: templates/partials/_entry_cards.html:11
 msgid "Glossary"
 msgstr ""
 
-#: templates/base.html:77 templates/base.html:101
-#: templates/partials/_entry_cards.html:32
+#: templates/base.html:79 templates/base.html:103
+#: templates/partials/_entry_cards.html:35
 msgid "Use cases"
 msgstr ""
 
-#: templates/base.html:80 templates/base.html:104
+#: templates/base.html:82 templates/base.html:106
 #: templates/content/what-to-find.html:35
-#: templates/partials/_entry_cards.html:39
+#: templates/partials/_entry_cards.html:43
 msgid "Tools"
 msgstr ""
 
-#: templates/base.html:113
+#: templates/base.html:115
 msgid "Search"
 msgstr ""
 
-#: templates/base.html:122
+#: templates/base.html:124
 msgid "Toggle theme"
 msgstr ""
 
-#: templates/base.html:138
+#: templates/base.html:140
 msgid "Language select"
 msgstr ""
 
-#: templates/base.html:166
+#: templates/base.html:168
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:169
+#: templates/base.html:171
 msgid "Admin Panel"
 msgstr ""
 
-#: templates/base.html:171 templates/partials/editorial_nav.html:7
+#: templates/base.html:173 templates/partials/editorial_nav.html:9
 msgid "Drafts"
 msgstr ""
 
-#: templates/base.html:174 templates/partials/editorial_nav.html:10
+#: templates/base.html:176 templates/partials/editorial_nav.html:13
 msgid "Reviews"
 msgstr ""
 
-#: templates/base.html:193 templates/partials/_entry_cards.html:5
+#: templates/base.html:195 templates/partials/_entry_cards.html:5
 msgid "What can I find on MentoroAI?"
 msgstr ""
 
-#: templates/base.html:194
+#: templates/base.html:196
 msgid "Legal notice"
 msgstr ""
 
-#: templates/base.html:195
+#: templates/base.html:197
 msgid "Privacy policy"
 msgstr ""
 
-#: templates/base.html:197 templates/legal/terms_of_use.html:10
+#: templates/base.html:199 templates/legal/terms_of_use.html:10
 msgid "Terms of Use"
 msgstr ""
 
-#: templates/base.html:198
+#: templates/base.html:200
 msgid "Copyright"
 msgstr ""
 
@@ -1185,25 +1185,43 @@ msgstr ""
 msgid "Search tools …"
 msgstr ""
 
-#: templates/catalog/tool_list.html:17
+#: templates/catalog/tool_list.html:18
 msgid "Only with Free-Tier"
 msgstr ""
 
-#: templates/catalog/tool_list.html:20 templates/compare/index.html:23
+#: templates/catalog/tool_list.html:21 templates/catalog/tool_list.html:24
+#: templates/compare/index.html:24
 msgid "Filter"
 msgstr ""
 
-#: templates/catalog/tool_list.html:22 templates/compare/index.html:24
+#: templates/catalog/tool_list.html:24 templates/compare/index.html:25
 msgid "Reset"
 msgstr ""
 
-#: templates/catalog/tool_list.html:55 templates/compare/index.html:47
-#: templates/content/home.html:81 templates/prompts/prompt_list.html:28
-#: templates/usecases/list.html:37
+#: templates/catalog/tool_list.html:34 templates/catalog/tool_list.html:58
+#: templates/compare/index.html:35 templates/compare/index.html:50
+#: templates/glossary/glossary_results.html:7
+#: templates/guides/guide_list.html:19 templates/guides/guide_list.html:34
+#: templates/partials/_guideitem_card.html:22
+#: templates/partials/_guideitem_card.html:29
+#: templates/partials/_teaser_card.html:21
+#: templates/partials/_teaser_card.html:28
+#: templates/prompts/prompt_list.html:14 templates/prompts/prompt_list.html:30
+#: templates/usecases/list.html:18 templates/usecases/list.html:40
+msgid "Read details about "
+msgstr ""
+
+#: templates/catalog/tool_list.html:52
+msgid "Open website for "
+msgstr ""
+
+#: templates/catalog/tool_list.html:58 templates/compare/index.html:50
+#: templates/content/home.html:83 templates/prompts/prompt_list.html:30
+#: templates/usecases/list.html:40
 msgid "Details"
 msgstr ""
 
-#: templates/catalog/tool_list.html:61
+#: templates/catalog/tool_list.html:64
 msgid "No tools found."
 msgstr ""
 
@@ -1235,15 +1253,15 @@ msgstr ""
 msgid "Comparisons based on criteria such as price, functionality and quality."
 msgstr ""
 
-#: templates/compare/index.html:12
+#: templates/compare/index.html:13
 msgid "Search…"
 msgstr ""
 
-#: templates/compare/index.html:16
+#: templates/compare/index.html:17
 msgid "All categories"
 msgstr ""
 
-#: templates/compare/index.html:53
+#: templates/compare/index.html:56
 msgid "No comparisons found."
 msgstr ""
 
@@ -1334,32 +1352,36 @@ msgid ""
 "life."
 msgstr ""
 
-#: templates/content/home.html:20
+#: templates/content/home.html:20 templates/content/home.html:21
 msgid "Begin with the Starter Guide"
 msgstr ""
 
-#: templates/content/home.html:23
+#: templates/content/home.html:24 templates/content/home.html:25
 msgid "Discover AI Tools"
 msgstr ""
 
-#: templates/content/home.html:50
+#: templates/content/home.html:52
 msgid "Featured Tools"
 msgstr ""
 
-#: templates/content/home.html:92
+#: templates/content/home.html:81
+msgid "Rating"
+msgstr ""
+
+#: templates/content/home.html:94
 msgid "Recommended for you"
 msgstr ""
 
-#: templates/content/home.html:104
+#: templates/content/home.html:106
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:108 templates/usecases/list.html:9
+#: templates/content/home.html:110 templates/usecases/list.html:9
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
 
-#: templates/content/home.html:117
+#: templates/content/home.html:119
 msgid "No published content yet."
 msgstr ""
 
@@ -1720,25 +1742,45 @@ msgid "Search term..."
 msgstr ""
 
 #: templates/glossary/glossary_list.html:24
+msgid "Show all terms"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:25
 msgid "All"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:40
-#: templates/glossary/glossary_list.html:44
-#: templates/glossary/glossary_list.html:73
-#: templates/glossary/glossary_list.html:77
+#: templates/glossary/glossary_list.html:30
+msgid "Show terms with letter "
+msgstr ""
+
+#: templates/glossary/glossary_list.html:41
+#: templates/glossary/glossary_list.html:74
+#: templates/partials/pagination.html:7
+msgid "Previous Page"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:42
+#: templates/glossary/glossary_list.html:46
+#: templates/glossary/glossary_list.html:75
+#: templates/glossary/glossary_list.html:79
 msgid "Previous"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:47
-#: templates/partials/pagination.html:11
+#: templates/glossary/glossary_list.html:49
+#: templates/partials/pagination.html:12
 msgid "Site"
 msgstr ""
 
-#: templates/glossary/glossary_list.html:52
-#: templates/glossary/glossary_list.html:56
-#: templates/glossary/glossary_list.html:84
-#: templates/glossary/glossary_list.html:88
+#: templates/glossary/glossary_list.html:53
+#: templates/glossary/glossary_list.html:85
+#: templates/partials/pagination.html:17
+msgid "Next Page"
+msgstr ""
+
+#: templates/glossary/glossary_list.html:54
+#: templates/glossary/glossary_list.html:58
+#: templates/glossary/glossary_list.html:86
+#: templates/glossary/glossary_list.html:90
 msgid "Next"
 msgstr ""
 
@@ -1754,11 +1796,11 @@ msgstr ""
 msgid "Step-by-step instructions on AI topics – understandable and practical."
 msgstr ""
 
-#: templates/guides/guide_list.html:30
+#: templates/guides/guide_list.html:34
 msgid "Read more"
 msgstr ""
 
-#: templates/guides/guide_list.html:36
+#: templates/guides/guide_list.html:40
 msgid "No published guides available."
 msgstr ""
 
@@ -1981,19 +2023,19 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:11
+#: templates/legal/privacy_policy.html:13
 msgid "1. Controller"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:13
+#: templates/legal/privacy_policy.html:15
 msgid "Controller under data protection law, in particular the EU GDPR, is:"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:18
+#: templates/legal/privacy_policy.html:21
 msgid "2. Collection and storage of personal data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:20
+#: templates/legal/privacy_policy.html:23
 msgid ""
 "\n"
 "                When you visit this website, information sent by your "
@@ -2001,16 +2043,15 @@ msgid ""
 "                address,\n"
 "                date and time, pages viewed, browser used). These data are "
 "technically required to display the website\n"
-"                correctly\n"
-"                and serve the security of the system.\n"
+"                correctly and serve the security of the system.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:28
+#: templates/legal/privacy_policy.html:32
 msgid "3. Contact"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:30
+#: templates/legal/privacy_policy.html:34
 msgid ""
 "\n"
 "                If you contact us by email, we store your details to process "
@@ -2019,61 +2060,57 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:35
+#: templates/legal/privacy_policy.html:41
 msgid "4. Registration / User accounts"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:37
+#: templates/legal/privacy_policy.html:43
 msgid ""
 "\n"
 "                If you create a user account, we process your entered data "
 "(name, email address, password) solely for\n"
-"                providing\n"
-"                your account and managing your content.\n"
+"                providing your account and managing your content.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:43
+#: templates/legal/privacy_policy.html:50
 msgid "5. Cookies and tracking technologies"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:45
+#: templates/legal/privacy_policy.html:52
 msgid ""
 "\n"
 "                This website uses cookies to ensure technical functionality "
 "and, after your explicit consent, to analyze\n"
-"                usage behaviour.\n"
-"                The storage and evaluation of non-essential cookies only "
-"takes place with your prior consent in\n"
-"                accordance with Art. 6(1)(a) GDPR.\n"
-"                Consent is managed through the consent management platform "
-"Cookiebot by Usercentrics.\n"
+"                usage behaviour. The storage and evaluation of non-essential "
+"cookies only takes place with your prior\n"
+"                consent in accordance with Art. 6(1)(a) GDPR. Consent is "
+"managed through the consent management platform\n"
+"                Cookiebot by Usercentrics.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:54
+#: templates/legal/privacy_policy.html:61
 msgid "6. Consent management (Cookiebot)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:56
+#: templates/legal/privacy_policy.html:63
 msgid ""
 "\n"
 "                We use the consent management platform Cookiebot by "
 "Usercentrics to obtain and manage legally required\n"
-"                cookie consent.\n"
-"                Cookiebot stores cookies that document your consent status "
-"and block all non-essential cookies until you\n"
-"                consent.\n"
-"                The processing is based on our legal obligation under Art. "
-"6(1)(c) GDPR.\n"
+"                cookie consent. Cookiebot stores cookies that document your "
+"consent status and block all non-essential\n"
+"                cookies until you consent. The processing is based on our "
+"legal obligation under Art. 6(1)(c) GDPR.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:64
+#: templates/legal/privacy_policy.html:71
 msgid "7. Google Analytics 4"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:66
+#: templates/legal/privacy_policy.html:73
 msgid ""
 "\n"
 "                If you give your consent to the “Statistics” category, we "
@@ -2086,74 +2123,204 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:75
+#: templates/legal/privacy_policy.html:81
+#: templates/legal/privacy_policy.html:114
+#: templates/legal/privacy_policy.html:162
 msgid "Legal basis"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:75
+#: templates/legal/privacy_policy.html:81
 msgid "Your consent under Art. 6(1)(a) GDPR."
 msgstr ""
 
-#: templates/legal/privacy_policy.html:79
+#: templates/legal/privacy_policy.html:84
+#: templates/legal/privacy_policy.html:128
+#: templates/legal/privacy_policy.html:176
 msgid "Data transfer"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:79
+#: templates/legal/privacy_policy.html:85
 msgid ""
 "\n"
-"            Data may be transferred to Google LLC (USA). Google complies "
-"with the EU–US Data Privacy Framework.\n"
-"        "
+"                Data may be transferred to Google LLC in the United States. "
+"Google participates in the EU–US Data\n"
+"                Privacy\n"
+"                Framework.\n"
+"            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:85
-msgid "8. Your rights"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:87
-msgid "Access to your stored data"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:88
-msgid "Rectification of inaccurate data"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:89
-msgid "Erasure ('right to be forgotten')"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:90
-msgid "Restriction of processing"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:91
-msgid "Data portability"
-msgstr ""
-
-#: templates/legal/privacy_policy.html:92
-msgid "Objection to processing"
+#: templates/legal/privacy_policy.html:93
+msgid "8. Google Sign-In (Social Login)"
 msgstr ""
 
 #: templates/legal/privacy_policy.html:95
-msgid "9. Data security"
+msgid ""
+"\n"
+"                On this website you can log in or create an account using "
+"your Google account (\"Google Sign-In\").\n"
+"                The provider of this service is Google Ireland Limited, "
+"Gordon House, Barrow Street, Dublin 4, Ireland.\n"
+"            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:97
+#: templates/legal/privacy_policy.html:101
+#: templates/legal/privacy_policy.html:148
+msgid "Data processed"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:102
+msgid ""
+"\n"
+"                We receive from Google your name, email address and a unique "
+"Google user ID. This data is used solely to\n"
+"                create and manage your user account on MentoroAI and to "
+"authenticate you when you log in.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:108
+#: templates/legal/privacy_policy.html:156
+msgid "Purpose"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:109
+#: templates/legal/privacy_policy.html:157
+msgid ""
+"\n"
+"                Providing a convenient and secure login option and managing "
+"your user account.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:115
+#: templates/legal/privacy_policy.html:163
+msgid ""
+"\n"
+"                Your consent according to Art. 6(1)(a) GDPR.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:120
+#: templates/legal/privacy_policy.html:168
+msgid "Data storage and deletion"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:121
+msgid ""
+"\n"
+"                We store the data received from Google as long as your user "
+"account exists. If you delete your account,\n"
+"                this\n"
+"                data will be deleted unless statutory retention periods "
+"require longer storage.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:129
+msgid ""
+"\n"
+"                Data may be transferred to Google LLC (USA).\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:134
+#: templates/legal/privacy_policy.html:183
+msgid "Further information"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:139
+msgid "9. GitHub Sign-In (Social Login)"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:141
+msgid ""
+"\n"
+"                You can also log in or create an account using your GitHub "
+"account (\"GitHub Sign-In\").\n"
+"                The provider of this service is GitHub, Inc., 88 Colin P. "
+"Kelly Jr. Street, San Francisco, CA 94107,\n"
+"                USA.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:149
+msgid ""
+"\n"
+"                We receive from GitHub your username, email address and a "
+"unique GitHub user ID. This data is used\n"
+"                solely to\n"
+"                create and manage your user account on MentoroAI and to "
+"authenticate you when you log in.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:169
+msgid ""
+"\n"
+"                We store the data received from GitHub as long as your "
+"account exists. If you delete your account, this\n"
+"                data\n"
+"                will be deleted unless statutory retention periods require "
+"longer storage.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:177
+msgid ""
+"\n"
+"                GitHub Inc. is located in the United States. Data may "
+"therefore be transferred to servers outside the\n"
+"                EU.\n"
+"            "
+msgstr ""
+
+#: templates/legal/privacy_policy.html:188
+msgid "10. Your rights"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:190
+msgid "Access to your stored data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:191
+msgid "Rectification of inaccurate data"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:192
+msgid "Erasure ('right to be forgotten')"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:193
+msgid "Restriction of processing"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:194
+msgid "Data portability"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:195
+msgid "Objection to processing"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:199
+msgid "11. Data security"
+msgstr ""
+
+#: templates/legal/privacy_policy.html:201
 msgid ""
 "\n"
 "                We use technical and organizational measures to protect your "
 "data against manipulation, loss, or\n"
-"                unauthorized access.\n"
-"                These measures are continuously adapted in line with "
-"technological developments.\n"
+"                unauthorized access. These measures are continuously adapted "
+"in line with technological developments.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:103
-msgid "10. Changes to this Privacy Policy"
+#: templates/legal/privacy_policy.html:208
+msgid "12. Changes to this Privacy Policy"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:105
+#: templates/legal/privacy_policy.html:210
 msgid ""
 "\n"
 "                We reserve the right to update this Privacy Policy to "
@@ -2396,6 +2563,10 @@ msgid ""
 "Our areas of expertise at a glance - from definitions to practical examples."
 msgstr ""
 
+#: templates/partials/_entry_cards.html:9
+msgid "Go to Glossary list"
+msgstr ""
+
 #: templates/partials/_entry_cards.html:12
 msgid "AI terms explained simply - understandable, concise and with examples."
 msgstr ""
@@ -2404,53 +2575,73 @@ msgstr ""
 msgid "To glossary"
 msgstr ""
 
-#: templates/partials/_entry_cards.html:19
+#: templates/partials/_entry_cards.html:17
+msgid "Go to Guides list"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:20
 msgid ""
 "Step-by-step instructions for using AI safely in everyday life or at work."
 msgstr ""
 
-#: templates/partials/_entry_cards.html:20
+#: templates/partials/_entry_cards.html:21
 msgid "To the guides"
 msgstr ""
 
-#: templates/partials/_entry_cards.html:26
+#: templates/partials/_entry_cards.html:25
+msgid "Go to Prompts list"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:28
 msgid ""
 "Ready-made input templates for ChatGPT & Co. - simply copy and get started."
 msgstr ""
 
-#: templates/partials/_entry_cards.html:27
+#: templates/partials/_entry_cards.html:29
 msgid "To the prompts"
 msgstr ""
 
 #: templates/partials/_entry_cards.html:33
+msgid "Go to Usecases list"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:36
 msgid ""
 "Others are already using AI - real-world examples from everyday life and "
 "work."
 msgstr ""
 
-#: templates/partials/_entry_cards.html:34
+#: templates/partials/_entry_cards.html:37
 msgid "To the use cases"
 msgstr ""
 
-#: templates/partials/_entry_cards.html:40
+#: templates/partials/_entry_cards.html:41
+msgid "Go to Tools list"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:44
 msgid ""
 "AI tools and platforms presented - with features and areas of application."
 msgstr ""
 
-#: templates/partials/_entry_cards.html:41
+#: templates/partials/_entry_cards.html:45
 msgid "To the tools"
 msgstr ""
 
-#: templates/partials/_entry_cards.html:47
+#: templates/partials/_entry_cards.html:49
+msgid "Go to Comparisons list"
+msgstr ""
+
+#: templates/partials/_entry_cards.html:52
 msgid "Find out which AI tool or model best suits your needs."
 msgstr ""
 
-#: templates/partials/_entry_cards.html:48
+#: templates/partials/_entry_cards.html:53
 msgid "To the comparisons"
 msgstr ""
 
-#: templates/partials/_guideitem_card.html:28
-#: templates/partials/_teaser_card.html:26
+#: templates/partials/_guideitem_card.html:29
+#: templates/partials/_teaser_card.html:28
 msgid "Read"
 msgstr ""
 
@@ -2490,13 +2681,17 @@ msgstr ""
 msgid "Access your drafts and continue creating new content."
 msgstr ""
 
-#: templates/partials/author_info_card.html:29
+#: templates/partials/author_info_card.html:30
+msgid "Go to my editorial drafts "
+msgstr ""
+
+#: templates/partials/author_info_card.html:30
 msgid ""
 "\n"
 "                        My drafts"
 msgstr ""
 
-#: templates/partials/author_info_card.html:32
+#: templates/partials/author_info_card.html:33
 msgid ""
 "\n"
 "                        You're registered! an administrator will activate "
@@ -2505,19 +2700,29 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/partials/author_info_card.html:40
-msgid "Join for free"
+#: templates/partials/author_info_card.html:42
+msgid "Join as an author for free"
 msgstr ""
 
 #: templates/partials/author_info_card.html:43
+msgid "Join for free"
+msgstr ""
+
+#: templates/partials/author_info_card.html:46
 msgid ""
 "After creating your account, an administrator will review and activate your\n"
 "                            author access."
 msgstr ""
 
-#: templates/partials/author_info_card.html:48
-#: templates/partials/features_open.html:12
-msgid "Go to Github"
+#: templates/partials/author_info_card.html:52
+#: templates/partials/features_open.html:13
+msgid "Go to external project github discussions page"
+msgstr ""
+
+#: templates/partials/author_info_card.html:52
+msgid ""
+"Go to\n"
+"                        Github"
 msgstr ""
 
 #: templates/partials/breadcrumbs.html:2
@@ -2526,6 +2731,18 @@ msgstr ""
 
 #: templates/partials/breadcrumbs.html:4
 msgid "Start"
+msgstr ""
+
+#: templates/partials/copy_block.html:18
+msgid "Copy text block"
+msgstr ""
+
+#: templates/partials/editorial_nav.html:9
+msgid "Go to my editorial drafts"
+msgstr ""
+
+#: templates/partials/editorial_nav.html:13
+msgid "Go to editorial review queue"
 msgstr ""
 
 #: templates/partials/features_open.html:5
@@ -2540,178 +2757,174 @@ msgstr ""
 msgid "Please provide feedback on Github Discussions"
 msgstr ""
 
-#: templates/partials/features_open.html:18
-msgid "What’s coming to MentoroAI"
+#: templates/partials/features_open.html:14
+msgid "Go to Github"
 msgstr ""
 
 #: templates/partials/features_open.html:21
+msgid "What’s coming to MentoroAI"
+msgstr ""
+
+#: templates/partials/features_open.html:24
 msgid "A quick preview of features we’re building next."
 msgstr ""
 
-#: templates/partials/features_open.html:28
+#: templates/partials/features_open.html:31
 msgid "Editorial system"
 msgstr ""
 
-#: templates/partials/features_open.html:30
+#: templates/partials/features_open.html:33
 msgid ""
 "Draft → review → publish workflow with roles (Author, Editor, Admin) and "
 "status history."
 msgstr ""
 
-#: templates/partials/features_open.html:31
+#: templates/partials/features_open.html:34
 msgid "Per-object review checklist and required approvals before publishing."
 msgstr ""
 
-#: templates/partials/features_open.html:32
+#: templates/partials/features_open.html:35
 msgid "Versioning & change log for all content (diffs, rollbacks)."
 msgstr ""
 
-#: templates/partials/features_open.html:33
+#: templates/partials/features_open.html:36
 msgid "Scheduled publishing and unpublishing."
 msgstr ""
 
-#: templates/partials/features_open.html:39
+#: templates/partials/features_open.html:42
 msgid "Prompt Studio"
 msgstr ""
 
-#: templates/partials/features_open.html:40
+#: templates/partials/features_open.html:43
 msgid "planned"
 msgstr ""
 
-#: templates/partials/features_open.html:42
+#: templates/partials/features_open.html:45
 msgid ""
 "Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
 "model tips."
 msgstr ""
 
-#: templates/partials/features_open.html:43
+#: templates/partials/features_open.html:46
 msgid ""
 "Structured prompt templates with variables, examples, and tone/style presets."
 msgstr ""
 
-#: templates/partials/features_open.html:44
+#: templates/partials/features_open.html:47
 msgid "Guardrails: context hints, do/don’t lists, and input validation."
 msgstr ""
 
-#: templates/partials/features_open.html:45
+#: templates/partials/features_open.html:48
 msgid "One-click copy, shareable links, and export (Markdown/JSON)."
 msgstr ""
 
-#: templates/partials/features_open.html:46
+#: templates/partials/features_open.html:49
 msgid "Execution notes: record outputs to compare iterations."
 msgstr ""
 
-#: templates/partials/features_open.html:52
+#: templates/partials/features_open.html:55
 msgid "Discovery & navigation"
 msgstr ""
 
-#: templates/partials/features_open.html:54
+#: templates/partials/features_open.html:57
 msgid ""
 "Unified search across Tools, Guides, Prompts, Use-Cases with filters and "
 "tags."
 msgstr ""
 
-#: templates/partials/features_open.html:55
+#: templates/partials/features_open.html:58
 msgid "Collections & bookmarks (save for later, custom lists)."
 msgstr ""
 
-#: templates/partials/features_open.html:56
+#: templates/partials/features_open.html:59
 msgid "Compare view: side-by-side feature comparison for tools and prompts."
 msgstr ""
 
-#: templates/partials/features_open.html:57
+#: templates/partials/features_open.html:60
 msgid "RSS/Atom feeds for new and updated content."
 msgstr ""
 
-#: templates/partials/features_open.html:63
+#: templates/partials/features_open.html:66
 msgid "Quality & accessibility"
 msgstr ""
 
-#: templates/partials/features_open.html:65
+#: templates/partials/features_open.html:68
 msgid ""
 "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX."
 msgstr ""
 
-#: templates/partials/features_open.html:66
+#: templates/partials/features_open.html:69
 msgid "Reading modes: compact vs. comfortable layout."
 msgstr ""
 
-#: templates/partials/features_open.html:67
+#: templates/partials/features_open.html:70
 msgid "Glossary hover cards for terms used in content."
 msgstr ""
 
-#: templates/partials/features_open.html:68
+#: templates/partials/features_open.html:71
 msgid "Feedback widget on every page (quick rating + free text)."
 msgstr ""
 
-#: templates/partials/features_open.html:74
+#: templates/partials/features_open.html:77
 msgid "Multilingual & localization"
 msgstr ""
 
-#: templates/partials/features_open.html:76
+#: templates/partials/features_open.html:79
 msgid "Side-by-side DE/EN editing and translation status indicators."
 msgstr ""
 
-#: templates/partials/features_open.html:77
+#: templates/partials/features_open.html:80
 msgid "Per-language slugs and canonical links."
 msgstr ""
 
-#: templates/partials/features_open.html:78
+#: templates/partials/features_open.html:81
 msgid "Language-aware search and filters."
 msgstr ""
 
-#: templates/partials/features_open.html:84
+#: templates/partials/features_open.html:87
 msgid "Integrations & API"
 msgstr ""
 
-#: templates/partials/features_open.html:86
+#: templates/partials/features_open.html:89
 msgid "Optional API keys to try prompts live (bring-your-own-key)."
 msgstr ""
 
-#: templates/partials/features_open.html:87
+#: templates/partials/features_open.html:90
 msgid "Plugin endpoints for external tooling (read-only API first)."
 msgstr ""
 
-#: templates/partials/features_open.html:88
+#: templates/partials/features_open.html:91
 msgid "Privacy-friendly analytics and opt-in telemetry."
 msgstr ""
 
-#: templates/partials/features_open.html:94
+#: templates/partials/features_open.html:97
 msgid "Performance & reliability"
 msgstr ""
 
-#: templates/partials/features_open.html:96
+#: templates/partials/features_open.html:99
 msgid "Image optimization and smart caching."
 msgstr ""
 
-#: templates/partials/features_open.html:97
+#: templates/partials/features_open.html:100
 msgid "Offline-friendly error pages and graceful fallbacks."
 msgstr ""
 
-#: templates/partials/features_open.html:98
+#: templates/partials/features_open.html:101
 msgid "CI coverage gates for editorial and schema changes."
 msgstr ""
 
-#: templates/partials/features_open.html:104
+#: templates/partials/features_open.html:107
 msgid ""
 "Heads-up: Priorities may shift based on user feedback. If a feature is "
 "critical for you, please tell us!"
 msgstr ""
 
-#: templates/partials/features_open.html:110
+#: templates/partials/features_open.html:113
 msgid "Close"
 msgstr ""
 
-#: templates/partials/features_open.html:118
+#: templates/partials/features_open.html:121
 msgid "Close modal"
-msgstr ""
-
-#: templates/partials/pagination.html:6
-msgid "Previous Page"
-msgstr ""
-
-#: templates/partials/pagination.html:15
-msgid "Next Page"
 msgstr ""
 
 #: templates/partials/starter_guide_card.html:7
@@ -2721,17 +2934,18 @@ msgstr ""
 #: templates/partials/starter_guide_card.html:9
 msgid ""
 "\n"
-"              Perfect if you’ve never used AI before. No jargon, just "
+"                Perfect if you’ve never used AI before. No jargon, just "
 "practical steps.\n"
 "            "
 msgstr ""
 
-#: templates/partials/starter_guide_card.html:15
-#: templates/partials/starter_guide_card.html:17
+#: templates/partials/starter_guide_card.html:16
+#: templates/partials/starter_guide_card.html:18
 msgid "Open the Starter Guide"
 msgstr ""
 
-#: templates/partials/starter_guide_card.html:20
+#: templates/partials/starter_guide_card.html:21
+#: templates/partials/starter_guide_card.html:22
 msgid "Browse beginner-friendly tools"
 msgstr ""
 
@@ -2747,7 +2961,7 @@ msgstr ""
 msgid "More Prompts"
 msgstr ""
 
-#: templates/prompts/prompt_list.html:34
+#: templates/prompts/prompt_list.html:37
 msgid "No published prompts found."
 msgstr ""
 
@@ -2789,7 +3003,7 @@ msgstr ""
 msgid "Connect GitHub"
 msgstr ""
 
-#: templates/usecases/detail.html:13 templates/usecases/list.html:21
+#: templates/usecases/detail.html:13 templates/usecases/list.html:22
 msgid "Persona:"
 msgstr ""
 
@@ -2801,7 +3015,7 @@ msgstr ""
 msgid "Similar use cases"
 msgstr ""
 
-#: templates/usecases/list.html:43
+#: templates/usecases/list.html:47
 msgid "No published use cases found."
 msgstr ""
 

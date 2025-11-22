@@ -6,42 +6,47 @@
         <p class="text-lg text-base-content/80">{% trans "Our areas of expertise at a glance - from definitions to practical examples." %}</p>
     </div>
     <div class="grid gap-2 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <a href="{% url 'glossary:list' %}" class="card shadow-md">
+        <a href="{% url 'glossary:list' %}" class="card shadow-md" aria-label="{% trans "Go to Glossary list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">🧠 {% trans "Glossary" %}</h3>
                 <p>{% trans "AI terms explained simply - understandable, concise and with examples." %}</p>
                 <button class="btn btn-glossary text-base">{% trans "To glossary" %}</button>
             </div>
         </a>
-        <a href="{% url 'guides:list' %}" class="card bg-base-100 shadow-md">
+        <a href="{% url 'guides:list' %}" class="card bg-base-100 shadow-md"
+           aria-label="{% trans "Go to Guides list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">📖 {% trans "Guides" %}</h3>
                 <p>{% trans "Step-by-step instructions for using AI safely in everyday life or at work." %}</p>
                 <button class="btn btn-guide text-base">{% trans "To the guides" %} </button>
             </div>
         </a>
-        <a href="{% url 'prompts:list' %}" class="card bg-base-100 shadow-md">
+        <a href="{% url 'prompts:list' %}" class="card bg-base-100 shadow-md"
+           aria-label="{% trans "Go to Prompts list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">💬 {% trans "Prompts" %}</h3>
                 <p>{% trans "Ready-made input templates for ChatGPT & Co. - simply copy and get started." %}</p>
                 <button class="btn btn-prompt text-base">{% trans "To the prompts" %}</button>
             </div>
         </a>
-        <a href="{% url 'usecases:list' %}" class="card bg-base-100 shadow-md">
+        <a href="{% url 'usecases:list' %}" class="card bg-base-100 shadow-md"
+           aria-label="{% trans "Go to Usecases list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">💡 {% trans "Use cases" %}</h3>
                 <p>{% trans "Others are already using AI - real-world examples from everyday life and work." %} </p>
                 <button class="btn btn-usecase text-base">{% trans "To the use cases" %} </button>
             </div>
         </a>
-        <a href="{% url 'catalog:list' %}" class="card bg-base-100 shadow-md">
+        <a href="{% url 'catalog:list' %}" class="card bg-base-100 shadow-md"
+           aria-label="{% trans "Go to Tools list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">🧰 {% trans "Tools" %}</h3>
                 <p>{% trans "AI tools and platforms presented - with features and areas of application." %} </p>
                 <button class="btn btn-tool text-base">{% trans "To the tools" %}</button>
             </div>
         </a>
-        <a href="{% url 'compare:index' %}" class="card bg-base-100 shadow-md">
+        <a href="{% url 'compare:index' %}" class="card bg-base-100 shadow-md"
+           aria-label="{% trans "Go to Comparisons list" %}">
             <div class="prose card-body">
                 <h3 class="card-title">⚖️ {% trans "Comparisons" %}</h3>
                 <p>{% trans "Find out which AI tool or model best suits your needs." %}</p>

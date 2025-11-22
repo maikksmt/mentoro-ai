@@ -4,7 +4,7 @@
         {% for term in terms %}
             <li class="border-b last:border-b-0">
                 <a href="{% url 'glossary:detail' term.slug %}"
-                   class="flex flex-col text-center py-3">
+                   class="flex flex-col text-center py-3" aria-label="{% trans "Read details about " %}{{ term.term }}">
                     <span class="font-semibold">{{ term.term }}</span>
                     {% if not compact %}
                         <span class="text-sm opacity-70">{{ term.short_definition|truncatewords:24 }}</span>

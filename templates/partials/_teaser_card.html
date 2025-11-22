@@ -17,13 +17,15 @@
             {% endif %}
         </div>
         <h3 class="card-title text-base leading-snug">
-            <a href="{{ item.url }}" class="link link-hover" aria-label="{{ item.title }}">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="link link-hover"
+               aria-label="{% trans "Read details about " %}{{ item.title }}">{{ item.title }}</a>
         </h3>
         {% if item.teaser %}
             <div class="prose opacity-80 mt-1 line-clamp-3 h-full">{{ item.teaser|richtext|safe }}</div>
         {% endif %}
         <div class="card-actions mt-4 justify-end">
-            <a href="{{ item.url }}" class="btn btn-primary btn-wide">{% trans "Read" %}</a>
+            <a href="{{ item.url }}" class="btn btn-primary btn-wide" role="button" aria-pressed="false"
+               aria-label="{% trans "Read details about " %}{{ item.title }}">{% trans "Read" %}</a>
         </div>
     </div>
 </article>

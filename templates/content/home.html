@@ -16,10 +16,12 @@
                             and prompts to apply AI confidently in everyday life.{% endblocktrans %}
                     </p>
                     <div class="flex flex-wrap gap-3 mt-6 justify-center items-center">
-                        <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg">
+                        <a href="{{ start_guide_url }}" class="btn btn-primary btn-lg" role="button"
+                           aria-pressed="false" aria-label="{% trans "Begin with the Starter Guide" %}">
                             {% blocktrans %}Begin with the Starter Guide{% endblocktrans %}
                         </a>
-                        <a href="{% url 'catalog:list' %}" class="btn btn-outline">
+                        <a href="{% url 'catalog:list' %}" class="btn btn-outline" role="button" aria-pressed="false"
+                           aria-label="{% trans "Discover AI Tools" %}">
                             {% blocktrans %}Discover AI Tools{% endblocktrans %}
                         </a>
                     </div>
@@ -76,7 +78,7 @@
                             <div class="card-actions mt-4 justify-between items-center">
                                 {% if t.rating %}
                                     <span class="badge badge-primary badge-outline"
-                                          aria-label="Bewertung">{{ t.rating }}★</span>
+                                          aria-label="{% trans "Rating" %}">{{ t.rating }}★</span>
                                 {% endif %}
                                 <span class="btn btn-sm btn-primary">{% trans "Details" %}</span>
                             </div>
@@ -122,7 +124,8 @@
 
     <!-- Open the modal using ID.showModal() method -->
     <div class="fab">
-        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()">
+        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()"
+                aria-label="Information Button">
             {% heroicon_outline "information-circle" size=46 %}
         </button>
     </div>

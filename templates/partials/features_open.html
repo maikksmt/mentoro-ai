@@ -8,8 +8,11 @@
             {% trans "Please provide feedback on Github Discussions" %}
         </p>
         <div class="flex gap-3 justify-center items-center my-4">
-            <a class="btn btn-sm btn-outline btn-info" target="_blank" rel="noopener"
-               href="https://github.com/maikksmt/mentoro-ai/discussions"> {% trans "Go to Github" %} {% heroicon_solid "arrow-top-right-on-square" size=12 class="opacity-80" %}</a>
+            <a href="https://github.com/maikksmt/mentoro-ai/discussions" class="btn btn-sm btn-outline btn-info"
+               role="button" aria-pressed="false"
+               target="_blank" rel="noopener" aria-label="{% trans "Go to external project github discussions page" %}">
+                {% trans "Go to Github" %} {% heroicon_solid "arrow-top-right-on-square" size=12 class="opacity-80" %}
+            </a>
 
         </div>
 

@@ -1,5 +1,5 @@
 {# content: TinyMCE/HTML oder Text; optional: label (z.B. "Prompt") #}
-{% load richtext %}
+{% load richtext i18n %}
 <div class="relative group">
     {% if label %}
         <div class="uppercase tracking-wide text-base-content/60 mb-1">{{ label }}</div>
@@ -15,7 +15,8 @@
 
     <button type="button"
             class="copy-btn btn btn-neutral btn-sm absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition"
-            data-copy-text="{{ content|striptags|escapejs }}" aria-live="polite">
+            data-copy-text="{{ content|striptags|escapejs }}" aria-label="{% trans "Copy text block" %}"
+            aria-live="polite">
         {% heroicon_outline "clipboard" size=16 %}
         <span class="copy-label">Copy</span>
     </button>

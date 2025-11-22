@@ -8,6 +8,8 @@
 {% block content %}
     <section class="prose max-w-3xl mx-auto py-4">
         <h1>{% trans "Privacy Policy" %}</h1>
+
+        <!-- 1 -->
         <h2>{% trans "1. Controller" %}</h2>
         <p>
             {% trans "Controller under data protection law, in particular the EU GDPR, is:" %}<br>
@@ -15,16 +17,18 @@
             {% trans "Email" %}: <a href="mailto:contact@mentoro-ai.com">contact@mentoro-ai.com</a>
         </p>
 
+        <!-- 2 -->
         <h2>{% trans "2. Collection and storage of personal data" %}</h2>
         <p>
             {% blocktrans %}
                 When you visit this website, information sent by your browser is automatically collected (e.g., IP
                 address,
                 date and time, pages viewed, browser used). These data are technically required to display the website
-                correctly
-                and serve the security of the system.
+                correctly and serve the security of the system.
             {% endblocktrans %}
         </p>
+
+        <!-- 3 -->
         <h2>{% trans "3. Contact" %}</h2>
         <p>
             {% blocktrans %}
@@ -32,35 +36,38 @@
                 questions.
             {% endblocktrans %}
         </p>
+
+        <!-- 4 -->
         <h2>{% trans "4. Registration / User accounts" %}</h2>
         <p>
             {% blocktrans %}
                 If you create a user account, we process your entered data (name, email address, password) solely for
-                providing
-                your account and managing your content.
+                providing your account and managing your content.
             {% endblocktrans %}
         </p>
+
+        <!-- 5 -->
         <h2>{% trans "5. Cookies and tracking technologies" %}</h2>
         <p>
             {% blocktrans %}
                 This website uses cookies to ensure technical functionality and, after your explicit consent, to analyze
-                usage behaviour.
-                The storage and evaluation of non-essential cookies only takes place with your prior consent in
-                accordance with Art. 6(1)(a) GDPR.
-                Consent is managed through the consent management platform Cookiebot by Usercentrics.
+                usage behaviour. The storage and evaluation of non-essential cookies only takes place with your prior
+                consent in accordance with Art. 6(1)(a) GDPR. Consent is managed through the consent management platform
+                Cookiebot by Usercentrics.
             {% endblocktrans %}
         </p>
 
+        <!-- 6 -->
         <h2>{% trans "6. Consent management (Cookiebot)" %}</h2>
         <p>
             {% blocktrans %}
                 We use the consent management platform Cookiebot by Usercentrics to obtain and manage legally required
-                cookie consent.
-                Cookiebot stores cookies that document your consent status and block all non-essential cookies until you
-                consent.
-                The processing is based on our legal obligation under Art. 6(1)(c) GDPR.
+                cookie consent. Cookiebot stores cookies that document your consent status and block all non-essential
+                cookies until you consent. The processing is based on our legal obligation under Art. 6(1)(c) GDPR.
             {% endblocktrans %}
         </p>
+
+        <!-- 7 -->
         <h2>{% trans "7. Google Analytics 4" %}</h2>
         <p>
             {% blocktrans %}
@@ -71,18 +78,114 @@
             {% endblocktrans %}
         </p>
 
-        <p>
-            <strong>{% trans "Legal basis" %}:</strong> {% trans "Your consent under Art. 6(1)(a) GDPR." %}
-        </p>
+        <p><strong>{% trans "Legal basis" %}:</strong> {% trans "Your consent under Art. 6(1)(a) GDPR." %}</p>
 
         <p>
-            <strong>{% trans "Data transfer" %}:</strong> {% blocktrans %}
-            Data may be transferred to Google LLC (USA). Google complies with the EU–US Data Privacy Framework.
-        {% endblocktrans %}
+            <strong>{% trans "Data transfer" %}:</strong>
+            {% blocktrans %}
+                Data may be transferred to Google LLC in the United States. Google participates in the EU–US Data
+                Privacy
+                Framework.
+            {% endblocktrans %}
         </p>
 
+        <!-- 8 -->
+        <h2>{% trans "8. Google Sign-In (Social Login)" %}</h2>
+        <p>
+            {% blocktrans %}
+                On this website you can log in or create an account using your Google account ("Google Sign-In").
+                The provider of this service is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.
+            {% endblocktrans %}
+        </p>
 
-        <h2>{% trans "8. Your rights" %}</h2>
+        <p><strong>{% trans "Data processed" %}:</strong>
+            {% blocktrans %}
+                We receive from Google your name, email address and a unique Google user ID. This data is used solely to
+                create and manage your user account on MentoroAI and to authenticate you when you log in.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Purpose" %}:</strong>
+            {% blocktrans %}
+                Providing a convenient and secure login option and managing your user account.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Legal basis" %}:</strong>
+            {% blocktrans %}
+                Your consent according to Art. 6(1)(a) GDPR.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Data storage and deletion" %}:</strong>
+            {% blocktrans %}
+                We store the data received from Google as long as your user account exists. If you delete your account,
+                this
+                data will be deleted unless statutory retention periods require longer storage.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Data transfer" %}:</strong>
+            {% blocktrans %}
+                Data may be transferred to Google LLC (USA).
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Further information" %}:</strong>
+            https://policies.google.com/privacy
+        </p>
+
+        <!-- 9 -->
+        <h2>{% trans "9. GitHub Sign-In (Social Login)" %}</h2>
+        <p>
+            {% blocktrans %}
+                You can also log in or create an account using your GitHub account ("GitHub Sign-In").
+                The provider of this service is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107,
+                USA.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Data processed" %}:</strong>
+            {% blocktrans %}
+                We receive from GitHub your username, email address and a unique GitHub user ID. This data is used
+                solely to
+                create and manage your user account on MentoroAI and to authenticate you when you log in.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Purpose" %}:</strong>
+            {% blocktrans %}
+                Providing a convenient and secure login option and managing your user account.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Legal basis" %}:</strong>
+            {% blocktrans %}
+                Your consent according to Art. 6(1)(a) GDPR.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Data storage and deletion" %}:</strong>
+            {% blocktrans %}
+                We store the data received from GitHub as long as your account exists. If you delete your account, this
+                data
+                will be deleted unless statutory retention periods require longer storage.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Data transfer" %}:</strong>
+            {% blocktrans %}
+                GitHub Inc. is located in the United States. Data may therefore be transferred to servers outside the
+                EU.
+            {% endblocktrans %}
+        </p>
+
+        <p><strong>{% trans "Further information" %}:</strong>
+            https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
+        </p>
+
+        <!-- 10 -->
+        <h2>{% trans "10. Your rights" %}</h2>
         <ul>
             <li>{% trans "Access to your stored data" %}</li>
             <li>{% trans "Rectification of inaccurate data" %}</li>
@@ -92,19 +195,22 @@
             <li>{% trans "Objection to processing" %}</li>
         </ul>
 
-        <h2>{% trans "9. Data security" %}</h2>
+        <!-- 11 -->
+        <h2>{% trans "11. Data security" %}</h2>
         <p>
             {% blocktrans %}
                 We use technical and organizational measures to protect your data against manipulation, loss, or
-                unauthorized access.
-                These measures are continuously adapted in line with technological developments.
+                unauthorized access. These measures are continuously adapted in line with technological developments.
             {% endblocktrans %}
         </p>
-        <h2>{% trans "10. Changes to this Privacy Policy" %}</h2>
+
+        <!-- 12 -->
+        <h2>{% trans "12. Changes to this Privacy Policy" %}</h2>
         <p>
             {% blocktrans %}
                 We reserve the right to update this Privacy Policy to reflect current legal requirements.
             {% endblocktrans %}
         </p>
+
     </section>
 {% endblock %}

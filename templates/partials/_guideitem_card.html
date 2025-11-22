@@ -19,13 +19,14 @@
         </div>
         <h3 class="card-title leading-snug">
             <a href="{{ item.get_url }}" class="link link-hover"
-               aria-label="{{ item.get_title }}">{{ item.get_title }}</a>
+               aria-label="{% trans "Read details about " %}{{ item.get_title }}">{{ item.get_title }}</a>
         </h3>
         {% if item.get_teaser %}
             <div class="prose opacity-80 h-full">{{ item.get_teaser|richtext|safe|truncatewords:35 }}</div>
         {% endif %}
         <div class="card-actions mt-4 justify-end">
-            <a href="{{ item.get_url }}" class="btn btn-primary btn-wide">{% trans "Read" %}</a>
+            <a href="{{ item.get_url }}" class="btn btn-primary btn-wide" role="button" aria-pressed="false"
+               aria-label="{% trans "Read details about " %}{{ item.get_title }}">{% trans "Read" %}</a>
         </div>
     </div>
 </article>
