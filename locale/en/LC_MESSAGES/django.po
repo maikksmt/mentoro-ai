@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 09:21+0100\n"
+"POT-Creation-Date: 2025-11-22 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -729,7 +729,7 @@ msgstr ""
 msgid "Manage email addresses"
 msgstr ""
 
-#: templates/account/login.html:4 templates/account/login.html:94
+#: templates/account/login.html:4 templates/account/login.html:103
 #: templates/account/password_reset_from_key_done.html:23
 #: templates/partials/author_info_card.html:56
 msgid "Login"
@@ -747,32 +747,35 @@ msgstr ""
 msgid "Log in to access your guides, prompts and saved content."
 msgstr ""
 
-#: templates/account/login.html:57
-#: templates/socialaccount/snippets/provider_list.html:48
-msgid "Continue with GitHub"
+#: templates/account/login.html:52
+msgid "Login with Google"
 msgstr ""
 
-#: templates/account/login.html:65
+#: templates/account/login.html:66
+msgid "Login with GitHub"
+msgstr ""
+
+#: templates/account/login.html:74
 msgid "or continue with e-mail"
 msgstr ""
 
-#: templates/account/login.html:75
+#: templates/account/login.html:84
 msgid "eMail or username"
 msgstr ""
 
-#: templates/account/login.html:82
+#: templates/account/login.html:91
 msgid "Password"
 msgstr ""
 
-#: templates/account/login.html:85
+#: templates/account/login.html:94
 msgid "Forgot your password?"
 msgstr ""
 
-#: templates/account/login.html:98
+#: templates/account/login.html:107
 msgid "New to MentoroAI?"
 msgstr ""
 
-#: templates/account/login.html:103
+#: templates/account/login.html:112
 msgid "Create a free account"
 msgstr ""
 
@@ -892,7 +895,7 @@ msgstr ""
 msgid "For security reasons we need you to re-enter your password."
 msgstr ""
 
-#: templates/account/signup.html:4 templates/account/signup.html:95
+#: templates/account/signup.html:4 templates/account/signup.html:104
 msgid "Signup"
 msgstr ""
 
@@ -904,22 +907,26 @@ msgstr ""
 msgid "Create an account to save your favorite guides, prompts and tools."
 msgstr ""
 
-#: templates/account/signup.html:57
+#: templates/account/signup.html:52
+msgid "Sign up with Google"
+msgstr ""
+
+#: templates/account/signup.html:66
 msgid "Sign up with GitHub"
 msgstr ""
 
-#: templates/account/signup.html:65
+#: templates/account/signup.html:74
 msgid "or sign up with e-mail"
 msgstr ""
 
-#: templates/account/signup.html:89
+#: templates/account/signup.html:98
 msgid ""
 "Please confirm your email address. Your account will then be activated by "
 "an\n"
 "                            administrator."
 msgstr ""
 
-#: templates/account/signup.html:101
+#: templates/account/signup.html:110
 msgid "I already have an account"
 msgstr ""
 
@@ -2991,16 +2998,20 @@ msgstr ""
 msgid "Connect another service to sign in with it in the future."
 msgstr ""
 
-#: templates/socialaccount/snippets/provider_list.html:23
+#: templates/socialaccount/snippets/provider_list.html:30
 msgid "Connect Google"
 msgstr ""
 
-#: templates/socialaccount/snippets/provider_list.html:25
+#: templates/socialaccount/snippets/provider_list.html:32
 msgid "Continue with Google"
 msgstr ""
 
-#: templates/socialaccount/snippets/provider_list.html:46
+#: templates/socialaccount/snippets/provider_list.html:49
 msgid "Connect GitHub"
+msgstr ""
+
+#: templates/socialaccount/snippets/provider_list.html:51
+msgid "Continue with GitHub"
 msgstr ""
 
 #: templates/usecases/detail.html:13 templates/usecases/list.html:22
