@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-22 09:23+0100\n"
+"PO-Revision-Date: 2025-11-22 10:55+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -221,3 +221,19 @@ msgstr "Begriffe anzeigen mit Buchstabe "
 #: templates/content/home.html:79
 msgid "Bewertung"
 msgstr "Bewertung"
+
+#: templates/account/login.html:66
+msgid "Login with GitHub"
+msgstr "Mit GitHub anmelden"
+
+#: templates/account/login.html:52
+msgid "Login with Google"
+msgstr "Mit Google anmelden"
+
+#: templates/account/signup.html:52
+msgid "Sign up with Google"
+msgstr "Mit Google anmelden"
+
+#: templates/account/signup.html:66
+msgid "Sign up with GitHub"
+msgstr "Mit GitHub anmelden"

@@ -168,3 +168,15 @@ msgstr ""
 #: templates/content/home.html:79
 msgid "Bewertung"
 msgstr ""
+#: templates/account/login.html:66
+msgid "Login with GitHub"
+msgstr ""
+#: templates/account/login.html:52
+msgid "Login with Google"
+msgstr ""
+#: templates/account/signup.html:52
+msgid "Sign up with Google"
+msgstr ""
+#: templates/account/signup.html:66
+msgid "Sign up with GitHub"
+msgstr ""

@@ -3360,9 +3360,6 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-11 {
-    height: calc(var(--spacing) * 11);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -3385,11 +3382,6 @@
     @layer daisyui.modifier {
       width: 100%;
       max-width: calc(0.25rem * 64);
-    }
-  }
-  .btn-block {
-    @layer daisyui.modifier {
-      width: 100%;
     }
   }
   .w-4 {
@@ -3415,21 +3407,6 @@
   }
   .w-52 {
     width: calc(var(--spacing) * 52);
-  }
-  .w-\[158px\] {
-    width: 158px;
-  }
-  .w-\[162px\] {
-    width: 162px;
-  }
-  .w-\[167px\] {
-    width: 167px;
-  }
-  .w-\[170px\] {
-    width: 170px;
-  }
-  .w-\[171px\] {
-    width: 171px;
   }
   .w-full {
     width: 100%;
@@ -3485,9 +3462,6 @@
         rotate: calc(45deg * -1);
       }
     }
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .link {
     @layer daisyui.component {
@@ -3650,9 +3624,6 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .rounded-sm {
-    border-radius: var(--radius-sm);
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -3684,24 +3655,6 @@
     border-color: var(--color-base-300);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-base-300) 60%, transparent);
-    }
-  }
-  .border-base-content\/50 {
-    border-color: var(--color-base-content);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
-    }
-  }
-  .border-base-content\/60 {
-    border-color: var(--color-base-content);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
-    }
-  }
-  .border-base-content\/70 {
-    border-color: var(--color-base-content);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
     }
   }
   .border-black {
@@ -3772,9 +3725,6 @@
   .fill-current {
     fill: currentcolor;
   }
-  .object-contain {
-    object-fit: contain;
-  }
   .radio-sm {
     @layer daisyui.modifier {
       padding: 0.1875rem;
@@ -3782,9 +3732,6 @@
         --size: calc(var(--size-selector, 0.25rem) * 5);
       }
     }
-  }
-  .p-0 {
-    padding: calc(var(--spacing) * 0);
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -3810,9 +3757,6 @@
   }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -4004,27 +3948,6 @@
   }
   .italic {
     font-style: italic;
-  }
-  .btn-link {
-    @layer daisyui.modifier {
-      text-decoration-line: underline;
-      outline-color: currentcolor;
-      --btn-border: #0000;
-      --btn-bg: #0000;
-      --btn-fg: var(--color-primary);
-      --btn-noise: none;
-      --btn-shadow: "";
-      &:is(.btn-active, :hover, :active:focus, :focus-visible) {
-        text-decoration-line: underline;
-        --btn-border: #0000;
-        --btn-bg: #0000;
-      }
-      @media (hover: none) {
-        &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
-          text-decoration-line: none;
-        }
-      }
-    }
   }
   .link-hover {
     @layer daisyui.modifier {
@@ -4299,31 +4222,6 @@
       }
     }
   }
-  .sm\:w-\[193px\] {
-    @media (width >= 40rem) {
-      width: 193px;
-    }
-  }
-  .sm\:w-\[197px\] {
-    @media (width >= 40rem) {
-      width: 197px;
-    }
-  }
-  .sm\:w-\[204px\] {
-    @media (width >= 40rem) {
-      width: 204px;
-    }
-  }
-  .sm\:w-\[208px\] {
-    @media (width >= 40rem) {
-      width: 208px;
-    }
-  }
-  .sm\:w-\[210px\] {
-    @media (width >= 40rem) {
-      width: 210px;
-    }
-  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4401,15 +4299,6 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
-  .md\:btn-lg {
-    @media (width >= 48rem) {
-      @layer daisyui.modifier {
-        --fontsize: 1.125rem;
-        --btn-p: 1.25rem;
-        --size: calc(var(--size-field, 0.25rem) * 12);
-      }
-    }
-  }
   .lg\:mt-6 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 6);
@@ -4473,24 +4362,6 @@
   .xl\:grid-cols-3 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .dark\:block {
-    &:where([data-theme=mentoroai-dark], [data-theme=mentoroai-dark] *) {
-      display: block;
-    }
-  }
-  .dark\:hidden {
-    &:where([data-theme=mentoroai-dark], [data-theme=mentoroai-dark] *) {
-      display: none;
-    }
-  }
-  .dark\:bg-black\/40 {
-    &:where([data-theme=mentoroai-dark], [data-theme=mentoroai-dark] *) {
-      background-color: color-mix(in srgb, #000 40%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
-      }
     }
   }
 }
@@ -5053,26 +4924,6 @@ html[data-theme='mentoroai-dark'] #github-logo[srcset] {
     --noise: 0;
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -5216,11 +5067,6 @@ html[data-theme='mentoroai-dark'] #github-logo[srcset] {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 10:47+0100\n"
+"POT-Creation-Date: 2025-11-22 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -747,6 +747,14 @@ msgstr ""
 msgid "Log in to access your guides, prompts and saved content."
 msgstr ""
 
+#: templates/account/login.html:52
+msgid "Login with Google"
+msgstr ""
+
+#: templates/account/login.html:66
+msgid "Login with GitHub"
+msgstr ""
+
 #: templates/account/login.html:74
 msgid "or continue with e-mail"
 msgstr ""
@@ -897,6 +905,14 @@ msgstr ""
 
 #: templates/account/signup.html:21
 msgid "Create an account to save your favorite guides, prompts and tools."
+msgstr ""
+
+#: templates/account/signup.html:52
+msgid "Sign up with Google"
+msgstr ""
+
+#: templates/account/signup.html:66
+msgid "Sign up with GitHub"
 msgstr ""
 
 #: templates/account/signup.html:74
