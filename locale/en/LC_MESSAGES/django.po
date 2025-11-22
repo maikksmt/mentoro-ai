@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 10:54+0100\n"
+"POT-Creation-Date: 2025-11-22 12:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1188,47 +1188,50 @@ msgstr ""
 msgid "Similar Tools"
 msgstr ""
 
-#: templates/catalog/tool_list.html:12
+#: templates/catalog/tool_list.html:8
+msgid "Quickly find the right AI tools for your tasks."
+msgstr ""
+
+#: templates/catalog/tool_list.html:15
 msgid "Search tools …"
 msgstr ""
 
-#: templates/catalog/tool_list.html:18
+#: templates/catalog/tool_list.html:21
 msgid "Only with Free-Tier"
 msgstr ""
 
-#: templates/catalog/tool_list.html:21 templates/catalog/tool_list.html:24
+#: templates/catalog/tool_list.html:24 templates/catalog/tool_list.html:27
 #: templates/compare/index.html:24
 msgid "Filter"
 msgstr ""
 
-#: templates/catalog/tool_list.html:24 templates/compare/index.html:25
+#: templates/catalog/tool_list.html:27 templates/compare/index.html:25
 msgid "Reset"
 msgstr ""
 
-#: templates/catalog/tool_list.html:34 templates/catalog/tool_list.html:58
+#: templates/catalog/tool_list.html:37 templates/catalog/tool_list.html:61
 #: templates/compare/index.html:35 templates/compare/index.html:50
 #: templates/glossary/glossary_results.html:7
-#: templates/guides/guide_list.html:19 templates/guides/guide_list.html:34
+#: templates/guides/guide_list.html:18 templates/guides/guide_list.html:41
 #: templates/partials/_guideitem_card.html:22
 #: templates/partials/_guideitem_card.html:29
 #: templates/partials/_teaser_card.html:21
 #: templates/partials/_teaser_card.html:28
-#: templates/prompts/prompt_list.html:14 templates/prompts/prompt_list.html:30
-#: templates/usecases/list.html:18 templates/usecases/list.html:40
+#: templates/prompts/prompt_list.html:17 templates/prompts/prompt_list.html:35
+#: templates/usecases/list.html:19 templates/usecases/list.html:40
 msgid "Read details about "
 msgstr ""
 
-#: templates/catalog/tool_list.html:52
+#: templates/catalog/tool_list.html:55
 msgid "Open website for "
 msgstr ""
 
-#: templates/catalog/tool_list.html:58 templates/compare/index.html:50
-#: templates/content/home.html:83 templates/prompts/prompt_list.html:30
-#: templates/usecases/list.html:40
+#: templates/catalog/tool_list.html:61 templates/compare/index.html:50
+#: templates/content/home.html:83
 msgid "Details"
 msgstr ""
 
-#: templates/catalog/tool_list.html:64
+#: templates/catalog/tool_list.html:67
 msgid "No tools found."
 msgstr ""
 
@@ -1383,7 +1386,7 @@ msgstr ""
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:110 templates/usecases/list.html:9
+#: templates/content/home.html:110 templates/usecases/list.html:8
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
@@ -1803,11 +1806,12 @@ msgstr ""
 msgid "Step-by-step instructions on AI topics – understandable and practical."
 msgstr ""
 
-#: templates/guides/guide_list.html:34
+#: templates/guides/guide_list.html:41 templates/prompts/prompt_list.html:35
+#: templates/usecases/list.html:40
 msgid "Read more"
 msgstr ""
 
-#: templates/guides/guide_list.html:40
+#: templates/guides/guide_list.html:47
 msgid "No published guides available."
 msgstr ""
 
@@ -2968,7 +2972,11 @@ msgstr ""
 msgid "More Prompts"
 msgstr ""
 
-#: templates/prompts/prompt_list.html:37
+#: templates/prompts/prompt_list.html:8
+msgid "Templates that significantly improve your AI responses."
+msgstr ""
+
+#: templates/prompts/prompt_list.html:42
 msgid "No published prompts found."
 msgstr ""
 
@@ -3024,6 +3032,10 @@ msgstr ""
 
 #: templates/usecases/detail.html:59
 msgid "Similar use cases"
+msgstr ""
+
+#: templates/usecases/list.html:10
+msgid "Practical AI application examples for your everyday life and job."
 msgstr ""
 
 #: templates/usecases/list.html:47

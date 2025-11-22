@@ -180,3 +180,6 @@ msgstr ""
 #: templates/account/signup.html:66
 msgid "Sign up with GitHub"
 msgstr ""
+#: templates/guides/guide_list.html:33
+msgid "Published:"
+msgstr ""

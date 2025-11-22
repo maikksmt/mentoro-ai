@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 11:10+0100\n"
-"PO-Revision-Date: 2025-11-22 11:09+0100\n"
+"POT-Creation-Date: 2025-11-22 12:57+0100\n"
+"PO-Revision-Date: 2025-11-22 12:57+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -1180,7 +1180,7 @@ msgstr "Suche"
 
 #: templates/base.html:124
 msgid "Toggle theme"
-msgstr "Theme wechseln"
+msgstr "Farbschema wechseln"
 
 #: templates/base.html:140
 msgid "Language select"
@@ -1250,47 +1250,50 @@ msgstr "Integrationen"
 msgid "Similar Tools"
 msgstr "Ähnliche Tools"
 
-#: templates/catalog/tool_list.html:12
+#: templates/catalog/tool_list.html:8
+msgid "Quickly find the right AI tools for your tasks."
+msgstr "Finden Sie schnell die richtigen KI-Tools für Ihre Aufgaben."
+
+#: templates/catalog/tool_list.html:15
 msgid "Search tools …"
 msgstr "Suche Tools …"
 
-#: templates/catalog/tool_list.html:18
+#: templates/catalog/tool_list.html:21
 msgid "Only with Free-Tier"
 msgstr "Nur mit kostenlosem Tarif"
 
-#: templates/catalog/tool_list.html:21 templates/catalog/tool_list.html:24
+#: templates/catalog/tool_list.html:24 templates/catalog/tool_list.html:27
 #: templates/compare/index.html:24
 msgid "Filter"
 msgstr "Filter"
 
-#: templates/catalog/tool_list.html:24 templates/compare/index.html:25
+#: templates/catalog/tool_list.html:27 templates/compare/index.html:25
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: templates/catalog/tool_list.html:34 templates/catalog/tool_list.html:58
+#: templates/catalog/tool_list.html:37 templates/catalog/tool_list.html:61
 #: templates/compare/index.html:35 templates/compare/index.html:50
 #: templates/glossary/glossary_results.html:7
-#: templates/guides/guide_list.html:19 templates/guides/guide_list.html:34
+#: templates/guides/guide_list.html:18 templates/guides/guide_list.html:41
 #: templates/partials/_guideitem_card.html:22
 #: templates/partials/_guideitem_card.html:29
 #: templates/partials/_teaser_card.html:21
 #: templates/partials/_teaser_card.html:28
-#: templates/prompts/prompt_list.html:14 templates/prompts/prompt_list.html:30
-#: templates/usecases/list.html:18 templates/usecases/list.html:40
+#: templates/prompts/prompt_list.html:17 templates/prompts/prompt_list.html:35
+#: templates/usecases/list.html:19 templates/usecases/list.html:40
 msgid "Read details about "
 msgstr "Lesen Sie Details über"
 
-#: templates/catalog/tool_list.html:52
+#: templates/catalog/tool_list.html:55
 msgid "Open website for "
 msgstr "Website öffnen für"
 
-#: templates/catalog/tool_list.html:58 templates/compare/index.html:50
-#: templates/content/home.html:83 templates/prompts/prompt_list.html:30
-#: templates/usecases/list.html:40
+#: templates/catalog/tool_list.html:61 templates/compare/index.html:50
+#: templates/content/home.html:83
 msgid "Details"
 msgstr "Details"
 
-#: templates/catalog/tool_list.html:64
+#: templates/catalog/tool_list.html:67
 msgid "No tools found."
 msgstr "Keine Tools gefunden."
 
@@ -1451,7 +1454,7 @@ msgstr "Empfohlen für dich"
 msgid "Current content"
 msgstr "Aktuelle Inhalte"
 
-#: templates/content/home.html:110 templates/usecases/list.html:9
+#: templates/content/home.html:110 templates/usecases/list.html:8
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr "Anwendungsfälle"
@@ -1913,11 +1916,12 @@ msgid "Step-by-step instructions on AI topics – understandable and practical."
 msgstr ""
 "Schritt-für-Schritt-Anleitungen zu KI Themen – verständlich und praxisnah."
 
-#: templates/guides/guide_list.html:34
+#: templates/guides/guide_list.html:41 templates/prompts/prompt_list.html:35
+#: templates/usecases/list.html:40
 msgid "Read more"
 msgstr "Weiterlesen"
 
-#: templates/guides/guide_list.html:40
+#: templates/guides/guide_list.html:47
 msgid "No published guides available."
 msgstr "Keine veröffentlichten Leitfäden verfügbar."
 
@@ -1969,7 +1973,7 @@ msgstr "Speichert die aktuelle Sitzungs-ID"
 
 #: templates/legal/cookie_policy.html:27
 msgid "remembers your selected theme (light/dark)"
-msgstr "Merkt sich dein ausgewähltes Theme (hell/dunkel)"
+msgstr "Merkt sich dein ausgewähltes Farbschema (hell/dunkel)"
 
 #: templates/legal/cookie_policy.html:28
 msgid "remembers your selected language"
@@ -3289,7 +3293,11 @@ msgstr "Keine Tools verknüpft."
 msgid "More Prompts"
 msgstr "Weitere Prompts"
 
-#: templates/prompts/prompt_list.html:37
+#: templates/prompts/prompt_list.html:8
+msgid "Templates that significantly improve your AI responses."
+msgstr "Vorlagen, die Ihre KI-Antworten erheblich verbessern."
+
+#: templates/prompts/prompt_list.html:42
 msgid "No published prompts found."
 msgstr "Keine veröffentlichten Prompts gefunden."
 
@@ -3349,6 +3357,10 @@ msgstr "Verwendete Tools"
 #: templates/usecases/detail.html:59
 msgid "Similar use cases"
 msgstr "Ähnliche Anwendungsfälle"
+
+#: templates/usecases/list.html:10
+msgid "Practical AI application examples for your everyday life and job."
+msgstr "Praktische Anwendungsbeispiele für KI in Ihrem Alltag und Beruf."
 
 #: templates/usecases/list.html:47
 msgid "No published use cases found."
