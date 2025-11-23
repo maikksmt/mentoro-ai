@@ -16,6 +16,12 @@ class ToolAdminForm(TranslatableModelForm):
         label=_("Language support"),
         required=False,
         help_text=_("Comma-separated language codes, e.g. de,en,fr"),
+        widget=forms.Textarea(
+            attrs={
+                "rows": 2,
+                "style": "min-width:30rem;",  # Breite nach Geschmack
+            }
+        ),
     )
 
     class Meta:
@@ -29,6 +35,11 @@ class ToolAdminForm(TranslatableModelForm):
             self.fields["language_support_input"].initial = ", ".join(
                 self.instance.language_support
             )
+        if "tags" in self.fields:
+            w = self.fields["tags"].widget
+            style = w.attrs.get("style", "")
+            # Höhe + Breite anpassen – Taggit nutzt ein <input>, die Höhe kommt über CSS
+            w.attrs["style"] = (style + "; min-width:50rem;").strip("; ")
 
     def clean_language_support_input(self):
         raw = self.cleaned_data.get("language_support_input", "")
@@ -64,8 +75,14 @@ class PricingTierInlineForm(TranslatableModelForm):
         super().__init__(*args, **kwargs)
 
         # bestehende Features (für aktuelle Sprache) -> Zeilen
-        if self.instance and self.instance.pk and self.instance.features:
-            self.fields["features_input"].initial = "\n".join(self.instance.features)
+        if self.instance and self.instance.pk:
+            features = self.instance.safe_translation_getter(
+                "features",
+                default=[],
+                any_language=False,
+            )
+            if features:
+                self.fields["features_input"].initial = "\n".join(features)
 
         # Name-Feld im Inline schmaler machen
         if "name" in self.fields:
