@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-27 23:53+0100\n"
-"PO-Revision-Date: 2025-11-22 22:47+0100\n"
+"PO-Revision-Date: 2025-11-23 07:40+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -245,3 +245,27 @@ msgstr "Veröffentlicht:"
 #: templates/catalog/tool_list.html:64
 msgid "Free Tier"
 msgstr "Kostenlos"
+
+#: templates/partials/_teaser_card.html:7
+msgid "Guide"
+msgstr "Leitfaden"
+
+#: templates/partials/_teaser_card.html:9
+msgid "Prompt"
+msgstr "Prompt"
+
+#: templates/partials/_teaser_card.html:11
+msgid "Usecase"
+msgstr "Anwendungsfall"
+
+#: templates/partials/_guideitem_card.html:13
+msgid "Tool"
+msgstr "Tool"
+
+#: templates/partials/_guideitem_card.html:15
+msgid "Comparison"
+msgstr "Vergleich"
+
+#: templates/partials/_guideitem_card.html:17
+msgid "Link"
+msgstr "Link"
