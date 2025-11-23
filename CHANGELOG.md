@@ -12,13 +12,26 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### (New changes are placed here as the beta phase progresses.)
 
-- Add missing reversion usage for editorial workflow in usecases app
-- Add Google Analytics to project
-- Add Cookie Banner
-- Preparing for later Google AdSense
-- Final step for user account management and user registration.
+---
+
+## [1.0.0-beta-3] – 2025-11-23
+
+### Added
+
 - rebuild Tools pages (list and detail)
+- missing reversion usage for editorial workflow in usecases app
+- Google Analytics
+- Cookie Banner
+
+### Changed
+
+- Final step for user account management Dashboard and user registration.
+- minor UI updates
 - Update Tool Data model
+
+### Fixed
+
+- missing translation for badges
 
 ---
 
