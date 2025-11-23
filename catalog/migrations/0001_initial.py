@@ -135,6 +135,7 @@ class Migration(migrations.Migration):
                 "verbose_name": "Pricing tier",
                 "verbose_name_plural": "Pricing tiers",
             },
+            bases=(parler.models.TranslatableModelMixin, models.Model),
         ),
         migrations.CreateModel(
             name="AffiliateProgram",
