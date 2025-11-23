@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-23 07:30+0100\n"
-"PO-Revision-Date: 2025-11-23 07:39+0100\n"
+"POT-Creation-Date: 2025-11-23 09:49+0100\n"
+"PO-Revision-Date: 2025-11-23 09:50+0100\n"
 "Last-Translator: Maik Kusmat <maik.kusmat@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -31,31 +31,31 @@ msgstr "Sprachunterstützung"
 msgid "Comma-separated language codes, e.g. de,en,fr"
 msgstr "Komma-getrennte Sprachcodes, z.B. de,en,fr"
 
-#: catalog/admin.py:52
+#: catalog/admin.py:63
 msgid "Features"
 msgstr "Merkmale"
 
-#: catalog/admin.py:55
+#: catalog/admin.py:66
 msgid "One feature per line (stored as a list per language)."
 msgstr "Ein Feature pro Zeile (gespeichert als Liste pro Sprache)."
 
-#: catalog/admin.py:146
+#: catalog/admin.py:163
 msgid "Existing tags"
 msgstr "Vorhandene Schlagwörter"
 
-#: catalog/admin.py:162
+#: catalog/admin.py:179
 msgid "Content"
 msgstr "Inhalt"
 
-#: catalog/admin.py:171
+#: catalog/admin.py:188
 msgid "Classification"
 msgstr "Klassifizierung"
 
-#: catalog/admin.py:182
+#: catalog/admin.py:199
 msgid "Pricing & Highlight"
 msgstr "Preisgestaltung & Highlight"
 
-#: catalog/admin.py:193 compare/admin.py:33 guides/admin.py:59
+#: catalog/admin.py:210 compare/admin.py:33 guides/admin.py:59
 #: prompts/admin.py:51 usecases/admin.py:51
 msgid "Meta"
 msgstr "Meta"
@@ -1381,20 +1381,24 @@ msgstr "Filter zurücksetzen"
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: templates/catalog/tool_list.html:141
+#: templates/catalog/tool_list.html:119
+msgid "French"
+msgstr "Französisch"
+
+#: templates/catalog/tool_list.html:143
 msgid "Featured"
 msgstr "Empfohlen"
 
-#: templates/catalog/tool_list.html:150
+#: templates/catalog/tool_list.html:152
 msgid "Website"
 msgstr "Webseite"
 
-#: templates/catalog/tool_list.html:155 templates/compare/index.html:50
+#: templates/catalog/tool_list.html:157 templates/compare/index.html:50
 #: templates/content/home.html:72
 msgid "Details"
 msgstr "Details"
 
-#: templates/catalog/tool_list.html:163
+#: templates/catalog/tool_list.html:165
 msgid "No tools found."
 msgstr "Keine Tools gefunden."
 
@@ -3048,7 +3052,6 @@ msgid "Go to editorial review queue"
 msgstr "Zur Warteschlange für redaktionelle Reviews"
 
 #: templates/partials/features_open.html:5
-#| msgid "MentoroAI is a continuously process"
 msgid ""
 "MentoroAI is a continuous development\n"
 "            process"
@@ -3059,7 +3062,6 @@ msgid "Some features may change or be incomplete."
 msgstr "Einige Funktionen können sich ändern oder unvollständig sein."
 
 #: templates/partials/features_open.html:10
-#| msgid "Please provide feedback on Github Discussions"
 msgid "Please provide feedback, suggestions or ideas on Github Discussions"
 msgstr "Bitte sende Feedback, Vorschläge oder Ideen auf Github Discussions"
 
@@ -3081,9 +3083,6 @@ msgid "Editorial system"
 msgstr "Redaktionssystem"
 
 #: templates/partials/features_open.html:30
-#| msgid ""
-#| "Draft → review → publish workflow with roles (Author, Editor, Admin) and "
-#| "status history."
 msgid ""
 "Draft → review → publish → archive workflow with roles (Author, Editor, "
 "Admin) and status history."
