@@ -13,7 +13,7 @@
                             {% if object.logo %}
                                 <img src="{{ object.logo.url }}" alt="{{ object.name }}">
                             {% else %}
-                                <div class="flex h-full w-full items-center justify-center bg-base-200 text-xl font-semibold">
+                                <div class="flex h-full w-full items-center justify-center bg-base-200 text-3xl font-semibold">
                                     {{ object.name|first|upper }}
                                 </div>
                             {% endif %}

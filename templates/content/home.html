@@ -29,58 +29,47 @@
             </div>
         </div>
     </section>
-
-    <!-- Info Cards -->
-    {#    <section class="container mx-auto mt-4">#}
-    {#        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">#}
-    {#            {% include "partials/starter_guide_card.html" %}#}
-    {#            {% include "partials/author_info_card.html" %}#}
-    {#        </div>#}
-    {#    </section>#}
-
-    <!-- Entry Cards -->
     {% include "partials/_entry_cards.html" with card=c %}
     <section class="container mx-auto mt-4">
-
-        {#            {% include "partials/starter_guide_card.html" %}#}
         {% include "partials/author_info_card.html" %}
-
     </section>
     <!-- Featured Tools -->
     {% if featured_tools %}
         <section class="container mx-auto mt-8">
             <h2 class="text-xl font-semibold pb-4">{% trans "Featured Tools" %}</h2>
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                 {% for t in featured_tools %}
                     <a href="{% url 'catalog:detail' slug=t.slug %}"
                        class="card border rounded-md hover:shadow-xl transition-shadow h-full">
                         <div class="card-body">
                             <div class="flex items-center gap-3">
-                                {% if t.logo %}
-                                    <div class="avatar">
-                                        <div class="w-10 h-10 rounded-full ring-1 ring-base-300">
+                                <div class="avatar">
+                                    {% if t.logo %}
+                                        <div class="w-10 h-10 rounded-full">
                                             <img src="{{ t.logo.url }}" alt="{{ t.name }}" loading="lazy" width="40"
                                                  height="40">
                                         </div>
-                                    </div>
-                                {% else %}
-                                    <div class="w-10 h-10 rounded-full bg-base-200 grid place-items-center">
-                                        {% heroicon_solid "bolt" size=18 class="opacity-80" %}
-                                    </div>
-                                {% endif %}
+                                    {% else %}
+                                        <div class="w-10 h-10 rounded-full ring-1 ring-base-300">
+                                            <div class="flex h-full w-full items-center justify-center bg-base-200 text-lg font-semibold">
+                                                {{ t.name|first|upper }}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
                                 <div>
                                     <h3 class="font-semibold leading-tight">{{ t.name }}</h3>
                                     {% if t.vendor %}<p class="text-sm opacity-70">{{ t.vendor }}</p>{% endif %}
                                 </div>
                             </div>
                             {% if t.short_description %}
-                                <p class="opacity-80 mt-3 line-clamp-2">{{ t.short_description|richtext|safe|truncatewords:35 }}</p>{% endif %}
+                                <p class="opacity-80 mt-3 line-clamp-2">{{ t.short_description|richtext|safe|truncatewords:12 }}</p>{% endif %}
                             <div class="card-actions mt-4 justify-between items-center">
                                 {% if t.rating %}
                                     <span class="badge badge-primary badge-outline"
                                           aria-label="{% trans "Rating" %}">{{ t.rating }}★</span>
                                 {% endif %}
-                                <span class="btn btn-sm btn-primary">{% trans "Details" %}</span>
+                                <span class="btn btn-sm btn-block btn-primary">{% trans "Details" %}</span>
                             </div>
                         </div>
                     </a>
@@ -99,15 +88,15 @@
             </div>
         </section>
     {% endif %}
-
-    <!-- Aktuelle Inhalte -->
+    <!-- New Content -->
     <section class="container mx-auto mt-8">
         <div class="flex items-baseline justify-between mb-4">
-            <h2 class="text-xl font-semibold">{% trans "Current content" %} <span class="opacity-70 text-sm"><a
-                    class="link link-hover ml-2" href="{% url 'guides:list' %}">{% trans "Guides" %}</a> • <a
-                    class="link link-hover" href="{% url 'prompts:list' %}">{% trans "Prompts" %}</a> • <a
-                    class="link link-hover"
-                    href="{% url 'usecases:list' %}">{% trans "Usecases" %}</a></span>
+            <h2 class="text-xl font-semibold">{% trans "Current content" %}
+                <span class="opacity-70 text-sm">
+                    <a class="link link-hover ml-2" href="{% url 'guides:list' %}">{% trans "Guides" %}</a> •
+                    <a class="link link-hover" href="{% url 'prompts:list' %}">{% trans "Prompts" %}</a> •
+                    <a class="link link-hover" href="{% url 'usecases:list' %}">{% trans "Usecases" %}</a>
+                </span>
             </h2>
         </div>
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -121,14 +110,12 @@
             {% endfor %}
         </div>
     </section>
-
     <!-- Open the modal using ID.showModal() method -->
     <div class="fab">
-        <button class="btn btn-lg btn-circle btn-info" onclick="featuresmodal.showModal()"
+        <button class="btn btn-lg md:btn-xl btn-circle btn-info" onclick="featuresmodal.showModal()"
                 aria-label="Information Button">
-            {% heroicon_outline "information-circle" size=46 %}
+            {% heroicon_outline "light-bulb" size=32 %}
         </button>
     </div>
     {% include "partials/features_open.html" %}
-
 {% endblock %}

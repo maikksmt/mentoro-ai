@@ -57,14 +57,17 @@
                                 </p>
                             {% endif %}
                         </div>
-
-                        {% if t.logo %}
-                            <div class="avatar">
-                                <div class="w-10 h-10 rounded-lg ring ring-base-200 ring-offset-base-100 ring-offset-1">
+                        <div class="avatar">
+                            <div class="w-10 h-10 rounded-lg ring ring-base-200 ring-offset-base-100 ring-offset-1">
+                                {% if t.logo %}
                                     <img src="{{ t.logo.url }}" alt="{{ t.name }}">
-                                </div>
+                                {% else %}
+                                    <div class="flex h-full w-full items-center justify-center bg-base-200 text-lg font-semibold">
+                                        {{ t.name|first|upper }}
+                                    </div>
+                                {% endif %}
                             </div>
-                        {% endif %}
+                        </div>
                     </header>
                     <dl class="space-y-2 text-xs">
                         {% if t.tags.all %}

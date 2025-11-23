@@ -2,45 +2,55 @@
 
 <dialog id="featuresmodal" class="modal">
     <div class="modal-box max-w-3xl max-h-[80vh]">
-        <h3 class="text-lg font-bold">{% blocktrans %}MentoroAI is a continuously process{% endblocktrans %}</h3>
-        <p>
-            {% trans "Some features may change or be incomplete." %} <br>
-            {% trans "Please provide feedback on Github Discussions" %}
-        </p>
-        <div class="flex gap-3 justify-center items-center my-4">
-            <a href="https://github.com/maikksmt/mentoro-ai/discussions" class="btn btn-sm btn-outline btn-info"
-               role="button" aria-pressed="false"
-               target="_blank" rel="noopener" aria-label="{% trans "Go to external project github discussions page" %}">
-                {% trans "Go to Github" %} {% heroicon_solid "arrow-top-right-on-square" size=12 class="opacity-80" %}
+        <h3 class="text-lg font-bold">{% blocktrans %}MentoroAI is a continuous development
+            process{% endblocktrans %}</h3>
+        <div class="flex items-center justify-between gap-4 my-4 text-start">
+            <p class="m-0">
+                {% trans "Some features may change or be incomplete." %} <br>
+                {% trans "Please provide feedback, suggestions or ideas on Github Discussions" %}
+            </p>
+            <a href="https://github.com/maikksmt/mentoro-ai/discussions"
+               class="btn btn-sm btn-outline btn-info"
+               target="_blank" rel="noopener"
+               aria-label="{% trans 'Go to external project github discussions page' %}">
+                {% trans "Go to Github" %}
+                {% heroicon_solid "arrow-top-right-on-square" size=12 class="opacity-80" %}
             </a>
-
         </div>
-
-
         <h3 class="text-xl font-bold mb-2">
             {% trans "What’s coming to MentoroAI" %}
         </h3>
         <p class="text-base-content/70 mb-4">
             {% trans "A quick preview of features we’re building next." %}
         </p>
-
         <div class="space-y-6">
-
-            <!-- 1) Redaktion & Workflow -->
             <section>
                 <h4 class="font-semibold mb-2">{% trans "Editorial system" %}</h4>
                 <ul class="list-disc ms-5 space-y-1">
-                    <li>{% trans "Draft → review → publish workflow with roles (Author, Editor, Admin) and status history." %}</li>
+                    <li>{% trans "Draft → review → publish → archive workflow with roles (Author, Editor, Admin) and status history." %}</li>
                     <li>{% trans "Per-object review checklist and required approvals before publishing." %}</li>
                     <li>{% trans "Versioning & change log for all content (diffs, rollbacks)." %}</li>
-                    <li>{% trans "Scheduled publishing and unpublishing." %}</li>
                 </ul>
             </section>
-
-            <!-- 2) Prompt Studio -->
             <section>
-                <h4 class="font-semibold mb-2">{% trans "Prompt Studio" %} <span
-                        class="badge badge-outline">{% trans "planned" %}</span></h4>
+                <h4 class="font-semibold mb-2">{% trans "Discovery & navigation" %}</h4>
+                <ul class="list-disc ms-5 space-y-1">
+                    <li>{% trans "Unified search across Tools, Guides, Prompts, Use-Cases with filters and tags." %}</li>
+                    <li>{% trans "Compare view: side-by-side feature comparison for tools and prompts." %}</li>
+                    <li>{% trans "RSS/Atom feeds for new and updated content." %}</li>
+                </ul>
+            </section>
+            <section>
+                <h4 class="font-semibold mb-2">{% trans "Quality & accessibility" %}</h4>
+                <ul class="list-disc ms-5 space-y-1">
+                    <li>{% trans "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX." %}</li>
+                    <li>{% trans "Reading modes: compact vs. comfortable layout." %}</li>
+                    <li>{% trans "Glossary hover cards for terms used in content." %}</li>
+                </ul>
+            </section>
+            <section>
+                <h4 class="font-semibold mb-2">{% trans "Prompt Studio" %}
+                    <span class="badge badge-sm badge-outline">{% trans "planned" %}</span></h4>
                 <ul class="list-disc ms-5 space-y-1">
                     <li>{% trans "Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-model tips." %}</li>
                     <li>{% trans "Structured prompt templates with variables, examples, and tone/style presets." %}</li>
@@ -49,61 +59,15 @@
                     <li>{% trans "Execution notes: record outputs to compare iterations." %}</li>
                 </ul>
             </section>
-
-            <!-- 3) Navigation & Discovery -->
-            <section>
-                <h4 class="font-semibold mb-2">{% trans "Discovery & navigation" %}</h4>
-                <ul class="list-disc ms-5 space-y-1">
-                    <li>{% trans "Unified search across Tools, Guides, Prompts, Use-Cases with filters and tags." %}</li>
-                    <li>{% trans "Collections & bookmarks (save for later, custom lists)." %}</li>
-                    <li>{% trans "Compare view: side-by-side feature comparison for tools and prompts." %}</li>
-                    <li>{% trans "RSS/Atom feeds for new and updated content." %}</li>
-                </ul>
-            </section>
-
-            <!-- 4) Qualität & Zugänglichkeit -->
-            <section>
-                <h4 class="font-semibold mb-2">{% trans "Quality & accessibility" %}</h4>
-                <ul class="list-disc ms-5 space-y-1">
-                    <li>{% trans "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX." %}</li>
-                    <li>{% trans "Reading modes: compact vs. comfortable layout." %}</li>
-                    <li>{% trans "Glossary hover cards for terms used in content." %}</li>
-                    <li>{% trans "Feedback widget on every page (quick rating + free text)." %}</li>
-                </ul>
-            </section>
-
-            <!-- 5) Internationalisierung -->
-            <section>
-                <h4 class="font-semibold mb-2">{% trans "Multilingual & localization" %}</h4>
-                <ul class="list-disc ms-5 space-y-1">
-                    <li>{% trans "Side-by-side DE/EN editing and translation status indicators." %}</li>
-                    <li>{% trans "Per-language slugs and canonical links." %}</li>
-                    <li>{% trans "Language-aware search and filters." %}</li>
-                </ul>
-            </section>
-
-            <!-- 6) Integrationen -->
-            <section>
-                <h4 class="font-semibold mb-2">{% trans "Integrations & API" %}</h4>
-                <ul class="list-disc ms-5 space-y-1">
-                    <li>{% trans "Optional API keys to try prompts live (bring-your-own-key)." %}</li>
-                    <li>{% trans "Plugin endpoints for external tooling (read-only API first)." %}</li>
-                    <li>{% trans "Privacy-friendly analytics and opt-in telemetry." %}</li>
-                </ul>
-            </section>
-
-            <!-- 7) Performance & Technik -->
             <section>
                 <h4 class="font-semibold mb-2">{% trans "Performance & reliability" %}</h4>
                 <ul class="list-disc ms-5 space-y-1">
                     <li>{% trans "Image optimization and smart caching." %}</li>
                     <li>{% trans "Offline-friendly error pages and graceful fallbacks." %}</li>
-                    <li>{% trans "CI coverage gates for editorial and schema changes." %}</li>
                 </ul>
             </section>
 
-            <!-- Hinweis -->
-            <p class="text-sm text-base-content/60">
+            <p class="text-sm text-base-content/70">
                 {% trans "Heads-up: Priorities may shift based on user feedback. If a feature is critical for you, please tell us!" %}
             </p>
         </div>

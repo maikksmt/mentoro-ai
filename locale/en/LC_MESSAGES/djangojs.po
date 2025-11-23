@@ -186,3 +186,21 @@ msgstr ""
 #: templates/catalog/tool_list.html:64
 msgid "Free Tier"
 msgstr ""
+#: templates/partials/_teaser_card.html:7
+msgid "Guide"
+msgstr ""
+#: templates/partials/_teaser_card.html:9
+msgid "Prompt"
+msgstr ""
+#: templates/partials/_teaser_card.html:11
+msgid "Usecase"
+msgstr ""
+#: templates/partials/_guideitem_card.html:13
+msgid "Tool"
+msgstr ""
+#: templates/partials/_guideitem_card.html:15
+msgid "Comparison"
+msgstr ""
+#: templates/partials/_guideitem_card.html:17
+msgid "Link"
+msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 22:45+0100\n"
+"POT-Creation-Date: 2025-11-23 07:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Intro"
 msgstr ""
 
-#: compare/models.py:31
+#: compare/models.py:31 templates/partials/_guideitem_card.html:15
 msgid "Comparison"
 msgstr ""
 
@@ -397,14 +397,15 @@ msgstr ""
 msgid "Public slug"
 msgstr ""
 
-#: guides/models.py:28
+#: guides/models.py:28 templates/partials/_guideitem_card.html:7
+#: templates/partials/_teaser_card.html:7
 msgid "Guide"
 msgstr ""
 
 #: guides/models.py:29 guides/views.py:49 guides/views.py:113
-#: templates/base.html:73 templates/base.html:97
-#: templates/content/home.html:107 templates/content/what-to-find.html:32
-#: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:19
+#: templates/base.html:73 templates/base.html:97 templates/content/home.html:96
+#: templates/content/what-to-find.html:32 templates/guides/guide_list.html:7
+#: templates/partials/_entry_cards.html:19
 msgid "Guides"
 msgstr ""
 
@@ -552,13 +553,15 @@ msgid "Outro"
 msgstr ""
 
 #: prompts/models.py:31 prompts/views.py:130
+#: templates/partials/_guideitem_card.html:9
+#: templates/partials/_teaser_card.html:9
 #: templates/prompts/prompt_detail.html:22
 msgid "Prompt"
 msgstr ""
 
 #: prompts/models.py:32 prompts/views.py:68 prompts/views.py:129
 #: templates/base.html:76 templates/base.html:100
-#: templates/content/home.html:108 templates/content/what-to-find.html:33
+#: templates/content/home.html:97 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:27 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
@@ -1236,32 +1239,32 @@ msgstr ""
 msgid "Featured tool"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:76 templates/catalog/tool_list.html:73
+#: templates/catalog/tool_detail.html:76 templates/catalog/tool_list.html:76
 msgid "Tags"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:82 templates/catalog/tool_list.html:79
+#: templates/catalog/tool_detail.html:82 templates/catalog/tool_list.html:82
 msgid "Filter by tag"
 msgstr ""
 
 #: templates/catalog/tool_detail.html:93 templates/catalog/tool_detail.html:158
-#: templates/catalog/tool_list.html:89
+#: templates/catalog/tool_list.html:92
 msgid "Pricing"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:98 templates/catalog/tool_list.html:93
+#: templates/catalog/tool_detail.html:98 templates/catalog/tool_list.html:96
 msgid "Free Tier"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:127 templates/catalog/tool_list.html:106
+#: templates/catalog/tool_detail.html:127 templates/catalog/tool_list.html:109
 msgid "Languages"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:133 templates/catalog/tool_list.html:112
+#: templates/catalog/tool_detail.html:133 templates/catalog/tool_list.html:115
 msgid "German"
 msgstr ""
 
-#: templates/catalog/tool_detail.html:135 templates/catalog/tool_list.html:114
+#: templates/catalog/tool_detail.html:135 templates/catalog/tool_list.html:117
 msgid "English"
 msgstr ""
 
@@ -1322,20 +1325,20 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: templates/catalog/tool_list.html:138
+#: templates/catalog/tool_list.html:141
 msgid "Featured"
 msgstr ""
 
-#: templates/catalog/tool_list.html:147
+#: templates/catalog/tool_list.html:150
 msgid "Website"
 msgstr ""
 
-#: templates/catalog/tool_list.html:152 templates/compare/index.html:50
-#: templates/content/home.html:83
+#: templates/catalog/tool_list.html:155 templates/compare/index.html:50
+#: templates/content/home.html:72
 msgid "Details"
 msgstr ""
 
-#: templates/catalog/tool_list.html:160
+#: templates/catalog/tool_list.html:163
 msgid "No tools found."
 msgstr ""
 
@@ -1486,28 +1489,28 @@ msgstr ""
 msgid "Discover AI Tools"
 msgstr ""
 
-#: templates/content/home.html:52
+#: templates/content/home.html:39
 msgid "Featured Tools"
 msgstr ""
 
-#: templates/content/home.html:81
+#: templates/content/home.html:70
 msgid "Rating"
 msgstr ""
 
-#: templates/content/home.html:94
+#: templates/content/home.html:83
 msgid "Recommended for you"
 msgstr ""
 
-#: templates/content/home.html:106
+#: templates/content/home.html:94
 msgid "Current content"
 msgstr ""
 
-#: templates/content/home.html:110 templates/usecases/list.html:8
+#: templates/content/home.html:98 templates/usecases/list.html:8
 #: usecases/models.py:35 usecases/views.py:67 usecases/views.py:126
 msgid "Usecases"
 msgstr ""
 
-#: templates/content/home.html:119
+#: templates/content/home.html:108
 msgid "No published content yet."
 msgstr ""
 
@@ -2771,6 +2774,20 @@ msgstr ""
 msgid "To the comparisons"
 msgstr ""
 
+#: templates/partials/_guideitem_card.html:11
+#: templates/partials/_teaser_card.html:11 usecases/models.py:34
+#: usecases/views.py:127
+msgid "Usecase"
+msgstr ""
+
+#: templates/partials/_guideitem_card.html:13
+msgid "Tool"
+msgstr ""
+
+#: templates/partials/_guideitem_card.html:17
+msgid "Link"
+msgstr ""
+
 #: templates/partials/_guideitem_card.html:29
 #: templates/partials/_teaser_card.html:28
 msgid "Read"
@@ -2846,7 +2863,7 @@ msgid ""
 msgstr ""
 
 #: templates/partials/author_info_card.html:52
-#: templates/partials/features_open.html:13
+#: templates/partials/features_open.html:15
 msgid "Go to external project github discussions page"
 msgstr ""
 
@@ -2877,18 +2894,20 @@ msgid "Go to editorial review queue"
 msgstr ""
 
 #: templates/partials/features_open.html:5
-msgid "MentoroAI is a continuously process"
+msgid ""
+"MentoroAI is a continuous development\n"
+"            process"
 msgstr ""
 
-#: templates/partials/features_open.html:7
+#: templates/partials/features_open.html:9
 msgid "Some features may change or be incomplete."
 msgstr ""
 
-#: templates/partials/features_open.html:8
-msgid "Please provide feedback on Github Discussions"
+#: templates/partials/features_open.html:10
+msgid "Please provide feedback, suggestions or ideas on Github Discussions"
 msgstr ""
 
-#: templates/partials/features_open.html:14
+#: templates/partials/features_open.html:16
 msgid "Go to Github"
 msgstr ""
 
@@ -2900,161 +2919,113 @@ msgstr ""
 msgid "A quick preview of features we’re building next."
 msgstr ""
 
-#: templates/partials/features_open.html:31
+#: templates/partials/features_open.html:28
 msgid "Editorial system"
 msgstr ""
 
-#: templates/partials/features_open.html:33
+#: templates/partials/features_open.html:30
 msgid ""
-"Draft → review → publish workflow with roles (Author, Editor, Admin) and "
-"status history."
+"Draft → review → publish → archive workflow with roles (Author, Editor, "
+"Admin) and status history."
 msgstr ""
 
-#: templates/partials/features_open.html:34
+#: templates/partials/features_open.html:31
 msgid "Per-object review checklist and required approvals before publishing."
 msgstr ""
 
-#: templates/partials/features_open.html:35
+#: templates/partials/features_open.html:32
 msgid "Versioning & change log for all content (diffs, rollbacks)."
 msgstr ""
 
 #: templates/partials/features_open.html:36
-msgid "Scheduled publishing and unpublishing."
-msgstr ""
-
-#: templates/partials/features_open.html:42
-msgid "Prompt Studio"
-msgstr ""
-
-#: templates/partials/features_open.html:43
-msgid "planned"
-msgstr ""
-
-#: templates/partials/features_open.html:45
-msgid ""
-"Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
-"model tips."
-msgstr ""
-
-#: templates/partials/features_open.html:46
-msgid ""
-"Structured prompt templates with variables, examples, and tone/style presets."
-msgstr ""
-
-#: templates/partials/features_open.html:47
-msgid "Guardrails: context hints, do/don’t lists, and input validation."
-msgstr ""
-
-#: templates/partials/features_open.html:48
-msgid "One-click copy, shareable links, and export (Markdown/JSON)."
-msgstr ""
-
-#: templates/partials/features_open.html:49
-msgid "Execution notes: record outputs to compare iterations."
-msgstr ""
-
-#: templates/partials/features_open.html:55
 msgid "Discovery & navigation"
 msgstr ""
 
-#: templates/partials/features_open.html:57
+#: templates/partials/features_open.html:38
 msgid ""
 "Unified search across Tools, Guides, Prompts, Use-Cases with filters and "
 "tags."
 msgstr ""
 
-#: templates/partials/features_open.html:58
-msgid "Collections & bookmarks (save for later, custom lists)."
-msgstr ""
-
-#: templates/partials/features_open.html:59
+#: templates/partials/features_open.html:39
 msgid "Compare view: side-by-side feature comparison for tools and prompts."
 msgstr ""
 
-#: templates/partials/features_open.html:60
+#: templates/partials/features_open.html:40
 msgid "RSS/Atom feeds for new and updated content."
 msgstr ""
 
-#: templates/partials/features_open.html:66
+#: templates/partials/features_open.html:44
 msgid "Quality & accessibility"
 msgstr ""
 
-#: templates/partials/features_open.html:68
+#: templates/partials/features_open.html:46
 msgid ""
 "A11y passes (focus states, landmarks, color contrast) and keyboard-first UX."
 msgstr ""
 
-#: templates/partials/features_open.html:69
+#: templates/partials/features_open.html:47
 msgid "Reading modes: compact vs. comfortable layout."
 msgstr ""
 
-#: templates/partials/features_open.html:70
+#: templates/partials/features_open.html:48
 msgid "Glossary hover cards for terms used in content."
 msgstr ""
 
-#: templates/partials/features_open.html:71
-msgid "Feedback widget on every page (quick rating + free text)."
+#: templates/partials/features_open.html:52
+msgid "Prompt Studio"
 msgstr ""
 
-#: templates/partials/features_open.html:77
-msgid "Multilingual & localization"
+#: templates/partials/features_open.html:53
+msgid "planned"
 msgstr ""
 
-#: templates/partials/features_open.html:79
-msgid "Side-by-side DE/EN editing and translation status indicators."
+#: templates/partials/features_open.html:55
+msgid ""
+"Model picker for each prompt (e.g., GPT-4 class, Claude, Llama) and per-"
+"model tips."
 msgstr ""
 
-#: templates/partials/features_open.html:80
-msgid "Per-language slugs and canonical links."
+#: templates/partials/features_open.html:56
+msgid ""
+"Structured prompt templates with variables, examples, and tone/style presets."
 msgstr ""
 
-#: templates/partials/features_open.html:81
-msgid "Language-aware search and filters."
+#: templates/partials/features_open.html:57
+msgid "Guardrails: context hints, do/don’t lists, and input validation."
 msgstr ""
 
-#: templates/partials/features_open.html:87
-msgid "Integrations & API"
+#: templates/partials/features_open.html:58
+msgid "One-click copy, shareable links, and export (Markdown/JSON)."
 msgstr ""
 
-#: templates/partials/features_open.html:89
-msgid "Optional API keys to try prompts live (bring-your-own-key)."
+#: templates/partials/features_open.html:59
+msgid "Execution notes: record outputs to compare iterations."
 msgstr ""
 
-#: templates/partials/features_open.html:90
-msgid "Plugin endpoints for external tooling (read-only API first)."
-msgstr ""
-
-#: templates/partials/features_open.html:91
-msgid "Privacy-friendly analytics and opt-in telemetry."
-msgstr ""
-
-#: templates/partials/features_open.html:97
+#: templates/partials/features_open.html:63
 msgid "Performance & reliability"
 msgstr ""
 
-#: templates/partials/features_open.html:99
+#: templates/partials/features_open.html:65
 msgid "Image optimization and smart caching."
 msgstr ""
 
-#: templates/partials/features_open.html:100
+#: templates/partials/features_open.html:66
 msgid "Offline-friendly error pages and graceful fallbacks."
 msgstr ""
 
-#: templates/partials/features_open.html:101
-msgid "CI coverage gates for editorial and schema changes."
-msgstr ""
-
-#: templates/partials/features_open.html:107
+#: templates/partials/features_open.html:71
 msgid ""
 "Heads-up: Priorities may shift based on user feedback. If a feature is "
 "critical for you, please tell us!"
 msgstr ""
 
-#: templates/partials/features_open.html:113
+#: templates/partials/features_open.html:77
 msgid "Close"
 msgstr ""
 
-#: templates/partials/features_open.html:121
+#: templates/partials/features_open.html:85
 msgid "Close modal"
 msgstr ""
 
@@ -3204,10 +3175,6 @@ msgstr ""
 
 #: usecases/models.py:26
 msgid "Persona"
-msgstr ""
-
-#: usecases/models.py:34 usecases/views.py:127
-msgid "Usecase"
 msgstr ""
 
 #: usecases/views.py:55
