@@ -6,39 +6,32 @@
 {% endblock %}
 
 {% block content %}
-    <section class="prose max-w-3xl mx-auto py-4">
-        <h1>{% trans "Terms of Use" %}</h1>
+<section class="prose max-w-3xl mx-auto py-4">
+    <h1>{% trans "Terms of Use" %}</h1>
 
-        <h2>{% trans "1. Scope" %}</h2>
-        <p>
-            {% blocktrans %}
-                These Terms of Use apply to all visitors and registered users of MentoroAI.
-            {% endblocktrans %}
-        </p>
-        <h2>{% trans "2. Use of content" %}</h2>
-        <p>    {% blocktrans %}
-            The content on this website is provided for informational purposes only. Commercial use without the
-            operator’s consent
-            is not permitted.
-        {% endblocktrans %}
-        </p>
-        <h2>{% trans "3. User accounts" %}</h2>
-        <p>    {% blocktrans %}
-            Users must keep their login credentials confidential. The operator reserves the right to suspend or delete
-            accounts in case of misuse.
-        {% endblocktrans %}
-        </p>
-        <h2>{% trans "4. Liability" %}</h2>
-        <p>    {% blocktrans %}
-            The operator assumes no warranty for the correctness, completeness, or timeliness of the information
-            provided.
-            Any liability for damages arising directly or indirectly from the use is excluded.
-        {% endblocktrans %}
-        </p>
-        <h2>{% trans "5. Changes" %}</h2>
-        <p>    {% blocktrans %}
-            The operator may amend these Terms of Use at any time. The current version applies.
-        {% endblocktrans %}
-        </p>
-    </section>
+    <h2>{% trans "1. Scope and operator" %}</h2>
+    <p>{% blocktrans %}These Terms of Use govern the use of MentoroAI, a privately operated, currently free information and education website about artificial intelligence. The operator and contact details can be found in the legal notice.{% endblocktrans %}</p>
+
+    <h2>{% trans "2. Information and availability" %}</h2>
+    <p>{% blocktrans %}The guides, tool descriptions and examples are for general information and education. We aim to keep them accurate and up to date but do not guarantee that every item is complete, correct or suitable for your individual situation. Information about third-party tools may change. The website may be temporarily unavailable for maintenance or technical reasons. Statutory rights remain unaffected.{% endblocktrans %}</p>
+
+    <h2>{% trans "3. User accounts" %}</h2>
+    <p>{% blocktrans %}Where account functions are offered, users must provide accurate information when required, protect their login access and refrain from unauthorized access, misuse or unlawful activity. Accounts may be restricted or suspended where objectively justified, particularly for security reasons or serious violations of these Terms. Where practicable and reasonable, the user will be informed of the reason. Applicable statutory rights and any obligations to provide reasons remain unaffected.{% endblocktrans %}</p>
+    <p>{% blocktrans %}Users can request deletion of their account or use any account-deletion function provided on the website. Personal-data deletion is governed by the privacy policy and applicable retention obligations.{% endblocktrans %}</p>
+
+    <h2>{% trans "4. Rights to content" %}</h2>
+    <p>{% blocktrans %}Content may be used for personal information and learning within applicable law. Further rights to reuse, distribute or modify content depend on the applicable licenses, third-party rights and statutory exceptions. The copyright and licenses page explains which materials are covered by which licenses. Merely viewing the website does not transfer intellectual property rights.{% endblocktrans %}</p>
+
+    <h2>{% trans "5. Third-party offerings" %}</h2>
+    <p>{% blocktrans %}Links to external websites and descriptions of third-party AI tools do not make those offerings part of MentoroAI. Their respective operators are responsible for their services and terms. We do not adopt third-party content as our own solely by linking to it. Statutory responsibilities remain unaffected.{% endblocktrans %}</p>
+
+    <h2>{% trans "6. Liability" %}</h2>
+    <p>{% blocktrans %}We are liable without limitation for intent and gross negligence and for damages arising from injury to life, body or health caused by a culpable breach of duty. In cases of slight negligence, liability for other damages exists only where a material contractual obligation is breached, and is limited to the damage typically foreseeable at the time of the contract. Mandatory statutory liability remains unaffected. These provisions do not limit claims that cannot legally be excluded or restricted.{% endblocktrans %}</p>
+
+    <h2>{% trans "7. Changes to these Terms" %}</h2>
+    <p>{% blocktrans %}We may revise these Terms for future use. Revised terms do not automatically replace existing contractual arrangements merely because they are published on this website. Where the law requires notice or consent for changes affecting existing users, we will comply with those requirements. The version applicable to a particular use is determined by the legal circumstances of that use.{% endblocktrans %}</p>
+
+    <h2>{% trans "8. Applicable law" %}</h2>
+    <p>{% blocktrans %}German law applies to the extent permitted by law. Mandatory consumer protection rules that apply under the law of a user's country of habitual residence remain unaffected.{% endblocktrans %}</p>
+</section>
 {% endblock %}

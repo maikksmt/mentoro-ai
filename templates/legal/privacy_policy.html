@@ -38,6 +38,11 @@
         <p>
             {% trans "Controller under data protection law, in particular the EU GDPR, is:" %}<br>
             <strong>Maik Kusmat</strong><br>
+            MentoroAI<br>
+            c/o Block Services<br>
+            Stuttgarter Str. 106<br>
+            70736 Fellbach<br>
+            {% trans "Germany" %}<br>
             {% trans "Email" %}: <a href="mailto:contact@mentoro-ai.com">contact@mentoro-ai.com</a>
         </p>
         <p>
@@ -96,10 +101,7 @@
         <ul>
             <li>{% trans "Server log data (IP address, timestamps): up to 30 days" %}</li>
             <li>{% trans "Contact requests: up to 12 months after completion" %}</li>
-            <li>{% trans "User account data: for the duration of the account" %}</li>
-            <li>{% trans "Server log data (IP address, timestamps): up to 30 days" %}</li>
-            <li>{% trans "Contact requests: up to 12 months after completion" %}</li>
-            <li>{% trans "User account data: for the duration of the account" %}</li>
+            <li>{% trans "User account data: for the duration of the account, subject to legally required retention after deletion" %}</li>
             <li>
                 {% trans "Analytics data (Google Analytics 4): depending on the configuration, typically up to 14 months." %}
             </li>
@@ -121,6 +123,8 @@
             {% endblocktrans %}
         </p>
 
+        <p>{% blocktrans %}The legal basis for processing technically necessary server requests and security logs is our legitimate interest in a secure, accessible website under Art. 6(1)(f) GDPR. Where processing is legally required, Art. 6(1)(c) GDPR applies.{% endblocktrans %}</p>
+
         <h3>{% trans "Contact" %}</h3>
         <p>
             {% blocktrans %}
@@ -129,6 +133,8 @@
             {% endblocktrans %}
         </p>
 
+        <p>{% blocktrans %}We process contact requests on the basis of Art. 6(1)(f) GDPR (responding to enquiries), or Art. 6(1)(b) GDPR if the request concerns steps towards or performance of an agreement.{% endblocktrans %}</p>
+
         <h3>{% trans "Registration / User accounts" %}</h3>
         <p>
             {% blocktrans %}
@@ -136,6 +142,8 @@
                 providing your account and managing your content.
             {% endblocktrans %}
         </p>
+
+        <p>{% blocktrans %}Account-related processing that is necessary to provide a requested user account is based on Art. 6(1)(b) GDPR. Additional processing, where applicable, requires its own legal basis.{% endblocktrans %}</p>
 
         <h3>{% trans "Google Sign-In (Social Login)" %}</h3>
         <p>
@@ -160,7 +168,7 @@
 
         <p><strong>{% trans "Legal basis" %}:</strong>
             {% blocktrans %}
-                Your consent according to Art. 6(1)(a) GDPR.
+                Art. 6(1)(b) GDPR insofar as the data are necessary to provide the account login selected by you. Any additional processing requiring consent is based on Art. 6(1)(a) GDPR.
             {% endblocktrans %}
         </p>
 
@@ -214,7 +222,7 @@
 
         <p><strong>{% trans "Legal basis" %}:</strong>
             {% blocktrans %}
-                Your consent according to Art. 6(1)(a) GDPR.
+                Art. 6(1)(b) GDPR insofar as the data are necessary to provide the account login selected by you. Any additional processing requiring consent is based on Art. 6(1)(a) GDPR.
             {% endblocktrans %}
         </p>
 
@@ -277,7 +285,7 @@
             {% blocktrans %}
                 We use the consent management platform Klaro by KIProtect to obtain and manage legally required
                 cookie consent. Klaro stores cookies that document your consent status and block all non-essential
-                cookies until you consent. The processing is based on our legal obligation under Art. 6(1)(c) GDPR.
+                cookies until you consent. Where necessary, processing to document and respect your privacy choices is based on Art. 6(1)(c) GDPR and Art. 6(1)(f) GDPR, as applicable.
             {% endblocktrans %}
         </p>
 
@@ -295,8 +303,7 @@
         <p>
             <strong>{% trans "Legal basis" %}:</strong>
             {% blocktrans %}
-                Legitimate interests under Art. 6(1)(f) GDPR for the use of a tag management system.
-                Processing for analytics purposes takes place only with your consent under Art. 6(1)(a) GDPR.
+                The legal basis depends on the actual tag-loading configuration and the processing involved. Any non-essential access to your device requires consent under § 25 TDDDG; subsequent analytics processing is based on Art. 6(1)(a) GDPR. Technically necessary processing may be based on Art. 6(1)(f) GDPR if its requirements are satisfied.
             {% endblocktrans %}
         </p>
 
@@ -417,8 +424,8 @@
 
 
         <h2>{% trans "Effective date" %}</h2>
-        <p>{% trans "This Privacy Policy is effective as of 16 December 2025." %}</p>
-        <p>Version 1.0</p>
+        <p>{% trans "This Privacy Policy was last substantively revised in October 2026." %}</p>
+        <p>Version 1.1</p>
 
     </section>
 {% endblock %}

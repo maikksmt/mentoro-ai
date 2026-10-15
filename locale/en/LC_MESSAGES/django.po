@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-02 13:36+0200\n"
+"POT-Creation-Date: 2026-10-15 18:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,64 +18,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: accounts/views.py:19
+#: accounts/views.py:20
 msgid "My account"
 msgstr ""
 
-#: accounts/views.py:21
+#: accounts/views.py:22
 msgid "Manage your MentoroAI profile, settings and editorial access."
 msgstr ""
 
-#: accounts/views.py:47
+#: accounts/views.py:48
 msgid "Your profile has been updated."
 msgstr ""
 
-#: catalog/admin.py:16
+#: catalog/admin.py:18
 msgid "Language support"
 msgstr ""
 
-#: catalog/admin.py:19
+#: catalog/admin.py:21
 msgid ""
 "Comma-separated language codes (ISO-639-1), e.g. "
 "en,es,de,fr,pt,it,nl,jp,ko,cn,hi,ar,tr,ru - all other languages needs full "
 "name, use \"+\" for more"
 msgstr ""
 
-#: catalog/admin.py:58
+#: catalog/admin.py:60
 msgid "Features"
 msgstr ""
 
-#: catalog/admin.py:61
+#: catalog/admin.py:63
 msgid "One feature per line (stored as a list per language)."
 msgstr ""
 
-#: catalog/admin.py:166 compare/admin.py:185
+#: catalog/admin.py:168 compare/admin.py:191
 msgid "Content"
 msgstr ""
 
-#: catalog/admin.py:175
+#: catalog/admin.py:177
 msgid "Classification"
 msgstr ""
 
-#: catalog/admin.py:184
+#: catalog/admin.py:186
 msgid "Pricing & Highlight"
 msgstr ""
 
-#: catalog/admin.py:195 guides/admin.py:86 prompts/admin.py:281
-#: usecases/admin.py:60
+#: catalog/admin.py:197 guides/admin.py:97 prompts/admin.py:284
+#: usecases/admin.py:62
 msgid "Meta"
 msgstr ""
 
-#: catalog/admin.py:281
+#: catalog/admin.py:283
 #, python-format
 msgid ""
 "%(entry)s: used by tool %(tool)s - remove or reassign the comparison entries "
 "first"
 msgstr ""
 
-#: catalog/models.py:15 catalog/models.py:79 compare/models.py:144
-#: glossary/models.py:11 guides/models.py:71 prompts/models.py:69
-#: usecases/models.py:104
+#: catalog/models.py:15 catalog/models.py:79 compare/models.py:149
+#: glossary/models.py:11 guides/models.py:81 prompts/models.py:74
+#: usecases/models.py:109
 msgid "Slug"
 msgstr ""
 
@@ -148,183 +148,183 @@ msgstr ""
 msgid "Affiliate-Programs"
 msgstr ""
 
-#: catalog/views.py:61
+#: catalog/views.py:63
 msgid "AI tools catalog"
 msgstr ""
 
-#: catalog/views.py:63
+#: catalog/views.py:65
 msgid ""
 "Discover AI tools for productivity, marketing, coding, creatives and more to "
 "find the best match for your needs."
 msgstr ""
 
-#: catalog/views.py:100 catalog/views.py:199
+#: catalog/views.py:102 catalog/views.py:201
 msgid "Catalog"
 msgstr ""
 
-#: catalog/views.py:101 catalog/views.py:200
+#: catalog/views.py:103 catalog/views.py:202
 msgid "All tools"
 msgstr ""
 
-#: catalog/views.py:141
+#: catalog/views.py:143
 msgid "Tool does not exist"
 msgstr ""
 
-#: catalog/views.py:152
+#: catalog/views.py:154
 msgid ""
 "This AI tool enhances modern workflows and helps streamline key tasks across "
 "various use cases. "
 msgstr ""
 
-#: compare/admin.py:176 guides/admin.py:77 prompts/admin.py:272
-#: usecases/admin.py:51
+#: compare/admin.py:182 guides/admin.py:88 prompts/admin.py:275
+#: usecases/admin.py:53
 msgid "Editorial"
 msgstr ""
 
-#: compare/admin.py:192
+#: compare/admin.py:198
 msgid "Slug & URLs"
 msgstr ""
 
-#: compare/admin.py:198
+#: compare/admin.py:204
 msgid "Timestamps"
 msgstr ""
 
-#: compare/admin.py:205
+#: compare/admin.py:211
 msgid "[Tools] Overview"
 msgstr ""
 
-#: compare/admin.py:316 compare/models.py:141 guides/admin.py:142
-#: guides/admin.py:146 guides/models.py:68 guides/models.py:212
-#: guides/models.py:302 prompts/admin.py:1555 prompts/models.py:65
+#: compare/admin.py:322 compare/models.py:146 guides/admin.py:153
+#: guides/admin.py:157 guides/models.py:78 guides/models.py:222
+#: guides/models.py:312 prompts/admin.py:1558 prompts/models.py:70
 #: templates/content/editorial/my_content.html:18
 #: templates/content/editorial/review_queue.html:14
-#: templates/ops/seo_check.html:41 usecases/admin.py:108 usecases/models.py:100
+#: templates/ops/seo_check.html:41 usecases/admin.py:110 usecases/models.py:105
 msgid "Title"
 msgstr ""
 
-#: compare/admin.py:321
+#: compare/admin.py:327
 msgid "No tools selected"
 msgstr ""
 
-#: compare/admin.py:327
+#: compare/admin.py:333
 msgid "Tools in comparison"
 msgstr ""
 
-#: compare/admin.py:334
+#: compare/admin.py:340
 msgid "Updated"
 msgstr ""
 
-#: compare/admin.py:341
+#: compare/admin.py:347
 msgid "Published"
 msgstr ""
 
-#: compare/admin.py:347 templates/content/editorial/my_content.html:19
+#: compare/admin.py:353 templates/content/editorial/my_content.html:19
 #: templates/ops/seo_check.html:40
 msgid "Status"
 msgstr ""
 
-#: compare/models.py:142 guides/models.py:69 prompts/models.py:66
-#: usecases/models.py:101
+#: compare/models.py:147 guides/models.py:79 prompts/models.py:71
+#: usecases/models.py:106
 msgid "Intro"
 msgstr ""
 
-#: compare/models.py:142
+#: compare/models.py:147
 msgid "Short introduction shown in lists and above the comparison."
 msgstr ""
 
-#: compare/models.py:143 guides/models.py:70 guides/models.py:213
-#: prompts/models.py:67 usecases/models.py:102
+#: compare/models.py:148 guides/models.py:80 guides/models.py:223
+#: prompts/models.py:72 usecases/models.py:107
 msgid "Body"
 msgstr ""
 
-#: compare/models.py:143
+#: compare/models.py:148
 msgid "Optional longer text with context, recommendations or wrap-up."
 msgstr ""
 
-#: compare/models.py:144
+#: compare/models.py:149
 msgid "Internal slug, used for the default detail URL."
 msgstr ""
 
-#: compare/models.py:146 guides/models.py:72 prompts/models.py:70
-#: usecases/models.py:105
+#: compare/models.py:151 guides/models.py:82 prompts/models.py:75
+#: usecases/models.py:110
 msgid "Public slug"
 msgstr ""
 
-#: compare/models.py:151
+#: compare/models.py:156
 msgid "Optional public slug. If empty, slug will be used on publish."
 msgstr ""
 
-#: compare/models.py:159
+#: compare/models.py:164
 msgid "Tool comparison"
 msgstr ""
 
-#: compare/models.py:160
+#: compare/models.py:165
 msgid "Tool comparisons"
 msgstr ""
 
-#: compare/models.py:329
+#: compare/models.py:334
 msgid "Order in which tools are displayed in this comparison."
 msgstr ""
 
-#: compare/models.py:334
+#: compare/models.py:339
 msgid "Label / heading"
 msgstr ""
 
-#: compare/models.py:337
+#: compare/models.py:342
 msgid "Optional headline for this tool within the comparison."
 msgstr ""
 
-#: compare/models.py:340
+#: compare/models.py:345
 msgid "Summary"
 msgstr ""
 
-#: compare/models.py:342
+#: compare/models.py:347
 msgid "Free text: main description for this tool in the comparison."
 msgstr ""
 
-#: compare/models.py:345
+#: compare/models.py:350
 msgid "Strengths / advantages"
 msgstr ""
 
-#: compare/models.py:347
+#: compare/models.py:352
 msgid "Use bullet lists in TinyMCE to highlight strengths."
 msgstr ""
 
-#: compare/models.py:350
+#: compare/models.py:355
 msgid "Weaknesses / limitations"
 msgstr ""
 
-#: compare/models.py:352
+#: compare/models.py:357
 msgid "Use bullet lists in TinyMCE to highlight weaknesses."
 msgstr ""
 
-#: compare/models.py:355
+#: compare/models.py:360
 msgid "Special features / notes"
 msgstr ""
 
-#: compare/models.py:357
+#: compare/models.py:362
 msgid "Anything unique, edge cases, or important caveats."
 msgstr ""
 
-#: compare/models.py:362
+#: compare/models.py:367
 msgid "Tool comparison entry"
 msgstr ""
 
-#: compare/models.py:363
+#: compare/models.py:368
 msgid "Tool comparison entries"
 msgstr ""
 
-#: compare/views.py:271 templates/compare/comparison_list.html:6
+#: compare/views.py:273 templates/compare/comparison_list.html:6
 msgid "AI tool comparisons"
 msgstr ""
 
-#: compare/views.py:273 templates/compare/comparison_list.html:8
+#: compare/views.py:275 templates/compare/comparison_list.html:8
 msgid ""
 "Side-by-side comparisons of AI tools to help you understand strengths, "
 "weaknesses and special features."
 msgstr ""
 
-#: compare/views.py:307 compare/views.py:434 search/presentation.py:37
+#: compare/views.py:309 compare/views.py:436 search/presentation.py:37
 #: templates/base.html:139 templates/base.html:171 templates/base.html:280
 #: templates/content/home.html:57 templates/content/what-to-find.html:36
 #: templates/partials/_entry_cards.html:85
@@ -396,166 +396,166 @@ msgstr ""
 msgid "You are not allowed to submit this item for review."
 msgstr ""
 
-#: content/views/home.py:33
+#: content/views/home.py:34
 msgid "AI tools, guides & usecases for beginners and professionals"
 msgstr ""
 
-#: content/views/home.py:35
+#: content/views/home.py:36
 msgid ""
 "MentoroAI offers AI tutorials, guides, prompts, tool comparisons, use cases "
 "and a glossary to help you navigate the modern AI world."
 msgstr ""
 
-#: content/views/legal.py:43 templates/legal/legal_notice.html:5
+#: content/views/legal.py:44 templates/legal/legal_notice.html:5
 msgid "Legal Notice – MentoroAI"
 msgstr ""
 
-#: content/views/legal.py:45
+#: content/views/legal.py:46
 msgid ""
 "Legal notice (Impressum) for MentoroAI with information according to § 5 TMG "
 "and contact details."
 msgstr ""
 
-#: content/views/legal.py:52 templates/legal/privacy_policy.html:5
+#: content/views/legal.py:53 templates/legal/privacy_policy.html:5
 msgid "Privacy Policy – MentoroAI"
 msgstr ""
 
-#: content/views/legal.py:54
+#: content/views/legal.py:55
 msgid ""
 "Privacy policy for MentoroAI explaining data processing, cookies, analytics "
 "and your rights under GDPR."
 msgstr ""
 
-#: content/views/legal.py:61 templates/legal/cookie_policy.html:5
+#: content/views/legal.py:62 templates/legal/cookie_policy.html:5
 msgid "Cookie Policy – MentoroAI"
 msgstr ""
 
-#: content/views/legal.py:63
+#: content/views/legal.py:64
 msgid ""
 "Cookie policy for MentoroAI describing the types of cookies used, consent "
 "management and control options."
 msgstr ""
 
-#: content/views/legal.py:70 templates/legal/terms_of_use.html:5
+#: content/views/legal.py:71 templates/legal/terms_of_use.html:5
 msgid "Terms of Use – MentoroAI"
 msgstr ""
 
-#: content/views/legal.py:72
+#: content/views/legal.py:73
 msgid ""
 "Terms of use for MentoroAI outlining scope, use of content, user accounts, "
 "liability and changes."
 msgstr ""
 
-#: content/views/legal.py:79 templates/legal/copyright.html:5
+#: content/views/legal.py:80 templates/legal/copyright.html:5
 msgid "Copyright & Licenses – MentoroAI"
 msgstr ""
 
-#: content/views/legal.py:81
+#: content/views/legal.py:82
 msgid ""
 "Information on copyright, open-source license (GPLv3) and use of content and "
 "trademarks for MentoroAI."
 msgstr ""
 
-#: core/admin.py:187
+#: core/admin.py:188
 msgid "Auto: Change in the admin form"
 msgstr ""
 
-#: core/admin.py:451
+#: core/admin.py:444
 msgid "Auto: Change to inline content"
 msgstr ""
 
-#: core/admin.py:517 prompts/admin.py:361
+#: core/admin.py:512 prompts/admin.py:364
 msgid "Send to review"
 msgstr ""
 
-#: core/admin.py:528 core/admin.py:612 core/admin.py:654
+#: core/admin.py:522 core/admin.py:605 core/admin.py:646
 msgid "permission denied"
 msgstr ""
 
-#: core/admin.py:538
+#: core/admin.py:532
 msgid "Transition 'move_to_review' not executable"
 msgstr ""
 
-#: core/admin.py:547
+#: core/admin.py:541
 #, python-format
 msgid "%(n)d item(s) → Review."
 msgstr ""
 
-#: core/admin.py:554 core/admin.py:639 core/admin.py:686
+#: core/admin.py:548 core/admin.py:632 core/admin.py:678
 #, python-format
 msgid "%(n)d skipped: %(detail)s"
 msgstr ""
 
-#: core/admin.py:558
+#: core/admin.py:552
 msgid "Request changes (→ Rework)"
 msgstr ""
 
-#: core/admin.py:568 core/admin.py:700 core/admin.py:741
+#: core/admin.py:562 core/admin.py:692 core/admin.py:733
 msgid "You are not authorized to perform this action."
 msgstr ""
 
-#: core/admin.py:581
+#: core/admin.py:575
 msgid "Transition 'request_rework' not executable"
 msgstr ""
 
-#: core/admin.py:595
+#: core/admin.py:589
 #, python-format
 msgid "%(n)d item(s) → Rework."
 msgstr ""
 
-#: core/admin.py:599 prompts/admin.py:517
+#: core/admin.py:593 prompts/admin.py:520
 msgid "Approve (Review → Approved)"
 msgstr ""
 
-#: core/admin.py:622
+#: core/admin.py:615
 msgid "transition 'approve' not executable"
 msgstr ""
 
-#: core/admin.py:631
+#: core/admin.py:624
 #, python-format
 msgid "%(n)d item(s) approved."
 msgstr ""
 
-#: core/admin.py:643
+#: core/admin.py:636
 msgid "Publish selected item(s)"
 msgstr ""
 
-#: core/admin.py:667
+#: core/admin.py:659
 msgid "Transition 'publish' not executable"
 msgstr ""
 
-#: core/admin.py:672
+#: core/admin.py:664
 #, python-format
 msgid "Could not publish: %(error)s"
 msgstr ""
 
-#: core/admin.py:679
+#: core/admin.py:671
 #, python-format
 msgid "%(n)d item(s) published."
 msgstr ""
 
-#: core/admin.py:690
+#: core/admin.py:682
 msgid "Archive (Soft Delete)"
 msgstr ""
 
-#: core/admin.py:713
+#: core/admin.py:705
 msgid "Transition 'archive' not executable"
 msgstr ""
 
-#: core/admin.py:727
+#: core/admin.py:719
 #, python-format
 msgid "%(n)d item(s) archived."
 msgstr ""
 
-#: core/admin.py:731
+#: core/admin.py:723
 msgid "Restore (→ Draft)"
 msgstr ""
 
-#: core/admin.py:757
+#: core/admin.py:749
 msgid "Transition 'restore' not executable"
 msgstr ""
 
-#: core/admin.py:771
+#: core/admin.py:763
 #, python-format
 msgid "%(n)d item(s) restored (draft)."
 msgstr ""
@@ -591,78 +591,78 @@ msgstr ""
 msgid "Glossary terms"
 msgstr ""
 
-#: glossary/views.py:45
+#: glossary/views.py:47
 msgid "AI glossary"
 msgstr ""
 
-#: glossary/views.py:47
+#: glossary/views.py:49
 msgid ""
 "Understand key terms in AI, machine learning and data science with clear, "
 "beginner-friendly definitions."
 msgstr ""
 
-#: guides/admin.py:97
+#: guides/admin.py:108
 msgid "Relations"
 msgstr ""
 
-#: guides/admin.py:100 prompts/admin.py:291 usecases/admin.py:69
+#: guides/admin.py:111 prompts/admin.py:294 usecases/admin.py:71
 msgid "Routing"
 msgstr ""
 
-#: guides/admin.py:103 prompts/admin.py:294 usecases/admin.py:72
+#: guides/admin.py:114 prompts/admin.py:297 usecases/admin.py:74
 msgid "Content (translated)"
 msgstr ""
 
-#: guides/admin.py:105 prompts/admin.py:296 usecases/admin.py:75
+#: guides/admin.py:116 prompts/admin.py:299 usecases/admin.py:77
 msgid "These fields are language-specific. Use the language tabs above."
 msgstr ""
 
-#: guides/models.py:77
+#: guides/models.py:87
 msgid "Starter guide"
 msgstr ""
 
-#: guides/models.py:79
+#: guides/models.py:89
 msgid "Shown first in the guide list and used as the homepage starter CTA."
 msgstr ""
 
-#: guides/models.py:85 search/presentation.py:31
+#: guides/models.py:95 search/presentation.py:31
 #: templates/partials/_editorial_card.html:7
 msgid "Guide"
 msgstr ""
 
-#: guides/models.py:86 guides/presentation.py:192 guides/views.py:113
-#: guides/views.py:203 search/presentation.py:31 templates/base.html:123
+#: guides/models.py:96 guides/presentation.py:192 guides/views.py:115
+#: guides/views.py:205 search/presentation.py:31 templates/base.html:123
 #: templates/base.html:155 templates/base.html:277
 #: templates/content/home.html:54 templates/content/what-to-find.html:32
 #: templates/guides/guide_list.html:7 templates/partials/_entry_cards.html:33
 msgid "Guides"
 msgstr ""
 
-#: guides/models.py:92 guides/models.py:114
+#: guides/models.py:102 guides/models.py:124
 msgid "Another guide is already published as the starter guide."
 msgstr ""
 
-#: guides/models.py:218
+#: guides/models.py:228
 msgid "Guide Section"
 msgstr ""
 
-#: guides/models.py:219
+#: guides/models.py:229
 msgid "Guide Sections"
 msgstr ""
 
-#: guides/models.py:303
+#: guides/models.py:313
 msgid "Teaser"
 msgstr ""
 
-#: guides/models.py:311
+#: guides/models.py:321
 msgid "Guide Item"
 msgstr ""
 
-#: guides/models.py:312
+#: guides/models.py:322
 msgid "Guide Items"
 msgstr ""
 
-#: guides/models.py:348
+#: guides/models.py:358
 msgid "Either content_object (content_type + object_id) OR a URL."
 msgstr ""
 
@@ -674,11 +674,11 @@ msgstr ""
 msgid "Auto: Change to GuideSection (delete)"
 msgstr ""
 
-#: guides/views.py:93
+#: guides/views.py:95
 msgid "AI guides · MentoroAI"
 msgstr ""
 
-#: guides/views.py:95
+#: guides/views.py:97
 msgid ""
 "Browse practical AI guides and tutorials to learn step by step how to use AI "
 "tools in everyday life and work."
@@ -696,65 +696,65 @@ msgstr ""
 msgid "Reason (optional)"
 msgstr ""
 
-#: newsletter/views.py:21 templates/base.html:329
+#: newsletter/views.py:25 templates/base.html:329
 msgid "Newsletter"
 msgstr ""
 
-#: newsletter/views.py:24
+#: newsletter/views.py:28
 msgid ""
 "Compact updates on AI trends, tools, and developments delivered via email "
 "for beginners, professionals, and anyone staying informed."
 msgstr ""
 
-#: newsletter/views.py:36
+#: newsletter/views.py:40
 msgid "If the address is eligible, a confirmation email will be sent shortly."
 msgstr ""
 
-#: newsletter/views.py:42 newsletter/views.py:55
+#: newsletter/views.py:46 newsletter/views.py:59
 msgid ""
 "The confirmation email could not be sent right now. Please try again later."
 msgstr ""
 
-#: newsletter/views.py:47
+#: newsletter/views.py:51
 msgid "You are already subscribed."
 msgstr ""
 
-#: newsletter/views.py:61
+#: newsletter/views.py:65
 msgid "Please check your inbox to confirm your subscription."
 msgstr ""
 
-#: newsletter/views.py:82
+#: newsletter/views.py:86
 msgid "Confirm newsletter subscription"
 msgstr ""
 
-#: newsletter/views.py:92
+#: newsletter/views.py:96
 msgid "This confirmation link is invalid or has already been used."
 msgstr ""
 
-#: newsletter/views.py:111
+#: newsletter/views.py:115
 msgid "No active subscription found for this email."
 msgstr ""
 
-#: newsletter/views.py:115
+#: newsletter/views.py:119
 msgid "This email is already unsubscribed."
 msgstr ""
 
-#: newsletter/views.py:119
+#: newsletter/views.py:123
 msgid "You have been unsubscribed."
 msgstr ""
 
-#: prompts/admin.py:298 usecases/admin.py:78
+#: prompts/admin.py:301 usecases/admin.py:80
 msgid "Internals"
 msgstr ""
 
-#: prompts/admin.py:439
+#: prompts/admin.py:442
 #, python-format
 msgid "%(count)d prompt was submitted for review."
 msgid_plural "%(count)d prompts were submitted for review."
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:450
+#: prompts/admin.py:453
 #, python-format
 msgid ""
 "%(count)d prompt was skipped because its status does not allow submission "
@@ -765,14 +765,14 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:463 prompts/admin.py:641 prompts/admin.py:855
+#: prompts/admin.py:466 prompts/admin.py:644 prompts/admin.py:858
 #, python-format
 msgid "%(count)d selected prompt no longer exists and was skipped."
 msgid_plural "%(count)d selected prompts no longer exist and were skipped."
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:474
+#: prompts/admin.py:477
 #, python-format
 msgid "%(count)d prompt was skipped because you are not allowed to submit it."
 msgid_plural ""
@@ -780,20 +780,20 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:487
+#: prompts/admin.py:490
 msgid ""
 "Some prompts could not be submitted because of a server configuration "
 "problem. Please contact an administrator."
 msgstr ""
 
-#: prompts/admin.py:604
+#: prompts/admin.py:607
 #, python-format
 msgid "%(count)d prompt was approved."
 msgid_plural "%(count)d prompts were approved."
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:615
+#: prompts/admin.py:618
 #, python-format
 msgid ""
 "%(count)d prompt was skipped because its status does not allow approval."
@@ -802,7 +802,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:628
+#: prompts/admin.py:631
 #, python-format
 msgid "%(count)d prompt was skipped because its reviewed content has changed."
 msgid_plural ""
@@ -810,7 +810,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:652
+#: prompts/admin.py:655
 #, python-format
 msgid "%(count)d prompt was skipped because you are not allowed to approve it."
 msgid_plural ""
@@ -818,24 +818,24 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:665
+#: prompts/admin.py:668
 msgid ""
 "Some prompts could not be approved because of a server configuration "
 "problem. Please contact an administrator."
 msgstr ""
 
-#: prompts/admin.py:700
+#: prompts/admin.py:703
 msgid "Publish (Approved → Published)"
 msgstr ""
 
-#: prompts/admin.py:805
+#: prompts/admin.py:808
 #, python-format
 msgid "%(count)d prompt was published."
 msgid_plural "%(count)d prompts were published."
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:816
+#: prompts/admin.py:819
 #, python-format
 msgid ""
 "%(count)d prompt was skipped because its status does not allow publishing."
@@ -845,7 +845,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:829
+#: prompts/admin.py:832
 #, python-format
 msgid ""
 "%(count)d prompt was skipped because its approved content has changed and "
@@ -856,7 +856,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:842
+#: prompts/admin.py:845
 #, python-format
 msgid ""
 "%(count)d prompt was skipped because it has no complete translation to "
@@ -867,7 +867,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:866
+#: prompts/admin.py:869
 #, python-format
 msgid "%(count)d prompt was skipped because you are not allowed to publish it."
 msgid_plural ""
@@ -875,39 +875,39 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: prompts/admin.py:879
+#: prompts/admin.py:882
 msgid ""
 "Some prompts could not be published because of a server configuration "
 "problem. Please contact an administrator."
 msgstr ""
 
-#: prompts/models.py:68 usecases/models.py:103
+#: prompts/models.py:73 usecases/models.py:108
 msgid "Outro"
 msgstr ""
 
-#: prompts/models.py:73
+#: prompts/models.py:78
 msgid "Select the AI tool for which this prompt has been optimized."
 msgstr ""
 
-#: prompts/models.py:79 prompts/views.py:202 search/presentation.py:32
+#: prompts/models.py:84 prompts/views.py:204 search/presentation.py:32
 #: templates/partials/_editorial_card.html:9
 #: templates/prompts/prompt_detail.html:52
 msgid "Prompt"
 msgstr ""
 
-#: prompts/models.py:80 prompts/presentation.py:103 prompts/views.py:108
-#: prompts/views.py:201 search/presentation.py:32 templates/base.html:127
+#: prompts/models.py:85 prompts/presentation.py:103 prompts/views.py:110
+#: prompts/views.py:203 search/presentation.py:32 templates/base.html:127
 #: templates/base.html:159 templates/base.html:278
 #: templates/content/home.html:55 templates/content/what-to-find.html:33
 #: templates/partials/_entry_cards.html:46 templates/prompts/prompt_list.html:6
 msgid "Prompts"
 msgstr ""
 
-#: prompts/views.py:88
+#: prompts/views.py:90
 msgid "AI prompts · MentoroAI"
 msgstr ""
 
-#: prompts/views.py:89
+#: prompts/views.py:91
 msgid ""
 "Browse ready-made AI prompts for writing, coding, learning, marketing and "
 "more."
@@ -925,7 +925,7 @@ msgid "Tools"
 msgstr ""
 
 #: search/presentation.py:34 templates/partials/_editorial_card.html:11
-#: usecases/views.py:219
+#: usecases/views.py:221
 msgid "Use case"
 msgstr ""
 
@@ -1431,8 +1431,8 @@ msgid "Enter your email address and we will send you a reset link."
 msgstr ""
 
 #: templates/account/password_reset.html:33
-#: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:30
-#: templates/legal/privacy_policy.html:41
+#: templates/legal/legal_notice.html:23 templates/legal/legal_notice.html:31
+#: templates/legal/privacy_policy.html:46
 msgid "Email"
 msgstr ""
 
@@ -2175,8 +2175,8 @@ msgid "Current content"
 msgstr ""
 
 #: templates/content/home.html:56 templates/usecases/list.html:8
-#: usecases/models.py:115 usecases/presentation.py:117 usecases/views.py:115
-#: usecases/views.py:218
+#: usecases/models.py:120 usecases/presentation.py:117 usecases/views.py:117
+#: usecases/views.py:220
 msgid "Usecases"
 msgstr ""
 
@@ -2789,7 +2789,7 @@ msgid "No published guides available."
 msgstr ""
 
 #: templates/legal/cookie_policy.html:10
-#: templates/legal/privacy_policy.html:272
+#: templates/legal/privacy_policy.html:280
 msgid "Cookie Policy"
 msgstr ""
 
@@ -2809,18 +2809,32 @@ msgid ""
 msgstr ""
 
 #: templates/legal/cookie_policy.html:21
-msgid "Cookies we use"
+msgid "Legal basis for device storage and access"
 msgstr ""
 
 #: templates/legal/cookie_policy.html:22
-msgid "This website uses the following types of cookies:"
+msgid ""
+"The storage of information on a device or access to information already "
+"stored there is governed by § 25 TDDDG. For technologies that are not "
+"strictly necessary, we obtain consent before access. Processing of personal "
+"data is additionally governed by the GDPR; the purposes and legal bases are "
+"explained in our Privacy Policy. These rules can also apply to browser "
+"storage technologies other than cookies."
+msgstr ""
+
+#: templates/legal/cookie_policy.html:24
+msgid "Cookies we use"
 msgstr ""
 
 #: templates/legal/cookie_policy.html:25
+msgid "This website uses the following types of cookies:"
+msgstr ""
+
+#: templates/legal/cookie_policy.html:28
 msgid "Technically necessary cookies"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:27
+#: templates/legal/cookie_policy.html:30
 msgid ""
 "\n"
 "                These cookies are required for the secure operation of the "
@@ -2830,41 +2844,41 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:35
+#: templates/legal/cookie_policy.html:38
 msgid ""
 "security cookie for form submissions (protection against Cross-Site-Request-"
 "Forgery attacks)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:39
+#: templates/legal/cookie_policy.html:42
 msgid ""
 "stores an anonymous session ID to keep you logged in and process requests "
 "across pages"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:43
+#: templates/legal/cookie_policy.html:46
 msgid ""
 "remembers your selected language (e.g. German or English) so that pages are "
 "displayed in the correct language"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:47
+#: templates/legal/cookie_policy.html:50
 msgid ""
 "stores the current path to keep browser navigation and history working when "
 "using HTMX"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:51
+#: templates/legal/cookie_policy.html:54
 msgid ""
 "stores your consent state for cookie categories and proves that consent has "
 "been obtained"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:56
+#: templates/legal/cookie_policy.html:59
 msgid "Local theme preference"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:58
+#: templates/legal/cookie_policy.html:61
 msgid ""
 "\n"
 "                MentoroAI stores your selected light or dark theme locally "
@@ -2878,17 +2892,17 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:68
+#: templates/legal/cookie_policy.html:71
 msgid ""
 "localStorage entry that remembers your selected theme (mentoroai-light or "
 "mentoroai-dark)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:74
+#: templates/legal/cookie_policy.html:77
 msgid "Statistics cookies (Google Analytics 4)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:76
+#: templates/legal/cookie_policy.html:79
 msgid ""
 "\n"
 "                We use Google Analytics 4 to analyze how our website is used "
@@ -2898,29 +2912,30 @@ msgid ""
 "explicit consent\n"
 "                in the “Statistics” category in the Klaro dialog.\n"
 "                Before consent is granted, Google Consent Mode v2 ensures "
-"that no Analytics cookies are stored\n"
-"                and only anonymized, non-identifying signals may be "
-"transmitted.\n"
+"that no Analytics cookies are stored;\n"
+"                depending on the configured consent mode, technical requests "
+"to Google services may still occur. Such requests can be relevant to data "
+"protection even without cookies; see our Privacy Policy.\n"
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:88
+#: templates/legal/cookie_policy.html:91
 msgid ""
 "used to distinguish users and generate anonymous statistics (typically "
 "expires after 2 years)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:92
+#: templates/legal/cookie_policy.html:95
 msgid ""
 "used to maintain session state for Google Analytics 4 (typically expires "
 "after 1 year)"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:96
+#: templates/legal/cookie_policy.html:99
 msgid "Cookie control"
 msgstr ""
 
-#: templates/legal/cookie_policy.html:98
+#: templates/legal/cookie_policy.html:101
 msgid ""
 "\n"
 "                You can change or withdraw your consent at any time using "
@@ -2932,7 +2947,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/cookie_policy.html:105
+#: templates/legal/cookie_policy.html:108
 msgid ""
 "\n"
 "                Klaro also controls the execution of tracking technologies "
@@ -2949,57 +2964,66 @@ msgid "Copyright & Licenses"
 msgstr ""
 
 #: templates/legal/copyright.html:12
-msgid "1. Copyright"
+msgid "1. Editorial and creative content"
 msgstr ""
 
-#: templates/legal/copyright.html:14
+#: templates/legal/copyright.html:13
 msgid ""
-"\n"
-"                All content published on this website (texts, images, code, "
-"layouts) is protected by copyright.\n"
-"                Third-party contributions are marked accordingly.\n"
-"            "
+"Texts, images, illustrations, designs and other creative materials on "
+"MentoroAI may be protected by copyright or other rights. Unless an "
+"individual item expressly states a different license, no general license for "
+"republication or commercial reuse of editorial content is granted. Statutory "
+"permissions, including quotation rights, remain unaffected."
+msgstr ""
+
+#: templates/legal/copyright.html:15
+msgid "2. Open-source software"
+msgstr ""
+
+#: templates/legal/copyright.html:16
+msgid ""
+"The MentoroAI source code published in the public project repository is made "
+"available under the GNU General Public License, version 3 (GPLv3), insofar "
+"as the repository's license notices apply to the respective files. The GPLv3 "
+"applies to the covered software, not automatically to all articles, "
+"graphics, trademarks or third-party materials visible on the website."
+msgstr ""
+
+#: templates/legal/copyright.html:17
+msgid "MentoroAI source repository and license notices"
 msgstr ""
 
 #: templates/legal/copyright.html:19
-msgid "2. Open-source license"
+msgid "3. Third-party material"
 msgstr ""
 
-#: templates/legal/copyright.html:21
+#: templates/legal/copyright.html:20
 msgid ""
-"\n"
-"                The MentoroAI project is licensed under the GNU General "
-"Public License v3.0 (GPLv3). A copy of the\n"
-"                license can be found on Github in the file\n"
-"            "
+"Third-party content, code, images and marks may be subject to separate "
+"terms. Credits and license notices provided with those materials take "
+"precedence for the respective items. Please check the applicable notices "
+"before reuse."
 msgstr ""
 
-#: templates/legal/copyright.html:26
-msgid "in the source repository."
-msgstr ""
-
-#: templates/legal/copyright.html:29
-msgid "3. Use of content"
-msgstr ""
-
-#: templates/legal/copyright.html:30
-msgid ""
-"\n"
-"            Reuse or reproduction of the content is only permitted within "
-"the scope of the license terms.\n"
-"        "
-msgstr ""
-
-#: templates/legal/copyright.html:34
+#: templates/legal/copyright.html:22
 msgid "4. Trademarks and logos"
 msgstr ""
 
-#: templates/legal/copyright.html:35
+#: templates/legal/copyright.html:23
 msgid ""
-"\n"
-"            Third-party trademarks and logos are the property of their "
-"respective owners.\n"
-"        "
+"Names, trademarks and logos mentioned on this site may be protected rights "
+"of their respective owners. Mentioning them does not imply sponsorship or "
+"endorsement."
+msgstr ""
+
+#: templates/legal/copyright.html:25
+msgid "5. Questions about reuse"
+msgstr ""
+
+#: templates/legal/copyright.html:26
+msgid ""
+"For questions about permissions relating to MentoroAI's own materials, "
+"please use the contact address in the legal notice."
 msgstr ""
 
 #: templates/legal/legal_notice.html:10
@@ -3007,14 +3031,14 @@ msgid "Legal Notice"
 msgstr ""
 
 #: templates/legal/legal_notice.html:11
-msgid "Information according to § 5 TMG (Germany)"
+msgid "Provider information under § 18(1) MStV and, where applicable, § 5 DDG"
 msgstr ""
 
-#: templates/legal/legal_notice.html:18
+#: templates/legal/legal_notice.html:18 templates/legal/privacy_policy.html:45
 msgid "Germany"
 msgstr ""
 
-#: templates/legal/legal_notice.html:21 templates/legal/privacy_policy.html:124
+#: templates/legal/legal_notice.html:21 templates/legal/privacy_policy.html:128
 msgid "Contact"
 msgstr ""
 
@@ -3022,18 +3046,8 @@ msgstr ""
 msgid "Responsible for content (§ 18 (2) MStV)"
 msgstr ""
 
-#: templates/legal/legal_notice.html:33
-msgid "Disclaimer"
-msgstr ""
-
-#: templates/legal/legal_notice.html:35
-msgid ""
-"\n"
-"                Despite careful content control, we assume no liability for "
-"external links.\n"
-"                The operators of the linked pages are solely responsible for "
-"their content.\n"
-"            "
+#: templates/legal/legal_notice.html:30
+msgid "Address as above"
 msgstr ""
 
 #: templates/legal/privacy_policy.html:10
@@ -3077,17 +3091,17 @@ msgstr ""
 msgid "Controller under data protection law, in particular the EU GDPR, is:"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:44
+#: templates/legal/privacy_policy.html:49
 msgid ""
 "A data protection officer has not been appointed, as there is no legal "
 "requirement to do so."
 msgstr ""
 
-#: templates/legal/privacy_policy.html:48
+#: templates/legal/privacy_policy.html:53
 msgid "Overview of data processing"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:50
+#: templates/legal/privacy_policy.html:55
 msgid ""
 "\n"
 "                This Privacy Policy explains what personal data we process "
@@ -3097,7 +3111,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:56
+#: templates/legal/privacy_policy.html:61
 msgid ""
 "\n"
 "                MentoroAI is an informational platform that provides guides, "
@@ -3110,85 +3124,85 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:64
+#: templates/legal/privacy_policy.html:69
 msgid "Categories of personal data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:66
+#: templates/legal/privacy_policy.html:71
 msgid "Identification data (name, username)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:67
+#: templates/legal/privacy_policy.html:72
 msgid "Contact data (email address)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:68
+#: templates/legal/privacy_policy.html:73
 msgid "Account data (login credentials, user ID)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:69
+#: templates/legal/privacy_policy.html:74
 msgid "Usage data (visited pages, interactions)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:70
+#: templates/legal/privacy_policy.html:75
 msgid "Technical data (IP address, browser, device information)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:72
+#: templates/legal/privacy_policy.html:77
 msgid "Purposes of data processing"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:74
+#: templates/legal/privacy_policy.html:79
 msgid "Providing and operating the website and its core functions"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:75
+#: templates/legal/privacy_policy.html:80
 msgid "Creating and managing user accounts and saved content"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:76
+#: templates/legal/privacy_policy.html:81
 msgid "Responding to contact requests and communication"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:77
+#: templates/legal/privacy_policy.html:82
 msgid "Ensuring security and preventing misuse or attacks"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:78
+#: templates/legal/privacy_policy.html:83
 msgid "Analyzing usage and improving our content and services"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:79
+#: templates/legal/privacy_policy.html:84
 msgid "Complying with legal obligations (e.g. retention duties)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:82
+#: templates/legal/privacy_policy.html:87
 msgid "Sources of personal data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:84
+#: templates/legal/privacy_policy.html:89
 msgid "Directly from users (registration, contact, content submission)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:85
+#: templates/legal/privacy_policy.html:90
 msgid "Automatically through website usage (server logs, technical data)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:86
+#: templates/legal/privacy_policy.html:91
 msgid "Third-party authentication providers (Google, GitHub)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:87
+#: templates/legal/privacy_policy.html:92
 msgid ""
 "Personal data received from third-party providers (Google, GitHub): name, "
 "email address, external user ID"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:90
+#: templates/legal/privacy_policy.html:95
 msgid "Data retention"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:92
+#: templates/legal/privacy_policy.html:97
 msgid ""
 "\n"
 "                Personal data is stored only for as long as necessary for "
@@ -3196,42 +3210,41 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:97
-#: templates/legal/privacy_policy.html:100
+#: templates/legal/privacy_policy.html:102
 msgid "Server log data (IP address, timestamps): up to 30 days"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:98
-#: templates/legal/privacy_policy.html:101
+#: templates/legal/privacy_policy.html:103
 msgid "Contact requests: up to 12 months after completion"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:99
-#: templates/legal/privacy_policy.html:102
-msgid "User account data: for the duration of the account"
+#: templates/legal/privacy_policy.html:104
+msgid ""
+"User account data: for the duration of the account, subject to legally "
+"required retention after deletion"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:104
+#: templates/legal/privacy_policy.html:106
 msgid ""
 "Analytics data (Google Analytics 4): depending on the configuration, "
 "typically up to 14 months."
 msgstr ""
 
-#: templates/legal/privacy_policy.html:107
+#: templates/legal/privacy_policy.html:109
 msgid ""
 "Consent logs (Klaro): stored for as long as required to prove lawful consent "
 "under applicable law."
 msgstr ""
 
-#: templates/legal/privacy_policy.html:112
+#: templates/legal/privacy_policy.html:114
 msgid "Processing activities on this website"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:114
+#: templates/legal/privacy_policy.html:116
 msgid "Collection and storage of personal data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:116
+#: templates/legal/privacy_policy.html:118
 msgid ""
 "\n"
 "                When you visit this website, information sent by your "
@@ -3245,6 +3258,14 @@ msgstr ""
 
 #: templates/legal/privacy_policy.html:126
 msgid ""
+"The legal basis for processing technically necessary server requests and "
+"security logs is our legitimate interest in a secure, accessible website "
+"under Art. 6(1)(f) GDPR. Where processing is legally required, Art. 6(1)(c) "
+"GDPR applies."
+msgstr ""
+
+#: templates/legal/privacy_policy.html:130
+msgid ""
 "\n"
 "                If you contact us by email, we store your details to process "
 "the request and for possible follow-up\n"
@@ -3252,11 +3273,18 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:132
+#: templates/legal/privacy_policy.html:136
+msgid ""
+"We process contact requests on the basis of Art. 6(1)(f) GDPR (responding to "
+"enquiries), or Art. 6(1)(b) GDPR if the request concerns steps towards or "
+"performance of an agreement."
+msgstr ""
+
+#: templates/legal/privacy_policy.html:138
 msgid "Registration / User accounts"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:134
+#: templates/legal/privacy_policy.html:140
 msgid ""
 "\n"
 "                If you create a user account, we process your entered data "
@@ -3265,11 +3293,18 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:140
+#: templates/legal/privacy_policy.html:146
+msgid ""
+"Account-related processing that is necessary to provide a requested user "
+"account is based on Art. 6(1)(b) GDPR. Additional processing, where "
+"applicable, requires its own legal basis."
+msgstr ""
+
+#: templates/legal/privacy_policy.html:148
 msgid "Google Sign-In (Social Login)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:142
+#: templates/legal/privacy_policy.html:150
 msgid ""
 "\n"
 "                On this website you can log in or create an account using "
@@ -3279,12 +3314,12 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:148
-#: templates/legal/privacy_policy.html:202
+#: templates/legal/privacy_policy.html:156
+#: templates/legal/privacy_policy.html:210
 msgid "Data processed"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:149
+#: templates/legal/privacy_policy.html:157
 msgid ""
 "\n"
 "                We receive from Google your name, email address and a unique "
@@ -3294,13 +3329,13 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:155
-#: templates/legal/privacy_policy.html:209
+#: templates/legal/privacy_policy.html:163
+#: templates/legal/privacy_policy.html:217
 msgid "Purpose"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:156
-#: templates/legal/privacy_policy.html:210
+#: templates/legal/privacy_policy.html:164
+#: templates/legal/privacy_policy.html:218
 msgid ""
 "\n"
 "                Providing a convenient and secure login option and managing "
@@ -3308,27 +3343,29 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:161
-#: templates/legal/privacy_policy.html:215
-#: templates/legal/privacy_policy.html:296
-#: templates/legal/privacy_policy.html:320
+#: templates/legal/privacy_policy.html:169
+#: templates/legal/privacy_policy.html:223
+#: templates/legal/privacy_policy.html:304
+#: templates/legal/privacy_policy.html:327
 msgid "Legal basis"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:162
-#: templates/legal/privacy_policy.html:216
+#: templates/legal/privacy_policy.html:170
+#: templates/legal/privacy_policy.html:224
 msgid ""
 "\n"
-"                Your consent according to Art. 6(1)(a) GDPR.\n"
+"                Art. 6(1)(b) GDPR insofar as the data are necessary to "
+"provide the account login selected by you. Any additional processing "
+"requiring consent is based on Art. 6(1)(a) GDPR.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:167
-#: templates/legal/privacy_policy.html:221
+#: templates/legal/privacy_policy.html:175
+#: templates/legal/privacy_policy.html:229
 msgid "Data storage and deletion"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:168
+#: templates/legal/privacy_policy.html:176
 msgid ""
 "\n"
 "                We store the data received from Google as long as your user "
@@ -3339,23 +3376,23 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:175
-#: templates/legal/privacy_policy.html:228
-#: templates/legal/privacy_policy.html:304
-#: templates/legal/privacy_policy.html:323
+#: templates/legal/privacy_policy.html:183
+#: templates/legal/privacy_policy.html:236
+#: templates/legal/privacy_policy.html:311
+#: templates/legal/privacy_policy.html:330
 msgid "Data transfer"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:176
+#: templates/legal/privacy_policy.html:184
 msgid ""
 "\n"
 "                Data may be transferred to Google LLC (USA).\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:181
-#: templates/legal/privacy_policy.html:234
-#: templates/legal/privacy_policy.html:329
+#: templates/legal/privacy_policy.html:189
+#: templates/legal/privacy_policy.html:242
+#: templates/legal/privacy_policy.html:336
 msgid ""
 "\n"
 "                Where data is transferred to countries outside the European "
@@ -3369,16 +3406,16 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:190
-#: templates/legal/privacy_policy.html:242
+#: templates/legal/privacy_policy.html:198
+#: templates/legal/privacy_policy.html:250
 msgid "Further information"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:194
+#: templates/legal/privacy_policy.html:202
 msgid "GitHub Sign-In (Social Login)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:196
+#: templates/legal/privacy_policy.html:204
 msgid ""
 "\n"
 "                You can also log in or create an account using your GitHub "
@@ -3388,7 +3425,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:203
+#: templates/legal/privacy_policy.html:211
 msgid ""
 "\n"
 "                We receive from GitHub your username, email address and a "
@@ -3398,7 +3435,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:222
+#: templates/legal/privacy_policy.html:230
 msgid ""
 "\n"
 "                We store the data received from GitHub as long as your "
@@ -3408,7 +3445,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:229
+#: templates/legal/privacy_policy.html:237
 msgid ""
 "\n"
 "                GitHub Inc. is located in the United States. Data may "
@@ -3416,15 +3453,15 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:247
+#: templates/legal/privacy_policy.html:255
 msgid "Cookies, tracking and consent management"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:249
+#: templates/legal/privacy_policy.html:257
 msgid "Cookies and tracking technologies"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:251
+#: templates/legal/privacy_policy.html:259
 msgid ""
 "\n"
 "                This website uses cookies to ensure technical functionality "
@@ -3440,7 +3477,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:260
+#: templates/legal/privacy_policy.html:268
 msgid ""
 "\n"
 "                Technically necessary cookies include in particular session "
@@ -3460,27 +3497,28 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:275
+#: templates/legal/privacy_policy.html:283
 msgid "Consent management (Klaro)"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:277
+#: templates/legal/privacy_policy.html:285
 msgid ""
 "\n"
 "                We use the consent management platform Klaro by KIProtect to "
 "obtain and manage legally required\n"
 "                cookie consent. Klaro stores cookies that document your "
 "consent status and block all non-essential\n"
-"                cookies until you consent. The processing is based on our "
-"legal obligation under Art. 6(1)(c) GDPR.\n"
+"                cookies until you consent. Where necessary, processing to "
+"document and respect your privacy choices is based on Art. 6(1)(c) GDPR and "
+"Art. 6(1)(f) GDPR, as applicable.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:284
+#: templates/legal/privacy_policy.html:292
 msgid "Google Tag Manager"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:286
+#: templates/legal/privacy_policy.html:294
 msgid ""
 "\n"
 "                We use Google Tag Manager to manage and deploy website tags "
@@ -3495,18 +3533,19 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:297
+#: templates/legal/privacy_policy.html:305
 msgid ""
 "\n"
-"                Legitimate interests under Art. 6(1)(f) GDPR for the use of "
-"a tag management system.\n"
-"                Processing for analytics purposes takes place only with your "
-"consent under Art. 6(1)(a) GDPR.\n"
+"                The legal basis depends on the actual tag-loading "
+"configuration and the processing involved. Any non-essential access to your "
+"device requires consent under § 25 TDDDG; subsequent analytics processing is "
+"based on Art. 6(1)(a) GDPR. Technically necessary processing may be based on "
+"Art. 6(1)(f) GDPR if its requirements are satisfied.\n"
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:305
-#: templates/legal/privacy_policy.html:324
+#: templates/legal/privacy_policy.html:312
+#: templates/legal/privacy_policy.html:331
 msgid ""
 "\n"
 "                Data may be transferred to Google LLC in the United States. "
@@ -3514,11 +3553,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:310
+#: templates/legal/privacy_policy.html:317
 msgid "Google Analytics 4"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:312
+#: templates/legal/privacy_policy.html:319
 msgid ""
 "\n"
 "                If you give your consent to the “Statistics” category, we "
@@ -3531,43 +3570,43 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:320
+#: templates/legal/privacy_policy.html:327
 msgid "Your consent under Art. 6(1)(a) GDPR."
 msgstr ""
 
-#: templates/legal/privacy_policy.html:339
+#: templates/legal/privacy_policy.html:346
 msgid "Your rights"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:341
+#: templates/legal/privacy_policy.html:348
 msgid "Access to your stored data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:342
+#: templates/legal/privacy_policy.html:349
 msgid "Rectification of inaccurate data"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:343
+#: templates/legal/privacy_policy.html:350
 msgid "Erasure ('right to be forgotten')"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:344
+#: templates/legal/privacy_policy.html:351
 msgid "Restriction of processing"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:345
+#: templates/legal/privacy_policy.html:352
 msgid "Data portability"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:346
+#: templates/legal/privacy_policy.html:353
 msgid "Objection to processing"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:349
+#: templates/legal/privacy_policy.html:356
 msgid "Withdrawal of consent and objection"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:351
+#: templates/legal/privacy_policy.html:358
 msgid ""
 "\n"
 "                You may withdraw your consent at any time with effect for "
@@ -3579,11 +3618,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:358
+#: templates/legal/privacy_policy.html:365
 msgid "Right to lodge a complaint"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:360
+#: templates/legal/privacy_policy.html:367
 msgid ""
 "\n"
 "                You have the right to lodge a complaint with a supervisory "
@@ -3594,11 +3633,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:368
+#: templates/legal/privacy_policy.html:375
 msgid "Data security"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:370
+#: templates/legal/privacy_policy.html:377
 msgid ""
 "\n"
 "                We use technical and organizational measures to protect your "
@@ -3608,7 +3647,7 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:376
+#: templates/legal/privacy_policy.html:383
 msgid ""
 "\n"
 "                Our servers are hosted within the European Union and are "
@@ -3617,11 +3656,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:382
+#: templates/legal/privacy_policy.html:389
 msgid "Do Not Track signals"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:384
+#: templates/legal/privacy_policy.html:391
 msgid ""
 "\n"
 "                Our website does not currently respond to \"Do Not Track\" "
@@ -3631,11 +3670,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:390
+#: templates/legal/privacy_policy.html:397
 msgid "Automated decision-making"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:392
+#: templates/legal/privacy_policy.html:399
 msgid ""
 "\n"
 "                We do not use automated decision-making or profiling within "
@@ -3643,11 +3682,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:397
+#: templates/legal/privacy_policy.html:404
 msgid "Children"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:399
+#: templates/legal/privacy_policy.html:406
 msgid ""
 "\n"
 "                This website is intended for a general audience.\n"
@@ -3659,11 +3698,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:407
+#: templates/legal/privacy_policy.html:414
 msgid "Changes to this Privacy Policy"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:409
+#: templates/legal/privacy_policy.html:416
 msgid ""
 "\n"
 "                We may update this Privacy Policy from time to time.\n"
@@ -3676,78 +3715,127 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/legal/privacy_policy.html:419
+#: templates/legal/privacy_policy.html:426
 msgid "Effective date"
 msgstr ""
 
-#: templates/legal/privacy_policy.html:420
-msgid "This Privacy Policy is effective as of 16 December 2025."
+#: templates/legal/privacy_policy.html:427
+msgid "This Privacy Policy was last substantively revised in October 2026."
 msgstr ""
 
 #: templates/legal/terms_of_use.html:12
-msgid "1. Scope"
+msgid "1. Scope and operator"
 msgstr ""
 
-#: templates/legal/terms_of_use.html:14
+#: templates/legal/terms_of_use.html:13
 msgid ""
-"\n"
-"                These Terms of Use apply to all visitors and registered "
-"users of MentoroAI.\n"
-"            "
+"These Terms of Use govern the use of MentoroAI, a privately operated, "
+"currently free information and education website about artificial "
+"intelligence. The operator and contact details can be found in the legal "
+"notice."
+msgstr ""
+
+#: templates/legal/terms_of_use.html:15
+msgid "2. Information and availability"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:16
+msgid ""
+"The guides, tool descriptions and examples are for general information and "
+"education. We aim to keep them accurate and up to date but do not guarantee "
+"that every item is complete, correct or suitable for your individual "
+"situation. Information about third-party tools may change. The website may "
+"be temporarily unavailable for maintenance or technical reasons. Statutory "
+"rights remain unaffected."
 msgstr ""
 
 #: templates/legal/terms_of_use.html:18
-msgid "2. Use of content"
+msgid "3. User accounts"
 msgstr ""
 
 #: templates/legal/terms_of_use.html:19
 msgid ""
-"\n"
-"            The content on this website is provided for informational "
-"purposes only. Commercial use without the\n"
-"            operator’s consent\n"
-"            is not permitted.\n"
-"        "
+"Where account functions are offered, users must provide accurate information "
+"when required, protect their login access and refrain from unauthorized "
+"access, misuse or unlawful activity. Accounts may be restricted or suspended "
+"where objectively justified, particularly for security reasons or serious "
+"violations of these Terms. Where practicable and reasonable, the user will "
+"be informed of the reason. Applicable statutory rights and any obligations "
+"to provide reasons remain unaffected."
+msgstr ""
+
+#: templates/legal/terms_of_use.html:20
+msgid ""
+"Users can request deletion of their account or use any account-deletion "
+"function provided on the website. Personal-data deletion is governed by the "
+"privacy policy and applicable retention obligations."
+msgstr ""
+
+#: templates/legal/terms_of_use.html:22
+msgid "4. Rights to content"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:23
+msgid ""
+"Content may be used for personal information and learning within applicable "
+"law. Further rights to reuse, distribute or modify content depend on the "
+"applicable licenses, third-party rights and statutory exceptions. The "
+"copyright and licenses page explains which materials are covered by which "
+"licenses. Merely viewing the website does not transfer intellectual property "
+"rights."
 msgstr ""
 
 #: templates/legal/terms_of_use.html:25
-msgid "3. User accounts"
+msgid "5. Third-party offerings"
 msgstr ""
 
 #: templates/legal/terms_of_use.html:26
 msgid ""
-"\n"
-"            Users must keep their login credentials confidential. The "
-"operator reserves the right to suspend or delete\n"
-"            accounts in case of misuse.\n"
-"        "
+"Links to external websites and descriptions of third-party AI tools do not "
+"make those offerings part of MentoroAI. Their respective operators are "
+"responsible for their services and terms. We do not adopt third-party "
+"content as our own solely by linking to it. Statutory responsibilities "
+"remain unaffected."
+msgstr ""
+
+#: templates/legal/terms_of_use.html:28
+msgid "6. Liability"
+msgstr ""
+
+#: templates/legal/terms_of_use.html:29
+msgid ""
+"We are liable without limitation for intent and gross negligence and for "
+"damages arising from injury to life, body or health caused by a culpable "
+"breach of duty. In cases of slight negligence, liability for other damages "
+"exists only where a material contractual obligation is breached, and is "
+"limited to the damage typically foreseeable at the time of the contract. "
+"Mandatory statutory liability remains unaffected. These provisions do not "
+"limit claims that cannot legally be excluded or restricted."
 msgstr ""
 
 #: templates/legal/terms_of_use.html:31
-msgid "4. Liability"
+msgid "7. Changes to these Terms"
 msgstr ""
 
 #: templates/legal/terms_of_use.html:32
 msgid ""
-"\n"
-"            The operator assumes no warranty for the correctness, "
-"completeness, or timeliness of the information\n"
-"            provided.\n"
-"            Any liability for damages arising directly or indirectly from "
-"the use is excluded.\n"
-"        "
+"We may revise these Terms for future use. Revised terms do not automatically "
+"replace existing contractual arrangements merely because they are published "
+"on this website. Where the law requires notice or consent for changes "
+"affecting existing users, we will comply with those requirements. The "
+"version applicable to a particular use is determined by the legal "
+"circumstances of that use."
 msgstr ""
 
-#: templates/legal/terms_of_use.html:38
-msgid "5. Changes"
+#: templates/legal/terms_of_use.html:34
+msgid "8. Applicable law"
 msgstr ""
 
-#: templates/legal/terms_of_use.html:39
+#: templates/legal/terms_of_use.html:35
 msgid ""
-"\n"
-"            The operator may amend these Terms of Use at any time. The "
-"current version applies.\n"
-"        "
+"German law applies to the extent permitted by law. Mandatory consumer "
+"protection rules that apply under the law of a user's country of habitual "
+"residence remain unaffected."
 msgstr ""
 
 #: templates/newsletter/confirm_error.html:7
@@ -4395,19 +4483,19 @@ msgstr ""
 msgid "No published use cases found."
 msgstr ""
 
-#: usecases/models.py:106
+#: usecases/models.py:111
 msgid "Persona"
 msgstr ""
 
-#: usecases/models.py:114
+#: usecases/models.py:119
 msgid "Usecase"
 msgstr ""
 
-#: usecases/views.py:95
+#: usecases/views.py:97
 msgid "AI use cases · MentoroAI"
 msgstr ""
 
-#: usecases/views.py:97
+#: usecases/views.py:99
 msgid ""
 "Practical AI use cases with clear examples, benefits and guidance for "
 "business tasks, research and creative work."

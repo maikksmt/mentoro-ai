@@ -8,7 +8,7 @@
 {% block content %}
     <section class="prose max-w-3xl mx-auto py-4">
         <h1>{% trans "Legal Notice" %}</h1>
-        <h2>{% trans "Information according to § 5 TMG (Germany)" %}</h2>
+        <h2>{% trans "Provider information under § 18(1) MStV and, where applicable, § 5 DDG" %}</h2>
         <p>
             Maik Kusmat<br>
             MentoroAI<br>
@@ -27,15 +27,9 @@
         <p>
             Maik Kusmat<br>
             MentoroAI<br>
+            {% trans "Address as above" %}<br>
             {% trans "Email" %}: <a href="mailto:contact@mentoro-ai.com">contact@mentoro-ai.com</a>
         </p>
 
-        <h2>{% trans "Disclaimer" %}</h2>
-        <p>
-            {% blocktrans %}
-                Despite careful content control, we assume no liability for external links.
-                The operators of the linked pages are solely responsible for their content.
-            {% endblocktrans %}
-        </p>
     </section>
 {% endblock %}
