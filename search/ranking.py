@@ -7,7 +7,7 @@ input always yields the same order, whenever it runs.
 from __future__ import annotations
 
 from collections.abc import Iterable
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from enum import IntEnum
 
 from search.query import NormalizedSearchQuery, normalize_text
@@ -33,8 +33,8 @@ _KIND_POSITION = {kind: index for index, kind in enumerate(CONTENT_KIND_ORDER)}
 
 # Aware UTC bounds used to order results by recency without ever calling
 # datetime.min.timestamp(), which overflows on some platforms.
-_OLDEST = datetime.min.replace(tzinfo=timezone.utc)
-_NEWEST = datetime.max.replace(tzinfo=timezone.utc)
+_OLDEST = datetime.min.replace(tzinfo=UTC)
+_NEWEST = datetime.max.replace(tzinfo=UTC)
 
 
 class SearchMatchTier(IntEnum):
@@ -95,8 +95,8 @@ def _recency(result: SearchResult) -> datetime:
     if value is None:
         return _OLDEST
     if value.tzinfo is None:
-        return value.replace(tzinfo=timezone.utc)
-    return value.astimezone(timezone.utc)
+        return value.replace(tzinfo=UTC)
+    return value.astimezone(UTC)
 
 
 def _sort_key(

@@ -1,13 +1,13 @@
 """Shared helpers for the search page tests."""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from search.query import NormalizedSearchQuery, SearchQueryIssue
 from search.responses import SearchResponse, build_counts
 from search.result_types import SearchMatchedField, SearchResult, SearchResultKind
 
-UTC = timezone.utc
+# UTC = UTC
 
 
 def make_result(kind, object_id, *, title=None, summary="A short summary.", url=None):

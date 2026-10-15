@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta, timezone
 
 from django.test import SimpleTestCase
 
@@ -14,7 +14,7 @@ from search.result_types import SearchMatchedField, SearchResult, SearchResultKi
 
 QUERY = normalize_search_query("ai tools")
 
-UTC = timezone.utc
+# UTC = UTC
 
 
 def build(
@@ -56,7 +56,8 @@ class DetermineMatchTierTests(SimpleTestCase):
 
     def test_title_contains(self):
         self.assertIs(
-            determine_match_tier(build(title="The best ai tools of 2026"), QUERY),
+            determine_match_tier(
+                build(title="The best ai tools of 2026"), QUERY),
             SearchMatchTier.TITLE_CONTAINS,
         )
 
@@ -74,7 +75,8 @@ class DetermineMatchTierTests(SimpleTestCase):
             with self.subTest(matched_field=matched_field):
                 self.assertIs(
                     determine_match_tier(
-                        build(title="Unrelated", matched_field=matched_field), QUERY
+                        build(title="Unrelated",
+                              matched_field=matched_field), QUERY
                     ),
                     SearchMatchTier.FULL_TEXT,
                 )
@@ -120,9 +122,12 @@ class DetermineMatchTierTests(SimpleTestCase):
 
     def test_tier_ordering_is_ascending_by_specificity(self):
         self.assertLess(SearchMatchTier.FULL_TEXT, SearchMatchTier.METADATA)
-        self.assertLess(SearchMatchTier.METADATA, SearchMatchTier.TITLE_CONTAINS)
-        self.assertLess(SearchMatchTier.TITLE_CONTAINS, SearchMatchTier.TITLE_PREFIX)
-        self.assertLess(SearchMatchTier.TITLE_PREFIX, SearchMatchTier.TITLE_EXACT)
+        self.assertLess(SearchMatchTier.METADATA,
+                        SearchMatchTier.TITLE_CONTAINS)
+        self.assertLess(SearchMatchTier.TITLE_CONTAINS,
+                        SearchMatchTier.TITLE_PREFIX)
+        self.assertLess(SearchMatchTier.TITLE_PREFIX,
+                        SearchMatchTier.TITLE_EXACT)
 
 
 class SortPrecedenceTests(SimpleTestCase):
@@ -130,7 +135,8 @@ class SortPrecedenceTests(SimpleTestCase):
         exact = build(title="ai tools", rank=0.01, object_id=1)
         full_text = build(title="Unrelated", rank=0.99, object_id=2)
         self.assertEqual(
-            sort_search_results([full_text, exact], query=QUERY), (exact, full_text)
+            sort_search_results([full_text, exact],
+                                query=QUERY), (exact, full_text)
         )
 
     def test_rank_beats_recency(self):
@@ -208,7 +214,8 @@ class TypeNeutralityTests(SimpleTestCase):
     def test_rank_is_compared_raw_without_per_kind_normalization(self):
         # The lone PROMPT hit is weak. If its rank were rescaled against its
         # own content type's maximum it would become 1.0 and jump to the top.
-        lone_weak_prompt = build(kind=SearchResultKind.PROMPT, rank=0.01, object_id=1)
+        lone_weak_prompt = build(
+            kind=SearchResultKind.PROMPT, rank=0.01, object_id=1)
         strong_tool = build(kind=SearchResultKind.TOOL, rank=0.90, object_id=2)
         other_tool = build(kind=SearchResultKind.TOOL, rank=0.80, object_id=3)
         self.assertEqual(
@@ -239,7 +246,8 @@ class RankRoundingTests(SimpleTestCase):
     def test_ranks_within_the_precision_are_treated_as_equal(self):
         # Both round to 0.1 at 4 decimal places, so the kind tie-break decides
         # even though the prompt's raw rank is marginally higher.
-        prompt = build(kind=SearchResultKind.PROMPT, rank=0.100004, object_id=1)
+        prompt = build(kind=SearchResultKind.PROMPT,
+                       rank=0.100004, object_id=1)
         tool = build(kind=SearchResultKind.TOOL, rank=0.100001, object_id=2)
         self.assertEqual(
             sort_search_results([prompt, tool], query=QUERY), (tool, prompt)
@@ -282,10 +290,12 @@ class RecencyTests(SimpleTestCase):
         )
 
     def test_result_without_any_date_sorts_last(self):
-        dated = build(object_id=2, published_at=datetime(1900, 1, 1, tzinfo=UTC))
+        dated = build(object_id=2, published_at=datetime(
+            1900, 1, 1, tzinfo=UTC))
         undated = build(object_id=1)
         self.assertEqual(
-            sort_search_results([undated, dated], query=QUERY), (dated, undated)
+            sort_search_results(
+                [undated, dated], query=QUERY), (dated, undated)
         )
 
     def test_two_undated_results_fall_through_to_object_id(self):
@@ -296,8 +306,9 @@ class RecencyTests(SimpleTestCase):
         )
 
     def test_naive_and_aware_datetimes_are_comparable(self):
-        naive_newer = build(object_id=1, published_at=datetime(2026, 1, 2))  # noqa: DTZ001 - naive datetime is the point of this test
-        aware_older = build(object_id=2, published_at=datetime(2026, 1, 1, tzinfo=UTC))
+        naive_newer = build(object_id=1, published_at=datetime(2026, 1, 2))
+        aware_older = build(
+            object_id=2, published_at=datetime(2026, 1, 1, tzinfo=UTC))
         self.assertEqual(
             sort_search_results([aware_older, naive_newer], query=QUERY),
             (naive_newer, aware_older),
@@ -309,22 +320,27 @@ class RecencyTests(SimpleTestCase):
         earlier = build(
             object_id=1, published_at=datetime(2026, 1, 1, 9, 0, tzinfo=plus_two)
         )
-        later = build(object_id=2, published_at=datetime(2026, 1, 1, 8, 0, tzinfo=UTC))
+        later = build(object_id=2, published_at=datetime(
+            2026, 1, 1, 8, 0, tzinfo=UTC))
         self.assertEqual(
-            sort_search_results([earlier, later], query=QUERY), (later, earlier)
+            sort_search_results(
+                [earlier, later], query=QUERY), (later, earlier)
         )
 
     def test_extreme_dates_do_not_overflow(self):
-        very_old = build(object_id=1, published_at=datetime(1, 1, 1, tzinfo=UTC))
+        very_old = build(
+            object_id=1, published_at=datetime(1, 1, 1, tzinfo=UTC))
         undated = build(object_id=2)
-        self.assertEqual(len(sort_search_results([very_old, undated], query=QUERY)), 2)
+        self.assertEqual(len(sort_search_results(
+            [very_old, undated], query=QUERY)), 2)
 
 
 class DeterminismTests(SimpleTestCase):
     def _mixed_results(self):
         return [
             build(kind=SearchResultKind.TOOL, object_id=3, rank=0.5),
-            build(kind=SearchResultKind.GUIDE, title="ai tools", object_id=1, rank=0.1),
+            build(kind=SearchResultKind.GUIDE,
+                  title="ai tools", object_id=1, rank=0.1),
             build(kind=SearchResultKind.PROMPT, object_id=2, rank=0.5),
             build(
                 kind=SearchResultKind.COMPARISON,
@@ -354,12 +370,14 @@ class DeterminismTests(SimpleTestCase):
         expected = sort_search_results(results, query=QUERY)
         for permutation in permutations(results):
             with self.subTest(order=[r.object_id for r in permutation]):
-                self.assertEqual(sort_search_results(permutation, query=QUERY), expected)
+                self.assertEqual(sort_search_results(
+                    permutation, query=QUERY), expected)
 
 
 class SortApiTests(SimpleTestCase):
     def test_returns_a_tuple(self):
-        self.assertIsInstance(sort_search_results([build()], query=QUERY), tuple)
+        self.assertIsInstance(sort_search_results(
+            [build()], query=QUERY), tuple)
 
     def test_does_not_mutate_the_input_list(self):
         first = build(object_id=1)
@@ -380,6 +398,7 @@ class SortApiTests(SimpleTestCase):
         self.assertEqual(sort_search_results([], query=QUERY), ())
 
     def test_unsearchable_query_is_rejected(self):
-        query = NormalizedSearchQuery(value="a", issue=SearchQueryIssue.TOO_SHORT)
+        query = NormalizedSearchQuery(
+            value="a", issue=SearchQueryIssue.TOO_SHORT)
         with self.assertRaisesMessage(ValueError, "unsearchable query"):
             sort_search_results([build()], query=query)

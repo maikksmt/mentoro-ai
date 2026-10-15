@@ -20,8 +20,7 @@ classes below pin the replacement: a single query joined against
 ``content_type__model`` filter fields, independent of cache state.
 """
 import math
-from datetime import datetime
-from datetime import timezone as dt_timezone
+from datetime import UTC, datetime
 from decimal import Decimal
 from pathlib import Path
 from uuid import uuid4
@@ -228,7 +227,7 @@ class FingerprintInvalidPayloadTests(TestCase):
 
     def test_datetime_is_rejected(self):
         self._assert_rejected(
-            {"a": datetime(2026, 1, 1, tzinfo=dt_timezone.utc)},
+            {"a": datetime(2026, 1, 1, tzinfo=UTC)},
             ReviewFingerprintErrorCode.UNSUPPORTED_TYPE,
         )
 

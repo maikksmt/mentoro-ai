@@ -1,5 +1,5 @@
 from dataclasses import FrozenInstanceError
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from django.test import SimpleTestCase
 
@@ -24,7 +24,7 @@ def result(kind, object_id):
         summary="",
         url=f"/en/{kind}/{object_id}/",
         language_code="en",
-        published_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+        published_at=datetime(2026, 1, 1, tzinfo=UTC),
         updated_at=None,
         rank=0.5,
         matched_field=SearchMatchedField.TITLE,

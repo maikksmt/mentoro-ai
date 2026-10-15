@@ -25,8 +25,7 @@ Uses the project's existing executor pattern (``guides/tests/test_migrations``):
 migrate forward, then restore the app to HEAD in ``tearDown`` so later tests in
 the same process see the real schema.
 """
-from datetime import datetime
-from datetime import timezone as dt_timezone
+from datetime import UTC, datetime
 from typing import Any, ClassVar
 
 from django.core.management import call_command
@@ -50,7 +49,7 @@ AFTER = {
 
 #: A fixed instant, so "unchanged" assertions on created_at/updated_at compare
 #: against a value the test controls rather than against "roughly now".
-FROZEN = datetime(2026, 1, 15, 10, 30, 0, tzinfo=dt_timezone.utc)
+FROZEN = datetime(2026, 1, 15, 10, 30, 0, tzinfo=UTC)
 
 
 class EditorialMigrationTestCase(TransactionTestCase):
