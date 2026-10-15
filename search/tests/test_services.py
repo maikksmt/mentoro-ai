@@ -7,7 +7,7 @@ adapter can never produce a partial answer. SimpleTestCase blocks database
 access outright, so any accidental query here fails the test rather than
 passing unnoticed.
 """
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from django.test import SimpleTestCase
 
@@ -17,7 +17,7 @@ from search.responses import SearchResponse
 from search.result_types import SearchMatchedField, SearchResult, SearchResultKind
 from search.services import search_site
 
-UTC = timezone.utc
+# UTC = UTC
 
 
 def make_result(
@@ -74,7 +74,8 @@ class InvalidQueryTests(SimpleTestCase):
 
     def test_empty_query_returns_an_empty_response(self):
         adapters = adapters_for()
-        response = search_site(raw_query="", language_code="en", adapters=adapters)
+        response = search_site(
+            raw_query="", language_code="en", adapters=adapters)
         self.assertIsInstance(response, SearchResponse)
         self.assertEqual(response.results, ())
         self.assertEqual(response.total_count, 0)
@@ -102,7 +103,8 @@ class InvalidQueryTests(SimpleTestCase):
                 self.assertEqual(adapter.calls, [])
 
     def test_all_counts_are_zero(self):
-        response = search_site(raw_query="", language_code="en", adapters=adapters_for())
+        response = search_site(
+            raw_query="", language_code="en", adapters=adapters_for())
         self.assertEqual(len(response.counts), len(SearchResultKind))
         self.assertTrue(all(entry.count == 0 for entry in response.counts))
 
@@ -123,13 +125,15 @@ class LanguageTests(SimpleTestCase):
 
         adapters = adapters_for()
         with self.assertRaises(UnsupportedSearchLanguage):
-            search_site(raw_query="ai tools", language_code="fr", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="fr", adapters=adapters)
         for adapter in adapters:
             self.assertEqual(adapter.calls, [])
 
     def test_language_is_passed_to_every_adapter(self):
         adapters = adapters_for()
-        search_site(raw_query="ai tools", language_code="de", adapters=adapters)
+        search_site(raw_query="ai tools",
+                    language_code="de", adapters=adapters)
         for adapter in adapters:
             with self.subTest(kind=adapter.kind):
                 self.assertEqual([call[1] for call in adapter.calls], ["de"])
@@ -138,7 +142,8 @@ class LanguageTests(SimpleTestCase):
 class MergeAndSortTests(SimpleTestCase):
     def test_every_adapter_is_called_exactly_once(self):
         adapters = adapters_for()
-        search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+        search_site(raw_query="ai tools",
+                    language_code="en", adapters=adapters)
         for adapter in adapters:
             with self.subTest(kind=adapter.kind):
                 self.assertEqual(len(adapter.calls), 1)
@@ -160,7 +165,8 @@ class MergeAndSortTests(SimpleTestCase):
         adapters = adapters_for(
             tool=(make_result(SearchResultKind.TOOL, 1, title="Unrelated", rank=0.1,
                               matched_field=SearchMatchedField.BODY),),
-            prompt=(make_result(SearchResultKind.PROMPT, 2, title="Ai Tools", rank=0.9),),
+            prompt=(make_result(SearchResultKind.PROMPT,
+                    2, title="Ai Tools", rank=0.9),),
         )
         response = search_site(
             raw_query="ai tools", language_code="en", adapters=adapters
@@ -190,8 +196,10 @@ class MergeAndSortTests(SimpleTestCase):
             raw_query="ai tools", language_code="en", adapters=build()[2:] + build()[:2]
         )
         expected = [(r.kind, r.object_id) for r in forward.results]
-        self.assertEqual([(r.kind, r.object_id) for r in reverse.results], expected)
-        self.assertEqual([(r.kind, r.object_id) for r in rotated.results], expected)
+        self.assertEqual([(r.kind, r.object_id)
+                         for r in reverse.results], expected)
+        self.assertEqual([(r.kind, r.object_id)
+                         for r in rotated.results], expected)
         self.assertEqual(reverse.counts, forward.counts)
         self.assertEqual(rotated.counts, forward.counts)
 
@@ -217,12 +225,14 @@ class MergeAndSortTests(SimpleTestCase):
         first = search_site(
             raw_query="ai tools",
             language_code="en",
-            adapters=adapters_for(tool=(make_result(SearchResultKind.TOOL, 1),)),
+            adapters=adapters_for(
+                tool=(make_result(SearchResultKind.TOOL, 1),)),
         )
         second = search_site(
             raw_query="ai tools",
             language_code="en",
-            adapters=adapters_for(tool=(make_result(SearchResultKind.TOOL, 1),)),
+            adapters=adapters_for(
+                tool=(make_result(SearchResultKind.TOOL, 1),)),
         )
         self.assertEqual(first.results, second.results)
 
@@ -263,13 +273,15 @@ class FailClosedTests(SimpleTestCase):
             if index == failing_index:
                 adapters.append(FakeAdapter(kind, raises=exception))
             else:
-                adapters.append(FakeAdapter(kind, (make_result(kind, index + 1),)))
+                adapters.append(FakeAdapter(
+                    kind, (make_result(kind, index + 1),)))
         return tuple(adapters)
 
     def test_failure_in_the_first_adapter_stops_everything(self):
         adapters = self._adapters_failing_at(0, RuntimeError("boom"))
         with self.assertRaises(SearchExecutionError):
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         for adapter in adapters[1:]:
             with self.subTest(kind=adapter.kind):
                 self.assertEqual(adapter.calls, [])
@@ -277,7 +289,8 @@ class FailClosedTests(SimpleTestCase):
     def test_failure_after_successful_adapters_discards_their_results(self):
         adapters = self._adapters_failing_at(2, RuntimeError("boom"))
         with self.assertRaises(SearchExecutionError) as caught:
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         # Nothing partial escaped: the exception carries no results at all.
         self.assertFalse(hasattr(caught.exception, "results"))
         self.assertEqual(len(adapters[0].calls), 1)
@@ -288,7 +301,8 @@ class FailClosedTests(SimpleTestCase):
     def test_error_names_the_failing_content_type(self):
         adapters = self._adapters_failing_at(1, RuntimeError("boom"))
         with self.assertRaises(SearchExecutionError) as caught:
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         self.assertIs(caught.exception.kind, SearchResultKind.GUIDE)
         self.assertIn("guide", str(caught.exception))
 
@@ -296,24 +310,29 @@ class FailClosedTests(SimpleTestCase):
         original = RuntimeError("database exploded")
         adapters = self._adapters_failing_at(0, original)
         with self.assertRaises(SearchExecutionError) as caught:
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         self.assertIs(caught.exception.__cause__, original)
 
     def test_database_detail_stays_out_of_the_message(self):
-        adapters = self._adapters_failing_at(0, RuntimeError("SELECT * FROM secret"))
+        adapters = self._adapters_failing_at(
+            0, RuntimeError("SELECT * FROM secret"))
         with self.assertRaises(SearchExecutionError) as caught:
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         self.assertNotIn("SELECT", str(caught.exception))
 
     def test_keyboard_interrupt_is_not_captured(self):
         adapters = self._adapters_failing_at(0, KeyboardInterrupt())
         with self.assertRaises(KeyboardInterrupt):
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
 
     def test_system_exit_is_not_captured(self):
         adapters = self._adapters_failing_at(0, SystemExit())
         with self.assertRaises(SystemExit):
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
 
 
 class ContractViolationTests(SimpleTestCase):
@@ -338,7 +357,8 @@ class ContractViolationTests(SimpleTestCase):
         self._assert_rejected(adapter, "expected a tuple")
 
     def test_non_search_result_element_is_rejected(self):
-        adapter = FakeAdapter(SearchResultKind.TOOL, ({"title": "not a result"},))
+        adapter = FakeAdapter(SearchResultKind.TOOL,
+                              ({"title": "not a result"},))
         self._assert_rejected(adapter, "expected SearchResult")
 
     def test_wrong_kind_is_rejected(self):
@@ -358,7 +378,8 @@ class ContractViolationTests(SimpleTestCase):
         for url in ("https://example.test/x", "http://example.test/x"):
             with self.subTest(url=url):
                 adapter = FakeAdapter(
-                    SearchResultKind.TOOL, (make_result(SearchResultKind.TOOL, 1, url=url),)
+                    SearchResultKind.TOOL, (make_result(
+                        SearchResultKind.TOOL, 1, url=url),)
                 )
                 self._assert_rejected(adapter, "non-internal url")
 
@@ -371,7 +392,8 @@ class ContractViolationTests(SimpleTestCase):
 
     def test_placeholder_url_is_rejected(self):
         adapter = FakeAdapter(
-            SearchResultKind.TOOL, (make_result(SearchResultKind.TOOL, 1, url="#"),)
+            SearchResultKind.TOOL, (make_result(
+                SearchResultKind.TOOL, 1, url="#"),)
         )
         self._assert_rejected(adapter, "non-internal url")
 
@@ -407,14 +429,17 @@ class ContractViolationTests(SimpleTestCase):
             SearchResultKind.PROMPT, [make_result(SearchResultKind.PROMPT, 1)]
         )
         adapters = (
-            FakeAdapter(SearchResultKind.TOOL, (make_result(SearchResultKind.TOOL, 1),)),
-            FakeAdapter(SearchResultKind.GUIDE, (make_result(SearchResultKind.GUIDE, 2),)),
+            FakeAdapter(SearchResultKind.TOOL,
+                        (make_result(SearchResultKind.TOOL, 1),)),
+            FakeAdapter(SearchResultKind.GUIDE,
+                        (make_result(SearchResultKind.GUIDE, 2),)),
             broken,
             FakeAdapter(SearchResultKind.USE_CASE),
             FakeAdapter(SearchResultKind.COMPARISON),
         )
         with self.assertRaises(SearchExecutionError):
-            search_site(raw_query="ai tools", language_code="en", adapters=adapters)
+            search_site(raw_query="ai tools",
+                        language_code="en", adapters=adapters)
         self.assertEqual(adapters[3].calls, [])
         self.assertEqual(adapters[4].calls, [])
 
@@ -461,5 +486,6 @@ class ResponseShapeTests(SimpleTestCase):
             adapters=adapters_for(tool=(older_strong,), guide=(newer_weak,)),
         )
         self.assertEqual(
-            [r.object_id for r in response.results], [1, 2], "rank must beat recency"
+            [r.object_id for r in response.results], [
+                1, 2], "rank must beat recency"
         )
